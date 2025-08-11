@@ -47,8 +47,8 @@ async def main(connection):
                                                     await session.async_send_text(f"\n# Screenshot saved: {screenshot_path}\n")
                                                     await session.async_send_text(f"# Auto-inserting into Claude context...\n")
                                                     
-                                                    # Insert screenshot viewing command
-                                                    await session.async_send_text(f"open {screenshot_path}\n")
+                                                    # Insert screenshot viewing command without stealing focus
+                                                    await session.async_send_text(f"open -g {screenshot_path}\n")
                                                     
                                                     # Mark this session
                                                     await session.async_set_name(f"📸 Claude - DevSystem")
@@ -71,13 +71,11 @@ async def main(connection):
                     for session in tab.sessions:
                         pwd = await session.async_get_variable("path")
                         if pwd and DEVSYSTEM_PATH in pwd:
-                            current_name = await session.async_get_name()
-                            if not current_name or "DevSystem" not in current_name:
-                                command = await session.async_get_variable("commandLine")
-                                if command and "claude" in command.lower():
-                                    await session.async_set_name("🤖 Claude - DevSystem")
-                                else:
-                                    await session.async_set_name("💻 DevSystem")
+                            command = await session.async_get_variable("commandLine")
+                            if command and "claude" in command.lower():
+                                await session.async_set_name("🤖 Claude - DevSystem")
+                            else:
+                                await session.async_set_name("💻 DevSystem")
             
             await asyncio.sleep(10)  # Check every 10 seconds
     

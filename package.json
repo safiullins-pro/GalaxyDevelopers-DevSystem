@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@google/genai": "^1.13.0",
+    "@google/generative-ai": "^0.24.1",
     "diff": "^8.0.2",
     "express": "^5.1.0",
     "firebase": "^11.10.0"

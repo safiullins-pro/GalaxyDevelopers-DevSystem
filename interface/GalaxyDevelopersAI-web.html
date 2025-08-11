@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GalaxyDevelopers AI Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -13,36 +31,84 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #000;
-            color: #fff;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             height: 100vh;
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-30px, -30px) rotate(120deg); }
+            66% { transform: translate(30px, -30px) rotate(240deg); }
         }
         
         .header {
-            padding: 20px;
-            border-bottom: 1px solid #333;
-            background: #111;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 100;
         }
         
         .header h1 {
-            font-size: 24px;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 600;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
         }
         
         .container {
             flex: 1;
             display: flex;
             overflow: hidden;
+            position: relative;
         }
         
         .sidebar {
-            width: 300px;
-            background: #111;
-            border-right: 1px solid #333;
-            padding: 20px;
+            width: 320px;
+            background: rgba(20, 20, 20, 0.5);
+            border-right: 1px solid var(--border-color);
+            padding: 24px;
             overflow-y: auto;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
         }
         
         .main {
@@ -53,34 +119,66 @@
         
         .chat-area {
             flex: 1;
-            padding: 20px;
+            padding: 30px;
             overflow-y: auto;
-            background: #0a0a0a;
+            background: var(--bg-primary);
+        }
+        
+        .chat-area::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .chat-area::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .chat-area::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
         }
         
         .input-area {
-            border-top: 1px solid #333;
-            padding: 20px;
-            background: #111;
+            border-top: 1px solid var(--border-color);
+            padding: 20px 30px;
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
         
         .message {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 8px;
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            border-radius: 16px;
             white-space: pre-wrap;
             word-wrap: break-word;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .user-message {
-            background: #1a3a52;
-            margin-left: 20%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            margin-left: auto;
+            max-width: 70%;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
         }
         
         .ai-message {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            margin-right: 20%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            max-width: 70%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         
         .input-container {
@@ -90,99 +188,353 @@
         
         #prompt-input {
             flex: 1;
-            padding: 12px;
-            background: #000;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 6px;
+            padding: 14px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 12px;
             font-size: 14px;
             font-family: inherit;
             resize: vertical;
-            min-height: 50px;
+            min-height: 52px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        #prompt-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        #prompt-input::placeholder {
+            color: var(--text-muted);
         }
         
         #send-btn {
-            padding: 12px 24px;
-            background: #007aff;
-            color: #fff;
+            padding: 14px 28px;
+            background: var(--accent-gradient);
+            color: var(--text-primary);
             border: none;
-            border-radius: 6px;
+            border-radius: 12px;
             cursor: pointer;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #send-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        #send-btn:hover::before {
+            width: 300px;
+            height: 300px;
         }
         
         #send-btn:hover {
-            background: #0051d5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+        }
+        
+        #send-btn:active {
+            transform: translateY(0);
         }
         
         #send-btn:disabled {
-            background: #333;
+            background: var(--bg-tertiary);
             cursor: not-allowed;
+            opacity: 0.5;
         }
         
         .settings-section {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+        }
+        
+        .settings-section:hover {
+            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
         .settings-section h3 {
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            color: #666;
-            margin-bottom: 10px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
         
-        textarea.settings {
+        textarea.settings, input.settings, select.settings {
             width: 100%;
-            padding: 10px;
-            background: #000;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 4px;
+            padding: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
             font-family: 'SF Mono', Monaco, monospace;
-            font-size: 12px;
+            font-size: 13px;
             resize: vertical;
             min-height: 100px;
+            transition: all 0.2s ease;
+        }
+        
+        textarea.settings:focus, input.settings:focus, select.settings:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        
+        select.settings {
+            min-height: 44px;
+            cursor: pointer;
+        }
+        
+        input.settings {
+            min-height: 44px;
         }
         
         .status {
-            padding: 10px;
-            background: #111;
-            border-top: 1px solid #333;
+            padding: 12px 30px;
+            background: rgba(20, 20, 20, 0.8);
+            border-top: 1px solid var(--border-color);
             font-size: 12px;
-            color: #666;
+            color: var(--text-muted);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .status::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
         
         .error {
-            color: #ff3b30;
+            color: var(--error);
+        }
+        
+        .error::before {
+            background: var(--error);
         }
         
         .loading {
-            color: #007aff;
+            color: var(--accent-primary);
+        }
+        
+        .loading::before {
+            background: var(--accent-primary);
+            animation: pulse 1s ease-in-out infinite;
+        }
+        
+        #screenshot-btn {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        #screenshot-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-primary);
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        /* Tools panel */
+        .tools-panel {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .tool-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .tool-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-primary);
+            transform: scale(1.1);
+        }
+        
+        .tool-btn.active {
+            background: var(--accent-gradient);
+            border-color: transparent;
+        }
+        
+        .sub-tools {
+            display: none;
+            gap: 8px;
+        }
+        
+        .sub-tools.show {
+            display: flex;
+        }
+        
+        /* Element selector mode */
+        body.selector-mode * {
+            cursor: crosshair !important;
+        }
+        
+        body.selector-mode *:hover {
+            outline: 2px solid var(--accent-primary) !important;
+            outline-offset: 2px;
+        }
+        
+        /* Streaming text */
+        @keyframes thinking {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .thinking-indicator {
+            color: var(--accent-primary);
+            font-style: italic;
+            animation: thinking 1.5s ease-in-out infinite;
+        }
+        
+        /* Убрана фиолетовая обводка при загрузке */
+        
+        /* Попап для комментария к элементу */
+        .comment-popup {
+            position: fixed;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            z-index: 10000;
+            min-width: 300px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .comment-popup textarea {
+            width: 100%;
+            min-height: 80px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            padding: 8px;
+            margin: 8px 0;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .comment-popup-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        
+        .comment-popup button {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .comment-popup button:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .comment-popup-title {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>GalaxyDevelopers AI Chat</h1>
-        <button id="screenshot-btn" style="position: absolute; right: 20px; top: 15px; padding: 8px 16px; background: #333; border: 1px solid #555; color: #fff; border-radius: 6px; cursor: pointer; font-size: 12px;">📸 Screenshot</button>
+        <h1>🌌 GalaxyDevelopers AI Chat</h1>
+        <div class="tools-panel">
+            <button id="tools-btn" class="tool-btn" title="Tools">🛠️</button>
+            <div id="sub-tools" class="sub-tools">
+                <button id="selector-btn" class="tool-btn" title="Element Selector">🎯</button>
+                <button id="structure-btn" class="tool-btn" title="Send Page Structure">📄</button>
+            </div>
+        </div>
     </div>
     
     <div class="container">
         <div class="sidebar">
             <div class="settings-section">
-                <h3>Instruction</h3>
+                <h3>📝 Instruction</h3>
                 <textarea id="instruction" class="settings" placeholder="System instruction...">You are a helpful assistant. Be concise and direct.</textarea>
             </div>
             
             <div class="settings-section">
-                <h3>Context</h3>
+                <h3>📚 Context</h3>
                 <textarea id="context" class="settings" placeholder="Additional context..."></textarea>
             </div>
             
             <div class="settings-section">
-                <h3>Model</h3>
-                <select id="model" class="settings" style="min-height: 40px; width: 100%; background: #000; border: 1px solid #333; color: #fff; border-radius: 4px; padding: 10px;">
+                <h3>🤖 Model</h3>
+                <select id="model" class="settings">
                     <option value="gemini-1.5-flash">Gemini 1.5 Flash (Fast)</option>
                     <option value="gemini-1.5-flash-8b">Gemini 1.5 Flash-8B (Cheapest)</option>
                     <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
@@ -195,20 +547,20 @@
             </div>
             
             <div class="settings-section">
-                <h3>API Endpoint</h3>
-                <input type="text" id="endpoint" class="settings" style="min-height: 40px;" value="http://127.0.0.1:37777/chat">
+                <h3>🔗 API Endpoint</h3>
+                <input type="text" id="endpoint" class="settings" value="http://127.0.0.1:37777/chat">
             </div>
         </div>
         
         <div class="main">
             <div class="chat-area" id="chat-area">
-                <div class="message ai-message">Ready. Each message is a new session - no memory retained.</div>
+                <div class="message ai-message">🚀 Ready. Each message is a new session - no memory retained.</div>
             </div>
             
             <div class="input-area">
                 <div class="input-container">
                     <textarea id="prompt-input" placeholder="Type your message... (Cmd+Enter to send)"></textarea>
-                    <button id="send-btn">Send</button>
+                    <button id="send-btn">✨ Send</button>
                 </div>
             </div>
             
@@ -225,16 +577,21 @@
         const contextEl = document.getElementById('context');
         const endpointEl = document.getElementById('endpoint');
         const modelEl = document.getElementById('model');
-        const screenshotBtn = document.getElementById('screenshot-btn');
+        const structureBtn = document.getElementById('structure-btn');
+        const toolsBtn = document.getElementById('tools-btn');
+        const subTools = document.getElementById('sub-tools');
+        const selectorBtn = document.getElementById('selector-btn');
         
         let isProcessing = false;
+        let selectorMode = false;
         
-        function addMessage(text, isUser = false) {
+        function addMessage(text, isUser = false, streaming = false) {
             const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+            messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'} ${streaming ? 'streaming' : ''}`;
             messageDiv.textContent = text;
             chatArea.appendChild(messageDiv);
             chatArea.scrollTop = chatArea.scrollHeight;
+            return messageDiv;
         }
         
         function setStatus(text, isError = false) {
@@ -259,6 +616,12 @@
             
             setStatus('Processing...');
             
+            // Создаем пустое сообщение для streaming
+            const aiMessageDiv = addMessage('', false, true);
+            
+            // Показываем индикатор размышления
+            aiMessageDiv.innerHTML = '<span class="thinking-indicator">Thinking...</span>';
+            
             try {
                 const response = await fetch(endpoint, {
                     method: 'POST',
@@ -270,6 +633,7 @@
                         instruction,
                         context,
                         model
+                        // stream: true  // ВРЕМЕННО ОТКЛЮЧЕНО
                     })
                 });
                 
@@ -277,13 +641,51 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
-                const data = await response.json();
-                
-                if (data.error) {
-                    throw new Error(data.error);
+                // Обрабатываем streaming ответ
+                if (response.headers.get('content-type')?.includes('text/event-stream')) {
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let fullText = '';
+                    
+                    aiMessageDiv.textContent = '';
+                    
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+                        
+                        const chunk = decoder.decode(value);
+                        const lines = chunk.split('\n');
+                        
+                        for (const line of lines) {
+                            if (line.startsWith('data: ')) {
+                                const data = line.slice(6);
+                                if (data === '[DONE]') continue;
+                                
+                                try {
+                                    const json = JSON.parse(data);
+                                    if (json.chunk) {
+                                        fullText += json.chunk;
+                                        aiMessageDiv.textContent = fullText;
+                                        chatArea.scrollTop = chatArea.scrollHeight;
+                                    }
+                                } catch (e) {
+                                    // Игнорируем ошибки парсинга
+                                }
+                            }
+                        }
+                    }
+                    
+                    aiMessageDiv.classList.remove('streaming');
+                } else {
+                    // Fallback к обычному режиму
+                    const data = await response.json();
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    aiMessageDiv.textContent = data.response;
+                    aiMessageDiv.classList.remove('streaming');
                 }
                 
-                addMessage(data.response);
                 setStatus('Ready');
                 
             } catch (error) {
@@ -305,31 +707,204 @@
             }
         });
         
-        // Screenshot functionality
-        screenshotBtn.addEventListener('click', async () => {
-            try {
-                const response = await fetch('http://127.0.0.1:37777/screenshot', {
-                    method: 'POST'
+        // Tools panel
+        toolsBtn.addEventListener('click', () => {
+            subTools.classList.toggle('show');
+            toolsBtn.classList.toggle('active');
+        });
+        
+        // Send page structure (HTML without scripts)
+        structureBtn.addEventListener('click', async () => {
+            // Закрываем панель
+            subTools.classList.remove('show');
+            toolsBtn.classList.remove('active');
+            
+            // Клонируем документ и удаляем скрипты
+            const docClone = document.documentElement.cloneNode(true);
+            const scripts = docClone.querySelectorAll('script');
+            scripts.forEach(script => script.remove());
+            
+            // Убираем inline JS обработчики
+            const allElements = docClone.querySelectorAll('*');
+            allElements.forEach(el => {
+                Array.from(el.attributes).forEach(attr => {
+                    if (attr.name.startsWith('on')) {
+                        el.removeAttribute(attr.name);
+                    }
                 });
-                const data = await response.json();
-                if (data.success) {
-                    screenshotBtn.textContent = '✓ Saved & Sent';
-                    
-                    // Notify Claude terminals through webhook
-                    fetch('http://127.0.0.1:37777/webhook/notify-claude', {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ filename: data.filename })
-                    });
-                    
-                    setTimeout(() => {
-                        screenshotBtn.textContent = '📸 Screenshot';
-                    }, 2000);
-                }
+            });
+            
+            const htmlStructure = docClone.outerHTML;
+            
+            try {
+                await fetch('http://127.0.0.1:37777/element-selected', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        element: 'FULL_PAGE_STRUCTURE',
+                        html: htmlStructure,
+                        info: 'Full page HTML structure without scripts'
+                    })
+                });
+                
+                // Меняем иконку на галочку
+                const originalIcon = structureBtn.textContent;
+                structureBtn.textContent = '✅';
+                setTimeout(() => {
+                    structureBtn.textContent = originalIcon;
+                }, 2000);
             } catch (error) {
-                console.error('Screenshot error:', error);
+                console.error('Structure send error:', error);
             }
         });
+        
+        // Element selector mode
+        selectorBtn.addEventListener('click', () => {
+            selectorMode = !selectorMode;
+            document.body.classList.toggle('selector-mode');
+            selectorBtn.classList.toggle('active');
+            
+            if (selectorMode) {
+                // Закрываем панель
+                subTools.classList.remove('show');
+                toolsBtn.classList.remove('active');
+                
+                // Обработчик клика по элементу
+                document.addEventListener('click', handleElementClick);
+            } else {
+                document.removeEventListener('click', handleElementClick);
+            }
+        });
+        
+        async function handleElementClick(e) {
+            // Не реагируем на клики по кнопкам инструментов и попапу
+            if (e.target.closest('.tools-panel') || e.target.closest('.comment-popup')) return;
+            
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const element = e.target;
+            const selector = getElementSelector(element);
+            const html = element.outerHTML;
+            
+            // Получаем путь к элементу и его контекст
+            const elementPath = getElementPath(element);
+            const parentHTML = element.parentElement ? element.parentElement.outerHTML : null;
+            
+            // Создаем попап для комментария
+            const popup = document.createElement('div');
+            popup.className = 'comment-popup';
+            popup.style.left = e.clientX + 10 + 'px';
+            popup.style.top = e.clientY + 10 + 'px';
+            
+            // Корректируем позицию если выходит за экран
+            if (e.clientX + 310 > window.innerWidth) {
+                popup.style.left = (e.clientX - 310) + 'px';
+            }
+            if (e.clientY + 200 > window.innerHeight) {
+                popup.style.top = (e.clientY - 200) + 'px';
+            }
+            
+            popup.innerHTML = `
+                <div class="comment-popup-title">Comment for: ${elementPath}</div>
+                <textarea placeholder="What needs to be fixed here?" autofocus></textarea>
+                <div class="comment-popup-buttons">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="send-btn">Send</button>
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            const textarea = popup.querySelector('textarea');
+            const sendBtn = popup.querySelector('.send-btn');
+            const cancelBtn = popup.querySelector('.cancel-btn');
+            
+            textarea.focus();
+            
+            // Обработчик отправки
+            const sendElement = async () => {
+                const comment = textarea.value.trim();
+                
+                try {
+                    await fetch('http://127.0.0.1:37777/element-selected', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            element: `ELEMENT: ${elementPath}`,
+                            comment: comment || 'No comment',
+                            selector,
+                            html,
+                            parentHTML,
+                            tagName: element.tagName,
+                            className: element.className,
+                            id: element.id,
+                            text: element.textContent?.substring(0, 200),
+                            attributes: Array.from(element.attributes).map(attr => ({name: attr.name, value: attr.value}))
+                        })
+                    });
+                    
+                    // Показываем что элемент отправлен
+                    element.style.outline = '3px solid var(--success)';
+                    setTimeout(() => {
+                        element.style.outline = '';
+                    }, 1000);
+                } catch (error) {
+                    console.error('Failed to send element:', error);
+                }
+                
+                // Удаляем попап
+                popup.remove();
+                
+                // Выключаем режим селектора
+                selectorMode = false;
+                document.body.classList.remove('selector-mode');
+                selectorBtn.classList.remove('active');
+                document.removeEventListener('click', handleElementClick);
+            };
+            
+            // Обработчик отмены
+            const cancel = () => {
+                popup.remove();
+                // Остаемся в режиме селектора
+            };
+            
+            sendBtn.addEventListener('click', sendElement);
+            cancelBtn.addEventListener('click', cancel);
+            
+            // Enter отправляет, Escape отменяет
+            textarea.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendElement();
+                } else if (e.key === 'Escape') {
+                    cancel();
+                }
+            });
+        }
+        
+        function getElementSelector(element) {
+            if (element.id) return `#${element.id}`;
+            if (element.className) return `.${element.className.split(' ')[0]}`;
+            return element.tagName.toLowerCase();
+        }
+        
+        function getElementPath(element) {
+            const path = [];
+            while (element && element.nodeType === Node.ELEMENT_NODE) {
+                let selector = element.tagName.toLowerCase();
+                if (element.id) {
+                    selector += '#' + element.id;
+                    path.unshift(selector);
+                    break;
+                } else if (element.className) {
+                    selector += '.' + element.className.split(' ').join('.');
+                }
+                path.unshift(selector);
+                element = element.parentElement;
+            }
+            return path.join(' > ');
+        }
         
         // Save settings to localStorage
         instructionEl.addEventListener('change', () => {

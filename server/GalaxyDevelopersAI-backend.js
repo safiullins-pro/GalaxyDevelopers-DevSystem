@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 const express = require('express');
-const { GoogleGenAI } = require('@google/genai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const KeyRotator = require('./GalaxyDevelopersAI-key-rotator');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+
+// Автоматическая очистка macOS метаданных при запуске
+try {
+  execSync('find /Volumes/Z7S/development/GalaxyDevelopers/DevSystem -name "._*" -delete 2>/dev/null');
+} catch (e) {
+  // Игнорируем ошибки очистки
+}
 
 // Отключаем все логи
 console.log = () => {};
@@ -102,6 +109,20 @@ app.post('/webhook/notify-claude', (req, res) => {
   }
 });
 
+// Element selector endpoint для отправки в терминал
+app.post('/element-selected', (req, res) => {
+  const data = req.body;
+  if (data) {
+    // Выводим полученные данные в консоль чтобы Claude их увидел
+    error('=== ELEMENT DATA FOR CLAUDE ===');
+    error(JSON.stringify(data, null, 2));
+    error('=== END ELEMENT DATA ===');
+    res.json({ success: true, message: 'Element sent to terminal' });
+  } else {
+    res.status(400).json({ error: 'No data provided' });
+  }
+});
+
 // MCP endpoint for AI agents to trigger screenshot
 app.get('/mcp/screenshot', (req, res) => {
   try {
@@ -152,7 +173,7 @@ app.post('/chat', async (req, res) => {
       }
     }
     
-    const genAI = new GoogleGenAI({ apiKey });
+    const genAI = new GoogleGenerativeAI(apiKey);
 
     // Собираем полный промпт
     const fullPrompt = [
@@ -165,20 +186,20 @@ app.post('/chat', async (req, res) => {
     const selectedModel = model || 'gemini-1.5-flash';
     error(`Using model: ${selectedModel}`);
     
-    // Отправляем и забываем
-    const result = await genAI.models.generateContent({
-      model: `models/${selectedModel}`,
-      contents: [{
-        parts: [{ text: fullPrompt }],
-        role: 'user'
-      }],
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 8192,
-      }
-    });
+    // Для streaming ответов - ВРЕМЕННО ОТКЛЮЧЕНО из-за ошибки API
+    // TODO: Исправить когда Google починит generateContentStream
+    /*
+    if (req.body.stream) {
+      // Streaming пока не работает с текущей версией API
+    }
+    */
     
-    const response = result.candidates[0].content.parts[0].text;
+    // Обычный режим - отправляем и забываем
+    const genModel = genAI.getGenerativeModel({ model: selectedModel });
+    const result = await genModel.generateContent(fullPrompt);
+    
+    // Проверяем что есть ответ
+    const response = result.response.text();
 
     // Отдаем ответ и разрываем соединение
     res.json({ response });
@@ -190,6 +211,7 @@ app.post('/chat', async (req, res) => {
 
   } catch (err) {
     error('API Error:', err.message);
+    error('Full error:', err);
     
     // If quota exceeded, mark key and retry with next one
     if (err.message && (err.message.includes('quota') || err.message.includes('limit'))) {
