@@ -91,6 +91,26 @@ curl http://127.0.0.1:37777
 - Screenshots сохраняются с timestamp
 - Webhook интеграция для iTerm2
 
+## iTerm2 Интеграция
+**Настройки iTerm2 (Preferences → General → Magic):**
+- ✅ Enable Python API - ВКЛЮЧЕНО
+- ✅ Allow all apps to connect - ВКЛЮЧЕНО  
+- ✅ Custom Python API Scripts Folder → `/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/connectors/`
+
+После настройки перезапустить iTerm2 и запустить:
+```bash
+python3 /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/connectors/iterm2-integration.py
+```
+
+## Текущий статус проекта (11.08.2025)
+- ✅ Проект полностью реструктурирован по папкам
+- ✅ Git репозиторий создан: https://github.com/safiullins-pro/GalaxyDevelopers-DevSystem
+- ✅ Сервис работает на порту 37777
+- ✅ Веб-интерфейс доступен: http://127.0.0.1:37777
+- ✅ Python модуль iterm2 установлен: `pip3 install iterm2`
+- ⏳ iTerm2 настройки: включить Custom Python API Scripts Folder
+- ⏳ Запустить iterm2-integration.py после перезапуска iTerm2
+
 ## Отладка
 При ошибках проверять:
 1. Работает ли сервис: `launchctl list | grep galaxydevelopers`
