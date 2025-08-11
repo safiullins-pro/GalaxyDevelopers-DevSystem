@@ -1,0 +1,25 @@
+# Dependencies
+resources/node_modules/
+node_modules/
+
+# API Keys and State
+.galaxydevelopers-ai-keys
+.galaxydevelopers-ai-key-state.json
+
+# Screenshots
+connectors/ScreenShots/
+
+# Logs
+*.log
+
+# Context files
+.context
+.instruction
+
+# OS Files
+.DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/

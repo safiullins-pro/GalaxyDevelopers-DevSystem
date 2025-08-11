@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@google/genai": "^1.13.0",
+    "diff": "^8.0.2",
+    "express": "^5.1.0",
+    "firebase": "^11.10.0"
+  },
+  "name": "safiullins_pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electron-main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "backend": "node gemini-backend.js",
+    "build-mac": "electron-builder --mac"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^37.2.6"
+  }
+}
