@@ -1,224 +1,268 @@
 #!/usr/bin/env node
 
 const express = require('express');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI, FunctionDeclarationSchemaType } = require('@google/generative-ai');
 const KeyRotator = require('./GalaxyDevelopersAI-key-rotator');
-const { execSync } = require('child_process');
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+const crypto = require('crypto');
+const os = require('os');
 
-// Автоматическая очистка macOS метаданных при запуске
-try {
-  execSync('find /Volumes/Z7S/development/GalaxyDevelopers/DevSystem -name "._*" -delete 2>/dev/null');
-} catch (e) {
-  // Игнорируем ошибки очистки
-}
+// Загружаем конфигурацию Gemini
+const geminiConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'gemini-config.json'), 'utf8'));
 
-// Отключаем все логи
-console.log = () => {};
-console.debug = () => {};
-console.info = () => {};
-
-// Оставляем только ошибки
+// Настоящие логи вместо заглушек
+const log = console.log;
+const debug = console.debug;
+const info = console.info;
 const error = console.error;
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));
 
-// Initialize key rotator
 const keyRotator = new KeyRotator();
+const MEMORY_API_URL = 'http://127.0.0.1:37778';
+let memoryAPIAvailable = false;
 
-// Webhook state for iTerm2
-let lastScreenshot = null;
-let screenshotPending = false;
+const startMemoryAPI = () => {
+  const memoryProcess = spawn('/opt/homebrew/bin/python3', [path.join(__dirname, '..', 'memory', 'memory_api.py')], { detached: false, stdio: 'inherit' });
+  memoryProcess.on('error', (err) => error('Failed to start Memory API:', err.message));
+  setTimeout(async () => {
+    try {
+      const response = await axios.get(`${MEMORY_API_URL}/health`);
+      if (response.data.status === 'healthy') {
+        memoryAPIAvailable = true;
+        error('✅ Memory API is running on port 37778');
+      }
+    } catch (err) {
+      error('⚠️ Memory API not available, running without memory');
+    }
+  }, 2000);
+};
 
-// CORS для локальной разработки
+startMemoryAPI();
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
+  if (req.method === 'OPTIONS') return res.sendStatus(200);
   next();
 });
 
-// Статические файлы
 app.use(express.static(path.join(__dirname, '..')));
+app.get('/', (req, res) => res.redirect('/interface/index.html'));
 
-// Redirect root to web interface
-app.get('/', (req, res) => {
-  res.redirect('/interface/GalaxyDevelopersAI-web.html');
-});
+// =================================================================
+// SEED GENERATION ENDPOINT
+// =================================================================
 
-// Endpoint для получения списка моделей
-app.get('/models', (req, res) => {
-  const models = require('../resources/available-models.json');
-  res.json(models);
-});
+function getClaudeChecksumSeed() {
+    try {
+        const credentialsPath = path.join(os.homedir(), '.claude', '.credentials.json');
+        if (!fs.existsSync(credentialsPath)) {
+            return { error: 'Claude credentials not found', checksum: null, seed: null };
+        }
 
-// Screenshot endpoint
-app.post('/screenshot', (req, res) => {
-  try {
-    const timestamp = new Date().toISOString().replace(/:/g, '-').substring(0, 19);
-    const filename = `screenshot-${timestamp}.png`;
-    const screenshotPath = path.join(__dirname, '..', 'connectors', 'ScreenShots', filename);
-    
-    // Ensure directory exists
-    if (!fs.existsSync(path.join(__dirname, '..', 'connectors', 'ScreenShots'))) {
-      fs.mkdirSync(path.join(__dirname, '..', 'connectors', 'ScreenShots'), { recursive: true });
+        const credsContent = fs.readFileSync(credentialsPath, 'utf8');
+        const creds = JSON.parse(credsContent);
+        const accessToken = creds?.claudeAiOauth?.accessToken;
+
+        if (!accessToken) {
+            return { error: 'Invalid Claude credentials format', checksum: null, seed: null };
+        }
+
+        const checksum = accessToken.slice(-12);
+        const hash = crypto.createHash('sha256').update(checksum).digest('hex');
+        const seed = parseInt(hash.substring(0, 8), 16) % 1000000;
+
+        return { checksum, seed };
+
+    } catch (e) {
+        error('Error extracting Claude checksum:', e.message);
+        return { error: e.message, checksum: null, seed: null };
     }
-    
-    // Take screenshot using screencapture command
-    execSync(`screencapture -x "${screenshotPath}"`);
-    
-    // Set webhook state for iTerm2
-    lastScreenshot = filename;
-    screenshotPending = true;
-    
-    error(`Screenshot saved: ${filename}`);
-    res.json({ success: true, filename });
-  } catch (err) {
-    error('Screenshot error:', err.message);
-    res.status(500).json({ error: err.message });
-  }
-});
+}
 
-// Webhook endpoints for iTerm2
-app.get('/webhook/status', (req, res) => {
-  res.json({
-    new_screenshot: screenshotPending,
-    filename: lastScreenshot
-  });
-});
-
-app.post('/webhook/clear', (req, res) => {
-  screenshotPending = false;
-  res.json({ success: true });
-});
-
-// Auto-insert screenshot for Claude terminals
-app.post('/webhook/notify-claude', (req, res) => {
-  const { filename } = req.body;
-  if (filename) {
-    lastScreenshot = filename;
-    screenshotPending = true;
-    res.json({ success: true, message: 'Claude terminals will be notified' });
-  } else {
-    res.status(400).json({ error: 'No filename provided' });
-  }
-});
-
-// Element selector endpoint для отправки в терминал
-app.post('/element-selected', (req, res) => {
-  const data = req.body;
-  if (data) {
-    // Выводим полученные данные в консоль чтобы Claude их увидел
-    error('=== ELEMENT DATA FOR CLAUDE ===');
-    error(JSON.stringify(data, null, 2));
-    error('=== END ELEMENT DATA ===');
-    res.json({ success: true, message: 'Element sent to terminal' });
-  } else {
-    res.status(400).json({ error: 'No data provided' });
-  }
-});
-
-// MCP endpoint for AI agents to trigger screenshot
-app.get('/mcp/screenshot', (req, res) => {
-  try {
-    const timestamp = new Date().toISOString().replace(/:/g, '-').substring(0, 19);
-    const filename = `mcp-screenshot-${timestamp}.png`;
-    const screenshotPath = path.join(__dirname, '..', 'connectors', 'ScreenShots', filename);
-    
-    // Ensure directory exists
-    if (!fs.existsSync(path.join(__dirname, '..', 'connectors', 'ScreenShots'))) {
-      fs.mkdirSync(path.join(__dirname, '..', 'connectors', 'ScreenShots'), { recursive: true });
+app.get('/api/get-seed', (req, res) => {
+    const seedData = getClaudeChecksumSeed();
+    if (seedData.error) {
+        return res.status(500).json(seedData);
     }
-    
-    // Take screenshot
-    execSync(`screencapture -x "${screenshotPath}"`);
-    
-    error(`MCP Screenshot saved: ${filename}`);
-    res.json({ 
-      success: true, 
-      filename,
-      path: screenshotPath,
-      message: `Screenshot saved to ScreenShots/${filename}`
-    });
-  } catch (err) {
-    error('MCP Screenshot error:', err.message);
-    res.status(500).json({ error: err.message });
-  }
+    res.json(seedData);
 });
 
-// Один endpoint - и всё
+
+// =================================================================
+// TOOL DEFINITIONS
+// =================================================================
+
+const tools = [
+  {
+    functionDeclarations: [
+      {
+        name: 'run_shell_command',
+        description: 'Executes a shell command and returns the output.',
+        parameters: {
+          type: FunctionDeclarationSchemaType.OBJECT,
+          properties: {
+            command: { type: FunctionDeclarationSchemaType.STRING, description: 'The command to execute.' },
+          },
+          required: ['command'],
+        },
+      },
+      {
+        name: 'read_file',
+        description: 'Reads the content of a file.',
+        parameters: {
+          type: FunctionDeclarationSchemaType.OBJECT,
+          properties: {
+            absolute_path: { type: FunctionDeclarationSchemaType.STRING, description: 'The absolute path to the file.' },
+          },
+          required: ['absolute_path'],
+        },
+      },
+      {
+        name: 'write_file',
+        description: 'Writes content to a file.',
+        parameters: {
+          type: FunctionDeclarationSchemaType.OBJECT,
+          properties: {
+            file_path: { type: FunctionDeclarationSchemaType.STRING, description: 'The absolute path to the file.' },
+            content: { type: FunctionDeclarationSchemaType.STRING, description: 'The content to write.' },
+          },
+          required: ['file_path', 'content'],
+        },
+      },
+    ],
+  },
+];
+
+const toolFunctions = {
+  run_shell_command: ({ command }) => {
+    try {
+      log(`SHELL EXEC: ${command}`);
+      const output = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+      return { result: { output } };
+    } catch (e) {
+      log(`SHELL ERROR: ${command}`, e);
+      return { result: { error: e.message, stdout: e.stdout, stderr: e.stderr } };
+    }
+  },
+  read_file: ({ absolute_path }) => {
+    try {
+      log(`FS READ: ${absolute_path}`);
+      if (fs.existsSync(absolute_path)) {
+        const content = fs.readFileSync(absolute_path, 'utf8');
+        return { result: { content } };
+      } else {
+        return { result: { error: `File not found: ${absolute_path}` } };
+      }
+    } catch (e) {
+      log(`FS READ ERROR: ${absolute_path}`, e);
+      return { result: { error: e.message } };
+    }
+  },
+  write_file: ({ file_path, content }) => {
+    try {
+      log(`FS WRITE: ${file_path}`);
+      fs.writeFileSync(file_path, content, 'utf8');
+      return { result: { success: true } };
+    } catch (e) {
+      log(`FS WRITE ERROR: ${file_path}`, e);
+      return { result: { error: e.message } };
+    }
+  },
+};
+
+// =================================================================
+// CHAT ENDPOINT WITH FUNCTION CALLING LOOP
+// =================================================================
+
 app.post('/chat', async (req, res) => {
   try {
-    const { prompt, instruction, context, model } = req.body;
-    
+    const { prompt, instruction, context, model, temperature, topK, topP, maxTokens, useMemory, history } = req.body;
+
     if (!prompt) {
       return res.status(400).json({ error: 'No prompt provided' });
     }
 
-    // Каждый раз новый клиент и новый ключ - никакой памяти
-    let apiKey;
-    try {
-      apiKey = keyRotator.getNextValidKey();
-      error(`Using key: ${apiKey.substring(0, 10)}...${apiKey.substring(apiKey.length - 4)}`);
-    } catch (e) {
-      // Fallback to env key if no valid keys
-      apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-      if (!apiKey) {
-        return res.status(500).json({ error: 'No API keys available' });
-      }
-    }
-    
+    let apiKey = keyRotator.getNextValidKey();
     const genAI = new GoogleGenerativeAI(apiKey);
 
-    // Собираем полный промпт
+    const config = geminiConfig.forge_mode; // Always use forge_mode for now
+    const selectedModel = model || 'gemini-1.5-pro-latest';
+
+    const genModel = genAI.getGenerativeModel({
+      model: selectedModel,
+      tools: tools,
+      generationConfig: {
+        temperature: temperature !== undefined ? temperature : config.temperature,
+        topK: topK !== undefined ? topK : config.topK,
+        topP: topP !== undefined ? topP : config.topP,
+        maxOutputTokens: maxTokens || config.maxOutputTokens,
+      }
+    });
+
+    const chat = genModel.startChat({ history: history || [] });
+
     const fullPrompt = [
       instruction ? `INSTRUCTION:\n${instruction}\n` : '',
       context ? `CONTEXT:\n${context}\n` : '',
       `REQUEST:\n${prompt}`
     ].filter(Boolean).join('\n');
 
-    // Используем выбранную модель или дефолтную
-    const selectedModel = model || 'gemini-1.5-flash';
-    error(`Using model: ${selectedModel}`);
-    
-    // Для streaming ответов - ВРЕМЕННО ОТКЛЮЧЕНО из-за ошибки API
-    // TODO: Исправить когда Google починит generateContentStream
-    /*
-    if (req.body.stream) {
-      // Streaming пока не работает с текущей версией API
-    }
-    */
-    
-    // Обычный режим - отправляем и забываем
-    const genModel = genAI.getGenerativeModel({ model: selectedModel });
-    const result = await genModel.generateContent(fullPrompt);
-    
-    // Проверяем что есть ответ
-    const response = result.response.text();
+    let result = await chat.sendMessage(fullPrompt);
 
-    // Отдаем ответ и разрываем соединение
-    res.json({ response });
-    
-    // Убиваем все ссылки
-    delete genAI;
-    delete model;
-    delete result;
+    // Function calling loop
+    while (true) {
+      const call = result.response.functionCalls()?.[0];
+      if (!call) {
+        // No more function calls, break the loop and return the text response
+        break;
+      }
+
+      log(`TOOL CALL: ${call.name}`, call.args);
+      const toolResult = toolFunctions[call.name](call.args);
+      log(`TOOL RESULT:`, toolResult);
+
+      result = await chat.sendMessage(JSON.stringify([
+        {
+          functionResponse: {
+            name: call.name,
+            response: toolResult,
+          },
+        },
+      ]));
+    }
+
+    const textResponse = result.response.text();
+
+    if (useMemory && memoryAPIAvailable) {
+        try {
+            log('💾 Saving to memory...');
+            await axios.post(`${MEMORY_API_URL}/save_conversation`, {
+                user_message: prompt,
+                ai_response: textResponse,
+                context: { instruction, context },
+                model: selectedModel,
+            });
+            log('✅ Saved to memory');
+        } catch (err) {
+            error('❌ Failed to save to memory:', err.message);
+        }
+    }
+
+    res.json({ response: textResponse });
 
   } catch (err) {
-    error('API Error:', err.message);
-    error('Full error:', err);
-    
-    // If quota exceeded, mark key and retry with next one
-    if (err.message && (err.message.includes('quota') || err.message.includes('limit'))) {
+    error('API Error:', err.message, err.stack);
+    if (err.message?.includes('quota')) {
       keyRotator.markKeyAsExhausted(apiKey);
       error('Key exhausted, will use next one on next request');
     }
-    
     res.status(500).json({ error: err.message });
   }
 });
@@ -226,9 +270,7 @@ app.post('/chat', async (req, res) => {
 const PORT = process.env.PORT || 37777;
 app.listen(PORT, '127.0.0.1', () => {
   error(`Backend running on http://127.0.0.1:${PORT}`);
-  error('POST /chat - {prompt, instruction, context}');
 });
 
-// Graceful shutdown
 process.on('SIGTERM', () => process.exit(0));
 process.on('SIGINT', () => process.exit(0));

@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyDevelopers AI Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%),
+                radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-30px, -30px) rotate(120deg); }
+            66% { transform: translate(30px, -30px) rotate(240deg); }
+        }
+        
+        @keyframes cosmicPulse {
+            0%, 100% { 
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            33% { 
+                opacity: 0.6;
+                transform: scale(1.02);
+            }
+            66% { 
+                opacity: 0.9;
+                transform: scale(0.98);
+            }
+        }
+        
+        @keyframes neonGlow {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 5px rgba(99, 102, 241, 0.3),
+                    0 0 10px rgba(99, 102, 241, 0.2),
+                    0 0 15px rgba(99, 102, 241, 0.1),
+                    inset 0 0 10px rgba(99, 102, 241, 0.05);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 10px rgba(99, 102, 241, 0.4),
+                    0 0 20px rgba(99, 102, 241, 0.3),
+                    0 0 30px rgba(99, 102, 241, 0.2),
+                    inset 0 0 15px rgba(99, 102, 241, 0.1);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 40px rgba(99, 102, 241, 0.3);
+            }
+        }
+        
+        .header {
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 100;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        
+        .container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: rgba(20, 20, 20, 0.5);
+            border-right: 1px solid var(--border-color);
+            padding: 24px;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+        
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-area {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: var(--bg-primary);
+        }
+        
+        .chat-area::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .chat-area::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .chat-area::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        
+        .input-area {
+            border-top: 1px solid var(--border-color);
+            padding: 20px 30px;
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .message {
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            margin-left: auto;
+            max-width: 70%;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
+        }
+        
+        .ai-message {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            max-width: 70%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #prompt-input {
+            flex: 1;
+            padding: 14px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 52px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        #prompt-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        #prompt-input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        #send-btn {
+            padding: 14px 28px;
+            background: var(--accent-gradient);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #send-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        #send-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        #send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+        }
+        
+        #send-btn:active {
+            transform: translateY(0);
+        }
+        
+        #send-btn:disabled {
+            background: var(--bg-tertiary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        
+        .settings-section {
+            margin-bottom: 28px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+        }
+        
+        .settings-section:hover {
+            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .settings-section h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        textarea.settings, input.settings, select.settings {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 13px;
+            resize: vertical;
+            min-height: 100px;
+            transition: all 0.2s ease;
+        }
+        
+        textarea.settings:focus, input.settings:focus, select.settings:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        
+        select.settings {
+            min-height: 44px;
+            cursor: pointer;
+        }
+        
+        input.settings {
+            min-height: 44px;
+        }
+        
+        .status {
+            padding: 12px 30px;
+            background: rgba(20, 20, 20, 0.8);
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-muted);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .status::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .error {
+            color: var(--error);
+        }
+        
+        .error::before {
+            background: var(--error);
+        }
+        
+        .loading {
+            color: var(--accent-primary);
+        }
+        
+        .loading::before {
+            background: var(--accent-primary);
+            animation: pulse 1s ease-in-out infinite;
+        }
+        
+        #screenshot-btn {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        #screenshot-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-primary);
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        /* Tools panel */
+        .tools-panel {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .tool-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .tool-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-primary);
+            transform: scale(1.1);
+        }
+        
+        .tool-btn.active {
+            background: var(--accent-gradient);
+            border-color: transparent;
+        }
+        
+        .sub-tools {
+            display: none;
+            gap: 8px;
+        }
+        
+        .sub-tools.show {
+            display: flex;
+        }
+        
+        /* Element selector mode */
+        body.selector-mode * {
+            cursor: crosshair !important;
+        }
+        
+        body.selector-mode *:hover {
+            outline: 2px solid var(--accent-primary) !important;
+            outline-offset: 2px;
+        }
+        
+        /* Streaming text */
+        @keyframes thinking {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .thinking-indicator {
+            color: var(--accent-primary);
+            font-style: italic;
+            animation: thinking 1.5s ease-in-out infinite;
+        }
+        
+        /* Убрана фиолетовая обводка при загрузке */
+        
+        /* Попап для комментария к элементу */
+        .comment-popup {
+            position: fixed;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            z-index: 10000;
+            min-width: 300px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .comment-popup textarea {
+            width: 100%;
+            min-height: 80px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            padding: 8px;
+            margin: 8px 0;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .comment-popup-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        
+        .comment-popup button {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .comment-popup button:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .comment-popup-title {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        /* GENERATION SETTINGS - КОСМИЧЕСКИЙ УРОВЕНЬ */
+        .settings-section {
+            margin-bottom: 28px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .settings-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .settings-section:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 
+                0 8px 32px rgba(99, 102, 241, 0.2),
+                0 0 0 1px rgba(99, 102, 241, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .settings-section:hover::before {
+            left: 100%;
+        }
+        
+        /* GENERATION заголовок особый стиль */
+        .settings-section:has(h3:contains("GENERATION")) {
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.12) 0%, 
+                rgba(139, 92, 246, 0.08) 50%, 
+                rgba(99, 102, 241, 0.12) 100%);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        
+        .settings-section:has(h3:contains("GENERATION")):hover {
+            box-shadow: 
+                0 8px 32px rgba(99, 102, 241, 0.25),
+                0 0 0 1px rgba(99, 102, 241, 0.2);
+        }
+        
+        .settings-section:has(h3:contains("GENERATION")) h3 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .settings-section h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .setting-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+        
+        .setting-label {
+            flex: 0 0 80px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .setting-row input[type="range"] {
+            flex: 1;
+            margin: 0 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border-radius: 3px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .setting-row input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 
+                0 0 0 3px rgba(99, 102, 241, 0.2),
+                0 0 15px rgba(99, 102, 241, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .setting-row input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 
+                0 0 0 5px rgba(99, 102, 241, 0.3),
+                0 0 25px rgba(99, 102, 241, 0.6),
+                0 0 35px rgba(139, 92, 246, 0.4);
+        }
+        
+        .setting-row input[type="range"]:focus::-webkit-slider-thumb {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        .setting-row input[type="number"] {
+            flex: 1;
+            padding: 6px 8px;
+            background: linear-gradient(135deg, var(--bg-primary), rgba(99, 102, 241, 0.03));
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 6px;
+            font-size: 12px;
+            min-height: 32px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .setting-row input[type="number"]:focus {
+            border-color: rgba(99, 102, 241, 0.6);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.03));
+            box-shadow: 
+                0 0 0 3px rgba(99, 102, 241, 0.1),
+                0 0 15px rgba(99, 102, 241, 0.2);
+            transform: scale(1.02);
+        }
+        
+        .setting-row input[type="number"]:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .value {
+            flex: 0 0 40px;
+            text-align: right;
+            font-size: 11px;
+            color: var(--text-secondary);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .setting-row:hover .value {
+            color: var(--text-primary);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+        }
+        
+        /* MODE BUTTONS */
+        .mode-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .mode-btn {
+            flex: 1;
+            padding: 8px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .mode-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+        }
+        
+        .mode-btn.active {
+            background: var(--accent-gradient);
+            border-color: rgba(99, 102, 241, 0.5);
+            color: var(--text-primary);
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+            transform: none;
+        }
+        
+        /* MEMORY FORGE STYLES */
+        .memory-title {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .memory-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .memory-toggle {
+            display: flex;
+            align-items: center;
+        }
+        
+        .forge-switch {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .forge-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .forge-slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .forge-slider::before {
+            content: '';
+            position: absolute;
+            right: 8px;
+            width: 20px;
+            height: 20px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .forge-switch input:checked + .forge-slider {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--accent-secondary);
+            box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+        }
+        
+        .forge-switch input:checked + .forge-slider::before {
+            background: var(--accent-secondary);
+            box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+        }
+        
+        .forge-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .forge-action-btn {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        
+        .forge-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+        }
+        
+        .forge-btn-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        /* SUPERCLAUDE COMPACT */
+        .claude-title {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .claude-compact {
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .claude-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .claude-mini-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .claude-mini-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .claude-mini-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--text-muted);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .claude-mini-slider::before {
+            content: '';
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background: var(--text-primary);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .claude-mini-switch input:checked + .claude-mini-slider {
+            background: var(--accent-primary);
+        }
+        
+        .claude-mini-switch input:checked + .claude-mini-slider::before {
+            transform: translateX(20px);
+        }
+        
+        .claude-status, .claude-memory {
+            font-size: 16px;
+        }
+        
+        .claude-mini-btn {
+            padding: 4px 8px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .claude-mini-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .claude-info {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* MEMORY CONTROL PANEL */
+        .memory-status-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .memory-btn {
+            flex: 1;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 6px;
+            color: var(--text-primary);
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .memory-btn:hover {
+            background: rgba(139, 92, 246, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .memory-preview {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            padding: 8px;
+        }
+        
+        .memory-preview-title {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .memory-preview-content {
+            font-size: 12px;
+            color: var(--text-primary);
+            max-height: 120px;
+            overflow-y: auto;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌌 GalaxyDevelopers AI Chat</h1>
+        <div class="tools-panel">
+            <button id="tools-btn" class="tool-btn" title="Tools">🛠️</button>
+            <div id="sub-tools" class="sub-tools">
+                <button id="selector-btn" class="tool-btn" title="Element Selector">🎯</button>
+                <button id="structure-btn" class="tool-btn" title="Send Page Structure">📄</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="settings-section">
+                <h3>📝 Instruction</h3>
+                <textarea id="instruction" class="settings" placeholder="System instruction...">You are a helpful assistant. Be concise and direct.</textarea>
+            </div>
+            
+            <div class="settings-section">
+                <h3>📚 Context</h3>
+                <textarea id="context" class="settings" placeholder="Additional context..."></textarea>
+            </div>
+            
+            <div class="settings-section">
+                <h3>🤖 Model</h3>
+                <select id="model" class="settings">
+                    <option value="gemini-1.5-flash">Gemini 1.5 Flash (Fast)</option>
+                    <option value="gemini-1.5-flash-8b">Gemini 1.5 Flash-8B (Cheapest)</option>
+                    <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                    <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash-Lite</option>
+                    <option value="gemini-2.0-flash-thinking-exp">Gemini 2.0 Thinking (Reasoning)</option>
+                    <option value="gemini-2.5-flash">Gemini 2.5 Flash (Latest)</option>
+                    <option value="gemini-2.5-pro">Gemini 2.5 Pro (Most Capable)</option>
+                    <option value="learnlm-2.0-flash-experimental">LearnLM 2.0 (Educational)</option>
+                </select>
+            </div>
+            
+            <!-- НАСТРОЙКИ ГЕНЕРАЦИИ -->
+            <div class="settings-section">
+                <h3>GENERATION</h3>
+                <div class="setting-row">
+                    <span class="setting-label">Temperature</span>
+                    <input type="range" id="temperature" min="0" max="2" step="0.1" value="0" class="settings">
+                    <span id="temp-value" class="value">0.0</span>
+                </div>
+                <div class="setting-row">
+                    <span class="setting-label">Top-K</span>
+                    <input type="number" id="topK" min="1" max="100" value="1" class="settings">
+                </div>
+                <div class="setting-row">
+                    <span class="setting-label">Top-P</span>
+                    <input type="range" id="topP" min="0" max="1" step="0.1" value="1" class="settings">
+                    <span id="topP-value" class="value">1.0</span>
+                </div>
+                <div class="setting-row">
+                    <span class="setting-label">Max Tokens</span>
+                    <input type="number" id="maxTokens" min="100" max="8192" value="8192" class="settings">
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>MODE</h3>
+                <div class="mode-buttons">
+                    <button id="forge-mode-btn" class="mode-btn active">🔥 FORGE</button>
+                    <button id="creative-mode-btn" class="mode-btn">🎨 Creative</button>
+                    <button id="balanced-mode-btn" class="mode-btn">⚖️ Balanced</button>
+                </div>
+            </div>
+
+            <!-- MEMORY CONTROL PANEL -->
+            <div class="settings-section">
+                <h3>🧠 MEMORY CONTROL</h3>
+                <div class="memory-status-row">
+                    <button id="memory-load-btn" class="memory-btn">📥 Load</button>
+                    <button id="memory-clear-btn" class="memory-btn">🗑️ Clear</button>
+                    <button id="memory-export-btn" class="memory-btn">💾 Export</button>
+                </div>
+                <div class="memory-preview" id="memory-preview">
+                    <div class="memory-preview-title">Current Memory Context:</div>
+                    <div class="memory-preview-content" id="memory-preview-content">No memory loaded</div>
+                </div>
+            </div>
+            
+            <!-- MEMORY FORGE -->
+            <div class="settings-section">
+                <h3 class="memory-title">🧠 MEMORY FORGE</h3>
+                <div class="memory-controls">
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-conversations" checked>
+                            <span class="forge-slider">
+                                <span class="forge-label">💬 Conversations</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-prompts">
+                            <span class="forge-slider">
+                                <span class="forge-label">📝 Prompts</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-snapshots">
+                            <span class="forge-slider">
+                                <span class="forge-label">📸 Snapshots</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-vectors">
+                            <span class="forge-slider">
+                                <span class="forge-label">🔍 Vector Search</span>
+                            </span>
+                        </label>
+                    </div>
+                    <button id="memory-save-snapshot" class="forge-action-btn">
+                        <span class="forge-btn-text">💾 Save Context Snapshot</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- SUPERCLAUDE COMPACT -->
+            <div class="settings-section">
+                <h3 class="claude-title">🤖 SUPERCLAUDE</h3>
+                <div class="claude-compact">
+                    <div class="claude-row">
+                        <label class="claude-mini-switch">
+                            <input type="checkbox" id="claude-bridge-enable">
+                            <span class="claude-mini-slider"></span>
+                        </label>
+                        <span class="claude-status" id="status-indicator">⚫</span>
+                        <span class="claude-memory" id="memory-indicator" title="Memory">🧠</span>
+                        <button id="claude-clear-memory" class="claude-mini-btn" title="Clear Memory">🗑️</button>
+                    </div>
+                    <div class="claude-info" id="claude-info">
+                        <span id="status-text">OFF</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>🔗 API Endpoint</h3>
+                <input type="text" id="endpoint" class="settings" value="http://127.0.0.1:37777/chat">
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="chat-area" id="chat-area">
+                <div class="message ai-message">🚀 Ready. Each message is a new session - no memory retained.</div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea id="prompt-input" placeholder="Type your message... (Cmd+Enter to send)"></textarea>
+                    <button id="send-btn">✨ Send</button>
+                </div>
+            </div>
+            
+            <div class="status" id="status">
+                <span>Ready</span>
+                <span id="seed-display" style="margin-left: auto; font-family: 'SF Mono', Monaco, monospace;"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const chatArea = document.getElementById('chat-area');
+        const promptInput = document.getElementById('prompt-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusBar = document.getElementById('status');
+        const instructionEl = document.getElementById('instruction');
+        const contextEl = document.getElementById('context');
+        const endpointEl = document.getElementById('endpoint');
+        const modelEl = document.getElementById('model');
+        const structureBtn = document.getElementById('structure-btn');
+        const toolsBtn = document.getElementById('tools-btn');
+        const subTools = document.getElementById('sub-tools');
+        const selectorBtn = document.getElementById('selector-btn');
+        const seedDisplay = document.getElementById('seed-display');
+        
+        let isProcessing = false;
+        let selectorMode = false;
+
+        async function updateSeedDisplay() {
+            try {
+                const response = await fetch('/api/get-seed');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                if (data.error) {
+                    seedDisplay.textContent = `Seed Error: ${data.error}`;
+                    seedDisplay.style.color = 'var(--error)';
+                } else {
+                    seedDisplay.textContent = `Checksum: ${data.checksum} | Seed: ${data.seed}`;
+                    seedDisplay.style.color = 'var(--text-muted)';
+                }
+            } catch (error) {
+                seedDisplay.textContent = `Seed Error: ${error.message}`;
+                seedDisplay.style.color = 'var(--error)';
+            }
+        }
+        
+        function addMessage(text, isUser = false, streaming = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'} ${streaming ? 'streaming' : ''}`;
+            messageDiv.textContent = text;
+            chatArea.appendChild(messageDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+            return messageDiv;
+        }
+        
+        function setStatus(text, isError = false) {
+            const statusText = statusBar.querySelector('span:first-child');
+            if(statusText) statusText.textContent = text;
+            statusBar.className = isError ? 'status error' : 'status';
+        }
+        
+        async function sendMessage() {
+            if (isProcessing || !promptInput.value.trim()) return;
+            
+            const prompt = promptInput.value.trim();
+            const instruction = instructionEl.value.trim();
+            const context = contextEl.value.trim();
+            const endpoint = endpointEl.value.trim();
+            const model = modelEl.value;
+            
+            isProcessing = true;
+            sendBtn.disabled = true;
+            
+            addMessage(prompt, true);
+            promptInput.value = '';
+            
+            setStatus('Processing...');
+            
+            const aiMessageDiv = addMessage('', false, true);
+            aiMessageDiv.innerHTML = '<span class="thinking-indicator">Thinking...</span>';
+            
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt,
+                        instruction,
+                        context,
+                        model
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                aiMessageDiv.textContent = data.response;
+                aiMessageDiv.classList.remove('streaming');
+                
+                setStatus('Ready');
+                
+            } catch (error) {
+                addMessage(`Error: ${error.message}`, false);
+                setStatus(`Error: ${error.message}`, true);
+            } finally {
+                isProcessing = false;
+                sendBtn.disabled = false;
+                promptInput.focus();
+            }
+        }
+        
+        sendBtn.addEventListener('click', sendMessage);
+        
+        promptInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        toolsBtn.addEventListener('click', () => {
+            subTools.classList.toggle('show');
+            toolsBtn.classList.toggle('active');
+        });
+        
+        structureBtn.addEventListener('click', async () => {
+            subTools.classList.remove('show');
+            toolsBtn.classList.remove('active');
+            const docClone = document.documentElement.cloneNode(true);
+            const scripts = docClone.querySelectorAll('script');
+            scripts.forEach(script => script.remove());
+            const allElements = docClone.querySelectorAll('*');
+            allElements.forEach(el => {
+                Array.from(el.attributes).forEach(attr => {
+                    if (attr.name.startsWith('on')) {
+                        el.removeAttribute(attr.name);
+                    }
+                });
+            });
+            const htmlStructure = docClone.outerHTML;
+            try {
+                await fetch('http://127.0.0.1:37777/element-selected', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        element: 'FULL_PAGE_STRUCTURE',
+                        html: htmlStructure,
+                        info: 'Full page HTML structure without scripts'
+                    })
+                });
+                const originalIcon = structureBtn.textContent;
+                structureBtn.textContent = '✅';
+                setTimeout(() => {
+                    structureBtn.textContent = originalIcon;
+                }, 2000);
+            } catch (error) {
+                console.error('Structure send error:', error);
+            }
+        });
+        
+        selectorBtn.addEventListener('click', () => {
+            selectorMode = !selectorMode;
+            document.body.classList.toggle('selector-mode');
+            selectorBtn.classList.toggle('active');
+            if (selectorMode) {
+                subTools.classList.remove('show');
+                toolsBtn.classList.remove('active');
+                document.addEventListener('click', handleElementClick);
+            } else {
+                document.removeEventListener('click', handleElementClick);
+            }
+        });
+        
+        async function handleElementClick(e) {
+            if (e.target.closest('.tools-panel') || e.target.closest('.comment-popup')) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const element = e.target;
+            const selector = getElementSelector(element);
+            const html = element.outerHTML;
+            const elementPath = getElementPath(element);
+            const parentHTML = element.parentElement ? element.parentElement.outerHTML : null;
+            const popup = document.createElement('div');
+            popup.className = 'comment-popup';
+            popup.style.left = e.clientX + 10 + 'px';
+            popup.style.top = e.clientY + 10 + 'px';
+            if (e.clientX + 310 > window.innerWidth) {
+                popup.style.left = (e.clientX - 310) + 'px';
+            }
+            if (e.clientY + 200 > window.innerHeight) {
+                popup.style.top = (e.clientY - 200) + 'px';
+            }
+            popup.innerHTML = `
+                <div class="comment-popup-title">Comment for: ${elementPath}</div>
+                <textarea placeholder="What needs to be fixed here?" autofocus></textarea>
+                <div class="comment-popup-buttons">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="send-btn">Send</button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+            const textarea = popup.querySelector('textarea');
+            const sendBtn = popup.querySelector('.send-btn');
+            const cancelBtn = popup.querySelector('.cancel-btn');
+            textarea.focus();
+            const sendElement = async () => {
+                const comment = textarea.value.trim();
+                try {
+                    await fetch('http://127.0.0.1:37777/element-selected', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            element: `ELEMENT: ${elementPath}`,
+                            comment: comment || 'No comment',
+                            selector,
+                            html,
+                            parentHTML,
+                            tagName: element.tagName,
+                            className: element.className,
+                            id: element.id,
+                            text: element.textContent?.substring(0, 200),
+                            attributes: Array.from(element.attributes).map(attr => ({name: attr.name, value: attr.value}))
+                        })
+                    });
+                    element.style.outline = '3px solid var(--success)';
+                    setTimeout(() => {
+                        element.style.outline = '';
+                    }, 1000);
+                } catch (error) {
+                    console.error('Failed to send element:', error);
+                }
+                popup.remove();
+                selectorMode = false;
+                document.body.classList.remove('selector-mode');
+                selectorBtn.classList.remove('active');
+                document.removeEventListener('click', handleElementClick);
+            };
+            const cancel = () => {
+                popup.remove();
+            };
+            sendBtn.addEventListener('click', sendElement);
+            cancelBtn.addEventListener('click', cancel);
+            textarea.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendElement();
+                } else if (e.key === 'Escape') {
+                    cancel();
+                }
+            });
+        }
+        
+        function getElementSelector(element) {
+            if (element.id) return `#${element.id}`;
+            if (element.className) return `.${element.className.split(' ')[0]}`;
+            return element.tagName.toLowerCase();
+        }
+        
+        function getElementPath(element) {
+            const path = [];
+            while (element && element.nodeType === Node.ELEMENT_NODE) {
+                let selector = element.tagName.toLowerCase();
+                if (element.id) {
+                    selector += '#' + element.id;
+                    path.unshift(selector);
+                    break;
+                } else if (element.className) {
+                    selector += '.' + element.className.split(' ').join('.');
+                }
+                path.unshift(selector);
+                element = element.parentElement;
+            }
+            return path.join(' > ');
+        }
+        
+        const temperatureSlider = document.getElementById('temperature');
+        const tempValue = document.getElementById('temp-value');
+        const topPSlider = document.getElementById('topP');
+        const topPValue = document.getElementById('topP-value');
+        
+        temperatureSlider.addEventListener('input', () => {
+            tempValue.textContent = parseFloat(temperatureSlider.value).toFixed(1);
+        });
+        
+        topPSlider.addEventListener('input', () => {
+            topPValue.textContent = parseFloat(topPSlider.value).toFixed(1);
+        });
+        
+        const modeButtons = document.querySelectorAll('.mode-btn');
+        modeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+        
+        instructionEl.addEventListener('change', () => {
+            localStorage.setItem('galaxydevelopers-ai-instruction', instructionEl.value);
+        });
+        
+        contextEl.addEventListener('change', () => {
+            localStorage.setItem('galaxydevelopers-ai-context', contextEl.value);
+        });
+        
+        endpointEl.addEventListener('change', () => {
+            localStorage.setItem('galaxydevelopers-ai-endpoint', endpointEl.value);
+        });
+        
+        modelEl.addEventListener('change', () => {
+            localStorage.setItem('galaxydevelopers-ai-model', modelEl.value);
+        });
+        
+        window.addEventListener('load', () => {
+            const savedInstruction = localStorage.getItem('galaxydevelopers-ai-instruction');
+            const savedContext = localStorage.getItem('galaxydevelopers-ai-context');
+            const savedEndpoint = localStorage.getItem('galaxydevelopers-ai-endpoint');
+            const savedModel = localStorage.getItem('galaxydevelopers-ai-model');
+            
+            if (savedInstruction) instructionEl.value = savedInstruction;
+            if (savedContext) contextEl.value = savedContext;
+            if (savedEndpoint) endpointEl.value = savedEndpoint;
+            if (savedModel) modelEl.value = savedModel;
+            
+            promptInput.focus();
+            updateSeedDisplay(); // Fetch and display the seed on load
+        });
+    </script>
+</body>
+</html>
