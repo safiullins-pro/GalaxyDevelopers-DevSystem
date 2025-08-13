@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesigned Interface</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #100f12; /* Deep, almost black */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* Prevent scrollbars from glint effect */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            height: 70vh;
+            background-color: #1a1a1a; /* Slightly lighter dark for contrast */
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(159, 80, 255, 0.3); /* Soft glow */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-block {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .tongue {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* Example width */
+            height: 0px; /* Initially hidden */
+            background-color: transparent;
+            border: 1px solid #9f50ff; /* Neon purple border */
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 0 15px #9f50ff; /* Neon glow */
+            transition: height 0.1s ease-out; /* Smooth transition for appearance */
+            z-index: 10;
+            cursor: pointer;
+            overflow: hidden; /* For glint effect */
+        }
+
+        .instruction-panel {
+            position: absolute;
+            top: -200px; /* Initially off-screen */
+            left: 0;
+            width: 100%;
+            height: 200px; /* Example height */
+            background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent dark */
+            border-bottom: 1px solid #9f50ff;
+            box-shadow: 0 0 20px rgba(159, 80, 255, 0.5);
+            transition: top 0.3s ease-out;
+            z-index: 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .instruction-panel.active {
+            top: 0;
+        }
+
+        .chat-content {
+            flex-grow: 1;
+            padding: 20px;
+            color: #ccc;
+            overflow-y: auto;
+        }
+
+        /* Glint effect for instruction panel */
+        @keyframes glint {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .instruction-panel.glint-effect {
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: glint 0.8s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-block">
+            <div class="tongue"></div>
+            <div class="instruction-panel">
+                <p>System Instruction Panel Content</p>
+            </div>
+            <div class="chat-content">
+                <!-- Placeholder for chat messages -->
+                <p>Welcome to the chat!</p>
+                <p>This is a placeholder for chat messages.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatBlock = document.querySelector('.chat-block');
+            const tongue = document.querySelector('.tongue');
+            const instructionPanel = document.querySelector('.instruction-panel');
+            const activationZoneHeight = 100; // Pixels from the top of chat-block
+
+            let isPanelOpen = false;
+
+            chatBlock.addEventListener('mousemove', (e) => {
+                const rect = chatBlock.getBoundingClientRect();
+                const mouseY = e.clientY - rect.top; // Mouse Y position relative to chat-block top
+
+                if (mouseY < activationZoneHeight) {
+                    const distance = activationZoneHeight - mouseY;
+                    const tongueHeight = Math.min(distance, 50); // Max 50px extension
+                    tongue.style.height = `${tongueHeight}px`;
+                } else {
+                    tongue.style.height = '0px';
+                }
+            });
+
+            chatBlock.addEventListener('mouseleave', () => {
+                tongue.style.height = '0px';
+            });
+
+            tongue.addEventListener('click', () => {
+                isPanelOpen = !isPanelOpen;
+                if (isPanelOpen) {
+                    instructionPanel.classList.add('active');
+                    // Trigger glint effect
+                    instructionPanel.classList.remove('glint-effect'); // Reset animation
+                    void instructionPanel.offsetWidth; // Trigger reflow
+                    instructionPanel.classList.add('glint-effect');
+                } else {
+                    instructionPanel.classList.remove('active');
+                    instructionPanel.classList.remove('glint-effect');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

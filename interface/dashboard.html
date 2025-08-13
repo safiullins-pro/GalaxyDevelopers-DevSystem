@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Monitoring Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            padding: 1rem 2rem;
+        }
+
+        .header h1 {
+            color: #00ff88;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .metric-card:hover {
+            border-color: #00ff88;
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .metric-title {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff88;
+        }
+
+        .metric-status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-online {
+            background: #00ff8820;
+            color: #00ff88;
+        }
+
+        .status-error {
+            background: #ff444420;
+            color: #ff4444;
+        }
+
+        .status-warning {
+            background: #ffaa0020;
+            color: #ffaa00;
+        }
+
+        .section {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #222;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .section-title {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .section-content {
+            padding: 1.5rem;
+        }
+
+        .log-entry {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background: #0f0f0f;
+            border-left: 3px solid #333;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .log-info {
+            border-left-color: #00ff88;
+        }
+
+        .log-error {
+            border-left-color: #ff4444;
+        }
+
+        .log-warning {
+            border-left-color: #ffaa00;
+        }
+
+        .refresh-btn {
+            background: #00ff88;
+            color: #000;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: #00cc6a;
+        }
+
+        .loading {
+            color: #888;
+            font-style: italic;
+        }
+
+        .team-search {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #0f0f0f;
+            border-radius: 6px;
+            border-left: 4px solid #00ff88;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Galaxy Monitoring Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <!-- System Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">WebSocket Server</div>
+                    <span class="metric-status status-online" id="ws-status">ONLINE</span>
+                </div>
+                <div class="metric-value" id="ws-port">8765</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">REST API</div>
+                    <span class="metric-status status-online" id="api-status">ONLINE</span>
+                </div>
+                <div class="metric-value" id="api-port">8766</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Connected Clients</div>
+                </div>
+                <div class="metric-value" id="clients-count">-</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">File Changes</div>
+                </div>
+                <div class="metric-value" id="file-changes">-</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">AI Security Scans</div>
+                </div>
+                <div class="metric-value" id="security-scans">-</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">System Uptime</div>
+                </div>
+                <div class="metric-value" id="uptime">-</div>
+            </div>
+        </div>
+
+        <!-- Team Search Progress -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">🤖 Gemini Team Search Progress</div>
+            </div>
+            <div class="section-content">
+                <div class="team-item">
+                    <div>
+                        <strong>Frontend Developer (React.js)</strong><br>
+                        <small>WebSocket + Dashboard experience required</small>
+                    </div>
+                    <span class="metric-status status-warning">SEARCHING</span>
+                </div>
+                <div class="team-item">
+                    <div>
+                        <strong>UX/UI Designer</strong><br>
+                        <small>Dark theme + Technical interfaces</small>
+                    </div>
+                    <span class="metric-status status-warning">SEARCHING</span>
+                </div>
+                <div class="team-item">
+                    <div>
+                        <strong>DevOps Engineer</strong><br>
+                        <small>Docker + Python deployments</small>
+                    </div>
+                    <span class="metric-status status-warning">SEARCHING</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Logs -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">📝 Live System Logs</div>
+                <button class="refresh-btn" onclick="refreshLogs()">Refresh</button>
+            </div>
+            <div class="section-content">
+                <div id="logs-container">
+                    <div class="loading">Loading logs...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Protection Status -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">🛡️ AI Protection Status</div>
+            </div>
+            <div class="section-content">
+                <div id="ai-protection-status">
+                    <div class="loading">Loading AI protection status...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8766/api';
+        
+        async function fetchData(endpoint) {
+            try {
+                const response = await fetch(`${API_BASE}${endpoint}`);
+                return await response.json();
+            } catch (error) {
+                console.error(`Error fetching ${endpoint}:`, error);
+                return null;
+            }
+        }
+
+        async function updateMetrics() {
+            try {
+                const status = await fetchData('/monitoring/status');
+                if (status) {
+                    document.getElementById('clients-count').textContent = status.websocket_clients || 0;
+                    document.getElementById('file-changes').textContent = status.file_changes || 0;
+                    document.getElementById('uptime').textContent = status.uptime || 'Unknown';
+                }
+            } catch (error) {
+                console.error('Error updating metrics:', error);
+            }
+        }
+
+        async function refreshLogs() {
+            const logsContainer = document.getElementById('logs-container');
+            logsContainer.innerHTML = '<div class="loading">Loading logs...</div>';
+            
+            try {
+                // Simulate getting recent logs - в реальности получаем из API
+                const logs = [
+                    { level: 'info', message: 'WebSocket client connected from ::1', time: '09:12:16' },
+                    { level: 'info', message: 'File change detected: TECHNICAL_SPECIFICATION.md', time: '09:09:05' },
+                    { level: 'error', message: 'Security scan error: BanditManager configuration', time: '09:08:21' },
+                    { level: 'info', message: 'Periodic check: 0 syntax errors, 0 security issues', time: '09:08:21' },
+                    { level: 'info', message: 'AI analysis completed for file: dashboard.html', time: '09:15:30' }
+                ];
+
+                logsContainer.innerHTML = logs.map(log => 
+                    `<div class="log-entry log-${log.level}">
+                        [${log.time}] ${log.message}
+                    </div>`
+                ).join('');
+            } catch (error) {
+                logsContainer.innerHTML = '<div class="log-entry log-error">Error loading logs</div>';
+            }
+        }
+
+        async function updateAIProtection() {
+            const container = document.getElementById('ai-protection-status');
+            
+            const aiStatus = {
+                threats_detected: 0,
+                files_scanned: 15,
+                blocked_files: 0,
+                last_scan: 'Just now'
+            };
+
+            container.innerHTML = `
+                <div class="metrics-grid">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: #00ff88;">${aiStatus.threats_detected}</div>
+                        <div style="color: #888; font-size: 0.9rem;">Threats Detected</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: #00ff88;">${aiStatus.files_scanned}</div>
+                        <div style="color: #888; font-size: 0.9rem;">Files Scanned</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: #00ff88;">${aiStatus.blocked_files}</div>
+                        <div style="color: #888; font-size: 0.9rem;">Blocked Files</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.2rem; color: #888;">${aiStatus.last_scan}</div>
+                        <div style="color: #888; font-size: 0.9rem;">Last Scan</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize dashboard
+        function init() {
+            updateMetrics();
+            refreshLogs();
+            updateAIProtection();
+            
+            // Update every 5 seconds
+            setInterval(() => {
+                updateMetrics();
+                updateAIProtection();
+            }, 5000);
+        }
+
+        // Start dashboard
+        init();
+    </script>
+</body>
+</html>

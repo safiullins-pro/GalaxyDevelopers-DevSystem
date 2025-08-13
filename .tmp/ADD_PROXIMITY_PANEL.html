@@ -1,0 +1,135 @@
+<!-- ДОБАВИТЬ ПОСЛЕ СТРОКИ 1155 внутри <div class="chat-area" id="chat-area"> -->
+
+<!-- Proximity Instruction Panel -->
+<div class="proximity-instruction" id="proximity-instruction" style="
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: 60;
+    width: 300px;
+    transition: transform 0.3s ease-out;
+">
+    <div class="instruction-tab" id="instruction-tab" style="
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 0 0 12px 12px;
+        padding: 8px 20px;
+        cursor: pointer;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.95);
+        text-align: center;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 24px rgba(99, 102, 241, 0.25);
+    ">SYSTEM INSTRUCTION</div>
+    <div class="instruction-panel" id="instruction-panel" style="
+        background: linear-gradient(135deg, rgba(20, 20, 25, 0.98) 0%, rgba(15, 15, 20, 0.98) 100%);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 0 0 12px 12px;
+        padding: 15px;
+        margin-top: -1px;
+        display: none;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    ">
+        <textarea id="instruction-textarea" placeholder="System instruction..." style="
+            width: 100%;
+            min-height: 120px;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 12px;
+            resize: vertical;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+        "></textarea>
+    </div>
+</div>
+
+<script>
+// Proximity Panel JavaScript
+(function() {
+    const panel = document.getElementById('proximity-instruction');
+    const instructionPanel = document.getElementById('instruction-panel');
+    const textarea = document.getElementById('instruction-textarea');
+    
+    if (!panel) return;
+    
+    let currentY = -100;
+    let targetY = -100;
+    let animationFrame = null;
+    let isExpanded = false;
+    
+    function animate() {
+        const diff = targetY - currentY;
+        if (Math.abs(diff) > 0.1) {
+            currentY += diff * 0.15;
+            panel.style.transform = `translateX(-50%) translateY(${currentY}%)`;
+            animationFrame = requestAnimationFrame(animate);
+        } else {
+            currentY = targetY;
+            panel.style.transform = `translateX(-50%) translateY(${currentY}%)`;
+            animationFrame = null;
+        }
+    }
+    
+    // Mouse proximity
+    document.addEventListener('mousemove', (e) => {
+        if (!isExpanded && e.clientY < 100) {
+            targetY = -100 + ((1 - e.clientY / 100) * 70);
+            if (!animationFrame) animationFrame = requestAnimationFrame(animate);
+        } else if (!isExpanded && e.clientY >= 100) {
+            targetY = -100;
+            if (!animationFrame) animationFrame = requestAnimationFrame(animate);
+        }
+    });
+    
+    // Panel hover
+    panel.addEventListener('mouseenter', () => {
+        if (!isExpanded) {
+            targetY = 0;
+            instructionPanel.style.display = 'block';
+            if (!animationFrame) animationFrame = requestAnimationFrame(animate);
+        }
+    });
+    
+    panel.addEventListener('mouseleave', () => {
+        if (!isExpanded) {
+            targetY = -100;
+            setTimeout(() => {
+                if (!isExpanded) instructionPanel.style.display = 'none';
+            }, 300);
+            if (!animationFrame) animationFrame = requestAnimationFrame(animate);
+        }
+    });
+    
+    // Click to toggle
+    document.getElementById('instruction-tab').addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        if (isExpanded) {
+            targetY = 0;
+            instructionPanel.style.display = 'block';
+            setTimeout(() => textarea.focus(), 300);
+        } else {
+            targetY = -100;
+            setTimeout(() => instructionPanel.style.display = 'none', 300);
+        }
+        if (!animationFrame) animationFrame = requestAnimationFrame(animate);
+    });
+    
+    // Save to localStorage
+    textarea.addEventListener('input', () => {
+        localStorage.setItem('systemInstruction', textarea.value);
+    });
+    
+    // Load saved
+    const saved = localStorage.getItem('systemInstruction');
+    if (saved) textarea.value = saved;
+})();
+</script>

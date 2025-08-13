@@ -1,0 +1,41 @@
+{
+  "project_root": "/Volumes/Z7S/development/GalaxyDevelopers/DevSystem",
+  "structure": {
+    "CONNECTORS": "Интеграции и коннекторы",
+    "DOCUMENTS": "ВСЯ документация (НЕ docs! DOCUMENTS правильно!)",
+    "DeadIdiots": "Архив провалов и ошибок",
+    "HR": "Кадры, найм, тестирование агентов",
+    "INTERFACE": "Frontend интерфейсы (НЕ interface! INTERFACE правильно!)",
+    "MEMORY": "Система памяти и vector DB",
+    "config": "Все конфигурации",
+    "logs": "Логи и PID файлы",
+    "scripts": "ВСЕ .sh скрипты",
+    "server": "Backend Node.js серверы",
+    "src": "Python исходники",
+    "standards": "Стандарты кода",
+    "validators": "Валидаторы",
+    "resources": "Ресурсы и модели",
+    "backups": "Резервные копии"
+  },
+  "rules": [
+    "DOCUMENTS - правильное имя папки, НЕ менять на docs",
+    "INTERFACE - правильное имя папки, НЕ менять на interface",
+    "Все .sh файлы ТОЛЬКО в scripts/",
+    "Все .md файлы ТОЛЬКО в DOCUMENTS/",
+    "Все .html файлы ТОЛЬКО в INTERFACE/",
+    "Все .py файлы ТОЛЬКО в src/",
+    "НЕ МЕНЯТЬ структуру без разрешения пользователя"
+  ],
+  "critical_paths": {
+    "monitoring_server": "/src/monitoring_server_fixed.py",
+    "main_interface": "/INTERFACE/index.html",
+    "monitoring_config": "/config/monitoring_config.json",
+    "start_script": "/scripts/start_monitoring.sh",
+    "stop_script": "/scripts/stop_monitoring.sh",
+    "status_script": "/scripts/monitoring_status.sh"
+  },
+  "timestamp": "2025-08-13T10:45:00+07:00",
+  "version": "1.0.0",
+  "approved_by": "user",
+  "warning": "СТРУКТУРА УТВЕРЖДЕНА - НЕ МЕНЯТЬ!"
+}

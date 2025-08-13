@@ -10,7 +10,17 @@
       "Bash(mv:*)",
       "Bash(find:*)",
       "WebFetch(domain:developer.apple.com)",
-      "Bash(chmod:*)"
+      "Bash(git push:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:iterm2.com)",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:stackoverflow.com)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(python3:*)",
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(open http://127.0.0.1:37777)"
     ],
     "deny": []
   }

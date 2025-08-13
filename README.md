@@ -1,62 +1,72 @@
-# GalaxyDevelopers AI DevSystem
+# 🌌 GALAXY DEVELOPERS SYSTEM
 
-Stateless AI chat system with automatic API key rotation for Google Gemini, web interface, and macOS system integrations.
+## Быстрый старт
 
-## Features
-
-- **Stateless Architecture** - Each request is independent, no sessions saved
-- **Auto-rotation of 14 API keys** - Switches on each request
-- **11 Gemini models** to choose from (versions 1.5, 2.0, 2.5)
-- **macOS System Service** - Auto-starts on boot
-- **MCP Integration** - API for AI agents
-- **Screenshot Functionality** - Interface state capture
-
-## Quick Start
-
-### Web Interface
-Open http://127.0.0.1:37777 in your browser
-
-### API Usage
 ```bash
-curl -X POST http://127.0.0.1:37777/chat \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Your question here",
-    "model": "gemini-2.5-flash"
-  }'
+# Запуск системы
+./start_galaxy.sh
+
+# Открыть в браузере
+http://localhost:8000
+
+# Остановка
+./stop_galaxy.sh
 ```
 
-## Project Structure
+## Архитектура
+
+### Frontend
+- **Интерфейс**: Galaxy AI Chat с панелями мониторинга
+- **Memory System**: Персистентная память для AI
+- **Pipeline Monitor**: Отслеживание 17 агентов
+
+### Backend  
+- **Pipeline Server**: WebSocket + REST API
+- **DocumentsSystem**: 47 IT-процессов, мульти-агентная архитектура
+- **Инфраструктура**: PostgreSQL, Redis, Kafka, Docker
+
+## Компоненты
 
 ```
-├── docs/           # Documentation
-├── scripts/        # Utility scripts
-├── resources/      # Models, configs, dependencies
-├── server/         # Backend server
-├── interface/      # Web interface
-├── connectors/     # Integrations (iTerm2, screenshots)
-└── validators/     # Test utilities
+interface/
+├── index.html           # Главный интерфейс
+├── css/main.css        # Стили и анимации
+├── js/app.js           # Основная логика
+├── memory-system.js    # Система памяти
+├── pipeline-monitor.js # Мониторинг pipeline
+└── backend/
+    └── pipeline_server.py # Backend сервер
+
+DocumentsSystem/
+├── AGENTS/             # AI агенты (5/17 реализовано)
+├── PROCESSES/          # P1-P7 процессы
+├── docker-compose.yml  # Docker инфраструктура
+└── file_monitor.py     # Мониторинг файлов
 ```
 
-## System Service
+## Статус реализации
 
-The backend runs as a macOS launchd service on port 37777.
+- ✅ Интерфейс и дизайн
+- ✅ Pipeline мониторинг
+- ✅ Backend сервер
+- ✅ Система памяти
+- ⚠️ 5/17 агентов реализовано
+- ❌ 71% backend не готов
+- ❌ 92% mobile не реализовано
 
-### Service Management
-```bash
-# Restart
-launchctl kickstart -k gui/$(id -u)/com.galaxydevelopers.ai.backend
+## API Endpoints
 
-# Stop
-launchctl unload ~/Library/LaunchAgents/com.galaxydevelopers.ai.backend.plist
+- `ws://localhost:8765` - WebSocket для real-time обновлений
+- `http://localhost:8080/api/pipeline/metrics` - Метрики системы
+- `http://localhost:8080/api/pipeline/agents` - Статус агентов
+- `http://localhost:8080/api/pipeline/trigger` - Запуск задач
 
-# Start
-launchctl load ~/Library/LaunchAgents/com.galaxydevelopers.ai.backend.plist
-```
+## Документация
 
-## Development
-
-See [docs/CLAUDE.md](docs/CLAUDE.md) for detailed documentation.
+- [CLAUDE.md](CLAUDE.md) - Память для Claude
+- [Архитектура DocumentsSystem](../../../ALBERT_TOOLS_PLACE/DocumentsSystem/DOCUMENTATION_SYSTEM_ARCHITECTURE.md)
+- [Список задач](../../../ALBERT_TOOLS_PLACE/DocumentsSystem/TASK_LIST_TO_PHASE_4_COMPLETION.md)
 
 ---
-GalaxyDevelopers © 2025
+
+*Galaxy Developers System v2.0 - Система с памятью и физикой для AI*

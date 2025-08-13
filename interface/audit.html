@@ -1,0 +1,149 @@
+<\!DOCTYPE html>
+<html>
+<head>
+    <title>INTERFACE AUDIT</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
+        .error { color: #f00; }
+        .warning { color: #ff0; }
+        .ok { color: #0f0; }
+        .section { margin: 20px 0; padding: 10px; border: 1px solid #0f0; }
+    </style>
+</head>
+<body>
+    <h1>🔍 АУДИТ ИНТЕРФЕЙСА</h1>
+    
+    <div class="section">
+        <h2>ПРОВЕРКА ЭЛЕМЕНТОВ</h2>
+        <div id="elements"></div>
+    </div>
+    
+    <div class="section">
+        <h2>ПРОВЕРКА СТИЛЕЙ</h2>
+        <div id="styles"></div>
+    </div>
+    
+    <div class="section">
+        <h2>ПРОВЕРКА ФУНКЦИОНАЛА</h2>
+        <div id="functions"></div>
+    </div>
+
+    <script>
+        // Загружаем основной интерфейс в iframe для проверки
+        const iframe = document.createElement('iframe');
+        iframe.src = 'file:///Volumes/Z7S/development/GalaxyDevelopers/DevSystem/interface/index.html';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        
+        iframe.onload = function() {
+            const doc = iframe.contentDocument;
+            const win = iframe.contentWindow;
+            
+            // ПРОВЕРКА ЭЛЕМЕНТОВ
+            const elements = {
+                'Язычок': '.proximity-instruction',
+                'Send Button': '#send-btn',
+                'Input': '#prompt-input',
+                'Chat Area': '#chat-area',
+                'Claude Toggle': '#claude-bridge-enable',
+                'Status Icon': '#status-indicator',
+                'Memory Icon': '#memory-indicator',
+                'Clear Memory': '#claude-clear-memory',
+                'Model Selector': '.model-selector-btn',
+                'Model Popup': '.model-popup'
+            };
+            
+            let elementResults = '';
+            for (let [name, selector] of Object.entries(elements)) {
+                const el = doc.querySelector(selector);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    const visible = rect.width > 0 && rect.height > 0;
+                    const styles = win.getComputedStyle(el);
+                    
+                    let status = 'ok';
+                    let issues = [];
+                    
+                    if (\!visible && styles.display \!== 'none') {
+                        status = 'warning';
+                        issues.push('невидим');
+                    }
+                    if (rect.top < -100) {
+                        status = 'error';
+                        issues.push('за экраном');
+                    }
+                    if (styles.opacity === '0') {
+                        status = 'warning';
+                        issues.push('прозрачный');
+                    }
+                    
+                    elementResults += `<div class="${status}">
+                        ${status === 'ok' ? '✅' : status === 'warning' ? '⚠️' : '❌'} 
+                        ${name}: ${issues.length ? issues.join(', ') : 'OK'}
+                    </div>`;
+                } else {
+                    elementResults += `<div class="error">❌ ${name}: НЕ НАЙДЕН\!</div>`;
+                }
+            }
+            document.getElementById('elements').innerHTML = elementResults;
+            
+            // ПРОВЕРКА СТИЛЕЙ
+            let styleResults = '';
+            const styleSheets = Array.from(doc.styleSheets);
+            const requiredCSS = ['main.css', 'superclaude-fixes.css'];
+            
+            requiredCSS.forEach(file => {
+                const found = styleSheets.some(sheet => sheet.href && sheet.href.includes(file));
+                styleResults += `<div class="${found ? 'ok' : 'error'}">
+                    ${found ? '✅' : '❌'} ${file}: ${found ? 'загружен' : 'НЕ НАЙДЕН'}
+                </div>`;
+            });
+            
+            // Проверяем анимации
+            const animations = doc.getAnimations();
+            styleResults += `<div class="ok">🎬 Активных анимаций: ${animations.length}</div>`;
+            
+            document.getElementById('styles').innerHTML = styleResults;
+            
+            // ПРОВЕРКА ФУНКЦИОНАЛА
+            let functionResults = '';
+            
+            // Проверяем JS файлы
+            const scripts = Array.from(doc.scripts);
+            const requiredJS = ['app.js', 'superclaude.js'];
+            
+            requiredJS.forEach(file => {
+                const found = scripts.some(script => script.src && script.src.includes(file));
+                functionResults += `<div class="${found ? 'ok' : 'error'}">
+                    ${found ? '✅' : '❌'} ${file}: ${found ? 'загружен' : 'НЕ НАЙДЕН'}
+                </div>`;
+            });
+            
+            // Проверяем глобальные переменные
+            const globals = ['superClaude', 'sendMessage'];
+            globals.forEach(global => {
+                const exists = typeof win[global] \!== 'undefined';
+                functionResults += `<div class="${exists ? 'ok' : 'warning'}">
+                    ${exists ? '✅' : '⚠️'} window.${global}: ${exists ? 'определен' : 'не найден'}
+                </div>`;
+            });
+            
+            document.getElementById('functions').innerHTML = functionResults;
+            
+            // ИТОГОВАЯ СТАТИСТИКА
+            const errors = document.querySelectorAll('.error').length;
+            const warnings = document.querySelectorAll('.warning').length;
+            
+            const summary = document.createElement('div');
+            summary.className = 'section';
+            summary.innerHTML = `
+                <h2>📊 ИТОГО</h2>
+                <div class="${errors > 0 ? 'error' : 'ok'}">Ошибок: ${errors}</div>
+                <div class="${warnings > 0 ? 'warning' : 'ok'}">Предупреждений: ${warnings}</div>
+                <div class="ok">Статус: ${errors === 0 ? '✅ ВСЁ РАБОТАЕТ' : '💀 ЕСТЬ ПРОБЛЕМЫ'}</div>
+            `;
+            document.body.appendChild(summary);
+        };
+    </script>
+</body>
+</html>

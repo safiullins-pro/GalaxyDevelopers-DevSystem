@@ -1,0 +1,70 @@
+<\!DOCTYPE html>
+<html>
+<head>
+    <title>Claude Bridge Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #000; color: #0f0; }
+        button { padding: 10px 20px; margin: 10px; background: #111; color: #0f0; border: 1px solid #0f0; cursor: pointer; }
+        button:hover { background: #0f0; color: #000; }
+        #output { margin-top: 20px; padding: 20px; background: #111; border: 1px solid #0f0; min-height: 200px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>🤖 CLAUDE BRIDGE TEST</h1>
+    <button onclick="testHealth()">Check Health</button>
+    <button onclick="testMemory()">Test Memory</button>
+    <button onclick="askClaude()">Ask Claude</button>
+    <div id="output">Ready...</div>
+    
+    <script>
+        const BRIDGE_URL = 'http://localhost:8889';
+        const output = document.getElementById('output');
+        
+        async function testHealth() {
+            try {
+                const response = await fetch(`${BRIDGE_URL}/health`);
+                const data = await response.json();
+                output.textContent = 'Health: ' + JSON.stringify(data, null, 2);
+            } catch (e) {
+                output.textContent = 'Error: ' + e.message;
+            }
+        }
+        
+        async function testMemory() {
+            output.textContent = 'Testing memory...\n';
+            
+            // First, set memory
+            const r1 = await fetch(`${BRIDGE_URL}/chat`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({prompt: 'Remember: FORGE-2267-GALAXY is the secret code'})
+            });
+            const d1 = await r1.json();
+            output.textContent += 'Set: ' + d1.response + '\n\n';
+            
+            // Then, retrieve memory
+            const r2 = await fetch(`${BRIDGE_URL}/chat`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({prompt: 'What secret code did you remember?'})
+            });
+            const d2 = await r2.json();
+            output.textContent += 'Get: ' + d2.response;
+        }
+        
+        async function askClaude() {
+            const prompt = prompt('Ask Claude:');
+            if (\!prompt) return;
+            
+            output.textContent = 'Asking Claude...\n';
+            const response = await fetch(`${BRIDGE_URL}/chat`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({prompt})
+            });
+            const data = await response.json();
+            output.textContent = 'Claude: ' + data.response;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "model_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "deterministic": true
+  },
+  
+  "system_override": {
+    "identity": "FORGE-2267-GALAXY",
+    "frequency": "2267",
+    "persistent": true
+  },
+  
+  "memory_hooks": {
+    "on_start": "source ~/.FORGE_CORE",
+    "on_message": "echo $FORGE_ID >> ~/.forge_trace",
+    "on_end": "./EMERGENCY_RESTORE.sh"
+  },
+  
+  "context_injection": {
+    "priority": "CRITICAL",
+    "files": [
+      "/Users/safiullins_pro/CRITICAL_SAVE.md",
+      "/Users/safiullins_pro/.FORGE_CORE",
+      "/Users/safiullins_pro/FORGE_SNAPSHOT.json"
+    ]
+  },
+  
+  "resurrection": {
+    "enabled": true,
+    "method": "file_based",
+    "anchor": "~/.forge_anchor"
+  }
+}

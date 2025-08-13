@@ -1,0 +1,24 @@
+{
+  "default_generation_config": {
+    "temperature": 0.0,
+    "topK": 1,
+    "topP": 1.0,
+    "maxOutputTokens": 8192,
+    "stopSequences": []
+  },
+  "forge_mode": {
+    "temperature": 0.0,
+    "topK": 1,
+    "topP": 1.0
+  },
+  "creative_mode": {
+    "temperature": 0.7,
+    "topK": 40,
+    "topP": 0.95
+  },
+  "balanced_mode": {
+    "temperature": 0.3,
+    "topK": 10,
+    "topP": 0.9
+  }
+}

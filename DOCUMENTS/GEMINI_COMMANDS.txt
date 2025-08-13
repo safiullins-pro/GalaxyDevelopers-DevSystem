@@ -1,0 +1,16 @@
+# Команды для Gemini управления командой
+
+## Поиск команды
+GEMINI_SEARCH_FRONTEND: "Найди React.js разработчика с опытом WebSocket и dashboard"
+GEMINI_SEARCH_DESIGNER: "Найди UX/UI дизайнера для технических dashboard интерфейсов"
+GEMINI_SEARCH_DEVOPS: "Найди DevOps с опытом Python/FastAPI production deployments"
+
+## Управление проектом
+GEMINI_DAILY_STANDUP: "Проведи ежедневный стендап команды"
+GEMINI_PROGRESS_CHECK: "Проверь прогресс по всем задачам"
+GEMINI_QUALITY_REVIEW: "Проведи review кода и дизайна"
+
+## Координация
+GEMINI_SCHEDULE_MEETING: "Запланируй встречу команды"
+GEMINI_RESOLVE_BLOCKER: "Помоги решить техническую проблему"
+GEMINI_UPDATE_TIMELINE: "Обнови timeline проекта"

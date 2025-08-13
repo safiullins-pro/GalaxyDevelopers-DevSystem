@@ -593,7 +593,7 @@
         .settings-section:has(h3:contains("GENERATION")) {
             background: linear-gradient(135deg, 
                 rgba(99, 102, 241, 0.12) 0%, 
-                rgba(139, 92, 246, 0.08) 50%, 
+                rgba(139, 92, 246, 0.08) 50%,
                 rgba(99, 102, 241, 0.12) 100%);
             border-color: rgba(99, 102, 241, 0.3);
         }
@@ -998,6 +998,83 @@
             line-height: 1.4;
             white-space: pre-wrap;
         }
+
+        /* GALAXY MONITORING STYLES */
+        .monitoring-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .monitor-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .monitor-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .monitor-status {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .monitor-actions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .monitor-btn {
+            flex: 1;
+            padding: 8px 12px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--text-primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .monitor-btn:hover {
+            background: rgba(99, 102, 241, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .monitor-stats {
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 11px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+        }
+
+        .stat-value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -1070,7 +1147,7 @@
                 </div>
             </div>
 
-            <!-- MEMORY CONTROL PANEL -->
+<!-- MEMORY CONTROL PANEL -->
             <div class="settings-section">
                 <h3>🧠 MEMORY CONTROL</h3>
                 <div class="memory-status-row">
@@ -1165,7 +1242,6 @@
             
             <div class="status" id="status">
                 <span>Ready</span>
-                <span id="seed-display" style="margin-left: auto; font-family: 'SF Mono', Monaco, monospace;"></span>
             </div>
         </div>
     </div>
@@ -1183,30 +1259,9 @@
         const toolsBtn = document.getElementById('tools-btn');
         const subTools = document.getElementById('sub-tools');
         const selectorBtn = document.getElementById('selector-btn');
-        const seedDisplay = document.getElementById('seed-display');
         
         let isProcessing = false;
         let selectorMode = false;
-
-        async function updateSeedDisplay() {
-            try {
-                const response = await fetch('/api/get-seed');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                if (data.error) {
-                    seedDisplay.textContent = `Seed Error: ${data.error}`;
-                    seedDisplay.style.color = 'var(--error)';
-                } else {
-                    seedDisplay.textContent = `Checksum: ${data.checksum} | Seed: ${data.seed}`;
-                    seedDisplay.style.color = 'var(--text-muted)';
-                }
-            } catch (error) {
-                seedDisplay.textContent = `Seed Error: ${error.message}`;
-                seedDisplay.style.color = 'var(--error)';
-            }
-        }
         
         function addMessage(text, isUser = false, streaming = false) {
             const messageDiv = document.createElement('div');
@@ -1218,8 +1273,7 @@
         }
         
         function setStatus(text, isError = false) {
-            const statusText = statusBar.querySelector('span:first-child');
-            if(statusText) statusText.textContent = text;
+            statusBar.textContent = text;
             statusBar.className = isError ? 'status error' : 'status';
         }
         
@@ -1240,7 +1294,10 @@
             
             setStatus('Processing...');
             
+            // Создаем пустое сообщение для streaming
             const aiMessageDiv = addMessage('', false, true);
+            
+            // Показываем индикатор размышления
             aiMessageDiv.innerHTML = '<span class="thinking-indicator">Thinking...</span>';
             
             try {
@@ -1254,6 +1311,7 @@
                         instruction,
                         context,
                         model
+                        // stream: true  // ВРЕМЕННО ОТКЛЮЧЕНО
                     })
                 });
                 
@@ -1261,12 +1319,50 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
-                const data = await response.json();
-                if (data.error) {
-                    throw new Error(data.error);
+                // Обрабатываем streaming ответ
+                if (response.headers.get('content-type')?.includes('text/event-stream')) {
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let fullText = '';
+                    
+                    aiMessageDiv.textContent = '';
+                    
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+                        
+                        const chunk = decoder.decode(value);
+                        const lines = chunk.split('\n');
+                        
+                        for (const line of lines) {
+                            if (line.startsWith('data: ')) {
+                                const data = line.slice(6);
+                                if (data === '[DONE]') continue;
+                                
+                                try {
+                                    const json = JSON.parse(data);
+                                    if (json.chunk) {
+                                        fullText += json.chunk;
+                                        aiMessageDiv.textContent = fullText;
+                                        chatArea.scrollTop = chatArea.scrollHeight;
+                                    }
+                                } catch (e) {
+                                    // Игнорируем ошибки парсинга
+                                }
+                            }
+                        }
+                    }
+                    
+                    aiMessageDiv.classList.remove('streaming');
+                } else {
+                    // Fallback к обычному режиму
+                    const data = await response.json();
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    aiMessageDiv.textContent = data.response;
+                    aiMessageDiv.classList.remove('streaming');
                 }
-                aiMessageDiv.textContent = data.response;
-                aiMessageDiv.classList.remove('streaming');
                 
                 setStatus('Ready');
                 
@@ -1289,17 +1385,24 @@
             }
         });
         
+        // Tools panel
         toolsBtn.addEventListener('click', () => {
             subTools.classList.toggle('show');
             toolsBtn.classList.toggle('active');
         });
         
+        // Send page structure (HTML without scripts)
         structureBtn.addEventListener('click', async () => {
+            // Закрываем панель
             subTools.classList.remove('show');
             toolsBtn.classList.remove('active');
+            
+            // Клонируем документ и удаляем скрипты
             const docClone = document.documentElement.cloneNode(true);
             const scripts = docClone.querySelectorAll('script');
             scripts.forEach(script => script.remove());
+            
+            // Убираем inline JS обработчики
             const allElements = docClone.querySelectorAll('*');
             allElements.forEach(el => {
                 Array.from(el.attributes).forEach(attr => {
@@ -1308,7 +1411,9 @@
                     }
                 });
             });
+            
             const htmlStructure = docClone.outerHTML;
+            
             try {
                 await fetch('http://127.0.0.1:37777/element-selected', {
                     method: 'POST',
@@ -1319,6 +1424,8 @@
                         info: 'Full page HTML structure without scripts'
                     })
                 });
+                
+                // Меняем иконку на галочку
                 const originalIcon = structureBtn.textContent;
                 structureBtn.textContent = '✅';
                 setTimeout(() => {
@@ -1329,13 +1436,18 @@
             }
         });
         
+        // Element selector mode
         selectorBtn.addEventListener('click', () => {
             selectorMode = !selectorMode;
             document.body.classList.toggle('selector-mode');
             selectorBtn.classList.toggle('active');
+            
             if (selectorMode) {
+                // Закрываем панель
                 subTools.classList.remove('show');
                 toolsBtn.classList.remove('active');
+                
+                // Обработчик клика по элементу
                 document.addEventListener('click', handleElementClick);
             } else {
                 document.removeEventListener('click', handleElementClick);
@@ -1343,39 +1455,55 @@
         });
         
         async function handleElementClick(e) {
+            // Не реагируем на клики по кнопкам инструментов и попапу
             if (e.target.closest('.tools-panel') || e.target.closest('.comment-popup')) return;
+            
             e.preventDefault();
             e.stopPropagation();
+            
             const element = e.target;
             const selector = getElementSelector(element);
             const html = element.outerHTML;
+            
+            // Получаем путь к элементу и его контекст
             const elementPath = getElementPath(element);
             const parentHTML = element.parentElement ? element.parentElement.outerHTML : null;
+            
+            // Создаем попап для комментария
             const popup = document.createElement('div');
             popup.className = 'comment-popup';
             popup.style.left = e.clientX + 10 + 'px';
             popup.style.top = e.clientY + 10 + 'px';
+            
+            // Корректируем позицию если выходит за экран
             if (e.clientX + 310 > window.innerWidth) {
                 popup.style.left = (e.clientX - 310) + 'px';
             }
             if (e.clientY + 200 > window.innerHeight) {
                 popup.style.top = (e.clientY - 200) + 'px';
             }
+            
             popup.innerHTML = `
                 <div class="comment-popup-title">Comment for: ${elementPath}</div>
                 <textarea placeholder="What needs to be fixed here?" autofocus></textarea>
                 <div class="comment-popup-buttons">
                     <button class="cancel-btn">Cancel</button>
                     <button class="send-btn">Send</button>
-                </div>
+                }
             `;
+            
             document.body.appendChild(popup);
+            
             const textarea = popup.querySelector('textarea');
             const sendBtn = popup.querySelector('.send-btn');
             const cancelBtn = popup.querySelector('.cancel-btn');
+            
             textarea.focus();
+            
+            // Обработчик отправки
             const sendElement = async () => {
                 const comment = textarea.value.trim();
+                
                 try {
                     await fetch('http://127.0.0.1:37777/element-selected', {
                         method: 'POST',
@@ -1393,6 +1521,8 @@
                             attributes: Array.from(element.attributes).map(attr => ({name: attr.name, value: attr.value}))
                         })
                     });
+                    
+                    // Показываем что элемент отправлен
                     element.style.outline = '3px solid var(--success)';
                     setTimeout(() => {
                         element.style.outline = '';
@@ -1400,17 +1530,27 @@
                 } catch (error) {
                     console.error('Failed to send element:', error);
                 }
+                
+                // Удаляем попап
                 popup.remove();
+                
+                // Выключаем режим селектора
                 selectorMode = false;
                 document.body.classList.remove('selector-mode');
                 selectorBtn.classList.remove('active');
                 document.removeEventListener('click', handleElementClick);
             };
+            
+            // Обработчик отмены
             const cancel = () => {
                 popup.remove();
+                // Остаемся в режиме селектора
             };
+            
             sendBtn.addEventListener('click', sendElement);
             cancelBtn.addEventListener('click', cancel);
+            
+            // Enter отправляет, Escape отменяет
             textarea.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
@@ -1444,6 +1584,7 @@
             return path.join(' > ');
         }
         
+        // Temperature/TopP sliders
         const temperatureSlider = document.getElementById('temperature');
         const tempValue = document.getElementById('temp-value');
         const topPSlider = document.getElementById('topP');
@@ -1457,6 +1598,7 @@
             topPValue.textContent = parseFloat(topPSlider.value).toFixed(1);
         });
         
+        // Mode buttons
         const modeButtons = document.querySelectorAll('.mode-btn');
         modeButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -1465,6 +1607,7 @@
             });
         });
         
+        // Save settings to localStorage
         instructionEl.addEventListener('change', () => {
             localStorage.setItem('galaxydevelopers-ai-instruction', instructionEl.value);
         });
@@ -1481,6 +1624,7 @@
             localStorage.setItem('galaxydevelopers-ai-model', modelEl.value);
         });
         
+// Load settings from localStorage
         window.addEventListener('load', () => {
             const savedInstruction = localStorage.getItem('galaxydevelopers-ai-instruction');
             const savedContext = localStorage.getItem('galaxydevelopers-ai-context');
@@ -1493,8 +1637,10 @@
             if (savedModel) modelEl.value = savedModel;
             
             promptInput.focus();
-            updateSeedDisplay(); // Fetch and display the seed on load
         });
     </script>
+    
+    <!-- Galaxy Monitoring Module -->
+    <script src="js/monitoring-module.js"></script>
 </body>
 </html>
