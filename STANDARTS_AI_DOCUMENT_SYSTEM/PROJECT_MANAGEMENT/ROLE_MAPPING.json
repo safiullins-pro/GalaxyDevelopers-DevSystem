@@ -1,0 +1,354 @@
+{
+  "role_mapping": {
+    "Business Analyst": "BA_c8541e",
+    "System Architect": "SA_2a6c2a",
+    "Technical Lead": "TL_6de9b7",
+    "DevOps Engineer": "DE_c4a174",
+    "Marketing Manager": "MM_21bf1c",
+    "Mobile App Designer": "MAD_171fbf",
+    "Security Specialist": "SS_6229c6",
+    "App Store Optimization Specialist": "ASO_5441f1",
+    "Platform Engineer": "PE_2c29c1",
+    "QA Engineer": "QE_6db8b7",
+    "Penetration Tester": "PT_2hrqyc",
+    "Release Manager": "RM_b31b92",
+    "Performance Engineer": "PE_a9fca8",
+    "Content Manager": "CM_fe9ac2",
+    "Site Reliability Engineer": "SRE_75e791",
+    "HR Business Partner": "HBP_45664f",
+    "UX/UI Designer": "UD_70004c",
+    "iOS Developer": "ID_93c891",
+    "Mobile Developer": "ID_93c891",
+    "Compliance Officer": "CO_54ba88",
+    "Swift Developer": "SD_b35713",
+    "Integration Architect": "IA_64b5ec",
+    "Load Testing Specialist": "LTS_db8b78",
+    "AI/ML Engineer": "AE_a9b03e",
+    "AI Testing Specialist": "ATS_9f8280",
+    "Technical Writer": "TW_816379",
+    "Python Developer": "PD_2b7692",
+    "Test Automation Engineer": "TAE_16682e",
+    "API Developer": "AD_c3791b",
+    "AI Specialist": "AS_dmw9ry",
+    "UX Designer": "UD_73qj9b",
+    "UI Designer": "UD_8a0eap",
+    "Database Architect": "DA_jkr2p4",
+    "Data Scientist": "DS_r535j0",
+    "Machine Learning Engineer": "ML_nzjx4x",
+    "Cloud Architect": "CA_pckkmr",
+    "Frontend Developer": "FD_e3m533",
+    "Backend Developer": "BD_2kxzj2",
+    "Full Stack Developer": "FS_8gfsdj"
+  },
+  "reverse_mapping": {
+    "BA_c8541e": {
+      "title": "Business Analyst",
+      "original_title": "Business Analyst",
+      "skills_count": 20,
+      "certifications_count": 5,
+      "competency_level": "advanced"
+    },
+    "SA_2a6c2a": {
+      "title": "System Architect",
+      "original_title": "System Architect",
+      "skills_count": 16,
+      "certifications_count": 4,
+      "competency_level": "advanced"
+    },
+    "TL_6de9b7": {
+      "title": "Technical Lead",
+      "original_title": "Technical Lead",
+      "skills_count": 20,
+      "certifications_count": 4,
+      "competency_level": "advanced"
+    },
+    "DE_c4a174": {
+      "title": "DevOps Engineer",
+      "original_title": "DevOps Engineer",
+      "skills_count": 39,
+      "certifications_count": 5,
+      "competency_level": "advanced"
+    },
+    "MM_21bf1c": {
+      "title": "Marketing Manager",
+      "original_title": "Marketing Manager",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "MAD_171fbf": {
+      "title": "Mobile App Designer",
+      "original_title": "Mobile App Designer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "SS_6229c6": {
+      "title": "Security Specialist",
+      "original_title": "Security Specialist",
+      "skills_count": 15,
+      "certifications_count": 5,
+      "competency_level": "advanced"
+    },
+    "ASO_5441f1": {
+      "title": "App Store Optimization Specialist",
+      "original_title": "App Store Optimization Specialist",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "PE_2c29c1": {
+      "title": "Platform Engineer",
+      "original_title": "Platform Engineer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "QE_6db8b7": {
+      "title": "QA Engineer",
+      "original_title": "Penetration Tester",
+      "skills_count": 15,
+      "certifications_count": 4,
+      "competency_level": "advanced"
+    },
+    "RM_b31b92": {
+      "title": "Release Manager",
+      "original_title": "Release Manager",
+      "skills_count": 15,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "PE_a9fca8": {
+      "title": "Performance Engineer",
+      "original_title": "Performance Engineer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "CM_fe9ac2": {
+      "title": "Content Manager",
+      "original_title": "Content Manager",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "SRE_75e791": {
+      "title": "Site Reliability Engineer",
+      "original_title": "Site Reliability Engineer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "HBP_45664f": {
+      "title": "HR Business Partner",
+      "original_title": "HR Business Partner",
+      "skills_count": 9,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "UD_70004c": {
+      "title": "UX/UI Designer",
+      "original_title": "UX/UI Designer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "ID_93c891": {
+      "title": "iOS Developer",
+      "original_title": "Mobile Developer",
+      "skills_count": 17,
+      "certifications_count": 2,
+      "competency_level": "expert"
+    },
+    "CO_54ba88": {
+      "title": "Compliance Officer",
+      "original_title": "Compliance Officer",
+      "skills_count": 15,
+      "certifications_count": 4,
+      "competency_level": "advanced"
+    },
+    "SD_b35713": {
+      "title": "Swift Developer",
+      "original_title": "Swift Developer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "IA_64b5ec": {
+      "title": "Integration Architect",
+      "original_title": "Integration Architect",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "LTS_db8b78": {
+      "title": "Load Testing Specialist",
+      "original_title": "Load Testing Specialist",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "AE_a9b03e": {
+      "title": "AI/ML Engineer",
+      "original_title": "AI/ML Engineer",
+      "skills_count": 24,
+      "certifications_count": 3,
+      "competency_level": "advanced"
+    },
+    "ATS_9f8280": {
+      "title": "AI Testing Specialist",
+      "original_title": "AI Testing Specialist",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "TW_816379": {
+      "title": "Technical Writer",
+      "original_title": "Technical Writer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "PD_2b7692": {
+      "title": "Python Developer",
+      "original_title": "Python Developer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "TAE_16682e": {
+      "title": "Test Automation Engineer",
+      "original_title": "Test Automation Engineer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "AD_c3791b": {
+      "title": "API Developer",
+      "original_title": "API Developer",
+      "skills_count": 10,
+      "certifications_count": 0,
+      "competency_level": "intermediate"
+    },
+    "AS_dmw9ry": {
+      "title": "AI Specialist",
+      "original_title": "AI Specialist",
+      "skills_count": 9,
+      "certifications_count": 3,
+      "competency_level": "advanced"
+    },
+    "UD_73qj9b": {
+      "title": "UX Designer",
+      "original_title": "UX Designer",
+      "skills_count": 9,
+      "certifications_count": 2,
+      "competency_level": "advanced"
+    },
+    "UD_8a0eap": {
+      "title": "UI Designer",
+      "original_title": "UI Designer",
+      "skills_count": 9,
+      "certifications_count": 2,
+      "competency_level": "advanced"
+    },
+    "DA_jkr2p4": {
+      "title": "Database Architect",
+      "original_title": "Database Architect",
+      "skills_count": 9,
+      "certifications_count": 3,
+      "competency_level": "advanced"
+    },
+    "PT_2hrqyc": {
+      "title": "Penetration Tester",
+      "original_title": "Penetration Tester",
+      "skills_count": 9,
+      "certifications_count": 4,
+      "competency_level": "advanced"
+    },
+    "DS_r535j0": {
+      "title": "Data Scientist",
+      "original_title": "Data Scientist",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    },
+    "ML_nzjx4x": {
+      "title": "Machine Learning Engineer",
+      "original_title": "Machine Learning Engineer",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    },
+    "CA_pckkmr": {
+      "title": "Cloud Architect",
+      "original_title": "Cloud Architect",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    },
+    "FD_e3m533": {
+      "title": "Frontend Developer",
+      "original_title": "Frontend Developer",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    },
+    "BD_2kxzj2": {
+      "title": "Backend Developer",
+      "original_title": "Backend Developer",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    },
+    "FS_8gfsdj": {
+      "title": "Full Stack Developer",
+      "original_title": "Full Stack Developer",
+      "skills_count": 3,
+      "certifications_count": 1,
+      "competency_level": "advanced"
+    }
+  },
+  "statistics": {
+    "total_roles": 39,
+    "role_ids": [
+      "BA_c8541e",
+      "SA_2a6c2a",
+      "TL_6de9b7",
+      "DE_c4a174",
+      "MM_21bf1c",
+      "MAD_171fbf",
+      "SS_6229c6",
+      "ASO_5441f1",
+      "PE_2c29c1",
+      "QE_6db8b7",
+      "RM_b31b92",
+      "PE_a9fca8",
+      "CM_fe9ac2",
+      "SRE_75e791",
+      "HBP_45664f",
+      "UD_70004c",
+      "ID_93c891",
+      "CO_54ba88",
+      "SD_b35713",
+      "IA_64b5ec",
+      "LTS_db8b78",
+      "AE_a9b03e",
+      "ATS_9f8280",
+      "TW_816379",
+      "PD_2b7692",
+      "TAE_16682e",
+      "AD_c3791b",
+      "AS_dmw9ry",
+      "UD_73qj9b",
+      "UD_8a0eap",
+      "DA_jkr2p4",
+      "PT_2hrqyc",
+      "DS_r535j0",
+      "ML_nzjx4x",
+      "CA_pckkmr",
+      "FD_e3m533",
+      "BD_2kxzj2",
+      "FS_8gfsdj"
+    ]
+  }
+}

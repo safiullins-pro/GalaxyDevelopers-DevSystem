@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: galaxy_postgres
+    environment:
+      POSTGRES_DB: documents_system
+      POSTGRES_USER: galaxy_user
+      POSTGRES_PASSWORD: galaxy2025
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U galaxy_user -d documents_system"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+    networks:
+      - galaxy_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: galaxy_redis
+    command: redis-server --requirepass redis2025 --maxmemory 512mb --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis2025", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+    networks:
+      - galaxy_network
+
+networks:
+  galaxy_network:
+    driver: bridge
+    name: galaxy_network

@@ -1,0 +1,27 @@
+{
+  "id": "P3.4",
+  "name": "IntegratorAgent разработка",
+  "description": "системная интеграция и версионность",
+  "executor": "DevOps Engineer + Integration Architect",
+  "methodology": [
+    "API Gateway Configuration",
+    "Event-Driven Architecture",
+    "Data Synchronization",
+    "Monitoring & Alerting",
+    "Rollback Strategies"
+  ],
+  "deliverables": [
+    "integrator_agent.py",
+    "api_gateway.yaml",
+    "sync_service.py"
+  ],
+  "required_skills": [
+    "Опыт работы с системами интеграции (API, webhooks, message queues)",
+    "Знание DevOps практик и инструментов",
+    "Навыки автоматизации и orchestration",
+    "Понимание cloud технологий и контейнеризации",
+    "Опыт работы с системами мониторинга"
+  ],
+  "generated_at": "2025-08-07T10:19:35.182407",
+  "status": "ready_for_execution"
+}

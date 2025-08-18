@@ -1,0 +1,25 @@
+{
+  "process_id": "P2.2",
+  "deliverables": [
+    {
+      "name": "cli_specs.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/cli_specs_md_template.json"
+    },
+    {
+      "name": "automation_scripts.sh",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SH/automation_scripts_sh_template.json"
+    },
+    {
+      "name": "user_manual.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/user_manual_pdf_template.json"
+    }
+  ],
+  "template_locations": {
+    "cli_specs.md": "../../../03_TEMPLATES/MD/cli_specs_md_template.json",
+    "automation_scripts.sh": "../../../03_TEMPLATES/SH/automation_scripts_sh_template.json",
+    "user_manual.pdf": "../../../03_TEMPLATES/PDF/user_manual_pdf_template.json"
+  }
+}

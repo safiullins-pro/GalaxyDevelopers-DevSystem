@@ -1,0 +1,15 @@
+{
+  "process_id": "P1.3",
+  "process_name": "Анализ команды",
+  "created": "2025-08-08T08:05:53.321629",
+  "status": "in_progress",
+  "executor": "Business Analyst + HR Business Partner",
+  "methodology": [
+    "Интервьюирование сотрудников",
+    "Создание RACI-матрицы",
+    "Анализ загруженности",
+    "Выявление дублирования",
+    "Документирование процессов"
+  ],
+  "data": {}
+}

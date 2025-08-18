@@ -1,0 +1,44 @@
+{
+  "role_id": "IA_64b5ec",
+  "title": "Integration Architect",
+  "original_title": "Integration Architect",
+  "created_at": "2025-08-07T10:19:32.930621",
+  "updated_at": "2025-08-07T10:19:32.930623",
+  "version": "1.0.0",
+  "skills": [
+    "Опыт работы с системами мониторинга",
+    "Знание DevOps практик и инструментов",
+    "Навыки автоматизации и orchestration",
+    "Понимание cloud технологий и контейнеризации",
+    "Опыт работы с системами интеграции (API, webhooks, message queues)",
+    "Communication skills",
+    "Problem-solving abilities",
+    "Team collaboration",
+    "Time management",
+    "Analytical thinking"
+  ],
+  "certifications": [],
+  "tools": [],
+  "frameworks": [],
+  "responsibilities": [],
+  "competency_levels": {
+    "technical": "intermediate",
+    "leadership": "basic",
+    "domain": "intermediate"
+  },
+  "experience_requirements": {
+    "minimum_years": 5,
+    "preferred_years": 8,
+    "required_experience": [
+      "Hands-on experience in Integration Architect role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": []
+}

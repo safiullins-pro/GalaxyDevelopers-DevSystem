@@ -1,0 +1,25 @@
+{
+  "process_id": "P2.1",
+  "deliverables": [
+    {
+      "name": "architecture_blueprint.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/architecture_blueprint_pdf_template.json"
+    },
+    {
+      "name": "api_specs.yaml",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/YAML/api_specs_yaml_template.json"
+    },
+    {
+      "name": "tech_stack.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/tech_stack_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "architecture_blueprint.pdf": "../../../03_TEMPLATES/PDF/architecture_blueprint_pdf_template.json",
+    "api_specs.yaml": "../../../03_TEMPLATES/YAML/api_specs_yaml_template.json",
+    "tech_stack.md": "../../../03_TEMPLATES/MD/tech_stack_md_template.json"
+  }
+}

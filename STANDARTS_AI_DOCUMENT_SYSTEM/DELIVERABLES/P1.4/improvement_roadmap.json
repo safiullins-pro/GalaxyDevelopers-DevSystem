@@ -1,0 +1,15 @@
+{
+  "process_id": "P1.4",
+  "process_name": "Оценка зрелости процессов",
+  "created": "2025-08-08T08:05:53.327795",
+  "status": "in_progress",
+  "executor": "Compliance Officer + IT Auditor",
+  "methodology": [
+    "Матрица соответствия",
+    "Оценка по модели зрелости",
+    "Анализ пробелов",
+    "Приоритизация улучшений",
+    "Создание roadmap"
+  ],
+  "data": {}
+}

@@ -1,0 +1,25 @@
+{
+  "process_id": "P2.3",
+  "deliverables": [
+    {
+      "name": "wireframes.fig",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/FIG/wireframes_fig_template.json"
+    },
+    {
+      "name": "prototypes.fig",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/FIG/prototypes_fig_template.json"
+    },
+    {
+      "name": "design_system.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/design_system_pdf_template.json"
+    }
+  ],
+  "template_locations": {
+    "wireframes.fig": "../../../03_TEMPLATES/FIG/wireframes_fig_template.json",
+    "prototypes.fig": "../../../03_TEMPLATES/FIG/prototypes_fig_template.json",
+    "design_system.pdf": "../../../03_TEMPLATES/PDF/design_system_pdf_template.json"
+  }
+}

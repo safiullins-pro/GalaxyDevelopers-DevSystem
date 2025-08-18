@@ -1,0 +1,27 @@
+{
+  "id": "P3.2",
+  "name": "ComposerAgent разработка",
+  "description": "генерация документации по корпоративным шаблонам",
+  "executor": "AI/ML Engineer + Technical Writer",
+  "methodology": [
+    "Template Engineering",
+    "Content Generation Logic",
+    "Style Consistency",
+    "Metadata Management",
+    "Version Control Integration"
+  ],
+  "deliverables": [
+    "composer_agent.py",
+    "template_engine.py",
+    "style_validator.py"
+  ],
+  "required_skills": [
+    "Опыт работы с генеративными AI моделями (GPT, Claude)",
+    "Знание шаблонов технической документации",
+    "Понимание стандартов документирования (ITIL, ISO)",
+    "Навыки работы с Markdown и структурированным контентом",
+    "Опыт создания automated content generation систем"
+  ],
+  "generated_at": "2025-08-07T10:19:35.170954",
+  "status": "ready_for_execution"
+}

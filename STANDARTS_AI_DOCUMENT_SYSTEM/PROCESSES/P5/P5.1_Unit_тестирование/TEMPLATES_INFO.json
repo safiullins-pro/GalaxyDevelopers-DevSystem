@@ -1,0 +1,25 @@
+{
+  "process_id": "P5.1",
+  "deliverables": [
+    {
+      "name": "test_suite.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/test_suite_swift_template.json"
+    },
+    {
+      "name": "mock_framework.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/mock_framework_swift_template.json"
+    },
+    {
+      "name": "coverage_report.html",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/HTML/coverage_report_html_template.json"
+    }
+  ],
+  "template_locations": {
+    "test_suite.swift": "../../../03_TEMPLATES/SWIFT/test_suite_swift_template.json",
+    "mock_framework.swift": "../../../03_TEMPLATES/SWIFT/mock_framework_swift_template.json",
+    "coverage_report.html": "../../../03_TEMPLATES/HTML/coverage_report_html_template.json"
+  }
+}

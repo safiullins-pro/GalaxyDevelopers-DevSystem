@@ -1,0 +1,27 @@
+{
+  "id": "P5.4",
+  "name": "Performance тестирование",
+  "description": "1000+ одновременных пользователей",
+  "executor": "Performance Engineer + Load Testing Specialist",
+  "methodology": [
+    "Performance Requirements Definition",
+    "Test Scenario Design",
+    "Environment Setup",
+    "Load Testing Execution",
+    "Results Analysis"
+  ],
+  "deliverables": [
+    "load_test_plan.jmx",
+    "performance_report.pdf",
+    "capacity_recommendations.md"
+  ],
+  "required_skills": [
+    "Опыт проведения load и performance testing",
+    "Знание инструментов нагрузочного тестирования (JMeter, k6, LoadRunner)",
+    "Понимание архитектуры высоконагруженных систем",
+    "Навыки анализа метрик производительности",
+    "Опыт capacity planning и scalability testing"
+  ],
+  "generated_at": "2025-08-07T10:19:35.274821",
+  "status": "ready_for_execution"
+}

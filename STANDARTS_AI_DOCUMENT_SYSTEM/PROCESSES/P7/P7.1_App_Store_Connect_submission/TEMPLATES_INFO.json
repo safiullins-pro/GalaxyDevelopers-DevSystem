@@ -1,0 +1,25 @@
+{
+  "process_id": "P7.1",
+  "deliverables": [
+    {
+      "name": "release_build.ipa",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/IPA/release_build_ipa_template.json"
+    },
+    {
+      "name": "app_store_submission.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/app_store_submission_pdf_template.json"
+    },
+    {
+      "name": "review_notes.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/review_notes_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "release_build.ipa": "../../../03_TEMPLATES/IPA/release_build_ipa_template.json",
+    "app_store_submission.pdf": "../../../03_TEMPLATES/PDF/app_store_submission_pdf_template.json",
+    "review_notes.md": "../../../03_TEMPLATES/MD/review_notes_md_template.json"
+  }
+}

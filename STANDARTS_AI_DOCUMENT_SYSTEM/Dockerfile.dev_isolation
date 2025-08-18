@@ -1,0 +1,26 @@
+# Dockerfile для создания изолированного окружения разработчика
+FROM ubuntu:22.04
+
+# Установка базовых утилит
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    sudo \
+    git \
+    curl \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Создание пользователя 'coder' с UID 1000 и предоставление ему sudo прав без пароля
+RUN useradd -m -s /bin/bash -u 1000 coder && echo "coder ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Установка рабочей директории
+WORKDIR /workspace/target
+
+# Переключение на пользователя 'coder'
+USER coder
+
+# Монтирование тома для работы
+VOLUME ["/workspace/target"]
+
+# Команда по умолчанию для запуска контейнера
+CMD ["/bin/bash"]
+

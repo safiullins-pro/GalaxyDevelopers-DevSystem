@@ -1,0 +1,1402 @@
+[
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/PROCESS_INDEX.json",
+    "name": "PROCESS_INDEX.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 378,
+    "modified": "2025-08-07T09:38:11.450000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/._EXECUTION_PLAN.md",
+    "name": "._EXECUTION_PLAN.md",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 4096,
+    "modified": "2025-08-07T16:36:21.010000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/._FILENAME_MAPPING.json",
+    "name": "._FILENAME_MAPPING.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 4096,
+    "modified": "2025-08-07T16:36:34.190000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/ROLE_MAPPING.json",
+    "name": "ROLE_MAPPING.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 10167,
+    "modified": "2025-08-07T10:23:19.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/EXECUTION_PLAN.md",
+    "name": "EXECUTION_PLAN.md",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 9028,
+    "modified": "2025-08-07T09:54:43.100000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/._PROCESS_INDEX.json",
+    "name": "._PROCESS_INDEX.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 4096,
+    "modified": "2025-08-07T16:36:52.450000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/PROCESS_ROLE_MATRIX.json",
+    "name": "PROCESS_ROLE_MATRIX.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 10593,
+    "modified": "2025-08-07T10:23:19.360000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/._PROCESS_ROLE_MATRIX.json",
+    "name": "._PROCESS_ROLE_MATRIX.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 4096,
+    "modified": "2025-08-07T16:37:07.420000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/FILENAME_MAPPING.json",
+    "name": "FILENAME_MAPPING.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 21266,
+    "modified": "2025-08-07T10:10:37.940000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/00_PROJECT_MANAGEMENT/._ROLE_MAPPING.json",
+    "name": "._ROLE_MAPPING.json",
+    "category": "00_PROJECT_MANAGEMENT",
+    "size": 4096,
+    "modified": "2025-08-07T16:37:19.810000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XLSX/template_raci_matrix_T002.json",
+    "name": "template_raci_matrix_T002.json",
+    "category": "03_TEMPLATES",
+    "size": 1016,
+    "modified": "2025-08-07T09:58:17.180000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XLSX/template_compliance_matrix_T003.json",
+    "name": "template_compliance_matrix_T003.json",
+    "category": "03_TEMPLATES",
+    "size": 1022,
+    "modified": "2025-08-07T09:58:18.030000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XLSX/template_keywords_research_T004.json",
+    "name": "template_keywords_research_T004.json",
+    "category": "03_TEMPLATES",
+    "size": 1022,
+    "modified": "2025-08-07T09:58:18.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XLSX/template_inventory_catalog_T005.json",
+    "name": "template_inventory_catalog_T005.json",
+    "category": "03_TEMPLATES",
+    "size": 1022,
+    "modified": "2025-08-07T09:58:19.760000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XLSX/template_security_audit_T001.json",
+    "name": "template_security_audit_T001.json",
+    "category": "03_TEMPLATES",
+    "size": 1019,
+    "modified": "2025-08-07T09:58:16.730000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_user_manual_T007.json",
+    "name": "template_user_manual_T007.json",
+    "category": "03_TEMPLATES",
+    "size": 587,
+    "modified": "2025-08-07T09:58:16.420000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_launch_report_T013.json",
+    "name": "template_launch_report_T013.json",
+    "category": "03_TEMPLATES",
+    "size": 589,
+    "modified": "2025-08-07T09:58:18.570000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_design_system_T010.json",
+    "name": "template_design_system_T010.json",
+    "category": "03_TEMPLATES",
+    "size": 589,
+    "modified": "2025-08-07T09:58:16.630000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_security_report_T008.json",
+    "name": "template_security_report_T008.json",
+    "category": "03_TEMPLATES",
+    "size": 591,
+    "modified": "2025-08-07T09:58:21.770000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_er_diagrams_T011.json",
+    "name": "template_er_diagrams_T011.json",
+    "category": "03_TEMPLATES",
+    "size": 587,
+    "modified": "2025-08-07T09:58:14.910000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_roles_mapping_T012.json",
+    "name": "template_roles_mapping_T012.json",
+    "category": "03_TEMPLATES",
+    "size": 589,
+    "modified": "2025-08-07T09:58:14.360000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_architecture_blueprint_T009.json",
+    "name": "template_architecture_blueprint_T009.json",
+    "category": "03_TEMPLATES",
+    "size": 598,
+    "modified": "2025-08-07T09:58:16.950000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_app_store_submission_T014.json",
+    "name": "template_app_store_submission_T014.json",
+    "category": "03_TEMPLATES",
+    "size": 596,
+    "modified": "2025-08-07T09:58:18.130000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_architecture_docs_T006.json",
+    "name": "template_architecture_docs_T006.json",
+    "category": "03_TEMPLATES",
+    "size": 593,
+    "modified": "2025-08-07T09:58:17.280000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_performance_report_T015.json",
+    "name": "template_performance_report_T015.json",
+    "category": "03_TEMPLATES",
+    "size": 594,
+    "modified": "2025-08-07T09:58:20.910000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_coverage_matrix_T016.json",
+    "name": "template_coverage_matrix_T016.json",
+    "category": "03_TEMPLATES",
+    "size": 591,
+    "modified": "2025-08-07T09:58:21.870000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_maturity_assessment_T017.json",
+    "name": "template_maturity_assessment_T017.json",
+    "category": "03_TEMPLATES",
+    "size": 595,
+    "modified": "2025-08-07T09:58:15.760000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PDF/template_aso_strategy_T018.json",
+    "name": "template_aso_strategy_T018.json",
+    "category": "03_TEMPLATES",
+    "size": 588,
+    "modified": "2025-08-07T09:58:20.570000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_capacity_recommendations_T027.json",
+    "name": "template_capacity_recommendations_T027.json",
+    "category": "03_TEMPLATES",
+    "size": 615,
+    "modified": "2025-08-07T09:58:20.360000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_rollback-procedures_T020.json",
+    "name": "template_rollback-procedures_T020.json",
+    "category": "03_TEMPLATES",
+    "size": 610,
+    "modified": "2025-08-07T09:58:16.090000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_tech_stack_T023.json",
+    "name": "template_tech_stack_T023.json",
+    "category": "03_TEMPLATES",
+    "size": 601,
+    "modified": "2025-08-07T09:58:18.890000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_cli_specs_T021.json",
+    "name": "template_cli_specs_T021.json",
+    "category": "03_TEMPLATES",
+    "size": 600,
+    "modified": "2025-08-07T09:58:19"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_interview_results_T019.json",
+    "name": "template_interview_results_T019.json",
+    "category": "03_TEMPLATES",
+    "size": 608,
+    "modified": "2025-08-07T09:58:15.120000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_incident_response_plan_T024.json",
+    "name": "template_incident_response_plan_T024.json",
+    "category": "03_TEMPLATES",
+    "size": 613,
+    "modified": "2025-08-07T09:58:16.520000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_migration_plan_T025.json",
+    "name": "template_migration_plan_T025.json",
+    "category": "03_TEMPLATES",
+    "size": 605,
+    "modified": "2025-08-07T09:58:15.870000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_pentest_results_T022.json",
+    "name": "template_pentest_results_T022.json",
+    "category": "03_TEMPLATES",
+    "size": 606,
+    "modified": "2025-08-07T09:58:21.340000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_backup-strategy_T026.json",
+    "name": "template_backup-strategy_T026.json",
+    "category": "03_TEMPLATES",
+    "size": 606,
+    "modified": "2025-08-07T09:58:14.580000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_gaps_analysis_T028.json",
+    "name": "template_gaps_analysis_T028.json",
+    "category": "03_TEMPLATES",
+    "size": 1696,
+    "modified": "2025-08-07T09:58:21.010000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_improvement_roadmap_T029.json",
+    "name": "template_improvement_roadmap_T029.json",
+    "category": "03_TEMPLATES",
+    "size": 610,
+    "modified": "2025-08-07T09:58:16.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/MD/template_review_notes_T030.json",
+    "name": "template_review_notes_T030.json",
+    "category": "03_TEMPLATES",
+    "size": 603,
+    "modified": "2025-08-07T09:58:18.240000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/YAML/template_deployment-pipeline.yaml_T032.json",
+    "name": "template_deployment-pipeline.yaml_T032.json",
+    "category": "03_TEMPLATES",
+    "size": 480,
+    "modified": "2025-08-07T09:58:14.470000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/YAML/template_api_gateway.yaml_T033.json",
+    "name": "template_api_gateway.yaml_T033.json",
+    "category": "03_TEMPLATES",
+    "size": 1427,
+    "modified": "2025-08-07T09:58:16.200000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/YAML/template_monitoring-stack.yaml_T034.json",
+    "name": "template_monitoring-stack.yaml_T034.json",
+    "category": "03_TEMPLATES",
+    "size": 477,
+    "modified": "2025-08-07T09:58:19.330000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/YAML/template_api_specs.yaml_T031.json",
+    "name": "template_api_specs.yaml_T031.json",
+    "category": "03_TEMPLATES",
+    "size": 1425,
+    "modified": "2025-08-07T09:58:20.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SQL/template_database_schema_T035.json",
+    "name": "template_database_schema_T035.json",
+    "category": "03_TEMPLATES",
+    "size": 3386,
+    "modified": "2025-08-07T09:58:17.710000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/._template_DocumentModel.swift_T036.json",
+    "name": "._template_DocumentModel.swift_T036.json",
+    "category": "03_TEMPLATES",
+    "size": 4096,
+    "modified": "2025-08-07T16:39:52.660000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_APIClient.swift_T037.json",
+    "name": "template_APIClient.swift_T037.json",
+    "category": "03_TEMPLATES",
+    "size": 3065,
+    "modified": "2025-08-07T09:58:14.260000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_SyncEngine.swift_T038.json",
+    "name": "template_SyncEngine.swift_T038.json",
+    "category": "03_TEMPLATES",
+    "size": 3067,
+    "modified": "2025-08-07T09:58:15.020000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_CacheManager.swift_T039.json",
+    "name": "template_CacheManager.swift_T039.json",
+    "category": "03_TEMPLATES",
+    "size": 3071,
+    "modified": "2025-08-07T09:58:17.820000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_mock_framework.swift_T040.json",
+    "name": "template_mock_framework.swift_T040.json",
+    "category": "03_TEMPLATES",
+    "size": 3075,
+    "modified": "2025-08-07T09:58:19.430000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_test_suite.swift_T041.json",
+    "name": "template_test_suite.swift_T041.json",
+    "category": "03_TEMPLATES",
+    "size": 3067,
+    "modified": "2025-08-07T09:58:20.800000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_NetworkLayer.swift_T042.json",
+    "name": "template_NetworkLayer.swift_T042.json",
+    "category": "03_TEMPLATES",
+    "size": 3071,
+    "modified": "2025-08-07T09:58:21.440000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_AuthManager.swift_T043.json",
+    "name": "template_AuthManager.swift_T043.json",
+    "category": "03_TEMPLATES",
+    "size": 3069,
+    "modified": "2025-08-07T09:58:21.660000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SWIFT/template_DocumentModel.swift_T036.json",
+    "name": "template_DocumentModel.swift_T036.json",
+    "category": "03_TEMPLATES",
+    "size": 3073,
+    "modified": "2025-08-07T09:41:40.600000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_style_validator.py_T045.json",
+    "name": "template_style_validator.py_T045.json",
+    "category": "03_TEMPLATES",
+    "size": 4962,
+    "modified": "2025-08-07T09:58:14.800000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_api_client.py_T046.json",
+    "name": "template_api_client.py_T046.json",
+    "category": "03_TEMPLATES",
+    "size": 4952,
+    "modified": "2025-08-07T09:58:15.230000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_ai_test_framework.py_T047.json",
+    "name": "template_ai_test_framework.py_T047.json",
+    "category": "03_TEMPLATES",
+    "size": 4966,
+    "modified": "2025-08-07T09:58:15.340000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_data_processor.py_T048.json",
+    "name": "template_data_processor.py_T048.json",
+    "category": "03_TEMPLATES",
+    "size": 4960,
+    "modified": "2025-08-07T09:58:15.550000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_notification_service.py_T049.json",
+    "name": "template_notification_service.py_T049.json",
+    "category": "03_TEMPLATES",
+    "size": 4972,
+    "modified": "2025-08-07T09:58:15.650000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_quality_metrics.py_T050.json",
+    "name": "template_quality_metrics.py_T050.json",
+    "category": "03_TEMPLATES",
+    "size": 4962,
+    "modified": "2025-08-07T09:58:15.980000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_distribution_engine.py_T051.json",
+    "name": "template_distribution_engine.py_T051.json",
+    "category": "03_TEMPLATES",
+    "size": 4970,
+    "modified": "2025-08-07T09:58:16.840000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_integration_tests.py_T052.json",
+    "name": "template_integration_tests.py_T052.json",
+    "category": "03_TEMPLATES",
+    "size": 4966,
+    "modified": "2025-08-07T09:58:17.070000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_composer_agent.py_T053.json",
+    "name": "template_composer_agent.py_T053.json",
+    "category": "03_TEMPLATES",
+    "size": 4960,
+    "modified": "2025-08-07T09:58:17.390000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_research_agent.py_T054.json",
+    "name": "template_research_agent.py_T054.json",
+    "category": "03_TEMPLATES",
+    "size": 4960,
+    "modified": "2025-08-07T09:58:17.610000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_publisher_agent.py_T055.json",
+    "name": "template_publisher_agent.py_T055.json",
+    "category": "03_TEMPLATES",
+    "size": 4962,
+    "modified": "2025-08-07T09:58:17.920000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_integrator_agent.py_T056.json",
+    "name": "template_integrator_agent.py_T056.json",
+    "category": "03_TEMPLATES",
+    "size": 4964,
+    "modified": "2025-08-07T09:58:19.540000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_sync_service.py_T057.json",
+    "name": "template_sync_service.py_T057.json",
+    "category": "03_TEMPLATES",
+    "size": 4956,
+    "modified": "2025-08-07T09:58:19.660000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_compliance_checker.py_T058.json",
+    "name": "template_compliance_checker.py_T058.json",
+    "category": "03_TEMPLATES",
+    "size": 4968,
+    "modified": "2025-08-07T09:58:19.870000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_template_engine.py_T059.json",
+    "name": "template_template_engine.py_T059.json",
+    "category": "03_TEMPLATES",
+    "size": 4962,
+    "modified": "2025-08-07T09:58:21.230000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_reviewer_agent.py_T060.json",
+    "name": "template_reviewer_agent.py_T060.json",
+    "category": "03_TEMPLATES",
+    "size": 4960,
+    "modified": "2025-08-07T09:58:21.980000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/PY/template_document_service.py_T044.json",
+    "name": "template_document_service.py_T044.json",
+    "category": "03_TEMPLATES",
+    "size": 4964,
+    "modified": "2025-08-07T09:41:40.770000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/FIG/template_prototypes.fig_T062.json",
+    "name": "template_prototypes.fig_T062.json",
+    "category": "03_TEMPLATES",
+    "size": 296,
+    "modified": "2025-08-07T09:58:15.440000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/FIG/template_wireframes.fig_T061.json",
+    "name": "template_wireframes.fig_T061.json",
+    "category": "03_TEMPLATES",
+    "size": 296,
+    "modified": "2025-08-07T09:58:14.690000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/template_monitoring_dashboard_T064.json",
+    "name": "template_monitoring_dashboard_T064.json",
+    "category": "03_TEMPLATES",
+    "size": 610,
+    "modified": "2025-08-07T09:58:18.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/template_performance_benchmarks_T065.json",
+    "name": "template_performance_benchmarks_T065.json",
+    "category": "03_TEMPLATES",
+    "size": 614,
+    "modified": "2025-08-07T09:58:19.220000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/template_vulnerability_scan_T063.json",
+    "name": "template_vulnerability_scan_T063.json",
+    "category": "03_TEMPLATES",
+    "size": 606,
+    "modified": "2025-08-07T09:58:17.500000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/template_tech_inventory_T066.json",
+    "name": "template_tech_inventory_T066.json",
+    "category": "03_TEMPLATES",
+    "size": 598,
+    "modified": "2025-08-07T09:58:20.680000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/._template_monitoring_dashboard_T064.json",
+    "name": "._template_monitoring_dashboard_T064.json",
+    "category": "03_TEMPLATES",
+    "size": 4096,
+    "modified": "2025-08-07T16:39:38.470000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JSON/template_app_store_metadata_T067.json",
+    "name": "template_app_store_metadata_T067.json",
+    "category": "03_TEMPLATES",
+    "size": 606,
+    "modified": "2025-08-07T09:58:20.120000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XCDATAMODELD/template_CoreDataModel.xcdatamodeld_T068.json",
+    "name": "template_CoreDataModel.xcdatamodeld_T068.json",
+    "category": "03_TEMPLATES",
+    "size": 329,
+    "modified": "2025-08-07T09:58:18.680000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XCODEPROJ/template_iOS_app.xcodeproj_T070.json",
+    "name": "template_iOS_app.xcodeproj_T070.json",
+    "category": "03_TEMPLATES",
+    "size": 308,
+    "modified": "2025-08-07T09:58:22.080000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XCODEPROJ/template_macOS_app.xcodeproj_T069.json",
+    "name": "template_macOS_app.xcodeproj_T069.json",
+    "category": "03_TEMPLATES",
+    "size": 312,
+    "modified": "2025-08-07T09:58:18.790000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/HTML/._template_coverage_report.html_T071.json",
+    "name": "._template_coverage_report.html_T071.json",
+    "category": "03_TEMPLATES",
+    "size": 4096,
+    "modified": "2025-08-07T16:39:24.630000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/HTML/template_coverage_report.html_T071.json",
+    "name": "template_coverage_report.html_T071.json",
+    "category": "03_TEMPLATES",
+    "size": 309,
+    "modified": "2025-08-07T09:58:19.110000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/JMX/template_load_test_plan.jmx_T072.json",
+    "name": "template_load_test_plan.jmx_T072.json",
+    "category": "03_TEMPLATES",
+    "size": 304,
+    "modified": "2025-08-07T09:58:20.020000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/GENERIC/template_k8s_manifests_T077.json",
+    "name": "template_k8s_manifests_T077.json",
+    "category": "03_TEMPLATES",
+    "size": 662,
+    "modified": "2025-08-07T10:23:14.810000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/XCFRAMEWORK/template_shared_framework.xcframework_T073.json",
+    "name": "template_shared_framework.xcframework_T073.json",
+    "category": "03_TEMPLATES",
+    "size": 332,
+    "modified": "2025-08-07T09:58:20.240000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/SH/template_automation_scripts.sh_T074.json",
+    "name": "template_automation_scripts.sh_T074.json",
+    "category": "03_TEMPLATES",
+    "size": 309,
+    "modified": "2025-08-07T09:58:21.130000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/IPA/template_release_build.ipa_T075.json",
+    "name": "template_release_build.ipa_T075.json",
+    "category": "03_TEMPLATES",
+    "size": 302,
+    "modified": "2025-08-07T09:58:21.550000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/GITHUB/WORKFLOWS/._template_github_workflows_T076.json",
+    "name": "._template_github_workflows_T076.json",
+    "category": "03_TEMPLATES",
+    "size": 4096,
+    "modified": "2025-08-07T16:39:00.370000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/03_TEMPLATES/GITHUB/WORKFLOWS/template_github_workflows_T076.json",
+    "name": "template_github_workflows_T076.json",
+    "category": "03_TEMPLATES",
+    "size": 620,
+    "modified": "2025-08-07T10:22:37.100000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/BA_c8541e/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 2093,
+    "modified": "2025-08-07T10:19:34.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/BA_c8541e/profile_role_BA_c8541e.json",
+    "name": "profile_role_BA_c8541e.json",
+    "category": "05_ROLES",
+    "size": 2786,
+    "modified": "2025-08-07T10:19:34.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SA_2a6c2a/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1778,
+    "modified": "2025-08-07T10:19:34.210000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SA_2a6c2a/profile_role_SA_2a6c2a.json",
+    "name": "profile_role_SA_2a6c2a.json",
+    "category": "05_ROLES",
+    "size": 2432,
+    "modified": "2025-08-07T10:19:34.200000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TL_6de9b7/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1939,
+    "modified": "2025-08-07T10:19:34.860000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TL_6de9b7/profile_role_TL_6de9b7.json",
+    "name": "profile_role_TL_6de9b7.json",
+    "category": "05_ROLES",
+    "size": 2610,
+    "modified": "2025-08-07T10:19:34.860000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DE_c4a174/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 3194,
+    "modified": "2025-08-07T10:19:31.610000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DE_c4a174/profile_role_DE_c4a174.json",
+    "name": "profile_role_DE_c4a174.json",
+    "category": "05_ROLES",
+    "size": 3975,
+    "modified": "2025-08-07T10:19:31.610000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/MM_21bf1c/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 977,
+    "modified": "2025-08-07T10:19:34.970000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/MM_21bf1c/profile_role_MM_21bf1c.json",
+    "name": "profile_role_MM_21bf1c.json",
+    "category": "05_ROLES",
+    "size": 1318,
+    "modified": "2025-08-07T10:19:34.970000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/MAD_171fbf/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1142,
+    "modified": "2025-08-07T10:19:34.640000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/MAD_171fbf/profile_role_MAD_171fbf.json",
+    "name": "profile_role_MAD_171fbf.json",
+    "category": "05_ROLES",
+    "size": 1485,
+    "modified": "2025-08-07T10:19:34.640000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SS_6229c6/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1604,
+    "modified": "2025-08-07T10:19:34"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SS_6229c6/profile_role_SS_6229c6.json",
+    "name": "profile_role_SS_6229c6.json",
+    "category": "05_ROLES",
+    "size": 2260,
+    "modified": "2025-08-07T10:19:33.990000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ASO_5441f1/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1010,
+    "modified": "2025-08-07T10:19:31.940000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ASO_5441f1/profile_role_ASO_5441f1.json",
+    "name": "profile_role_ASO_5441f1.json",
+    "category": "05_ROLES",
+    "size": 1367,
+    "modified": "2025-08-07T10:19:31.940000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PE_2c29c1/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1033,
+    "modified": "2025-08-07T10:19:34.420000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PE_2c29c1/profile_role_PE_2c29c1.json",
+    "name": "profile_role_PE_2c29c1.json",
+    "category": "05_ROLES",
+    "size": 1374,
+    "modified": "2025-08-07T10:19:34.410000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/QE_6db8b7/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1572,
+    "modified": "2025-08-07T10:19:33.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/QE_6db8b7/profile_role_QE_6db8b7.json",
+    "name": "profile_role_QE_6db8b7.json",
+    "category": "05_ROLES",
+    "size": 2227,
+    "modified": "2025-08-07T10:19:33.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/RM_b31b92/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1320,
+    "modified": "2025-08-07T10:19:33.140000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/RM_b31b92/profile_role_RM_b31b92.json",
+    "name": "profile_role_RM_b31b92.json",
+    "category": "05_ROLES",
+    "size": 1684,
+    "modified": "2025-08-07T10:19:33.140000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PE_a9fca8/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1110,
+    "modified": "2025-08-07T10:19:31.170000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PE_a9fca8/profile_role_PE_a9fca8.json",
+    "name": "profile_role_PE_a9fca8.json",
+    "category": "05_ROLES",
+    "size": 1454,
+    "modified": "2025-08-07T10:19:31.170000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CM_fe9ac2/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1060,
+    "modified": "2025-08-07T10:19:31.830000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CM_fe9ac2/profile_role_CM_fe9ac2.json",
+    "name": "profile_role_CM_fe9ac2.json",
+    "category": "05_ROLES",
+    "size": 1399,
+    "modified": "2025-08-07T10:19:31.830000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SRE_75e791/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 967,
+    "modified": "2025-08-07T10:19:34.750000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SRE_75e791/profile_role_SRE_75e791.json",
+    "name": "profile_role_SRE_75e791.json",
+    "category": "05_ROLES",
+    "size": 1316,
+    "modified": "2025-08-07T10:19:34.750000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/HBP_45664f/._README.md",
+    "name": "._README.md",
+    "category": "05_ROLES",
+    "size": 4096,
+    "modified": "2025-08-07T13:34:51.800000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/HBP_45664f/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1051,
+    "modified": "2025-08-07T10:19:32.720000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/HBP_45664f/profile_role_HBP_45664f.json",
+    "name": "profile_role_HBP_45664f.json",
+    "category": "05_ROLES",
+    "size": 1389,
+    "modified": "2025-08-07T10:19:32.720000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_70004c/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1131,
+    "modified": "2025-08-07T10:19:33.360000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_70004c/profile_role_UD_70004c.json",
+    "name": "profile_role_UD_70004c.json",
+    "category": "05_ROLES",
+    "size": 1469,
+    "modified": "2025-08-07T10:19:33.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ID_93c891/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1657,
+    "modified": "2025-08-07T10:19:32.820000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ID_93c891/profile_role_ID_93c891.json",
+    "name": "profile_role_ID_93c891.json",
+    "category": "05_ROLES",
+    "size": 2319,
+    "modified": "2025-08-07T10:19:32.820000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CO_54ba88/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1615,
+    "modified": "2025-08-07T10:19:34.100000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CO_54ba88/profile_role_CO_54ba88.json",
+    "name": "profile_role_CO_54ba88.json",
+    "category": "05_ROLES",
+    "size": 2264,
+    "modified": "2025-08-07T10:19:34.100000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SD_b35713/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1071,
+    "modified": "2025-08-07T10:19:32.500000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/SD_b35713/profile_role_SD_b35713.json",
+    "name": "profile_role_SD_b35713.json",
+    "category": "05_ROLES",
+    "size": 1410,
+    "modified": "2025-08-07T10:19:32.500000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/IA_64b5ec/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1087,
+    "modified": "2025-08-07T10:19:32.930000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/IA_64b5ec/profile_role_IA_64b5ec.json",
+    "name": "profile_role_IA_64b5ec.json",
+    "category": "05_ROLES",
+    "size": 1432,
+    "modified": "2025-08-07T10:19:32.930000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/LTS_db8b78/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1117,
+    "modified": "2025-08-07T10:19:33.040000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/LTS_db8b78/profile_role_LTS_db8b78.json",
+    "name": "profile_role_LTS_db8b78.json",
+    "category": "05_ROLES",
+    "size": 1464,
+    "modified": "2025-08-07T10:19:33.030000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AE_a9b03e/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 2436,
+    "modified": "2025-08-07T10:19:32.070000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AE_a9b03e/profile_role_AE_a9b03e.json",
+    "name": "profile_role_AE_a9b03e.json",
+    "category": "05_ROLES",
+    "size": 3117,
+    "modified": "2025-08-07T10:19:32.050000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ATS_9f8280/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1048,
+    "modified": "2025-08-07T10:19:31.280000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ATS_9f8280/profile_role_ATS_9f8280.json",
+    "name": "profile_role_ATS_9f8280.json",
+    "category": "05_ROLES",
+    "size": 1393,
+    "modified": "2025-08-07T10:19:31.270000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TW_816379/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1125,
+    "modified": "2025-08-07T10:19:33.890000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TW_816379/profile_role_TW_816379.json",
+    "name": "profile_role_TW_816379.json",
+    "category": "05_ROLES",
+    "size": 1465,
+    "modified": "2025-08-07T10:19:33.880000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PD_2b7692/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1102,
+    "modified": "2025-08-07T10:19:32.180000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PD_2b7692/profile_role_PD_2b7692.json",
+    "name": "profile_role_PD_2b7692.json",
+    "category": "05_ROLES",
+    "size": 1442,
+    "modified": "2025-08-07T10:19:32.180000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TAE_16682e/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1071,
+    "modified": "2025-08-07T10:19:33.670000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/TAE_16682e/profile_role_TAE_16682e.json",
+    "name": "profile_role_TAE_16682e.json",
+    "category": "05_ROLES",
+    "size": 1419,
+    "modified": "2025-08-07T10:19:33.670000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AD_c3791b/._profile_role_AD_c3791b.json",
+    "name": "._profile_role_AD_c3791b.json",
+    "category": "05_ROLES",
+    "size": 4096,
+    "modified": "2025-08-07T16:40:45.070000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AD_c3791b/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 1050,
+    "modified": "2025-08-07T10:19:32.390000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AD_c3791b/profile_role_AD_c3791b.json",
+    "name": "profile_role_AD_c3791b.json",
+    "category": "05_ROLES",
+    "size": 1387,
+    "modified": "2025-08-07T10:19:32.390000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AS_dmw9ry/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 521,
+    "modified": "2025-08-07T10:20:30.290000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/AS_dmw9ry/profile_role_AS_dmw9ry.json",
+    "name": "profile_role_AS_dmw9ry.json",
+    "category": "05_ROLES",
+    "size": 1687,
+    "modified": "2025-08-07T10:20:30.280000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_73qj9b/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 496,
+    "modified": "2025-08-07T10:20:30.290000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_73qj9b/profile_role_UD_73qj9b.json",
+    "name": "profile_role_UD_73qj9b.json",
+    "category": "05_ROLES",
+    "size": 1650,
+    "modified": "2025-08-07T10:20:30.290000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_8a0eap/._profile_role_UD_8a0eap.json",
+    "name": "._profile_role_UD_8a0eap.json",
+    "category": "05_ROLES",
+    "size": 4096,
+    "modified": "2025-08-07T16:41:11.720000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_8a0eap/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 485,
+    "modified": "2025-08-07T10:20:30.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/UD_8a0eap/profile_role_UD_8a0eap.json",
+    "name": "profile_role_UD_8a0eap.json",
+    "category": "05_ROLES",
+    "size": 1611,
+    "modified": "2025-08-07T10:20:30.300000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DA_jkr2p4/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 521,
+    "modified": "2025-08-07T10:20:30.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DA_jkr2p4/profile_role_DA_jkr2p4.json",
+    "name": "profile_role_DA_jkr2p4.json",
+    "category": "05_ROLES",
+    "size": 1711,
+    "modified": "2025-08-07T10:20:30.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PT_2hrqyc/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 553,
+    "modified": "2025-08-07T10:20:30.320000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/PT_2hrqyc/profile_role_PT_2hrqyc.json",
+    "name": "profile_role_PT_2hrqyc.json",
+    "category": "05_ROLES",
+    "size": 1708,
+    "modified": "2025-08-07T10:20:30.310000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DS_r535j0/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 396,
+    "modified": "2025-08-07T10:20:30.320000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/DS_r535j0/profile_role_DS_r535j0.json",
+    "name": "profile_role_DS_r535j0.json",
+    "category": "05_ROLES",
+    "size": 1329,
+    "modified": "2025-08-07T10:20:30.320000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ML_nzjx4x/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 418,
+    "modified": "2025-08-07T10:20:30.330000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/ML_nzjx4x/profile_role_ML_nzjx4x.json",
+    "name": "profile_role_ML_nzjx4x.json",
+    "category": "05_ROLES",
+    "size": 1417,
+    "modified": "2025-08-07T10:20:30.320000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CA_pckkmr/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 398,
+    "modified": "2025-08-07T10:20:30.330000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/CA_pckkmr/profile_role_CA_pckkmr.json",
+    "name": "profile_role_CA_pckkmr.json",
+    "category": "05_ROLES",
+    "size": 1337,
+    "modified": "2025-08-07T10:20:30.330000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/FD_e3m533/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 404,
+    "modified": "2025-08-07T10:20:30.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/FD_e3m533/profile_role_FD_e3m533.json",
+    "name": "profile_role_FD_e3m533.json",
+    "category": "05_ROLES",
+    "size": 1361,
+    "modified": "2025-08-07T10:20:30.340000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/BD_2kxzj2/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 402,
+    "modified": "2025-08-07T10:20:30.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/BD_2kxzj2/profile_role_BD_2kxzj2.json",
+    "name": "profile_role_BD_2kxzj2.json",
+    "category": "05_ROLES",
+    "size": 1353,
+    "modified": "2025-08-07T10:20:30.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/BD_2kxzj2/._profile_role_BD_2kxzj2.json",
+    "name": "._profile_role_BD_2kxzj2.json",
+    "category": "05_ROLES",
+    "size": 4096,
+    "modified": "2025-08-07T13:34:19.200000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/FS_8gfsdj/README.md",
+    "name": "README.md",
+    "category": "05_ROLES",
+    "size": 408,
+    "modified": "2025-08-07T10:20:30.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/05_ROLES/FS_8gfsdj/profile_role_FS_8gfsdj.json",
+    "name": "profile_role_FS_8gfsdj.json",
+    "category": "05_ROLES",
+    "size": 1377,
+    "modified": "2025-08-07T10:20:30.350000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/06_AGENTS/._business_analyst_agent.py",
+    "name": "._business_analyst_agent.py",
+    "category": "06_AGENTS",
+    "size": 4096,
+    "modified": "2025-08-08T05:24:04.950000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/06_AGENTS/._P1_MEGA_AGENT.py",
+    "name": "._P1_MEGA_AGENT.py",
+    "category": "06_AGENTS",
+    "size": 4096,
+    "modified": "2025-08-08T06:02:05.870000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/06_AGENTS/P1_MEGA_AGENT.py",
+    "name": "P1_MEGA_AGENT.py",
+    "category": "06_AGENTS",
+    "size": 15537,
+    "modified": "2025-08-08T06:02:05.870000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/06_AGENTS/business_analyst_agent.py",
+    "name": "business_analyst_agent.py",
+    "category": "06_AGENTS",
+    "size": 19112,
+    "modified": "2025-08-08T05:24:04.950000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/templates_report_20250807_094140.json",
+    "name": "templates_report_20250807_094140.json",
+    "category": "10_REPORTS",
+    "size": 265,
+    "modified": "2025-08-07T09:41:40.880000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102533.json",
+    "name": "SYSTEM_VALIDATION_20250807_102533.json",
+    "category": "10_REPORTS",
+    "size": 7962,
+    "modified": "2025-08-07T10:25:33.700000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/roles_report_20250807_094828.json",
+    "name": "roles_report_20250807_094828.json",
+    "category": "10_REPORTS",
+    "size": 451,
+    "modified": "2025-08-07T09:48:28.670000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_102533.json",
+    "name": "._SYSTEM_VALIDATION_20250807_102533.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T10:25:33.700000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/templates_report_20250807_095822.json",
+    "name": "templates_report_20250807_095822.json",
+    "category": "10_REPORTS",
+    "size": 420,
+    "modified": "2025-08-07T09:58:22.190000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102553.json",
+    "name": "SYSTEM_VALIDATION_20250807_102553.json",
+    "category": "10_REPORTS",
+    "size": 7424,
+    "modified": "2025-08-07T10:25:53.500000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/roles_report_20250807_095826.json",
+    "name": "roles_report_20250807_095826.json",
+    "category": "10_REPORTS",
+    "size": 1312,
+    "modified": "2025-08-07T09:58:26.300000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_102553.json",
+    "name": "._SYSTEM_VALIDATION_20250807_102553.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T10:25:53.500000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/FINAL_EXECUTION_REPORT_20250807_095826.json",
+    "name": "FINAL_EXECUTION_REPORT_20250807_095826.json",
+    "category": "10_REPORTS",
+    "size": 1267,
+    "modified": "2025-08-07T09:58:26.570000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102624.json",
+    "name": "SYSTEM_VALIDATION_20250807_102624.json",
+    "category": "10_REPORTS",
+    "size": 2263,
+    "modified": "2025-08-07T10:26:24.510000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/templates_report_20250807_101931.json",
+    "name": "templates_report_20250807_101931.json",
+    "category": "10_REPORTS",
+    "size": 420,
+    "modified": "2025-08-07T10:19:31.160000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_102624.json",
+    "name": "._SYSTEM_VALIDATION_20250807_102624.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T10:26:24.510000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/roles_report_20250807_101935.json",
+    "name": "roles_report_20250807_101935.json",
+    "category": "10_REPORTS",
+    "size": 1312,
+    "modified": "2025-08-07T10:19:35.080000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102632.json",
+    "name": "SYSTEM_VALIDATION_20250807_102632.json",
+    "category": "10_REPORTS",
+    "size": 2263,
+    "modified": "2025-08-07T10:26:32.940000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/FINAL_EXECUTION_REPORT_20250807_101935.json",
+    "name": "FINAL_EXECUTION_REPORT_20250807_101935.json",
+    "category": "10_REPORTS",
+    "size": 1266,
+    "modified": "2025-08-07T10:19:35.320000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_102632.json",
+    "name": "._SYSTEM_VALIDATION_20250807_102632.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T10:26:32.940000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102455.json",
+    "name": "SYSTEM_VALIDATION_20250807_102455.json",
+    "category": "10_REPORTS",
+    "size": 46207,
+    "modified": "2025-08-07T10:24:55.950000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_102721.json",
+    "name": "SYSTEM_VALIDATION_20250807_102721.json",
+    "category": "10_REPORTS",
+    "size": 732,
+    "modified": "2025-08-07T10:27:21.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_102721.json",
+    "name": "._SYSTEM_VALIDATION_20250807_102721.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T10:27:21.460000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._templates_report_20250807_101931.json",
+    "name": "._templates_report_20250807_101931.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T16:45:30.450000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._roles_report_20250807_095826.json",
+    "name": "._roles_report_20250807_095826.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T13:36:48.420000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/SYSTEM_VALIDATION_20250807_134458.json",
+    "name": "SYSTEM_VALIDATION_20250807_134458.json",
+    "category": "10_REPORTS",
+    "size": 732,
+    "modified": "2025-08-07T13:44:58.210000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._SYSTEM_VALIDATION_20250807_134458.json",
+    "name": "._SYSTEM_VALIDATION_20250807_134458.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T13:44:58.210000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._roles_report_20250807_101935.json",
+    "name": "._roles_report_20250807_101935.json",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-07T16:45:54.170000"
+  },
+  {
+    "path": "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/10_REPORTS/._P1_MEGA_AUDIT",
+    "name": "._P1_MEGA_AUDIT",
+    "category": "10_REPORTS",
+    "size": 4096,
+    "modified": "2025-08-08T06:02:11.140000"
+  }
+]

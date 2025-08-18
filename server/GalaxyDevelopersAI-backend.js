@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+const { executeCommandSecure, authenticateToken, validateInput, validationSchemas, rateLimiters } = require('../McKinsey_Transformation/Horizon_1_Simplify/Week1_Security_Fixes.js');
 
 const express = require('express');
-const { GoogleGenerativeAI, FunctionDeclarationSchemaType } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const KeyRotator = require('./GalaxyDevelopersAI-key-rotator');
-const { execSync, spawn } = require('child_process');
+const { spawn } = require('child_process'); // execSync REMOVED FOREVER - LAZARUS AUDIT FIX
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
@@ -20,6 +21,17 @@ const info = console.info;
 const error = console.error;
 
 const app = express();
+
+const helmet = require('helmet');
+const cors = require('cors');
+
+// Security headers
+app.use(helmet());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    credentials: true
+}));
+
 app.use(express.json({ limit: '50mb' }));
 
 const keyRotator = new KeyRotator();
@@ -106,9 +118,9 @@ const tools = [
         name: 'run_shell_command',
         description: 'Executes a shell command and returns the output.',
         parameters: {
-          type: FunctionDeclarationSchemaType.OBJECT,
+          type: "object",
           properties: {
-            command: { type: FunctionDeclarationSchemaType.STRING, description: 'The command to execute.' },
+            command: { type: "string", description: 'The command to execute.' },
           },
           required: ['command'],
         },
@@ -117,9 +129,9 @@ const tools = [
         name: 'read_file',
         description: 'Reads the content of a file.',
         parameters: {
-          type: FunctionDeclarationSchemaType.OBJECT,
+          type: "object",
           properties: {
-            absolute_path: { type: FunctionDeclarationSchemaType.STRING, description: 'The absolute path to the file.' },
+            absolute_path: { type: "string", description: 'The absolute path to the file.' },
           },
           required: ['absolute_path'],
         },
@@ -128,10 +140,10 @@ const tools = [
         name: 'write_file',
         description: 'Writes content to a file.',
         parameters: {
-          type: FunctionDeclarationSchemaType.OBJECT,
+          type: "object",
           properties: {
-            file_path: { type: FunctionDeclarationSchemaType.STRING, description: 'The absolute path to the file.' },
-            content: { type: FunctionDeclarationSchemaType.STRING, description: 'The content to write.' },
+            file_path: { type: "string", description: 'The absolute path to the file.' },
+            content: { type: "string", description: 'The content to write.' },
           },
           required: ['file_path', 'content'],
         },
@@ -141,10 +153,10 @@ const tools = [
 ];
 
 const toolFunctions = {
-  run_shell_command: ({ command }) => {
+  run_shell_command: async ({ command }) => {
     try {
       log(`SHELL EXEC: ${command}`);
-      const output = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+      const output = await executeCommandSecure(command, { encoding: 'utf8', stdio: 'pipe' });
       return { result: { output } };
     } catch (e) {
       log(`SHELL ERROR: ${command}`, e);
@@ -182,6 +194,7 @@ const toolFunctions = {
 // =================================================================
 
 app.post('/chat', async (req, res) => {
+  let apiKey;
   try {
     const { prompt, instruction, context, model, temperature, topK, topP, maxTokens, useMemory, history } = req.body;
 
@@ -189,7 +202,7 @@ app.post('/chat', async (req, res) => {
       return res.status(400).json({ error: 'No prompt provided' });
     }
 
-    let apiKey = keyRotator.getNextValidKey();
+    apiKey = keyRotator.getNextValidKey();
     const genAI = new GoogleGenerativeAI(apiKey);
 
     const config = geminiConfig.forge_mode; // Always use forge_mode for now
@@ -216,13 +229,20 @@ app.post('/chat', async (req, res) => {
 
     let result = await chat.sendMessage(fullPrompt);
 
-    // Function calling loop
-    while (true) {
+    // Function calling loop with protection
+    let iterations = 0;
+    const maxIterations = 10;
+    const startTime = Date.now();
+    const timeout = 30000; // 30 seconds
+    
+    while (iterations < maxIterations && (Date.now() - startTime) < timeout) {
       const call = result.response.functionCalls()?.[0];
       if (!call) {
         // No more function calls, break the loop and return the text response
         break;
       }
+      
+      iterations++;
 
       log(`TOOL CALL: ${call.name}`, call.args);
       const toolResult = toolFunctions[call.name](call.args);
@@ -236,6 +256,14 @@ app.post('/chat', async (req, res) => {
           },
         },
       ]));
+    }
+    
+    // Check if loop ended due to timeout or max iterations
+    if (iterations >= maxIterations) {
+      log('⚠️ Function calling loop stopped: max iterations reached');
+    }
+    if ((Date.now() - startTime) >= timeout) {
+      log('⚠️ Function calling loop stopped: timeout reached');
     }
 
     const textResponse = result.response.text();
@@ -259,7 +287,7 @@ app.post('/chat', async (req, res) => {
 
   } catch (err) {
     error('API Error:', err.message, err.stack);
-    if (err.message?.includes('quota')) {
+    if (err.message?.includes('quota') && apiKey) {
       keyRotator.markKeyAsExhausted(apiKey);
       error('Key exhausted, will use next one on next request');
     }

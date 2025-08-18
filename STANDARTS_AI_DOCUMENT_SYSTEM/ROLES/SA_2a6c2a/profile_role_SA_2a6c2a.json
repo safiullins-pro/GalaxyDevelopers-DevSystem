@@ -1,0 +1,89 @@
+{
+  "role_id": "SA_2a6c2a",
+  "title": "System Architect",
+  "original_title": "System Architect",
+  "created_at": "2025-08-07T10:19:34.208691",
+  "updated_at": "2025-08-07T10:19:34.208694",
+  "version": "1.0.0",
+  "skills": [
+    "Глубокие знания IT-инфраструктуры и системной архитектуры",
+    "Опыт работы с облачными платформами (AWS, Azure, GCP)",
+    "Навыки системного администрирования",
+    "Знание современных технологий и фреймворков",
+    "Понимание принципов DevOps и CI/CD",
+    "Knowledge of TOGAF",
+    "Knowledge of Zachman",
+    "Knowledge of DoDAF",
+    "Knowledge of Microservices",
+    "Knowledge of SOA",
+    "Knowledge of Event-Driven Architecture",
+    "Proficiency in ArchiMate",
+    "Proficiency in Enterprise Architect",
+    "Proficiency in Visio",
+    "Proficiency in Draw.io",
+    "Proficiency in PlantUML"
+  ],
+  "certifications": [
+    "TOGAF",
+    "AWS Solutions Architect",
+    "Azure Solutions Architect",
+    "Google Cloud Architect"
+  ],
+  "tools": [
+    "ArchiMate",
+    "Enterprise Architect",
+    "Visio",
+    "Draw.io",
+    "PlantUML",
+    "C4 Model"
+  ],
+  "frameworks": [
+    "TOGAF",
+    "Zachman",
+    "DoDAF",
+    "Microservices",
+    "SOA",
+    "Event-Driven Architecture"
+  ],
+  "responsibilities": [
+    "System design and architecture",
+    "Technology stack selection",
+    "Integration design",
+    "Performance optimization",
+    "Security architecture"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "advanced",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Software Developer",
+    "current": "System Architect",
+    "senior": "Principal Architect",
+    "next": [
+      "Enterprise Architect",
+      "CTO",
+      "VP of Engineering"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 5,
+    "preferred_years": 8,
+    "required_experience": [
+      "Hands-on experience in System Architect role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Technical Lead",
+    "DevOps Engineer",
+    "Business Analyst"
+  ]
+}

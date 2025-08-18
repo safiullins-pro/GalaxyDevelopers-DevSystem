@@ -1,0 +1,26 @@
+{
+  "id": "P2.1",
+  "name": "Архитектурное проектирование Multi-Agent системы",
+  "description": "дизайн Multi-Agent системы (ResearchAgent, ComposerAgent, ReviewerAgent, IntegratorAgent, PublisherAgent)",
+  "executor": "Solution Architect + AI/ML Engineer",
+  "methodology": [
+    "Определение архитектурных требований",
+    "Проектирование агентной архитектуры",
+    "API дизайн",
+    "Выбор технологического стека",
+    "Создание архитектурной документации"
+  ],
+  "deliverables": [
+    "architecture_blueprint.pdf",
+    "api_specs.yaml",
+    "tech_stack.md"
+  ],
+  "required_skills": [
+    "Глубокие знания архитектурных паттернов и принципов",
+    "Опыт работы с AI/ML системами и агентами",
+    "Знание микросервисной архитектуры",
+    "Понимание паттернов интеграции и API design"
+  ],
+  "generated_at": "2025-08-07T10:19:35.117695",
+  "status": "ready_for_execution"
+}

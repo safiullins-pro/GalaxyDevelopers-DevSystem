@@ -1,0 +1,27 @@
+{
+  "id": "P4.2",
+  "name": "Core Data implementation",
+  "description": "для локального кэширования",
+  "executor": "iOS Developer + Database Developer",
+  "methodology": [
+    "Data Model Design",
+    "Caching Strategy",
+    "Sync Mechanisms",
+    "Performance Tuning",
+    "Offline Capabilities"
+  ],
+  "deliverables": [
+    "CoreDataModel.xcdatamodeld",
+    "CacheManager.swift",
+    "SyncEngine.swift"
+  ],
+  "required_skills": [
+    "Глубокие знания Core Data framework",
+    "Опыт проектирования локальных баз данных",
+    "Понимание принципов кэширования и оффлайн-режима",
+    "Навыки оптимизации производительности БД",
+    "Знание паттернов синхронизации данных"
+  ],
+  "generated_at": "2025-08-07T10:19:35.220790",
+  "status": "ready_for_execution"
+}

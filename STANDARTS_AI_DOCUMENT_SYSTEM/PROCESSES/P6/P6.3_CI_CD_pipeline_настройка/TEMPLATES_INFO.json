@@ -1,0 +1,25 @@
+{
+  "process_id": "P6.3",
+  "deliverables": [
+    {
+      "name": ".github/workflows/",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/GITHUB/WORKFLOWS//_github/workflows/_template.json"
+    },
+    {
+      "name": "deployment-pipeline.yaml",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/YAML/deployment-pipeline_yaml_template.json"
+    },
+    {
+      "name": "rollback-procedures.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/rollback-procedures_md_template.json"
+    }
+  ],
+  "template_locations": {
+    ".github/workflows/": "../../../03_TEMPLATES/GITHUB/WORKFLOWS//_github/workflows/_template.json",
+    "deployment-pipeline.yaml": "../../../03_TEMPLATES/YAML/deployment-pipeline_yaml_template.json",
+    "rollback-procedures.md": "../../../03_TEMPLATES/MD/rollback-procedures_md_template.json"
+  }
+}

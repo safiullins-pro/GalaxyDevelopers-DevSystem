@@ -1,0 +1,72 @@
+# Environment variables - NEVER commit these!
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# Security - Keys and certificates
+*.key
+*.pem
+*.crt
+*.pfx
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+*.egg-info/
+
+# Logs and temporary files
+logs/
+*.log
+*.log.*
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Data and backups
+data/*/
+backups/
+*.backup
+*.bak
+postgres_data/
+redis_data/
+workspace_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+.directory
+.Trash-*
+
+# Docker
+docker-compose.override.yml
+
+# Monitoring
+grafana_data/
+prometheus_data/
+monitor.log
+pipeline.log
+
+# Documentation
+docs/_build/
+*.audit

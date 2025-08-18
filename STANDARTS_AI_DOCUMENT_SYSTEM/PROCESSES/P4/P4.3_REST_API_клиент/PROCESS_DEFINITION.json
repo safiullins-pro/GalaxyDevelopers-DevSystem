@@ -1,0 +1,27 @@
+{
+  "id": "P4.3",
+  "name": "REST API клиент",
+  "description": "для синхронизации с backend",
+  "executor": "Mobile Developer + API Developer",
+  "methodology": [
+    "API Client Architecture",
+    "Authentication Handling",
+    "Error Recovery",
+    "Request/Response Optimization",
+    "Testing Strategy"
+  ],
+  "deliverables": [
+    "APIClient.swift",
+    "AuthManager.swift",
+    "NetworkLayer.swift"
+  ],
+  "required_skills": [
+    "Опыт создания robust API клиентов",
+    "Знание HTTP протоколов и RESTful принципов",
+    "Навыки обработки сетевых ошибок и retry логики",
+    "Понимание принципов безопасности API",
+    "Опыт работы с асинхронными операциями"
+  ],
+  "generated_at": "2025-08-07T10:19:35.226398",
+  "status": "ready_for_execution"
+}

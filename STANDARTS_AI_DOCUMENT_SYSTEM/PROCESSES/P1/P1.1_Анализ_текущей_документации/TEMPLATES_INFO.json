@@ -1,0 +1,25 @@
+{
+  "process_id": "P1.1",
+  "deliverables": [
+    {
+      "name": "inventory_catalog.xlsx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XLSX/inventory_catalog_xlsx_template.json"
+    },
+    {
+      "name": "coverage_matrix.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/coverage_matrix_pdf_template.json"
+    },
+    {
+      "name": "gaps_analysis.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/gaps_analysis_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "inventory_catalog.xlsx": "../../../03_TEMPLATES/XLSX/inventory_catalog_xlsx_template.json",
+    "coverage_matrix.pdf": "../../../03_TEMPLATES/PDF/coverage_matrix_pdf_template.json",
+    "gaps_analysis.md": "../../../03_TEMPLATES/MD/gaps_analysis_md_template.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "P3.1",
+  "name": "ResearchAgent разработка",
+  "description": "интеграция с Perplexity Desktop v2.25 + Deep Research API",
+  "executor": "AI/ML Engineer + Python Developer",
+  "methodology": [
+    "API Integration Design",
+    "Data Processing Pipeline",
+    "Quality Assurance Logic",
+    "Caching Strategy",
+    "Error Recovery Mechanisms"
+  ],
+  "deliverables": [
+    "research_agent.py",
+    "api_client.py",
+    "data_processor.py"
+  ],
+  "required_skills": [
+    "Глубокие знания AI/ML (Natural Language Processing, Machine Learning)",
+    "Опыт работы с API интеграциями",
+    "Знание Python и библиотек для AI (TensorFlow, PyTorch, LangChain)",
+    "Понимание архитектурных паттернов для AI-систем",
+    "Опыт работы с внешними API (rate limiting, error handling)"
+  ],
+  "generated_at": "2025-08-07T10:19:35.164857",
+  "status": "ready_for_execution"
+}

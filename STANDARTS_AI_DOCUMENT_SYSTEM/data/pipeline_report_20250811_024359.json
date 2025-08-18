@@ -1,0 +1,16 @@
+{
+  "duration_seconds": 1.47331,
+  "phases_completed": 0,
+  "processes_completed": 0,
+  "errors_count": 0,
+  "journal_stats": {
+    "total_entries": 5,
+    "by_type": {
+      "system": 2,
+      "processes": 3
+    },
+    "journal_sizes": {
+      "processes": 774
+    }
+  }
+}

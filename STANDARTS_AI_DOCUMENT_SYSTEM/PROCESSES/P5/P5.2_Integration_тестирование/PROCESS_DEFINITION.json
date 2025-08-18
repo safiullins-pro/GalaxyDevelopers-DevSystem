@@ -1,0 +1,27 @@
+{
+  "id": "P5.2",
+  "name": "Integration тестирование",
+  "description": "для AI-агентов и API интеграций",
+  "executor": "QA Engineer + AI Testing Specialist",
+  "methodology": [
+    "AI Agent Testing Framework",
+    "Data Quality Testing",
+    "Performance Benchmarking",
+    "Edge Case Handling",
+    "Integration Scenarios"
+  ],
+  "deliverables": [
+    "integration_tests.py",
+    "ai_test_framework.py",
+    "performance_benchmarks.json"
+  ],
+  "required_skills": [
+    "Опыт тестирования AI/ML систем",
+    "Знание методологий integration testing",
+    "Понимание специфики тестирования AI агентов",
+    "Навыки создания тестовых данных и сценариев",
+    "Опыт performance testing для AI систем"
+  ],
+  "generated_at": "2025-08-07T10:19:35.243737",
+  "status": "ready_for_execution"
+}

@@ -1,0 +1,93 @@
+{
+  "role_id": "TL_6de9b7",
+  "title": "Technical Lead",
+  "original_title": "Technical Lead",
+  "created_at": "2025-08-07T10:19:34.860234",
+  "updated_at": "2025-08-07T10:19:34.860239",
+  "version": "1.0.0",
+  "skills": [
+    "Глубокие знания IT-инфраструктуры и системной архитектуры",
+    "Знание скриптинга (Python, Bash, PowerShell)",
+    "Опыт работы с облачными платформами (AWS, Azure, GCP)",
+    "Опыт работы с API интеграциями",
+    "Понимание автоматизации и CI/CD процессов",
+    "Навыки системного администрирования",
+    "Опыт проектирования CLI-приложений",
+    "Знание современных технологий и фреймворков",
+    "Понимание принципов DevOps и CI/CD",
+    "Knowledge of Agile",
+    "Knowledge of DevOps",
+    "Knowledge of CI/CD",
+    "Knowledge of TDD",
+    "Knowledge of DDD",
+    "Knowledge of Clean Architecture",
+    "Proficiency in Git",
+    "Proficiency in Docker",
+    "Proficiency in Kubernetes",
+    "Proficiency in Jenkins",
+    "Proficiency in JIRA"
+  ],
+  "certifications": [
+    "PMP",
+    "CSM",
+    "AWS Certified",
+    "Microsoft Certified"
+  ],
+  "tools": [
+    "Git",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "JIRA",
+    "VS Code",
+    "IntelliJ IDEA"
+  ],
+  "frameworks": [
+    "Agile",
+    "DevOps",
+    "CI/CD",
+    "TDD",
+    "DDD",
+    "Clean Architecture"
+  ],
+  "responsibilities": [
+    "Technical team leadership",
+    "Code review and quality assurance",
+    "Architecture decisions",
+    "Mentoring developers",
+    "Sprint planning"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "advanced",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Junior Technical Lead",
+    "current": "Technical Lead",
+    "senior": "Senior Technical Lead",
+    "next": [
+      "Technical Lead Lead",
+      "Technical Lead Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 5,
+    "preferred_years": 8,
+    "required_experience": [
+      "Hands-on experience in Technical Lead role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "System Architect",
+    "DevOps Engineer",
+    "Development Manager"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "server": {
+    "websocket": {
+      "host": "localhost",
+      "port": 8765,
+      "ping_interval": 20,
+      "ping_timeout": 10,
+      "max_connections": 100,
+      "max_message_size": 10485760,
+      "compression": false
+    },
+    "api": {
+      "host": "localhost",
+      "port": 8766,
+      "cors_enabled": true,
+      "allowed_origins": ["*"],
+      "rate_limit": {
+        "enabled": true,
+        "requests_per_minute": 60
+      }
+    }
+  },
+  "monitoring": {
+    "file_watcher": {
+      "enabled": true,
+      "paths": [
+        "/Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/",
+        "/Volumes/Z7S/development/ALBERT_TOOLS_PLACE/DocumentsSystem/"
+      ],
+      "ignored_patterns": [
+        ".DS_Store",
+        ".git",
+        "__pycache__",
+        "*.pyc",
+        "node_modules",
+        "*.swp",
+        "*.tmp",
+        ".venv",
+        "venv",
+        "._*"
+      ],
+      "recursive": true,
+      "debounce_ms": 500
+    },
+    "syntax_check": {
+      "enabled": true,
+      "interval_seconds": 300,
+      "languages": ["python", "javascript", "typescript"],
+      "max_errors_shown": 10
+    },
+    "security_scan": {
+      "enabled": true,
+      "interval_seconds": 600,
+      "bandit_enabled": true,
+      "hardcoded_secrets_check": true,
+      "severity_threshold": "MEDIUM",
+      "max_issues_shown": 20
+    },
+    "compliance": {
+      "enabled": true,
+      "interval_seconds": 3600,
+      "standards": {
+        "ISO27001": {
+          "enabled": true,
+          "threshold": 80
+        },
+        "ITIL4": {
+          "enabled": true,
+          "threshold": 75
+        },
+        "COBIT": {
+          "enabled": true,
+          "threshold": 70
+        }
+      }
+    },
+    "periodic_checks": {
+      "enabled": true,
+      "interval_seconds": 30
+    }
+  },
+  "agents": {
+    "enabled": true,
+    "validation_timeout": 30,
+    "task_queue_size": 100,
+    "agents_config": {
+      "ResearchAgent": {
+        "enabled": true,
+        "priority": 1
+      },
+      "ReviewerAgent": {
+        "enabled": true,
+        "priority": 2
+      },
+      "ComposerAgent": {
+        "enabled": true,
+        "priority": 3
+      }
+    }
+  },
+  "database": {
+    "memory_db_path": "/Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/DEV_MONITORING/memory/unified_memory.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24,
+    "max_backup_count": 7
+  },
+  "logging": {
+    "level": "INFO",
+    "file_enabled": true,
+    "log_file": "/Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/DEV_MONITORING/logs/monitoring.log",
+    "max_file_size_mb": 100,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "notifications": {
+    "enabled": false,
+    "channels": {
+      "slack": {
+        "enabled": false,
+        "webhook_url": ""
+      },
+      "email": {
+        "enabled": false,
+        "smtp_server": "",
+        "smtp_port": 587,
+        "from_email": ""
+      }
+    },
+    "triggers": {
+      "high_severity_vulnerability": true,
+      "compliance_threshold_breach": true,
+      "file_system_error": true,
+      "agent_failure": true
+    }
+  },
+  "performance": {
+    "thread_pool_size": 4,
+    "max_memory_usage_mb": 512,
+    "cpu_threshold_percent": 80,
+    "auto_restart_on_crash": true
+  }
+}

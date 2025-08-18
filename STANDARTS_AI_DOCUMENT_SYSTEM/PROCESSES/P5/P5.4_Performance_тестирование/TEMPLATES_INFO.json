@@ -1,0 +1,25 @@
+{
+  "process_id": "P5.4",
+  "deliverables": [
+    {
+      "name": "load_test_plan.jmx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JMX/load_test_plan_jmx_template.json"
+    },
+    {
+      "name": "performance_report.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/performance_report_pdf_template.json"
+    },
+    {
+      "name": "capacity_recommendations.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/capacity_recommendations_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "load_test_plan.jmx": "../../../03_TEMPLATES/JMX/load_test_plan_jmx_template.json",
+    "performance_report.pdf": "../../../03_TEMPLATES/PDF/performance_report_pdf_template.json",
+    "capacity_recommendations.md": "../../../03_TEMPLATES/MD/capacity_recommendations_md_template.json"
+  }
+}

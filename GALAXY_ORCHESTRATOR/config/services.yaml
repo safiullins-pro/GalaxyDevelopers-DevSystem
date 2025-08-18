@@ -1,0 +1,260 @@
+# GALAXY ORCHESTRATOR - Service Registry
+# Complete registry of all 13 services in Galaxy AI System
+# Created: 2025-08-18 by DevOps Infrastructure Orchestration Specialist
+
+version: "1.0"
+last_updated: "2025-08-18"
+
+services:
+  # ==================================================
+  # CRITICAL CORE SERVICES
+  # ==================================================
+  
+  backend:
+    name: "Galaxy Backend API"
+    type: "nodejs"
+    file: "SERVER/GalaxyDevelopersAI-backend.js"
+    port: 37777
+    health_endpoint: "/health"
+    dependencies: ["memory-api", "postgres", "redis"]
+    auto_restart: true
+    critical: true
+    timeout: 30
+    description: "Main Galaxy AI backend with Gemini integration and function calling"
+    command: "node SERVER/GalaxyDevelopersAI-backend.js"
+    
+  memory-api:
+    name: "Memory API"
+    type: "python"
+    file: "MEMORY/memory_api.py"
+    port: 37778
+    health_endpoint: "/health"
+    dependencies: ["postgres"]
+    auto_restart: true
+    critical: true
+    timeout: 20
+    description: "AI Memory system with conversation storage and knowledge base"
+    command: "/opt/homebrew/bin/python3 MEMORY/memory_api.py"
+    
+  # ==================================================
+  # EXPERIENCE & DATA SERVICES
+  # ==================================================
+  
+  experience-api:
+    name: "Experience API"
+    type: "python"
+    file: "src/experience_api.py"
+    port: 5556  # CHANGED from 5555 to resolve conflict
+    health_endpoint: "/api/health"
+    dependencies: []
+    auto_restart: true
+    critical: false
+    timeout: 15
+    description: "Experience data extraction and pattern API"
+    command: "/opt/homebrew/bin/python3 src/experience_api.py"
+    note: "Port changed from 5555 to 5556 to resolve conflict with voice-storage"
+    
+  voice-storage:
+    name: "Voice Storage"
+    type: "python"
+    file: "voice_storage.py"
+    port: 5555
+    health_endpoint: "/health"
+    dependencies: []
+    auto_restart: false
+    critical: false
+    timeout: 15
+    description: "Voice data storage and management system"
+    command: "/opt/homebrew/bin/python3 voice_storage.py"
+    
+  # ==================================================
+  # MONITORING & OPERATIONS
+  # ==================================================
+  
+  dev-monitoring:
+    name: "DEV Monitoring System"
+    type: "python"
+    file: "DEV_MONITORING/serve_interface.py"
+    ports: [8765, 8766]  # WebSocket + HTTP
+    health_endpoint: "/health"
+    dependencies: []
+    auto_restart: true
+    critical: true
+    timeout: 25
+    description: "Real-time system monitoring with WebSocket and file protection"
+    command: "/opt/homebrew/bin/python3 DEV_MONITORING/serve_interface.py"
+    start_script: "DEV_MONITORING/start_monitoring.sh"
+    
+  # ==================================================
+  # AI DOCUMENT SYSTEM SERVICES
+  # ==================================================
+  
+  doc-system-api:
+    name: "DOC System API"
+    type: "python"
+    file: "DOC_SYSTEM/api/server.py"
+    port: 8080
+    health_endpoint: "/health"
+    dependencies: []
+    auto_restart: false
+    critical: false
+    timeout: 20
+    description: "Documentation system API with AI integration"
+    command: "/opt/homebrew/bin/python3 DOC_SYSTEM/api/server.py"
+    
+  doc-system-simple:
+    name: "DOC System Simple Server"
+    type: "python"
+    file: "DOC_SYSTEM/api/simple_server.py"
+    port: 8081
+    health_endpoint: "/health"
+    dependencies: []
+    auto_restart: false
+    critical: false
+    timeout: 15
+    description: "Simple documentation server for quick access"
+    command: "/opt/homebrew/bin/python3 DOC_SYSTEM/api/simple_server.py"
+    
+  standards-web-dashboard:
+    name: "Standards Web Dashboard"
+    type: "python"
+    file: "STANDARTS_AI_DOCUMENT_SYSTEM/web_dashboard.py"
+    port: 8000
+    health_endpoint: "/metrics"
+    dependencies: []
+    auto_restart: false
+    critical: false
+    timeout: 20
+    description: "AI Standards system web dashboard with metrics"
+    command: "/opt/homebrew/bin/python3 STANDARTS_AI_DOCUMENT_SYSTEM/web_dashboard.py"
+    
+  # ==================================================
+  # BRIDGE & INTEGRATION SERVICES
+  # ==================================================
+  
+  forge-bridge:
+    name: "Forge Integration Bridge"
+    type: "python"
+    file: "bridge/forge_bridge.py"
+    port: 8888
+    health_endpoint: "/health"
+    dependencies: ["backend"]
+    auto_restart: false
+    critical: false
+    timeout: 25
+    description: "Bridge service for Forge system integration"
+    command: "/opt/homebrew/bin/python3 bridge/forge_bridge.py"
+    start_script: "bridge/launch_forge_integration.sh"
+    
+  # ==================================================
+  # EXTERNAL DEPENDENCIES
+  # ==================================================
+  
+  postgres:
+    name: "PostgreSQL Database"
+    type: "external"
+    port: 5432
+    health_endpoint: "tcp_check"
+    dependencies: []
+    auto_restart: false
+    critical: true
+    timeout: 10
+    description: "Main database for Galaxy system"
+    command: "external_service"
+    
+  redis:
+    name: "Redis Cache"
+    type: "external"
+    port: 6379
+    health_endpoint: "tcp_check"
+    dependencies: []
+    auto_restart: false
+    critical: true
+    timeout: 10
+    description: "Cache and session storage"
+    command: "external_service"
+    
+  # ==================================================
+  # FRONTEND INTERFACE
+  # ==================================================
+  
+  frontend-interface:
+    name: "Frontend Interface"
+    type: "static"
+    port: 3000  # Served through backend
+    health_endpoint: "/"
+    dependencies: ["backend"]
+    auto_restart: false
+    critical: false
+    timeout: 5
+    description: "Main web interface served through backend"
+    command: "static_files"
+
+# ==================================================
+# SERVICE CATEGORIES
+# ==================================================
+
+categories:
+  critical:
+    - backend
+    - memory-api
+    - dev-monitoring
+    - postgres
+    - redis
+  
+  development:
+    - experience-api
+    - voice-storage
+    - doc-system-api
+    - doc-system-simple
+    
+  ai_systems:
+    - standards-web-dashboard
+    - forge-bridge
+    
+  infrastructure:
+    - postgres
+    - redis
+    - frontend-interface
+
+# ==================================================
+# STARTUP ORDER GROUPS
+# ==================================================
+
+startup_groups:
+  group_1_infrastructure:
+    order: 1
+    services: ["postgres", "redis"]
+    wait_time: 10
+    
+  group_2_core:
+    order: 2
+    services: ["memory-api", "backend"]
+    wait_time: 15
+    
+  group_3_monitoring:
+    order: 3
+    services: ["dev-monitoring"]
+    wait_time: 5
+    
+  group_4_ai_services:
+    order: 4
+    services: ["experience-api", "doc-system-api", "standards-web-dashboard"]
+    wait_time: 10
+    
+  group_5_optional:
+    order: 5
+    services: ["voice-storage", "doc-system-simple", "forge-bridge", "frontend-interface"]
+    wait_time: 5
+
+# ==================================================
+# METADATA
+# ==================================================
+
+metadata:
+  total_services: 13
+  critical_services: 5
+  managed_ports: 8
+  external_dependencies: 2
+  conflicts_resolved: 1
+  orchestrator_version: "1.0.0"

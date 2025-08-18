@@ -1,0 +1,58 @@
+# WB Analytics Grafana DataSources
+apiVersion: 1
+
+datasources:
+  # Prometheus
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true
+    jsonData:
+      timeInterval: "5s"
+      httpMethod: POST
+    version: 1
+
+  # Loki для логов
+  - name: Loki
+    type: loki
+    access: proxy
+    url: http://loki:3100
+    editable: true
+    jsonData:
+      timeout: 60
+      maxLines: 1000
+    version: 1
+
+  # PostgreSQL
+  - name: PostgreSQL
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: wb_analytics
+    user: wb_readonly_user
+    editable: true
+    secureJsonData:
+      password: wb_readonly_secure_2024
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1500
+      timescaledb: false
+    version: 1
+
+  # Redis
+  - name: Redis
+    type: redis-datasource
+    access: proxy
+    url: redis://redis:6379
+    editable: true
+    secureJsonData:
+      password: wb_redis_secure_2024
+    jsonData:
+      client: standalone
+      poolSize: 5
+      timeout: 10
+      pingInterval: 0
+      pipelineWindow: 0
+    version: 1

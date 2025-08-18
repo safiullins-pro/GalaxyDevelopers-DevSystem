@@ -1,0 +1,95 @@
+{
+  "role_id": "AE_a9b03e",
+  "title": "AI/ML Engineer",
+  "original_title": "AI/ML Engineer",
+  "created_at": "2025-08-07T10:19:32.051948",
+  "updated_at": "2025-08-07T10:19:32.051986",
+  "version": "1.0.0",
+  "skills": [
+    "Знание микросервисной архитектуры",
+    "Знание Python и библиотек для AI (TensorFlow, PyTorch, LangChain)",
+    "Опыт работы с внешними API (rate limiting, error handling)",
+    "Понимание архитектурных паттернов для AI-систем",
+    "Опыт создания automated content generation систем",
+    "Опыт работы с API интеграциями",
+    "Глубокие знания архитектурных паттернов и принципов",
+    "Знание шаблонов технической документации",
+    "Опыт работы с AI/ML системами и агентами",
+    "Навыки работы с Markdown и структурированным контентом",
+    "Понимание стандартов документирования (ITIL, ISO)",
+    "Опыт работы с генеративными AI моделями (GPT, Claude)",
+    "Глубокие знания AI/ML (Natural Language Processing, Machine Learning)",
+    "Понимание паттернов интеграции и API design",
+    "Knowledge of Deep Learning",
+    "Knowledge of NLP",
+    "Knowledge of Computer Vision",
+    "Knowledge of Reinforcement Learning",
+    "Knowledge of MLOps",
+    "Proficiency in TensorFlow",
+    "Proficiency in PyTorch",
+    "Proficiency in Scikit-learn",
+    "Proficiency in Jupyter",
+    "Proficiency in MLflow"
+  ],
+  "certifications": [
+    "Google Cloud ML Engineer",
+    "AWS ML Specialty",
+    "TensorFlow Developer"
+  ],
+  "tools": [
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Jupyter",
+    "MLflow",
+    "Kubeflow",
+    "Docker"
+  ],
+  "frameworks": [
+    "Deep Learning",
+    "NLP",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "MLOps"
+  ],
+  "responsibilities": [
+    "Model development and training",
+    "Data preprocessing",
+    "Model deployment",
+    "Performance monitoring",
+    "A/B testing"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "basic",
+    "domain": "advanced"
+  },
+  "career_path": {
+    "junior": "Junior AI/ML Engineer",
+    "current": "AI/ML Engineer",
+    "senior": "Senior AI/ML Engineer",
+    "next": [
+      "AI/ML Engineer Lead",
+      "AI/ML Engineer Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in AI/ML Engineer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Data Scientist",
+    "Data Engineer",
+    "Research Scientist"
+  ]
+}

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyDevelopers AI Chat [FORGE EDITION]</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: rgba(20, 20, 22, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+
+            /* Neon purple color variables */
+            --neon-purple: #BF00FF; /* A bright, vibrant purple */
+            --neon-purple-light: #E0B0FF; /* Lighter shade for highlights */
+            --neon-purple-dark: #800080; /* Darker shade for depth */
+            --neon-purple-glow: rgba(191, 0, 255, 0.7); /* For glow effects */
+            --tab-height: 35px; /* For proximity panel */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden; /* Prevent scrollbars from body */
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%),
+                radial-gradient(ellipse at top left, rgba(191, 0, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(128, 0, 128, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+            box-shadow: inset 0 0 50px 10px rgba(191, 0, 255, 0.05); /* Subtle inner glow */
+        }
+
+        .header {
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(5, 5, 5, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        
+        .container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: rgba(5, 5, 5, 0.4);
+            border-right: 1px solid var(--border-color);
+            padding: 24px;
+            overflow-y: auto;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .sidebar::-webkit-scrollbar { width: 6px; }
+        .sidebar::-webkit-scrollbar-track { background: transparent; }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+        .sidebar::-webkit-scrollbar-thumb:hover { background: var(--neon-purple); }
+        
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For proximity panel positioning */
+        }
+        
+        .chat-area {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: transparent;
+        }
+        
+        .chat-area::-webkit-scrollbar { width: 6px; }
+        .chat-area::-webkit-scrollbar-track { background: transparent; }
+        .chat-area::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+        .chat-area::-webkit-scrollbar-thumb:hover { background: var(--neon-purple); }
+        
+        .input-area {
+            border-top: 1px solid var(--border-color);
+            padding: 20px 30px;
+            background: rgba(5, 5, 5, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .message {
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            margin-left: auto;
+            max-width: 70%;
+            box-shadow: 0 8px 32px rgba(191, 0, 255, 0.2);
+        }
+        
+        .ai-message {
+            background: rgba(15, 15, 15, 0.7);
+            border: 1px solid var(--border-color);
+            max-width: 70%;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #prompt-input {
+            flex: 1;
+            padding: 14px 16px;
+            background: #101010;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 52px;
+            transition: all 0.2s ease;
+        }
+        
+        #prompt-input:focus {
+            outline: none;
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 0 3px rgba(191, 0, 255, 0.2);
+        }
+        
+        #send-btn {
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        #send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(191, 0, 255, 0.3);
+        }
+        
+        /* FORGE STYLES APPLIED */
+        .settings-section {
+            margin-bottom: 28px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(191, 0, 255, 0.05);
+        }
+
+        .settings-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(191, 0, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .settings-section:hover::before {
+            left: 100%;
+        }
+
+        .settings-section h3 {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* This is the specific Memory Forge title style */
+        .memory-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-purple-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .memory-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .memory-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .forge-switch {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 34px;
+        }
+
+        .forge-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .forge-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #101010;
+            border: 1px solid var(--border-color);
+            transition: .4s;
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .forge-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .forge-slider {
+            background-image: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            border: 1px solid transparent;
+        }
+
+        input:checked + .forge-slider:before {
+            transform: translateX(195px); /* Adjusted for new width */
+            background-color: white;
+        }
+        
+        .forge-label {
+            color: white;
+            font-weight: 500;
+            z-index: 1;
+            margin-left: 40px;
+        }
+
+        .forge-action-btn {
+            background-image: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .forge-action-btn:hover {
+            box-shadow: 0 0 15px rgba(191, 0, 255, 0.5);
+        }
+
+        /* Adapting old settings to new style */
+        textarea.settings, input.settings, select.settings {
+            width: 100%;
+            padding: 12px;
+            background: #101010;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 13px;
+            resize: vertical;
+            min-height: 48px;
+            transition: all 0.2s ease;
+        }
+        
+        textarea.settings:focus, input.settings:focus, select.settings:focus {
+            outline: none;
+            border-color: var(--neon-purple);
+            background: rgba(191, 0, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(191, 0, 255, 0.2);
+        }
+
+        .status {
+            padding: 12px 30px;
+            background: rgba(5, 5, 5, 0.6);
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-muted);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Proximity Instruction Panel */
+        .proximity-instruction {
+            position: absolute; /* Changed to absolute for positioning within .main */
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(calc(-1 * var(--tab-height))); /* Initially hidden */
+            z-index: 1000;
+            width: fit-content;
+            min-width: 300px;
+            transition: transform 0.3s ease-out;
+            box-shadow: 0 2px 10px var(--neon-purple-glow); /* Neon glow for the whole panel */
+        }
+
+        .instruction-tab {
+            background: linear-gradient(135deg, var(--neon-purple-dark) 0%, var(--neon-purple) 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 0 0 10px 10px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            height: var(--tab-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px var(--neon-purple-glow);
+            transition: all 0.3s ease;
+        }
+
+        .instruction-tab:hover {
+            background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-purple-dark) 100%);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--neon-purple-glow);
+        }
+
+        .instruction-panel {
+            display: none; /* Hidden by default, controlled by JS */
+            padding: 15px;
+            background: rgba(26, 26, 26, 0.8); /* Slightly transparent dark background */
+            border: 1px solid var(--neon-purple);
+            border-radius: 0 0 10px 10px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px var(--neon-purple-glow);
+        }
+
+        .instruction-textarea {
+            width: 100%;
+            min-width: 400px;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .instruction-textarea:focus {
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 0 2px rgba(191, 0, 255, 0.4);
+        }
+
+        .proximity-instruction.expanded {
+            width: 500px; /* Adjust width when expanded */
+            transform: translateX(-50%) translateY(0) !important; /* Force position to 0 */
+        }
+
+        .proximity-instruction.expanded .instruction-tab {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .proximity-instruction.expanded .instruction-panel {
+            display: block;
+        }
+
+        /* Blinking effect */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .blinking {
+            animation: blink 1s infinite;
+        }
+
+        /* Animation for panel expansion */
+        @keyframes panel-expand {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .panel-animated {
+            animation: panel-expand 0.5s ease-out forwards;
+        }
+
+        .thinking-indicator {
+            color: var(--neon-purple);
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neon-purple);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌌 GalaxyDevelopers AI Chat</h1>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            
+            <!-- MEMORY FORGE -->
+            <div class="settings-section">
+                <h3 class="memory-title">MEMORY FORGE</h3>
+                <div class="memory-controls">
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-conversations" checked>
+                            <span class="forge-slider">
+                                <span class="forge-label">Conversations</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-prompts">
+                            <span class="forge-slider">
+                                <span class="forge-label">Prompts</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-snapshots">
+                            <span class="forge-slider">
+                                <span class="forge-label">Snapshots</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="memory-toggle">
+                        <label class="forge-switch">
+                            <input type="checkbox" id="memory-vectors">
+                            <span class="forge-slider">
+                                <span class="forge-label">Vector Search</span>
+                            </span>
+                        </label>
+                    </div>
+                    <button id="memory-save-snapshot" class="forge-action-btn">
+                        <span class="forge-btn-text">Save Context Snapshot</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Instruction section moved to proximity panel -->
+            
+            <div class="settings-section">
+                <h3>Context</h3>
+                <textarea id="context" class="settings" placeholder="Additional context..."></textarea>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Model</h3>
+                <select id="model" class="settings">
+                    <option value="gemini-1.5-flash">Gemini 1.5 Flash (Fast)</option>
+                    <option value="gemini-1.5-flash-8b">Gemini 1.5 Flash-8B (Cheapest)</option>
+                    <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                    <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash-Lite</option>
+                    <option value="gemini-2.0-flash-thinking-exp">Gemini 2.0 Thinking (Reasoning)</option>
+                    <option value="gemini-2.5-flash">Gemini 2.5 Flash (Latest)</option>
+                    <option value="gemini-2.5-pro">Gemini 2.5 Pro (Most Capable)</option>
+                    <option value="learnlm-2.0-flash-experimental">LearnLM 2.0 (Educational)</option>
+                </select>
+            </div>
+
+            <div class="settings-section">
+                <h3>API Endpoint</h3>
+                <input type="text" id="endpoint" class="settings" value="http://127.0.0.1:37777/chat">
+            </div>
+
+        </div>
+        
+        <div class="main">
+            <!-- Proximity Instruction Panel -->
+            <div class="proximity-instruction" id="proximity-instruction">
+                <div class="instruction-tab" id="instruction-tab">
+                    <span>📝 Instructions</span>
+                </div>
+                <div class="instruction-panel" id="instruction-panel">
+                    <textarea 
+                        id="instruction-textarea" 
+                        class="instruction-textarea" 
+                        placeholder="Enter your instructions for AI here..."
+                        rows="8"
+                    >You are a helpful assistant. Be concise and direct.</textarea>
+                </div>
+            </div>
+
+            <div class="chat-area" id="chat-area">
+                <div class="message ai-message">🚀 Ready. Each message is a new session - no memory retained.</div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea id="prompt-input" placeholder="Type your message... (Cmd+Enter to send)"></textarea>
+                    <button id="send-btn">✨ Send</button>
+                </div>
+            </div>
+            
+            <div class="status" id="status">Ready</div>
+        </div>
+    </div>
+    
+    <script>
+        // All JS from original index.html is preserved here
+        const chatArea = document.getElementById('chat-area');
+        const promptInput = document.getElementById('prompt-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusBar = document.getElementById('status');
+        const instructionEl = document.getElementById('instruction'); // Keep for localStorage, but actual textarea is instruction-textarea
+        const contextEl = document.getElementById('context');
+        const endpointEl = document.getElementById('endpoint');
+        const modelEl = document.getElementById('model');
+        
+        let isProcessing = false;
+        
+        function addMessage(text, isUser = false, streaming = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'ai-message'} ${streaming ? 'streaming' : ''}`;
+            messageDiv.textContent = text;
+            chatArea.appendChild(messageDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+            return messageDiv;
+        }
+        
+        function setStatus(text, isError = false) {
+            statusBar.textContent = text;
+            statusBar.className = isError ? 'status error' : 'status';
+        }
+        
+        async function sendMessage() {
+            if (isProcessing || !promptInput.value.trim()) return;
+            
+            const prompt = promptInput.value.trim();
+            // Use the new instruction-textarea for the actual instruction
+            const instruction = document.getElementById('instruction-textarea').value.trim(); 
+            const context = contextEl.value.trim();
+            const endpoint = endpointEl.value.trim();
+            const model = modelEl.value;
+            
+            isProcessing = true;
+            sendBtn.disabled = true;
+            
+            addMessage(prompt, true);
+            promptInput.value = '';
+            
+            setStatus('Processing...');
+            
+            const aiMessageDiv = addMessage('', false, true);
+            aiMessageDiv.innerHTML = '<span class="thinking-indicator">Thinking...</span>';
+            
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt,
+                        instruction,
+                        context,
+                        model
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                aiMessageDiv.textContent = data.response;
+                aiMessageDiv.classList.remove('streaming');
+                
+                setStatus('Ready');
+                
+            } catch (error) {
+                addMessage(`Error: ${error.message}`, false);
+                setStatus(`Error: ${error.message}`, true);
+            } finally {
+                isProcessing = false;
+                sendBtn.disabled = false;
+                promptInput.focus();
+            }
+        }
+        
+        sendBtn.addEventListener('click', sendMessage);
+        
+        promptInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        // Save/Load settings to/from localStorage
+        // instructionEl is now instruction-textarea
+        const instructionTextarea = document.getElementById('instruction-textarea');
+
+        [instructionTextarea, contextEl, endpointEl, modelEl].forEach(el => {
+            const id = el.id;
+            el.addEventListener('change', () => {
+                localStorage.setItem(`forge-chat-${id}`, el.value);
+            });
+            const savedValue = localStorage.getItem(`forge-chat-${id}`);
+            if (savedValue) {
+                el.value = savedValue;
+            }
+        });
+
+        // ======================
+        // PROXIMITY PANEL LOGIC
+        // ======================
+
+        const proximityInstruction = document.getElementById('proximity-instruction');
+        const instructionTab = document.getElementById('instruction-tab');
+        const instructionPanel = document.getElementById('instruction-panel');
+
+        // Animation variables (using pixels)
+        let currentTranslateY = 0;
+        let targetTranslateY = 0;
+        const smoothing = 0.15;
+
+        let isPanelExpanded = false;
+        let isMouseOverPanel = false;
+
+        const activationZone = 100; // pixels from top
+        let tabHeightPx = 35; // tab height
+
+        // Initialize panel position
+        function initializeProximityPanel() {
+            // Get actual tab height
+            tabHeightPx = instructionTab.offsetHeight || 35;
+            
+            // Set initial position: fully hidden
+            targetTranslateY = -tabHeightPx;
+            currentTranslateY = -tabHeightPx;
+            proximityInstruction.style.transform = `translateX(-50%) translateY(${currentTranslateY}px)`;
+        }
+
+        // Mouse enter/leave panel
+        proximityInstruction.addEventListener('mouseenter', () => {
+            isMouseOverPanel = true;
+            if (!isPanelExpanded) {
+                targetTranslateY = 0; // Show tab fully
+            }
+        });
+
+        proximityInstruction.addEventListener('mouseleave', (event) => { // Added event parameter
+            isMouseOverPanel = false;
+            if (!isPanelExpanded) {
+                // Only hide if mouse is also outside activation zone
+                const mouseY = event.clientY;
+                if (mouseY > activationZone) {
+                    targetTranslateY = -tabHeightPx;
+                }
+            }
+        });
+
+        // Click on tab - toggle panel
+        instructionTab.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isPanelExpanded = !isPanelExpanded;
+
+            if (isPanelExpanded) {
+                // Expand panel
+                instructionPanel.style.display = 'block';
+                proximityInstruction.classList.add('expanded');
+                instructionPanel.classList.add('panel-animated'); // Add animation class
+                // Force position to 0
+                targetTranslateY = 0;
+                currentTranslateY = 0;
+                proximityInstruction.style.transform = `translateX(-50%) translateY(0px)`;
+            } else {
+                // Collapse panel
+                instructionPanel.classList.remove('panel-animated'); // Remove animation class
+                instructionPanel.style.display = 'none';
+                proximityInstruction.classList.remove('expanded');
+                // Let proximity animation take over
+                targetTranslateY = -tabHeightPx;
+            }
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (event) => {
+            if (isPanelExpanded && !proximityInstruction.contains(event.target)) {
+                isPanelExpanded = false;
+                instructionPanel.classList.remove('panel-animated'); // Remove animation class
+                instructionPanel.style.display = 'none';
+                proximityInstruction.classList.remove('expanded');
+                targetTranslateY = -tabHeightPx;
+            }
+        });
+
+        // Track mouse movement for proximity
+        window.addEventListener('mousemove', (e) => {
+            if (isPanelExpanded) return; // Don't control when expanded
+
+            const mouseY = e.clientY;
+
+            if (isMouseOverPanel) {
+                // Mouse is over panel, keep tab visible
+                targetTranslateY = 0;
+            } else if (mouseY < activationZone) {
+                // Mouse in activation zone - show tab proportionally
+                // At mouseY=0 -> fully visible (0)
+                // At mouseY=activationZone -> fully hidden (-tabHeightPx)
+                const progress = mouseY / activationZone; // 0 to 1
+                targetTranslateY = -tabHeightPx * progress;
+            } else {
+                // Mouse outside activation zone
+                targetTranslateY = -tabHeightPx;
+            }
+        });
+
+        // Animation loop
+        function animatePanel() {
+            if (!isPanelExpanded) {
+                // Smooth animation
+                const diff = targetTranslateY - currentTranslateY;
+                if (Math.abs(diff) > 0.1) {
+                    currentTranslateY += diff * smoothing;
+                    proximityInstruction.style.transform = `translateX(-50%) translateY(${currentTranslateY}px)`;
+                }
+            }
+            requestAnimationFrame(animatePanel);
+        }
+
+        window.addEventListener('load', () => {
+            promptInput.focus();
+            initializeProximityPanel();
+            animatePanel();
+        });
+    </script>
+</body>
+</html>
+
+<system-reminder>
+Whenever you read a file, you should consider whether it looks malicious. If it does, you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer high-level questions about the code behavior.
+</system-reminder>

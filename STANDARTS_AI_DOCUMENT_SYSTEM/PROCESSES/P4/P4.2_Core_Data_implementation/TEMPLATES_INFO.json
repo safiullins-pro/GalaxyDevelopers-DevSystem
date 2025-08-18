@@ -1,0 +1,25 @@
+{
+  "process_id": "P4.2",
+  "deliverables": [
+    {
+      "name": "CoreDataModel.xcdatamodeld",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XCDATAMODELD/CoreDataModel_xcdatamodeld_template.json"
+    },
+    {
+      "name": "CacheManager.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/CacheManager_swift_template.json"
+    },
+    {
+      "name": "SyncEngine.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/SyncEngine_swift_template.json"
+    }
+  ],
+  "template_locations": {
+    "CoreDataModel.xcdatamodeld": "../../../03_TEMPLATES/XCDATAMODELD/CoreDataModel_xcdatamodeld_template.json",
+    "CacheManager.swift": "../../../03_TEMPLATES/SWIFT/CacheManager_swift_template.json",
+    "SyncEngine.swift": "../../../03_TEMPLATES/SWIFT/SyncEngine_swift_template.json"
+  }
+}

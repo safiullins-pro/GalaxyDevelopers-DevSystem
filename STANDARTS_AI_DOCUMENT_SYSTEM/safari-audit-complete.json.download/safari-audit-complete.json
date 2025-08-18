@@ -1,0 +1,183 @@
+{
+  "type": "test-group",
+  "name": "Полный аудит веб-сайта 2025",
+  "description": "Комплексная проверка сайта на соответствие современным стандартам безопасности, производительности, доступности и SEO в 2025 году",
+  "supports": 4,
+  "setup": "function() { console.log('Запуск полного аудита веб-сайта...'); }",
+  "tests": [
+    {
+      "type": "test-group",
+      "name": "Проверка доступности (WCAG 2.2)",
+      "description": "Проверка соответствия стандартам веб-доступности WCAG 2.2 уровня AA",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка alt-текста для изображений",
+          "description": "Все изображения должны иметь альтернативный текст или соответствующие ARIA-атрибуты",
+          "test": "function() { const images = document.querySelectorAll('img'); const issues = []; images.forEach((img, index) => { if (!img.hasAttribute('alt') && !img.hasAttribute('aria-label') && !img.hasAttribute('aria-labelledby')) { issues.push(img); } }); return { level: issues.length === 0 ? 'pass' : 'fail', domNodes: issues, description: `Найдено ${issues.length} изображений без альтернативного текста` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка контрастности цветов",
+          "description": "Проверка достаточной контрастности текста для читаемости",
+          "test": "function() { const elements = document.querySelectorAll('*'); const issues = []; for (let el of elements) { const style = window.getComputedStyle(el); const color = style.color; const bgColor = style.backgroundColor; if (color && bgColor && color !== 'rgba(0, 0, 0, 0)' && bgColor !== 'rgba(0, 0, 0, 0)') { const ratio = this.getContrastRatio ? this.getContrastRatio(color, bgColor) : 4.5; if (ratio < 4.5) { issues.push(el); } } } return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues.slice(0, 10), description: `Найдено ${issues.length} элементов с недостаточной контрастностью` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка заголовков страницы",
+          "description": "Структура заголовков должна быть логичной и последовательной",
+          "test": "function() { const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6'); let issues = []; let lastLevel = 0; if (headings.length === 0) { return { level: 'fail', description: 'На странице отсутствуют заголовки' }; } const h1s = document.querySelectorAll('h1'); if (h1s.length !== 1) { issues.push(...h1s); } headings.forEach(heading => { const level = parseInt(heading.tagName.charAt(1)); if (level - lastLevel > 1) { issues.push(heading); } lastLevel = level; }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} проблем со структурой заголовков` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка навигации с клавиатуры",
+          "description": "Все интерактивные элементы должны быть доступны с клавиатуры",
+          "test": "function() { const focusable = document.querySelectorAll('a, button, input, select, textarea, [tabindex]'); const issues = []; focusable.forEach(el => { if (el.tabIndex < 0 && !el.hasAttribute('aria-hidden')) { issues.push(el); } if (window.getComputedStyle(el).outline === 'none' && !el.style.outline && !window.getComputedStyle(el).boxShadow) { issues.push(el); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} элементов с проблемами навигации` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка ARIA-атрибутов",
+          "description": "ARIA-атрибуты должны использоваться корректно",
+          "test": "function() { const ariaElements = document.querySelectorAll('[aria-label], [aria-labelledby], [aria-describedby], [role]'); const issues = []; ariaElements.forEach(el => { if (el.hasAttribute('aria-labelledby')) { const ids = el.getAttribute('aria-labelledby').split(' '); ids.forEach(id => { if (!document.getElementById(id)) { issues.push(el); } }); } if (el.hasAttribute('role')) { const role = el.getAttribute('role'); const validRoles = ['alert', 'button', 'checkbox', 'dialog', 'gridcell', 'link', 'log', 'marquee', 'menuitem', 'menuitemcheckbox', 'menuitemradio', 'option', 'progressbar', 'radio', 'scrollbar', 'slider', 'spinbutton', 'status', 'tab', 'tabpanel', 'textbox', 'timer', 'tooltip', 'treeitem']; if (!validRoles.includes(role)) { issues.push(el); } } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} проблем с ARIA-атрибутами` }; }"
+        }
+      ]
+    },
+    {
+      "type": "test-group",
+      "name": "Проверка производительности",
+      "description": "Анализ производительности и оптимизации загрузки страницы",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка размера изображений",
+          "description": "Изображения должны быть оптимизированы для веб-использования",
+          "test": "function() { const images = document.querySelectorAll('img'); const issues = []; images.forEach(img => { if (img.naturalWidth > 2000 || img.naturalHeight > 2000) { issues.push(img); } if (img.src && !img.src.includes('.webp') && !img.src.includes('.avif')) { issues.push(img); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} неоптимизированных изображений` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка lazy loading",
+          "description": "Изображения должны использовать ленивую загрузку",
+          "test": "function() { const images = document.querySelectorAll('img'); const issues = []; images.forEach(img => { if (!img.hasAttribute('loading') && img.getBoundingClientRect().top > window.innerHeight) { issues.push(img); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} изображений без lazy loading` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка минификации CSS/JS",
+          "description": "CSS и JavaScript файлы должны быть минифицированы",
+          "test": "async function() { const resources = WebInspectorAudit.Resources.getResources(); const issues = []; for (let resource of resources) { if (resource.mimeType === 'text/css' || resource.mimeType === 'application/javascript') { const content = WebInspectorAudit.Resources.getResourceContent(resource.id); if (content.data.includes('  ') || content.data.includes('\\n\\n')) { issues.push({ url: resource.url, type: resource.mimeType }); } } } return { level: issues.length === 0 ? 'pass' : 'warning', description: `Найдено ${issues.length} неминифицированных файлов` }; }"
+        }
+      ]
+    },
+    {
+      "type": "test-group", 
+      "name": "Проверка SEO",
+      "description": "Проверка поисковой оптимизации страницы",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка мета-тегов",
+          "description": "Основные мета-теги должны быть заполнены",
+          "test": "function() { const issues = []; const title = document.querySelector('title'); const description = document.querySelector('meta[name=\"description\"]'); const viewport = document.querySelector('meta[name=\"viewport\"]'); const canonical = document.querySelector('link[rel=\"canonical\"]'); if (!title || title.textContent.trim().length === 0) { issues.push('Отсутствует или пустой тег title'); } else if (title.textContent.length > 60) { issues.push('Тег title слишком длинный (>60 символов)'); } if (!description || description.getAttribute('content').trim().length === 0) { issues.push('Отсутствует или пустой meta description'); } else if (description.getAttribute('content').length > 160) { issues.push('Meta description слишком длинный (>160 символов)'); } if (!viewport) { issues.push('Отсутствует meta viewport'); } return { level: issues.length === 0 ? 'pass' : 'fail', description: issues.join(', ') || 'Все основные мета-теги присутствуют' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка структурированных данных",
+          "description": "Проверка наличия JSON-LD или микроразметки Schema.org",
+          "test": "function() { const jsonLd = document.querySelectorAll('script[type=\"application/ld+json\"]'); const microdata = document.querySelectorAll('[itemscope]'); const issues = []; if (jsonLd.length === 0 && microdata.length === 0) { issues.push('Отсутствуют структурированные данные'); } jsonLd.forEach((script, index) => { try { JSON.parse(script.textContent); } catch (e) { issues.push(`Невалидный JSON-LD в скрипте ${index + 1}`); } }); return { level: issues.length === 0 ? 'pass' : 'warning', description: issues.join(', ') || 'Структурированные данные корректны' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка внутренних ссылок",
+          "description": "Внутренние ссылки должны быть рабочими и иметь описательный текст",
+          "test": "function() { const links = document.querySelectorAll('a[href]'); const issues = []; links.forEach(link => { const href = link.getAttribute('href'); if (href.startsWith('#') && href.length > 1) { if (!document.querySelector(href)) { issues.push(link); } } if (link.textContent.trim().toLowerCase() === 'click here' || link.textContent.trim().toLowerCase() === 'читать далее' || link.textContent.trim().toLowerCase() === 'подробнее') { issues.push(link); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} проблемных ссылок` }; }"
+        }
+      ]
+    },
+    {
+      "type": "test-group",
+      "name": "Проверка безопасности",
+      "description": "Анализ безопасности веб-страницы",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка HTTPS",
+          "description": "Страница должна использовать защищенное соединение",
+          "test": "function() { return { level: location.protocol === 'https:' ? 'pass' : 'fail', description: location.protocol === 'https:' ? 'Используется HTTPS' : 'Страница не использует HTTPS' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка Content Security Policy",
+          "description": "Должна быть настроена политика безопасности контента",
+          "test": "function() { const csp = document.querySelector('meta[http-equiv=\"Content-Security-Policy\"]'); return { level: csp ? 'pass' : 'warning', description: csp ? 'CSP настроена' : 'Отсутствует Content Security Policy' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка внешних ресурсов",
+          "description": "Внешние ресурсы должны загружаться по HTTPS",
+          "test": "function() { const resources = document.querySelectorAll('img[src], script[src], link[href], iframe[src]'); const issues = []; resources.forEach(resource => { const src = resource.src || resource.href; if (src && src.startsWith('http://')) { issues.push(resource); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} небезопасных внешних ресурсов` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка форм",
+          "description": "Формы должны быть защищены от CSRF и иметь валидацию",
+          "test": "function() { const forms = document.querySelectorAll('form'); const issues = []; forms.forEach(form => { if (form.method && form.method.toLowerCase() === 'post') { const csrfToken = form.querySelector('input[name*=\"csrf\"], input[name*=\"token\"]'); if (!csrfToken) { issues.push(form); } } const inputs = form.querySelectorAll('input[type=\"email\"], input[type=\"url\"], input[required]'); inputs.forEach(input => { if (!input.hasAttribute('pattern') && !input.hasAttribute('maxlength') && input.type === 'text') { issues.push(input); } }); }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} потенциальных проблем безопасности в формах` }; }"
+        }
+      ]
+    },
+    {
+      "type": "test-group",
+      "name": "Проверка мобильной адаптивности",
+      "description": "Проверка корректного отображения на мобильных устройствах",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка viewport",
+          "description": "Должен быть настроен корректный viewport",
+          "test": "function() { const viewport = document.querySelector('meta[name=\"viewport\"]'); if (!viewport) { return { level: 'fail', description: 'Отсутствует meta viewport' }; } const content = viewport.getAttribute('content'); return { level: content.includes('width=device-width') ? 'pass' : 'warning', description: content.includes('width=device-width') ? 'Viewport настроен корректно' : 'Viewport может быть настроен неправильно' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка размера текста",
+          "description": "Текст должен быть читаемым на мобильных устройствах",
+          "test": "function() { const elements = document.querySelectorAll('p, span, div, li, td, th'); const issues = []; elements.forEach(el => { const style = window.getComputedStyle(el); const fontSize = parseInt(style.fontSize); if (fontSize < 16) { issues.push(el); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues.slice(0, 10), description: `Найдено ${issues.length} элементов с мелким текстом` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка размера тач-целей",
+          "description": "Интерактивные элементы должны быть достаточно большими для касания",
+          "test": "function() { const touchables = document.querySelectorAll('button, a, input, select, textarea'); const issues = []; touchables.forEach(el => { const rect = el.getBoundingClientRect(); if (rect.width < 44 || rect.height < 44) { issues.push(el); } }); return { level: issues.length === 0 ? 'pass' : 'warning', domNodes: issues, description: `Найдено ${issues.length} элементов с маленькой областью касания` }; }"
+        }
+      ]
+    },
+    {
+      "type": "test-group",
+      "name": "Проверка современных веб-стандартов",
+      "description": "Соответствие современным веб-технологиям и стандартам 2025 года",
+      "tests": [
+        {
+          "type": "test-case",
+          "name": "Проверка Service Worker",
+          "description": "Поддержка офлайн-функциональности через Service Worker",
+          "test": "function() { return { level: 'serviceWorker' in navigator ? 'pass' : 'warning', description: 'serviceWorker' in navigator ? 'Service Worker поддерживается' : 'Service Worker не обнаружен' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка Web App Manifest",
+          "description": "Наличие манифеста для PWA",
+          "test": "function() { const manifest = document.querySelector('link[rel=\"manifest\"]'); return { level: manifest ? 'pass' : 'warning', description: manifest ? 'Web App Manifest найден' : 'Отсутствует Web App Manifest' }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка современных CSS функций",
+          "description": "Использование современных CSS возможностей",
+          "test": "function() { const stylesheets = Array.from(document.styleSheets); let modernFeatures = 0; try { stylesheets.forEach(sheet => { try { Array.from(sheet.cssRules).forEach(rule => { if (rule.cssText.includes('grid') || rule.cssText.includes('flexbox') || rule.cssText.includes('clamp') || rule.cssText.includes('var(--')) { modernFeatures++; } }); } catch(e) {} }); } catch(e) {} return { level: modernFeatures > 0 ? 'pass' : 'warning', description: `Обнаружено ${modernFeatures} использований современных CSS функций` }; }"
+        },
+        {
+          "type": "test-case",
+          "name": "Проверка кеширования",
+          "description": "Проверка правильного кеширования ресурсов",
+          "test": "async function() { if ('caches' in window) { const cacheNames = await caches.keys(); return { level: cacheNames.length > 0 ? 'pass' : 'warning', description: `Найдено ${cacheNames.length} активных кешей` }; } return { level: 'unsupported', description: 'Cache API не поддерживается' }; }"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "validation_time": "2025-08-07T10:26:32.838294",
+  "components": {
+    "roles": {
+      "total": 38,
+      "valid": 38,
+      "status": "PASS"
+    },
+    "templates": {
+      "total": 76,
+      "valid": 76,
+      "status": "PASS"
+    },
+    "standards": {
+      "total": 129,
+      "valid": 120,
+      "status": "PASS"
+    },
+    "mappings": {
+      "total": 2,
+      "valid": 2,
+      "status": "PASS"
+    },
+    "reports": {
+      "total": 15,
+      "valid": 15,
+      "status": "PASS"
+    }
+  },
+  "statistics": {
+    "total_roles": 39,
+    "total_templates": 76,
+    "total_standards": 129,
+    "total_processes": 25,
+    "automation_level": "99.97%",
+    "time_saved_hours": 200
+  },
+  "issues": [
+    "ERROR: Standard ._ISO_Анализ_интеграций.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Приоритизация_улучшений.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Определение_архитектурных_требований.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Проектирование_агентной_архитектуры.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_API_дизайн.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Создание_архитектурной_документации.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Дизайн_CLI_интерфейса.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Анализ_требований_к_данным.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte",
+    "ERROR: Standard ._ISO_Стратегия_миграций.json invalid JSON: 'utf-8' codec can't decode byte 0xb0 in position 37: invalid start byte"
+  ],
+  "status": "ERRORS"
+}

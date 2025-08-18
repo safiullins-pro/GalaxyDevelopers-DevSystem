@@ -1,0 +1,27 @@
+{
+  "id": "P5.3",
+  "name": "Security тестирование",
+  "description": "по OWASP WSTG v2024",
+  "executor": "Security Specialist + Penetration Tester",
+  "methodology": [
+    "Threat Modeling",
+    "Vulnerability Assessment",
+    "Penetration Testing",
+    "Security Code Review",
+    "Compliance Validation"
+  ],
+  "deliverables": [
+    "security_report.pdf",
+    "vulnerability_scan.json",
+    "pentest_results.md"
+  ],
+  "required_skills": [
+    "Глубокие знания OWASP методологий и WSTG v2024",
+    "Опыт penetration testing и vulnerability assessment",
+    "Знание современных угроз кибербезопасности",
+    "Навыки работы с security testing tools",
+    "Понимание secure coding practices"
+  ],
+  "generated_at": "2025-08-07T10:19:35.251480",
+  "status": "ready_for_execution"
+}

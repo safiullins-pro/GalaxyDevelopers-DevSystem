@@ -1,0 +1,21 @@
+{
+  "agent": "RoleProfileBuilder",
+  "generated_at": "2025-08-07T09:48:28.668433",
+  "profiles_created": 4,
+  "roles_by_competency": {
+    "expert": [],
+    "advanced": [
+      "Business Analyst",
+      "System Architect",
+      "Technical Lead",
+      "DevOps Engineer"
+    ],
+    "intermediate": [],
+    "basic": []
+  },
+  "statistics": {
+    "avg_skills_per_role": 15.75,
+    "avg_certifications_per_role": 4.5,
+    "avg_tools_per_role": 7.25
+  }
+}

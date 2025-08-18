@@ -1,0 +1,27 @@
+{
+  "id": "P3.3",
+  "name": "ReviewerAgent разработка",
+  "description": "валидация соответствия ISO 27001, ITIL 4, COBIT",
+  "executor": "QA Engineer + Compliance Specialist",
+  "methodology": [
+    "Automated Testing Framework",
+    "Compliance Checklists",
+    "Quality Metrics",
+    "Feedback Mechanisms",
+    "Continuous Improvement"
+  ],
+  "deliverables": [
+    "reviewer_agent.py",
+    "compliance_checker.py",
+    "quality_metrics.py"
+  ],
+  "required_skills": [
+    "Опыт в области Quality Assurance и тестирования",
+    "Знание стандартов качества и compliance требований",
+    "Навыки автоматизированного тестирования",
+    "Понимание методологий валидации контента",
+    "Аналитические навыки для оценки качества"
+  ],
+  "generated_at": "2025-08-07T10:19:35.176890",
+  "status": "ready_for_execution"
+}

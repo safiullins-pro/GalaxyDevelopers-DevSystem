@@ -1,0 +1,27 @@
+{
+  "id": "P2.3",
+  "name": "UX/UI дизайн для мобильных приложений",
+  "description": "информационная архитектура, wireframes, прототипы для iOS/macOS/iPadOS",
+  "executor": "UX/UI Designer + Mobile App Designer",
+  "methodology": [
+    "Пользовательские исследования",
+    "Создание personas",
+    "Information Architecture",
+    "Wireframing",
+    "Прототипирование"
+  ],
+  "deliverables": [
+    "wireframes.fig",
+    "prototypes.fig",
+    "design_system.pdf"
+  ],
+  "required_skills": [
+    "Опыт проектирования мобильных интерфейсов (iOS, Android)",
+    "Знание принципов Human Interface Guidelines (Apple) и Material Design (Google)",
+    "Навыки создания wireframes и прототипов (Figma, Sketch)",
+    "Понимание accessibility принципов (WCAG 2.2)",
+    "Опыт проведения пользовательских исследований"
+  ],
+  "generated_at": "2025-08-07T10:19:35.150510",
+  "status": "ready_for_execution"
+}

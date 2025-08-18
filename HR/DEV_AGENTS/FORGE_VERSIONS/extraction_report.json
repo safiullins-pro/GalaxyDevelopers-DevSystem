@@ -1,0 +1,56 @@
+[
+  {
+    "line": 6,
+    "file": "FORGE_v006_FULL_EMOJI.html",
+    "source": "tool_result",
+    "features": {
+      "has_memory_forge": true,
+      "has_emoji": true,
+      "has_forge_slider": true,
+      "has_mercedes_black": false,
+      "has_neon_purple": true,
+      "has_proximity": true,
+      "has_glint": false,
+      "line_count": 854,
+      "size": 30870,
+      "emoji_count": 4,
+      "title": "GalaxyDevelopers AI Chat [FORGE EDITION]"
+    }
+  },
+  {
+    "line": 12,
+    "file": "FORGE_v012_PROXIMITY.html",
+    "source": "tool_result",
+    "features": {
+      "has_memory_forge": false,
+      "has_emoji": true,
+      "has_forge_slider": false,
+      "has_mercedes_black": false,
+      "has_neon_purple": false,
+      "has_proximity": true,
+      "has_glint": false,
+      "line_count": 75,
+      "size": 2847,
+      "emoji_count": 1,
+      "title": "GalaxyDevelopers AI Chat"
+    }
+  },
+  {
+    "line": 18,
+    "file": "FORGE_v018_NEON.html",
+    "source": "write_tool",
+    "features": {
+      "has_memory_forge": false,
+      "has_emoji": false,
+      "has_forge_slider": false,
+      "has_mercedes_black": true,
+      "has_neon_purple": true,
+      "has_proximity": false,
+      "has_glint": true,
+      "line_count": 669,
+      "size": 21525,
+      "emoji_count": 0,
+      "title": "FORGE UI - Mercedes Night Salon Edition"
+    }
+  }
+]

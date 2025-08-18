@@ -1,0 +1,29 @@
+{
+  "standard": "ISO",
+  "methodology": "Классификация по категориям",
+  "process": "Анализ текущей документации",
+  "checklist": [
+    "Define classification criteria",
+    "Create category hierarchy",
+    "Map to business functions",
+    "Establish naming conventions",
+    "Document classification rules"
+  ],
+  "protocol": {
+    "steps": [
+      "1. Analyze business activities",
+      "2. Identify classification needs",
+      "3. Design classification scheme",
+      "4. Test with sample documents",
+      "5. Refine and finalize"
+    ]
+  },
+  "best_practices": [
+    "Follow organizational policies",
+    "Ensure stakeholder involvement",
+    "Document all decisions",
+    "Maintain audit trail"
+  ],
+  "source_url": "https://standards.org/DIRKS Methodology",
+  "retrieved_at": "2025-08-07T09:34:10.529766"
+}

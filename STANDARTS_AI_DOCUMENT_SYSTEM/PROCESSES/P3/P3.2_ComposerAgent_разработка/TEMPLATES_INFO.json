@@ -1,0 +1,25 @@
+{
+  "process_id": "P3.2",
+  "deliverables": [
+    {
+      "name": "composer_agent.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/composer_agent_py_template.json"
+    },
+    {
+      "name": "template_engine.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/template_engine_py_template.json"
+    },
+    {
+      "name": "style_validator.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/style_validator_py_template.json"
+    }
+  ],
+  "template_locations": {
+    "composer_agent.py": "../../../03_TEMPLATES/PY/composer_agent_py_template.json",
+    "template_engine.py": "../../../03_TEMPLATES/PY/template_engine_py_template.json",
+    "style_validator.py": "../../../03_TEMPLATES/PY/style_validator_py_template.json"
+  }
+}

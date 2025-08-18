@@ -1,0 +1,26 @@
+{
+  "id": "P1.4",
+  "name": "Оценка зрелости процессов",
+  "description": "соответствие ITIL 4, ISO 27001, COBIT",
+  "executor": "Compliance Officer + IT Auditor",
+  "methodology": [
+    "Матрица соответствия",
+    "Оценка по модели зрелости",
+    "Анализ пробелов",
+    "Приоритизация улучшений",
+    "Создание roadmap"
+  ],
+  "deliverables": [
+    "compliance_matrix.xlsx",
+    "maturity_assessment.pdf",
+    "improvement_roadmap.md"
+  ],
+  "required_skills": [
+    "Глубокие знания стандартов ITIL 4, ISO 27001, COBIT",
+    "Опыт проведения аудитов и оценки соответствия",
+    "Аналитические навыки для оценки зрелости процессов",
+    "Понимание методологий оценки рисков"
+  ],
+  "generated_at": "2025-08-07T10:19:35.109433",
+  "status": "ready_for_execution"
+}

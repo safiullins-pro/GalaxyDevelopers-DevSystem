@@ -1,0 +1,27 @@
+{
+  "id": "P4.1",
+  "name": "SwiftUI приложения разработка",
+  "description": "для iPhone, iPad, Mac",
+  "executor": "iOS Developer + Swift Developer",
+  "methodology": [
+    "Architecture Design",
+    "Cross-Platform Compatibility",
+    "State Management",
+    "Performance Optimization",
+    "Accessibility Implementation"
+  ],
+  "deliverables": [
+    "iOS_app.xcodeproj",
+    "macOS_app.xcodeproj",
+    "shared_framework.xcframework"
+  ],
+  "required_skills": [
+    "Экспертные знания Swift и SwiftUI",
+    "Опыт разработки универсальных приложений (iPhone/iPad/Mac)",
+    "Понимание Apple Design Guidelines и Human Interface Guidelines",
+    "Знание архитектурных паттернов (MVVM, Clean Architecture)",
+    "Опыт работы с Core Data, CloudKit, Combine"
+  ],
+  "generated_at": "2025-08-07T10:19:35.214726",
+  "status": "ready_for_execution"
+}

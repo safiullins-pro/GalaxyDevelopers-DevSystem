@@ -1,0 +1,27 @@
+{
+  "id": "P6.1",
+  "name": "App Store metadata подготовка",
+  "description": "описание, ключевые слова, категории",
+  "executor": "App Store Optimization Specialist + Marketing Manager",
+  "methodology": [
+    "Keyword Research",
+    "Competitive Analysis",
+    "Metadata Optimization",
+    "Localization Strategy",
+    "A/B Testing Plan"
+  ],
+  "deliverables": [
+    "app_store_metadata.json",
+    "keywords_research.xlsx",
+    "aso_strategy.pdf"
+  ],
+  "required_skills": [
+    "Опыт App Store Optimization (ASO)",
+    "Знание алгоритмов App Store и Google Play",
+    "Навыки keyword research и competitive analysis",
+    "Понимание App Store guidelines и требований",
+    "Опыт A/B тестирования metadata"
+  ],
+  "generated_at": "2025-08-07T10:19:35.282148",
+  "status": "ready_for_execution"
+}

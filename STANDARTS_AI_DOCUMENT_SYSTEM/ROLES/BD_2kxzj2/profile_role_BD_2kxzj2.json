@@ -1,0 +1,56 @@
+{
+  "role_id": "BD_2kxzj2",
+  "title": "Backend Developer",
+  "original_title": "Backend Developer",
+  "created_at": "2025-08-07T10:20:30.352735",
+  "updated_at": "2025-08-07T10:20:30.352737",
+  "version": "1.0.0",
+  "skills": [
+    "Professional skills",
+    "Domain expertise",
+    "Team collaboration"
+  ],
+  "certifications": [
+    "Professional Certification"
+  ],
+  "tools": [
+    "Professional Tools"
+  ],
+  "frameworks": [
+    "Professional Frameworks"
+  ],
+  "responsibilities": [
+    "Professional responsibilities"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "basic",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Junior Backend Developer",
+    "current": "Backend Developer",
+    "senior": "Senior Backend Developer",
+    "next": [
+      "Backend Developer Lead",
+      "Backend Developer Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in Backend Developer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Related professional roles"
+  ]
+}

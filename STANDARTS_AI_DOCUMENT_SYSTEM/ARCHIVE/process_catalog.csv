@@ -1,0 +1,151 @@
+process_id,name,domain,owner,itil_category,iso_compliance,cobit_alignment,priority
+001,Incident Management,ITSM,Service Desk Manager,Service Operation,true,DSS02,1
+002,Change Management,ITSM,Change Manager,Service Transition,true,BAI06,1
+003,Problem Management,ITSM,Problem Manager,Service Operation,true,DSS03,2
+004,Service Request Management,ITSM,Service Desk Manager,Service Operation,true,DSS02,2
+005,Configuration Management,ITSM,Configuration Manager,Service Transition,true,BAI10,2
+006,Release Management,ITSM,Release Manager,Service Transition,true,BAI10,1
+007,Deployment Management,ITSM,Release Manager,Service Transition,true,BAI10,1
+008,Capacity Management,Infrastructure,Capacity Manager,Service Design,true,APO03,2
+009,Availability Management,Infrastructure,Availability Manager,Service Design,true,DSS04,1
+010,Performance Management,Infrastructure,Performance Manager,Service Operation,true,MEA01,2
+011,Security Incident Response,Security,Security Officer,Service Operation,true,APO13,1
+012,Vulnerability Management,Security,Security Officer,Service Operation,true,APO12,1
+013,Access Management,Security,Security Officer,Service Operation,true,DSS05,1
+014,Identity Management,Security,Identity Manager,Service Operation,true,DSS05,2
+015,Risk Management,Governance,Risk Manager,Service Strategy,true,APO12,1
+016,Compliance Management,Governance,Compliance Officer,Service Strategy,true,APO01,1
+017,Service Level Management,ITSM,SLA Manager,Service Design,true,APO09,2
+018,Supplier Management,ITSM,Supplier Manager,Service Strategy,true,APO10,2
+019,Financial Management,ITSM,Financial Manager,Service Strategy,true,APO06,3
+020,Knowledge Management,ITSM,Knowledge Manager,Service Transition,true,APO07,2
+021,Code Review Process,Development,Tech Lead,Development,false,BAI03,2
+022,Unit Testing,Development,QA Lead,Development,false,BAI03,2
+023,Integration Testing,Development,QA Lead,Development,false,BAI03,1
+024,Performance Testing,Development,QA Lead,Development,false,BAI03,1
+025,Security Testing,Development,Security Tester,Development,false,APO13,1
+026,User Acceptance Testing,Development,Business Analyst,Development,false,BAI03,2
+027,API Development,Development,API Developer,Development,false,BAI03,2
+028,Database Design,Development,Database Engineer,Development,false,BAI04,2
+029,Infrastructure Provisioning,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+030,Container Management,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+031,CI/CD Pipeline,Development,DevOps Engineer,Infrastructure,false,BAI03,1
+032,Monitoring Setup,Infrastructure,SRE,Infrastructure,false,DSS01,1
+033,Log Management,Infrastructure,SRE,Infrastructure,false,DSS01,2
+034,Backup and Recovery,Infrastructure,Backup Admin,Infrastructure,false,DSS04,1
+035,Disaster Recovery,Infrastructure,DR Manager,Infrastructure,false,DSS04,1
+036,Business Continuity,Governance,BC Manager,Service Strategy,true,APO12,1
+037,Data Backup,Data Management,Data Engineer,Infrastructure,false,DSS04,1
+038,Data Archiving,Data Management,Data Engineer,Infrastructure,false,DSS04,2
+039,Data Migration,Data Management,Data Engineer,Development,false,BAI04,2
+040,Data Quality Assessment,Data Management,Data Scientist,Data Management,false,BAI04,2
+041,ETL Process Development,Data Management,Data Engineer,Development,false,BAI04,2
+042,Data Warehouse Management,Data Management,DW Architect,Data Management,false,BAI04,2
+043,Business Intelligence,Data Management,BI Developer,Data Management,false,BAI04,2
+044,Machine Learning Model Development,AI/ML,ML Engineer,AI/ML,false,BAI04,2
+045,AI Model Deployment,AI/ML,MLOps Engineer,AI/ML,false,BAI04,1
+046,AI Model Monitoring,AI/ML,ML Engineer,AI/ML,false,MEA01,1
+047,Prompt Engineering,AI/ML,Prompt Engineer,AI/ML,false,BAI03,2
+048,LLM Integration,AI/ML,LLM Specialist,AI/ML,false,BAI03,2
+049,AI Quality Assurance,AI/ML,AI QA Engineer,AI/ML,false,BAI03,1
+050,Frontend Development,Development,Frontend Lead,Development,false,BAI03,2
+051,Mobile Development,Development,Mobile Developer,Development,false,BAI03,2
+052,UI/UX Design,Design,UI/UX Designer,Design,false,BAI03,3
+053,Responsive Design,Development,Frontend Developer,Development,false,BAI03,3
+054,Cross-browser Testing,QA,QA Engineer,Development,false,BAI03,2
+055,Accessibility Testing,QA,Accessibility Tester,Development,false,BAI03,2
+056,Load Testing,QA,Performance Tester,Development,false,BAI03,1
+057,Stress Testing,QA,Performance Tester,Development,false,BAI03,1
+058,API Documentation,Development,Technical Writer,Development,false,BAI03,2
+059,Technical Documentation,Development,Technical Writer,Development,false,BAI07,2
+060,User Documentation,Development,Technical Writer,Development,false,BAI07,3
+061,Requirements Gathering,Project Management,Business Analyst,Project Management,false,BAI01,2
+062,Project Planning,Project Management,Project Manager,Project Management,false,APO05,2
+063,Sprint Planning,Development,Scrum Master,Project Management,false,APO05,2
+064,Daily Standup,Development,Scrum Master,Project Management,false,APO05,3
+065,Sprint Review,Development,Scrum Master,Project Management,false,APO05,3
+066,Sprint Retrospective,Development,Scrum Master,Project Management,false,APO05,2
+067,Stakeholder Management,Project Management,Project Manager,Project Management,false,APO08,2
+068,Resource Management,Project Management,Resource Manager,Project Management,false,APO01,2
+069,Budget Management,Project Management,Financial Manager,Project Management,false,APO06,2
+070,Timeline Management,Project Management,Project Manager,Project Management,false,APO05,2
+071,Quality Assurance Planning,QA,QA Lead,QA,false,APO01,2
+072,Test Case Development,QA,QA Engineer,QA,false,BAI03,2
+073,Test Execution,QA,QA Engineer,QA,false,BAI03,2
+074,Bug Tracking,QA,QA Engineer,QA,false,BAI03,2
+075,Regression Testing,QA,QA Engineer,QA,false,BAI03,2
+076,Smoke Testing,QA,QA Engineer,QA,false,BAI03,3
+077,Sanity Testing,QA,QA Engineer,QA,false,BAI03,3
+078,Environment Setup,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+079,Environment Configuration,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+080,Network Configuration,Infrastructure,Network Engineer,Infrastructure,false,BAI04,2
+081,Security Configuration,Security,Security Engineer,Infrastructure,false,APO13,1
+082,SSL Certificate Management,Security,Security Engineer,Infrastructure,false,APO13,2
+083,Firewall Configuration,Security,Security Engineer,Infrastructure,false,APO13,1
+084,VPN Setup,Infrastructure,Network Engineer,Infrastructure,false,DSS05,2
+085,DNS Management,Infrastructure,Network Engineer,Infrastructure,false,BAI04,2
+086,Load Balancer Configuration,Infrastructure,Network Engineer,Infrastructure,false,DSS04,2
+087,CDN Configuration,Infrastructure,DevOps Engineer,Infrastructure,false,DSS04,2
+088,Database Performance Tuning,Infrastructure,Database Engineer,Infrastructure,false,DSS04,2
+089,Query Optimization,Development,Database Developer,Development,false,BAI04,2
+090,Database Backup,Infrastructure,Database Admin,Infrastructure,false,DSS04,1
+091,Database Recovery,Infrastructure,Database Admin,Infrastructure,false,DSS04,1
+092,Data Modeling,Development,Data Architect,Development,false,BAI04,2
+093,Schema Design,Development,Database Engineer,Development,false,BAI04,2
+094,Index Optimization,Infrastructure,Database Engineer,Infrastructure,false,DSS04,2
+095,Cloud Migration,Infrastructure,Cloud Architect,Infrastructure,false,BAI04,1
+096,Cloud Cost Optimization,Infrastructure,Cloud Engineer,Infrastructure,false,APO06,2
+097,Cloud Security,Security,Cloud Security Engineer,Infrastructure,false,APO13,1
+098,Serverless Architecture,Development,Cloud Architect,Infrastructure,false,BAI04,2
+099,Microservices Architecture,Development,System Architect,Development,false,BAI04,1
+100,API Gateway Setup,Infrastructure,API Developer,Infrastructure,false,BAI04,2
+101,Service Mesh Configuration,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+102,Container Orchestration,Infrastructure,Kubernetes Admin,Infrastructure,false,BAI04,1
+103,Helm Chart Development,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+104,Kubernetes Deployment,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,1
+105,Docker Image Building,Development,DevOps Engineer,Development,false,BAI03,2
+106,Image Security Scanning,Security,Security Engineer,Development,false,APO13,1
+107,Registry Management,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+108,GitOps Implementation,Infrastructure,DevOps Engineer,Infrastructure,false,BAI03,1
+109,Infrastructure as Code,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,1
+110,Terraform Development,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,1
+111,Ansible Playbooks,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+112,Chef Cookbooks,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+113,Puppet Manifests,Infrastructure,DevOps Engineer,Infrastructure,false,BAI04,2
+114,Configuration Drift Detection,Infrastructure,DevOps Engineer,Infrastructure,false,DSS01,2
+115,Compliance Scanning,Security,Compliance Officer,Security,false,APO12,1
+116,Security Audit,Security,Security Auditor,Security,false,APO13,1
+117,Penetration Testing,Security,Pentester,Security,false,APO13,1
+118,Code Security Review,Security,Security Engineer,Development,false,APO13,1
+119,SAST Implementation,Security,Security Engineer,Development,false,APO13,1
+120,DAST Implementation,Security,Security Engineer,Development,false,APO13,1
+121,SCA Implementation,Security,Security Engineer,Development,false,APO13,1
+122,Threat Modeling,Security,Security Architect,Security,false,APO12,1
+123,Risk Assessment,Security,Risk Analyst,Security,false,APO12,1
+124,Security Training,Security,Security Trainer,Training,false,APO07,2
+125,GDPR Compliance,Governance,Privacy Officer,Governance,true,APO01,1
+126,SOX Compliance,Governance,Compliance Officer,Governance,true,APO01,1
+127,PCI DSS Compliance,Security,Security Officer,Security,true,APO13,1
+128,HIPAA Compliance,Governance,Compliance Officer,Governance,true,APO01,1
+129,ISO 27001 Implementation,Security,ISMS Manager,Security,true,APO13,1
+130,Data Classification,Data Management,Data Governance Officer,Data Management,false,APO02,1
+131,Data Loss Prevention,Security,DLP Administrator,Security,false,APO13,1
+132,Email Security,Security,Security Engineer,Security,false,APO13,2
+133,Endpoint Protection,Security,Security Engineer,Security,false,APO13,1
+134,SIEM Implementation,Security,SOC Analyst,Security,false,DSS05,1
+135,SOC Operations,Security,SOC Manager,Security,false,DSS05,1
+136,Incident Response Planning,Security,Incident Response Manager,Security,false,DSS02,1
+137,Forensic Analysis,Security,Digital Forensics Analyst,Security,false,DSS02,1
+138,Business Impact Analysis,Governance,BCP Manager,Governance,false,APO12,1
+139,Service Catalog Management,ITSM,Service Catalog Manager,ITSM,true,APO09,2
+140,IT Asset Management,ITSM,Asset Manager,ITSM,true,BAI09,2
+141,Software License Management,ITSM,License Manager,ITSM,false,BAI09,2
+142,Vendor Management,Procurement,Vendor Manager,Procurement,false,APO10,2
+143,Contract Management,Legal,Contract Manager,Legal,false,APO10,2
+144,Budget Planning,Finance,Budget Manager,Finance,false,APO06,2
+145,Cost Allocation,Finance,Cost Analyst,Finance,false,APO06,2
+146,Chargeback Implementation,Finance,Chargeback Analyst,Finance,false,APO06,2
+147,Performance Reporting,Governance,Performance Analyst,Governance,false,MEA01,2
+148,Dashboard Development,BI,Dashboard Developer,BI,false,MEA01,2
+149,KPI Monitoring,Governance,KPI Analyst,Governance,false,MEA01,2
+150,Executive Reporting,Governance,Executive Analyst,Governance,false,MEA01,1

@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+RUN pip3 install redis psycopg2-binary requests python-telegram-bot detect-secrets pip-licenses
+
+COPY ai_auditor.py /app/
+
+WORKDIR /app
+
+CMD ["python3", "ai_auditor.py"]

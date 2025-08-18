@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY web_dashboard.py /app/web_dashboard.py
+COPY templates/dashboard.html /app/templates/dashboard.html
+COPY templates/login.html /app/templates/login.html
+RUN pip3 install flask psycopg2-binary passlib
+CMD ["python3", "web_dashboard.py"]

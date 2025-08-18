@@ -1,0 +1,96 @@
+{
+  "role_id": "BA_c8541e",
+  "title": "Business Analyst",
+  "original_title": "Business Analyst",
+  "created_at": "2025-08-07T10:19:34.312610",
+  "updated_at": "2025-08-07T10:19:34.312613",
+  "version": "1.0.0",
+  "skills": [
+    "Знание методологий анализа ролей и обязанностей (RACI matrix)",
+    "Коммуникационные навыки для работы с персоналом",
+    "Коммуникационные навыки для интервьюирования",
+    "Понимание бизнес-процессов и требований",
+    "Навыки интервьюирования и фасилитации",
+    "Аналитическое мышление и критическое мышление",
+    "Понимание организационных структур",
+    "Опыт работы с системами документооборота (Confluence, SharePoint)",
+    "Навыки работы с процессным моделированием (BPMN)",
+    "Knowledge of BABOK",
+    "Knowledge of PMBOK",
+    "Knowledge of Agile",
+    "Knowledge of Scrum",
+    "Knowledge of BPMN",
+    "Knowledge of UML",
+    "Proficiency in JIRA",
+    "Proficiency in Confluence",
+    "Proficiency in Visio",
+    "Proficiency in Enterprise Architect",
+    "Proficiency in Lucidchart"
+  ],
+  "certifications": [
+    "CBAP",
+    "PMI-PBA",
+    "CCBA",
+    "ECBA",
+    "IIBA AAC"
+  ],
+  "tools": [
+    "JIRA",
+    "Confluence",
+    "Visio",
+    "Enterprise Architect",
+    "Lucidchart",
+    "Miro",
+    "SharePoint",
+    "Excel"
+  ],
+  "frameworks": [
+    "BABOK",
+    "PMBOK",
+    "Agile",
+    "Scrum",
+    "BPMN",
+    "UML"
+  ],
+  "responsibilities": [
+    "Requirements gathering and analysis",
+    "Process documentation and modeling",
+    "Stakeholder management",
+    "Gap analysis",
+    "Business case development"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "basic",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Junior Business Analyst",
+    "current": "Business Analyst",
+    "senior": "Senior Business Analyst",
+    "next": [
+      "Product Owner",
+      "Solution Architect",
+      "Business Analysis Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in Business Analyst role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "System Architect",
+    "Product Owner",
+    "Project Manager"
+  ]
+}

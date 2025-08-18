@@ -1,0 +1,25 @@
+{
+  "process_id": "P4.1",
+  "deliverables": [
+    {
+      "name": "iOS_app.xcodeproj",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XCODEPROJ/iOS_app_xcodeproj_template.json"
+    },
+    {
+      "name": "macOS_app.xcodeproj",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XCODEPROJ/macOS_app_xcodeproj_template.json"
+    },
+    {
+      "name": "shared_framework.xcframework",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XCFRAMEWORK/shared_framework_xcframework_template.json"
+    }
+  ],
+  "template_locations": {
+    "iOS_app.xcodeproj": "../../../03_TEMPLATES/XCODEPROJ/iOS_app_xcodeproj_template.json",
+    "macOS_app.xcodeproj": "../../../03_TEMPLATES/XCODEPROJ/macOS_app_xcodeproj_template.json",
+    "shared_framework.xcframework": "../../../03_TEMPLATES/XCFRAMEWORK/shared_framework_xcframework_template.json"
+  }
+}

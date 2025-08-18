@@ -1,0 +1,54 @@
+{
+  "agent": "RoleProfileBuilder",
+  "generated_at": "2025-08-07T10:19:35.079839",
+  "profiles_created": 35,
+  "roles_by_competency": {
+    "expert": [
+      "iOS Developer",
+      "iOS Developer"
+    ],
+    "advanced": [
+      "System Architect",
+      "DevOps Engineer",
+      "Compliance Officer",
+      "AI/ML Engineer",
+      "Business Analyst",
+      "QA Engineer",
+      "Compliance Officer",
+      "QA Engineer",
+      "Business Analyst",
+      "Business Analyst",
+      "Security Specialist",
+      "Compliance Officer",
+      "System Architect",
+      "Business Analyst",
+      "Technical Lead"
+    ],
+    "intermediate": [
+      "Performance Engineer",
+      "AI Testing Specialist",
+      "Content Manager",
+      "App Store Optimization Specialist",
+      "Python Developer",
+      "API Developer",
+      "Swift Developer",
+      "HR Business Partner",
+      "Integration Architect",
+      "Load Testing Specialist",
+      "Release Manager",
+      "UX/UI Designer",
+      "Test Automation Engineer",
+      "Technical Writer",
+      "Platform Engineer",
+      "Mobile App Designer",
+      "Site Reliability Engineer",
+      "Marketing Manager"
+    ],
+    "basic": []
+  },
+  "statistics": {
+    "avg_skills_per_role": 14.6,
+    "avg_certifications_per_role": 1.97,
+    "avg_tools_per_role": 3.57
+  }
+}

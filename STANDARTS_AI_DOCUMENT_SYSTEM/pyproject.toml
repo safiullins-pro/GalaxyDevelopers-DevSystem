@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "documents-system"
+version = "0.1.0"
+description = "GALAXYDEVELOPMENT Document Management System"
+authors = [
+  { name="Chepuha", email="chepuha@example.com" },
+]
+requires-python = ">=3.9"
+dependencies = [
+    # Core dependencies
+    "aioredis==2.0.1",
+    "psycopg2-binary==2.9.7",
+    "kafka-python==2.0.2",
+    "loguru==0.7.0",
+    "prometheus-client==0.17.1",
+    "tenacity==8.2.2",
+    "aiohttp==3.8.5",
+    "structlog==23.2.0",
+    # AI/ML dependencies
+    "openai==0.27.8",
+    "anthropic==0.3.11",
+    "google-generativeai==0.7.0",
+    # Data processing
+    "pandas==2.0.3",
+    "numpy==1.24.3",
+    "pydantic==2.0.3",
+    # Utilities
+    "python-dotenv==1.0.0",
+    "PyYAML==6.0.1",
+    "requests==2.31.0",
+    "httpx==0.24.1",
+    "Jinja2==3.1.4", # Добавлено для ComposerAgent
+    "duckduckgo_search==5.1.0", # Добавлено для WebResearchAgent
+    "wikipedia==1.4.0", # Добавлено для WebResearchAgent
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.4.0",
+    "pytest-asyncio==0.21.0",
+    "pytest-cov==4.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["01_AGENTS*"] # Включаем 01_AGENTS как пакет
+namespaces = false

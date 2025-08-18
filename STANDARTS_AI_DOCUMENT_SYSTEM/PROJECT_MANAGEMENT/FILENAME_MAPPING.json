@@ -1,0 +1,585 @@
+{
+  "file_mapping": {
+    "inventory_catalog.xlsx": "P1.1_analysis_текущей_документации.xlsx",
+    "coverage_matrix.pdf": "P1.1_analysis_текущей_документации.pdf",
+    "gaps_analysis.md": "P1.1_analysis_текущей_документации.md",
+    "tech_inventory.json": "P1.2_technical_ревизия.json",
+    "architecture_docs.pdf": "P1.2_technical_ревизия.pdf",
+    "security_audit.xlsx": "P1.2_technical_ревизия.xlsx",
+    "raci_matrix.xlsx": "P1.3_analysis_команды.xlsx",
+    "roles_mapping.pdf": "P1.3_analysis_команды.pdf",
+    "interview_results.md": "P1.3_analysis_команды.md",
+    "compliance_matrix.xlsx": "P1.4_assessment_зрелости_процессов.xlsx",
+    "maturity_assessment.pdf": "P1.4_assessment_зрелости_процессов.pdf",
+    "improvement_roadmap.md": "P1.4_assessment_зрелости_процессов.md",
+    "architecture_blueprint.pdf": "P2.1_архитектурное_проектирование_multi_agent_системы.pdf",
+    "api_specs.yaml": "P2.1_архитектурное_проектирование_multi_agent_системы.txt",
+    "tech_stack.md": "P2.1_архитектурное_проектирование_multi_agent_системы.md",
+    "cli_specs.md": "P2.2_cli_first_архитектура.md",
+    "automation_scripts.sh": "P2.2_cli_first_архитектура.txt",
+    "user_manual.pdf": "P2.2_cli_first_архитектура.pdf",
+    "wireframes.fig": "P2.3_uxui_дизайн_для_мобильных_приложений.txt",
+    "prototypes.fig": "P2.3_uxui_дизайн_для_мобильных_приложений.txt",
+    "design_system.pdf": "P2.3_uxui_дизайн_для_мобильных_приложений.pdf",
+    "database_schema.sql": "P2.4_техническое_проектирование_database_schema.sql",
+    "er_diagrams.pdf": "P2.4_техническое_проектирование_database_schema.pdf",
+    "migration_plan.md": "P2.4_техническое_проектирование_database_schema.md",
+    "research_agent.py": "P3.1_researchagent_разработка.txt",
+    "api_client.py": "P3.1_researchagent_разработка.txt",
+    "data_processor.py": "P3.1_researchagent_разработка.txt",
+    "composer_agent.py": "P3.2_composeragent_разработка.txt",
+    "template_engine.py": "P3.2_composeragent_разработка.txt",
+    "style_validator.py": "P3.2_composeragent_разработка.txt",
+    "reviewer_agent.py": "P3.3_revieweragent_разработка.txt",
+    "compliance_checker.py": "P3.3_revieweragent_разработка.txt",
+    "quality_metrics.py": "P3.3_revieweragent_разработка.txt",
+    "integrator_agent.py": "P3.4_integratoragent_разработка.txt",
+    "api_gateway.yaml": "P3.4_integratoragent_разработка.txt",
+    "sync_service.py": "P3.4_integratoragent_разработка.txt",
+    "publisher_agent.py": "P3.5_publisheragent_разработка.txt",
+    "distribution_engine.py": "P3.5_publisheragent_разработка.txt",
+    "notification_service.py": "P3.5_publisheragent_разработка.txt",
+    "iOS_app.xcodeproj": "P4.1_swiftui_приложения_разработка.txt",
+    "macOS_app.xcodeproj": "P4.1_swiftui_приложения_разработка.txt",
+    "shared_framework.xcframework": "P4.1_swiftui_приложения_разработка.txt",
+    "CoreDataModel.xcdatamodeld": "P4.2_core_data_implementation.txt",
+    "CacheManager.swift": "P4.2_core_data_implementation.txt",
+    "SyncEngine.swift": "P4.2_core_data_implementation.txt",
+    "APIClient.swift": "P4.3_rest_api_клиент.txt",
+    "AuthManager.swift": "P4.3_rest_api_клиент.txt",
+    "NetworkLayer.swift": "P4.3_rest_api_клиент.txt",
+    "test_suite.swift": "P5.1_unit_тестирование.txt",
+    "mock_framework.swift": "P5.1_unit_тестирование.txt",
+    "coverage_report.html": "P5.1_unit_тестирование.txt",
+    "integration_tests.py": "P5.2_integration_тестирование.txt",
+    "ai_test_framework.py": "P5.2_integration_тестирование.txt",
+    "performance_benchmarks.json": "P5.2_integration_тестирование.json",
+    "security_report.pdf": "P5.3_security_тестирование.pdf",
+    "vulnerability_scan.json": "P5.3_security_тестирование.json",
+    "pentest_results.md": "P5.3_security_тестирование.md",
+    "load_test_plan.jmx": "P5.4_performance_тестирование.txt",
+    "performance_report.pdf": "P5.4_performance_тестирование.pdf",
+    "capacity_recommendations.md": "P5.4_performance_тестирование.md",
+    "app_store_metadata.json": "P6.1_app_store_metadata_подготовка.json",
+    "keywords_research.xlsx": "P6.1_app_store_metadata_подготовка.xlsx",
+    "aso_strategy.pdf": "P6.1_app_store_metadata_подготовка.pdf",
+    "k8s-manifests/": "P6.2_kubernetes_production_конфигурация.txt",
+    "monitoring-stack.yaml": "P6.2_kubernetes_production_конфигурация.txt",
+    "backup-strategy.md": "P6.2_kubernetes_production_конфигурация.md",
+    ".github/workflows/": "P6.3_cicd_pipeline_настройка.txt",
+    "deployment-pipeline.yaml": "P6.3_cicd_pipeline_настройка.txt",
+    "rollback-procedures.md": "P6.3_cicd_pipeline_настройка.md",
+    "release_build.ipa": "P7.1_app_store_connect_submission.txt",
+    "app_store_submission.pdf": "P7.1_app_store_connect_submission.pdf",
+    "review_notes.md": "P7.1_app_store_connect_submission.md",
+    "monitoring_dashboard.json": "P7.2_production_deployment_мониторинг.json",
+    "incident_response_plan.md": "P7.2_production_deployment_мониторинг.md",
+    "launch_report.pdf": "P7.2_production_deployment_мониторинг.pdf"
+  },
+  "process_files": {
+    "P1.1": {
+      "process_name": "Анализ текущей документации",
+      "files": [
+        {
+          "old_name": "inventory_catalog.xlsx",
+          "new_name": "P1.1_analysis_текущей_документации.xlsx",
+          "format": "xlsx"
+        },
+        {
+          "old_name": "coverage_matrix.pdf",
+          "new_name": "P1.1_analysis_текущей_документации.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "gaps_analysis.md",
+          "new_name": "P1.1_analysis_текущей_документации.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P1.2": {
+      "process_name": "Техническая ревизия",
+      "files": [
+        {
+          "old_name": "tech_inventory.json",
+          "new_name": "P1.2_technical_ревизия.json",
+          "format": "json"
+        },
+        {
+          "old_name": "architecture_docs.pdf",
+          "new_name": "P1.2_technical_ревизия.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "security_audit.xlsx",
+          "new_name": "P1.2_technical_ревизия.xlsx",
+          "format": "xlsx"
+        }
+      ]
+    },
+    "P1.3": {
+      "process_name": "Анализ команды",
+      "files": [
+        {
+          "old_name": "raci_matrix.xlsx",
+          "new_name": "P1.3_analysis_команды.xlsx",
+          "format": "xlsx"
+        },
+        {
+          "old_name": "roles_mapping.pdf",
+          "new_name": "P1.3_analysis_команды.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "interview_results.md",
+          "new_name": "P1.3_analysis_команды.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P1.4": {
+      "process_name": "Оценка зрелости процессов",
+      "files": [
+        {
+          "old_name": "compliance_matrix.xlsx",
+          "new_name": "P1.4_assessment_зрелости_процессов.xlsx",
+          "format": "xlsx"
+        },
+        {
+          "old_name": "maturity_assessment.pdf",
+          "new_name": "P1.4_assessment_зрелости_процессов.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "improvement_roadmap.md",
+          "new_name": "P1.4_assessment_зрелости_процессов.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P2.1": {
+      "process_name": "Архитектурное проектирование Multi-Agent системы",
+      "files": [
+        {
+          "old_name": "architecture_blueprint.pdf",
+          "new_name": "P2.1_архитектурное_проектирование_multi_agent_системы.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "api_specs.yaml",
+          "new_name": "P2.1_архитектурное_проектирование_multi_agent_системы.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "tech_stack.md",
+          "new_name": "P2.1_архитектурное_проектирование_multi_agent_системы.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P2.2": {
+      "process_name": "CLI-First архитектура",
+      "files": [
+        {
+          "old_name": "cli_specs.md",
+          "new_name": "P2.2_cli_first_архитектура.md",
+          "format": "md"
+        },
+        {
+          "old_name": "automation_scripts.sh",
+          "new_name": "P2.2_cli_first_архитектура.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "user_manual.pdf",
+          "new_name": "P2.2_cli_first_архитектура.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "P2.3": {
+      "process_name": "UX/UI дизайн для мобильных приложений",
+      "files": [
+        {
+          "old_name": "wireframes.fig",
+          "new_name": "P2.3_uxui_дизайн_для_мобильных_приложений.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "prototypes.fig",
+          "new_name": "P2.3_uxui_дизайн_для_мобильных_приложений.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "design_system.pdf",
+          "new_name": "P2.3_uxui_дизайн_для_мобильных_приложений.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "P2.4": {
+      "process_name": "Техническое проектирование Database Schema",
+      "files": [
+        {
+          "old_name": "database_schema.sql",
+          "new_name": "P2.4_техническое_проектирование_database_schema.sql",
+          "format": "sql"
+        },
+        {
+          "old_name": "er_diagrams.pdf",
+          "new_name": "P2.4_техническое_проектирование_database_schema.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "migration_plan.md",
+          "new_name": "P2.4_техническое_проектирование_database_schema.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P3.1": {
+      "process_name": "ResearchAgent разработка",
+      "files": [
+        {
+          "old_name": "research_agent.py",
+          "new_name": "P3.1_researchagent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "api_client.py",
+          "new_name": "P3.1_researchagent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "data_processor.py",
+          "new_name": "P3.1_researchagent_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P3.2": {
+      "process_name": "ComposerAgent разработка",
+      "files": [
+        {
+          "old_name": "composer_agent.py",
+          "new_name": "P3.2_composeragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "template_engine.py",
+          "new_name": "P3.2_composeragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "style_validator.py",
+          "new_name": "P3.2_composeragent_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P3.3": {
+      "process_name": "ReviewerAgent разработка",
+      "files": [
+        {
+          "old_name": "reviewer_agent.py",
+          "new_name": "P3.3_revieweragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "compliance_checker.py",
+          "new_name": "P3.3_revieweragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "quality_metrics.py",
+          "new_name": "P3.3_revieweragent_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P3.4": {
+      "process_name": "IntegratorAgent разработка",
+      "files": [
+        {
+          "old_name": "integrator_agent.py",
+          "new_name": "P3.4_integratoragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "api_gateway.yaml",
+          "new_name": "P3.4_integratoragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "sync_service.py",
+          "new_name": "P3.4_integratoragent_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P3.5": {
+      "process_name": "PublisherAgent разработка",
+      "files": [
+        {
+          "old_name": "publisher_agent.py",
+          "new_name": "P3.5_publisheragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "distribution_engine.py",
+          "new_name": "P3.5_publisheragent_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "notification_service.py",
+          "new_name": "P3.5_publisheragent_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P4.1": {
+      "process_name": "SwiftUI приложения разработка",
+      "files": [
+        {
+          "old_name": "iOS_app.xcodeproj",
+          "new_name": "P4.1_swiftui_приложения_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "macOS_app.xcodeproj",
+          "new_name": "P4.1_swiftui_приложения_разработка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "shared_framework.xcframework",
+          "new_name": "P4.1_swiftui_приложения_разработка.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P4.2": {
+      "process_name": "Core Data implementation",
+      "files": [
+        {
+          "old_name": "CoreDataModel.xcdatamodeld",
+          "new_name": "P4.2_core_data_implementation.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "CacheManager.swift",
+          "new_name": "P4.2_core_data_implementation.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "SyncEngine.swift",
+          "new_name": "P4.2_core_data_implementation.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P4.3": {
+      "process_name": "REST API клиент",
+      "files": [
+        {
+          "old_name": "APIClient.swift",
+          "new_name": "P4.3_rest_api_клиент.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "AuthManager.swift",
+          "new_name": "P4.3_rest_api_клиент.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "NetworkLayer.swift",
+          "new_name": "P4.3_rest_api_клиент.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P5.1": {
+      "process_name": "Unit тестирование",
+      "files": [
+        {
+          "old_name": "test_suite.swift",
+          "new_name": "P5.1_unit_тестирование.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "mock_framework.swift",
+          "new_name": "P5.1_unit_тестирование.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "coverage_report.html",
+          "new_name": "P5.1_unit_тестирование.txt",
+          "format": "txt"
+        }
+      ]
+    },
+    "P5.2": {
+      "process_name": "Integration тестирование",
+      "files": [
+        {
+          "old_name": "integration_tests.py",
+          "new_name": "P5.2_integration_тестирование.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "ai_test_framework.py",
+          "new_name": "P5.2_integration_тестирование.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "performance_benchmarks.json",
+          "new_name": "P5.2_integration_тестирование.json",
+          "format": "json"
+        }
+      ]
+    },
+    "P5.3": {
+      "process_name": "Security тестирование",
+      "files": [
+        {
+          "old_name": "security_report.pdf",
+          "new_name": "P5.3_security_тестирование.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "vulnerability_scan.json",
+          "new_name": "P5.3_security_тестирование.json",
+          "format": "json"
+        },
+        {
+          "old_name": "pentest_results.md",
+          "new_name": "P5.3_security_тестирование.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P5.4": {
+      "process_name": "Performance тестирование",
+      "files": [
+        {
+          "old_name": "load_test_plan.jmx",
+          "new_name": "P5.4_performance_тестирование.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "performance_report.pdf",
+          "new_name": "P5.4_performance_тестирование.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "capacity_recommendations.md",
+          "new_name": "P5.4_performance_тестирование.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P6.1": {
+      "process_name": "App Store metadata подготовка",
+      "files": [
+        {
+          "old_name": "app_store_metadata.json",
+          "new_name": "P6.1_app_store_metadata_подготовка.json",
+          "format": "json"
+        },
+        {
+          "old_name": "keywords_research.xlsx",
+          "new_name": "P6.1_app_store_metadata_подготовка.xlsx",
+          "format": "xlsx"
+        },
+        {
+          "old_name": "aso_strategy.pdf",
+          "new_name": "P6.1_app_store_metadata_подготовка.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "P6.2": {
+      "process_name": "Kubernetes production конфигурация",
+      "files": [
+        {
+          "old_name": "k8s-manifests/",
+          "new_name": "P6.2_kubernetes_production_конфигурация.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "monitoring-stack.yaml",
+          "new_name": "P6.2_kubernetes_production_конфигурация.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "backup-strategy.md",
+          "new_name": "P6.2_kubernetes_production_конфигурация.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P6.3": {
+      "process_name": "CI/CD pipeline настройка",
+      "files": [
+        {
+          "old_name": ".github/workflows/",
+          "new_name": "P6.3_cicd_pipeline_настройка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "deployment-pipeline.yaml",
+          "new_name": "P6.3_cicd_pipeline_настройка.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "rollback-procedures.md",
+          "new_name": "P6.3_cicd_pipeline_настройка.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P7.1": {
+      "process_name": "App Store Connect submission",
+      "files": [
+        {
+          "old_name": "release_build.ipa",
+          "new_name": "P7.1_app_store_connect_submission.txt",
+          "format": "txt"
+        },
+        {
+          "old_name": "app_store_submission.pdf",
+          "new_name": "P7.1_app_store_connect_submission.pdf",
+          "format": "pdf"
+        },
+        {
+          "old_name": "review_notes.md",
+          "new_name": "P7.1_app_store_connect_submission.md",
+          "format": "md"
+        }
+      ]
+    },
+    "P7.2": {
+      "process_name": "Production deployment мониторинг",
+      "files": [
+        {
+          "old_name": "monitoring_dashboard.json",
+          "new_name": "P7.2_production_deployment_мониторинг.json",
+          "format": "json"
+        },
+        {
+          "old_name": "incident_response_plan.md",
+          "new_name": "P7.2_production_deployment_мониторинг.md",
+          "format": "md"
+        },
+        {
+          "old_name": "launch_report.pdf",
+          "new_name": "P7.2_production_deployment_мониторинг.pdf",
+          "format": "pdf"
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "total_processes": 25,
+    "files_renamed": 75
+  }
+}

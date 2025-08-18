@@ -1,0 +1,25 @@
+{
+  "process_id": "P3.3",
+  "deliverables": [
+    {
+      "name": "reviewer_agent.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/reviewer_agent_py_template.json"
+    },
+    {
+      "name": "compliance_checker.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/compliance_checker_py_template.json"
+    },
+    {
+      "name": "quality_metrics.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/quality_metrics_py_template.json"
+    }
+  ],
+  "template_locations": {
+    "reviewer_agent.py": "../../../03_TEMPLATES/PY/reviewer_agent_py_template.json",
+    "compliance_checker.py": "../../../03_TEMPLATES/PY/compliance_checker_py_template.json",
+    "quality_metrics.py": "../../../03_TEMPLATES/PY/quality_metrics_py_template.json"
+  }
+}

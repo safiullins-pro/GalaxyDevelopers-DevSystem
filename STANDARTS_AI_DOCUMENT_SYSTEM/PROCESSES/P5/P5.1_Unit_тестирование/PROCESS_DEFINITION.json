@@ -1,0 +1,27 @@
+{
+  "id": "P5.1",
+  "name": "Unit тестирование",
+  "description": "с покрытием > 80%",
+  "executor": "QA Engineer + Test Automation Engineer",
+  "methodology": [
+    "Test Strategy Planning",
+    "Coverage Analysis",
+    "Mock Implementation",
+    "Continuous Testing",
+    "Quality Metrics"
+  ],
+  "deliverables": [
+    "test_suite.swift",
+    "mock_framework.swift",
+    "coverage_report.html"
+  ],
+  "required_skills": [
+    "Экспертные знания в области unit testing",
+    "Опыт работы с testing frameworks (XCTest для iOS, JUnit для Java)",
+    "Понимание принципов Test-Driven Development",
+    "Навыки анализа покрытия кода",
+    "Знание паттернов тестирования (mocking, stubbing)"
+  ],
+  "generated_at": "2025-08-07T10:19:35.237412",
+  "status": "ready_for_execution"
+}

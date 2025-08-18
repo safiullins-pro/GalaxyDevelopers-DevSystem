@@ -1,0 +1,25 @@
+{
+  "process_id": "P1.2",
+  "deliverables": [
+    {
+      "name": "tech_inventory.json",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JSON/tech_inventory_json_template.json"
+    },
+    {
+      "name": "architecture_docs.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/architecture_docs_pdf_template.json"
+    },
+    {
+      "name": "security_audit.xlsx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XLSX/security_audit_xlsx_template.json"
+    }
+  ],
+  "template_locations": {
+    "tech_inventory.json": "../../../03_TEMPLATES/JSON/tech_inventory_json_template.json",
+    "architecture_docs.pdf": "../../../03_TEMPLATES/PDF/architecture_docs_pdf_template.json",
+    "security_audit.xlsx": "../../../03_TEMPLATES/XLSX/security_audit_xlsx_template.json"
+  }
+}

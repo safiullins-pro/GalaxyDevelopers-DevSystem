@@ -1,0 +1,161 @@
+Category,Path,Description
+System Architecture & Documentation,00_DOCUMENTATION,"High-level design documents, READMEs, and architecture diagrams."
+Project Management & Processes,00_PROJECT_MANAGEMENT,"Execution plans, role definitions, process catalogs, and RACI matrices."
+Core Application Logic,01_AGENTS,AI agents for the GALAXYDEVELOPMENT system.
+Data & Databases,02_DATA,"Raw data, processed data, database schemas (.sql), and caches."
+Templates & Standards,03_TEMPLATES,Reusable code templates and documentation templates.
+Templates & Standards,04_STANDARDS,"Industry standards (ISO, NIST, etc.)."
+Project Management & Processes,05_ROLES,Detailed role profiles for the 38 roles in the system.
+Project Management & Processes,05_ROLES/ROLE_1,Role Profile: ROLE_1
+Project Management & Processes,05_ROLES/ROLE_2,Role Profile: ROLE_2
+Project Management & Processes,05_ROLES/ROLE_3,Role Profile: ROLE_3
+Project Management & Processes,05_ROLES/ROLE_4,Role Profile: ROLE_4
+Project Management & Processes,05_ROLES/ROLE_5,Role Profile: ROLE_5
+Project Management & Processes,05_ROLES/ROLE_6,Role Profile: ROLE_6
+Project Management & Processes,05_ROLES/ROLE_7,Role Profile: ROLE_7
+Project Management & Processes,05_ROLES/ROLE_8,Role Profile: ROLE_8
+Project Management & Processes,05_ROLES/ROLE_9,Role Profile: ROLE_9
+Project Management & Processes,05_ROLES/ROLE_10,Role Profile: ROLE_10
+Project Management & Processes,05_ROLES/ROLE_11,Role Profile: ROLE_11
+Project Management & Processes,05_ROLES/ROLE_12,Role Profile: ROLE_12
+Project Management & Processes,05_ROLES/ROLE_13,Role Profile: ROLE_13
+Project Management & Processes,05_ROLES/ROLE_14,Role Profile: ROLE_14
+Project Management & Processes,05_ROLES/ROLE_15,Role Profile: ROLE_15
+Project Management & Processes,05_ROLES/ROLE_16,Role Profile: ROLE_16
+Project Management & Processes,05_ROLES/ROLE_17,Role Profile: ROLE_17
+Project Management & Processes,05_ROLES/ROLE_18,Role Profile: ROLE_18
+Project Management & Processes,05_ROLES/ROLE_19,Role Profile: ROLE_19
+Project Management & Processes,05_ROLES/ROLE_20,Role Profile: ROLE_20
+Project Management & Processes,05_ROLES/ROLE_21,Role Profile: ROLE_21
+Project Management & Processes,05_ROLES/ROLE_22,Role Profile: ROLE_22
+Project Management & Processes,05_ROLES/ROLE_23,Role Profile: ROLE_23
+Project Management & Processes,05_ROLES/ROLE_24,Role Profile: ROLE_24
+Project Management & Processes,05_ROLES/ROLE_25,Role Profile: ROLE_25
+Project Management & Processes,05_ROLES/ROLE_26,Role Profile: ROLE_26
+Project Management & Processes,05_ROLES/ROLE_27,Role Profile: ROLE_27
+Project Management & Processes,05_ROLES/ROLE_28,Role Profile: ROLE_28
+Project Management & Processes,05_ROLES/ROLE_29,Role Profile: ROLE_29
+Project Management & Processes,05_ROLES/ROLE_30,Role Profile: ROLE_30
+Project Management & Processes,05_ROLES/ROLE_31,Role Profile: ROLE_31
+Project Management & Processes,05_ROLES/ROLE_32,Role Profile: ROLE_32
+Project Management & Processes,05_ROLES/ROLE_33,Role Profile: ROLE_33
+Project Management & Processes,05_ROLES/ROLE_34,Role Profile: ROLE_34
+Project Management & Processes,05_ROLES/ROLE_35,Role Profile: ROLE_35
+Project Management & Processes,05_ROLES/ROLE_36,Role Profile: ROLE_36
+Project Management & Processes,05_ROLES/ROLE_37,Role Profile: ROLE_37
+Project Management & Processes,05_ROLES/ROLE_38,Role Profile: ROLE_38
+Project Management & Processes,06_PROCESSES,Definitions and workflows for the 47 core micro-processes.
+Project Management & Processes,06_PROCESSES/P1/P1.1_Анализ_текущей_документации,Process Definition for Анализ текущей документации (ID: None)
+Project Management & Processes,06_PROCESSES/P1/P1.2_Техническая_ревизия,Process Definition for Техническая ревизия (ID: None)
+Project Management & Processes,06_PROCESSES/P1/P1.3_Анализ_команды,Process Definition for Анализ команды (ID: None)
+Project Management & Processes,06_PROCESSES/P1/P1.4_Оценка_зрелости_процессов,Process Definition for Оценка зрелости процессов (ID: None)
+Project Management & Processes,06_PROCESSES/P2/P2.1_Архитектурное_проектирование_Multi-Agent_системы,Process Definition for Архитектурное проектирование Multi-Agent системы (ID: None)
+Project Management & Processes,06_PROCESSES/P2/P2.2_CLI-First_архитектура,Process Definition for CLI-First архитектура (ID: None)
+Project Management & Processes,06_PROCESSES/P2/P2.3_UX/UI_дизайн_для_мобильных_приложений,Process Definition for UX/UI дизайн для мобильных приложений (ID: None)
+Project Management & Processes,06_PROCESSES/P2/P2.4_Техническое_проектирование_Database_Schema,Process Definition for Техническое проектирование Database Schema (ID: None)
+Project Management & Processes,06_PROCESSES/P3/P3.1_ResearchAgent_разработка,Process Definition for ResearchAgent разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P3/P3.2_ComposerAgent_разработка,Process Definition for ComposerAgent разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P3/P3.3_ReviewerAgent_разработка,Process Definition for ReviewerAgent разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P3/P3.4_IntegratorAgent_разработка,Process Definition for IntegratorAgent разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P3/P3.5_PublisherAgent_разработка,Process Definition for PublisherAgent разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P4/P4.1_SwiftUI_приложения_разработка,Process Definition for SwiftUI приложения разработка (ID: None)
+Project Management & Processes,06_PROCESSES/P4/P4.2_Core_Data_implementation,Process Definition for Core Data implementation (ID: None)
+Project Management & Processes,06_PROCESSES/P4/P4.3_REST_API_клиент,Process Definition for REST API клиент (ID: None)
+Project Management & Processes,06_PROCESSES/P5/P5.1_Unit_тестирование,Process Definition for Unit тестирование (ID: None)
+Project Management & Processes,06_PROCESSES/P5/P5.2_Integration_тестирование,Process Definition for Integration тестирование (ID: None)
+Project Management & Processes,06_PROCESSES/P5/P5.3_Security_тестирование,Process Definition for Security тестирование (ID: None)
+Project Management & Processes,06_PROCESSES/P5/P5.4_Performance_тестирование,Process Definition for Performance тестирование (ID: None)
+Project Management & Processes,06_PROCESSES/P6/P6.1_App_Store_metadata_подготовка,Process Definition for App Store metadata подготовка (ID: None)
+Project Management & Processes,06_PROCESSES/P6/P6.2_Kubernetes_production_конфигурация,Process Definition for Kubernetes production конфигурация (ID: None)
+Project Management & Processes,06_PROCESSES/P6/P6.3_CI/CD_pipeline_настройка,Process Definition for CI/CD pipeline настройка (ID: None)
+Project Management & Processes,06_PROCESSES/P7/P7.1_App_Store_Connect_submission,Process Definition for App Store Connect submission (ID: None)
+Project Management & Processes,06_PROCESSES/P7/P7.2_Production_deployment_мониторинг,Process Definition for Production deployment мониторинг (ID: None)
+Deliverables,07_DELIVERABLES,Generated artifacts and deliverables from the processes.
+"Logs, Reports & Journals",08_LOGS,Application logs from agent and system execution.
+"Logs, Reports & Journals",09_JOURNALS,System journals and operational records.
+"Logs, Reports & Journals",10_REPORTS,Generated reports from system execution.
+Configuration & Environment,11_SCRIPTS,Supporting scripts for automation and system management.
+Configuration & Environment,12_CONFIGS,Configuration files for the system and its components.
+Archive,13_ARCHIVE,Archived files and previous versions.
+Templates & Standards,03_TEMPLATES/FIG/template_prototypes.fig_T062.json,Template for Figma prototypes
+Templates & Standards,03_TEMPLATES/FIG/template_wireframes.fig_T061.json,Template for Figma wireframes
+Templates & Standards,03_TEMPLATES/GENERIC/template_k8s_manifests_T077.json,Generic Kubernetes manifests template
+Templates & Standards,03_TEMPLATES/GITHUB/WORKFLOWS/,Template for GitHub Actions workflows
+Templates & Standards,03_TEMPLATES/HTML/template_coverage_report.html_T071.json,Template for HTML coverage reports
+Templates & Standards,03_TEMPLATES/IPA/template_release_build.ipa_T075.json,Template for iOS release build IPA
+Templates & Standards,03_TEMPLATES/JMX/template_load_test_plan.jmx_T072.json,Template for JMeter load test plans
+Templates & Standards,03_TEMPLATES/JSON/template_app_store_metadata_T067.json,Template for App Store metadata JSON
+Templates & Standards,03_TEMPLATES/JSON/template_monitoring_dashboard_T064.json,Template for monitoring dashboard JSON
+Templates & Standards,03_TEMPLATES/JSON/template_performance_benchmarks_T065.json,Template for performance benchmarks JSON
+Templates & Standards,03_TEMPLATES/JSON/template_tech_inventory_T066.json,Template for technical inventory JSON
+Templates & Standards,03_TEMPLATES/JSON/template_vulnerability_scan_T063.json,Template for vulnerability scan JSON
+Templates & Standards,03_TEMPLATES/MD/template_backup-strategy_T026.json,Template for backup strategy Markdown
+Templates & Standards,03_TEMPLATES/MD/template_capacity_recommendations_T027.json,Template for capacity recommendations Markdown
+Templates & Standards,03_TEMPLATES/MD/template_cli_specs_T021.json,Template for CLI specifications Markdown
+Templates & Standards,03_TEMPLATES/MD/template_gaps_analysis_T028.json,Template for gaps analysis Markdown
+Templates & Standards,03_TEMPLATES/MD/template_improvement_roadmap_T029.json,Template for improvement roadmap Markdown
+Templates & Standards,03_TEMPLATES/MD/template_incident_response_plan_T024.json,Template for incident response plan Markdown
+Templates & Standards,03_TEMPLATES/MD/template_interview_results_T019.json,Template for interview results Markdown
+Templates & Standards,03_TEMPLATES/MD/template_migration_plan_T025.json,Template for migration plan Markdown
+Templates & Standards,03_TEMPLATES/MD/template_pentest_results_T022.json,Template for pentest results Markdown
+Templates & Standards,03_TEMPLATES/MD/template_review_notes_T030.json,Template for review notes Markdown
+Templates & Standards,03_TEMPLATES/MD/template_rollback-procedures_T020.json,Template for rollback procedures Markdown
+Templates & Standards,03_TEMPLATES/MD/template_tech_stack_T023.json,Template for tech stack Markdown
+Templates & Standards,03_TEMPLATES/PDF/template_app_store_submission_T014.json,Template for App Store submission PDF
+Templates & Standards,03_TEMPLATES/PDF/template_architecture_blueprint_T009.json,Template for architecture blueprint PDF
+Templates & Standards,03_TEMPLATES/PDF/template_architecture_docs_T006.json,Template for architecture documents PDF
+Templates & Standards,03_TEMPLATES/PDF/template_aso_strategy_T018.json,Template for ASO strategy PDF
+Templates & Standards,03_TEMPLATES/PDF/template_coverage_matrix_T016.json,Template for coverage matrix PDF
+Templates & Standards,03_TEMPLATES/PDF/template_design_system_T010.json,Template for design system PDF
+Templates & Standards,03_TEMPLATES/PDF/template_er_diagrams_T011.json,Template for ER diagrams PDF
+Templates & Standards,03_TEMPLATES/PDF/template_launch_report_T013.json,Template for launch report PDF
+Templates & Standards,03_TEMPLATES/PDF/template_maturity_assessment_T017.json,Template for maturity assessment PDF
+Templates & Standards,03_TEMPLATES/PDF/template_performance_report_T015.json,Template for performance report PDF
+Templates & Standards,03_TEMPLATES/PDF/template_roles_mapping_T012.json,Template for roles mapping PDF
+Templates & Standards,03_TEMPLATES/PDF/template_security_report_T008.json,Template for security report PDF
+Templates & Standards,03_TEMPLATES/PDF/template_user_manual_T007.json,Template for user manual PDF
+Templates & Standards,03_TEMPLATES/PY/template_ai_test_framework.py_T047.json,Template for AI test framework Python script
+Templates & Standards,03_TEMPLATES/PY/template_api_client.py_T046.json,Template for API client Python script
+Templates & Standards,03_TEMPLATES/PY/template_compliance_checker.py_T058.json,Template for compliance checker Python script
+Templates & Standards,03_TEMPLATES/PY/template_composer_agent.py_T053.json,Template for Composer Agent Python script
+Templates & Standards,03_TEMPLATES/PY/template_data_processor.py_T048.json,Template for data processor Python script
+Templates & Standards,03_TEMPLATES/PY/template_distribution_engine.py_T051.json,Template for distribution engine Python script
+Templates & Standards,03_TEMPLATES/PY/template_document_service.py_T044.json,Template for document service Python script
+Templates & Standards,03_TEMPLATES/PY/template_integration_tests.py_T052.json,Template for integration tests Python script
+Templates & Standards,03_TEMPLATES/PY/template_integrator_agent.py_T056.json,Template for Integrator Agent Python script
+Templates & Standards,03_TEMPLATES/PY/template_notification_service.py_T049.json,Template for notification service Python script
+Templates & Standards,03_TEMPLATES/PY/template_publisher_agent.py_T055.json,Template for Publisher Agent Python script
+Templates & Standards,03_TEMPLATES/PY/template_quality_metrics.py_T050.json,Template for quality metrics Python script
+Templates & Standards,03_TEMPLATES/PY/template_research_agent.py_T054.json,Template for Research Agent Python script
+Templates & Standards,03_TEMPLATES/PY/template_reviewer_agent.py_T060.json,Template for Reviewer Agent Python script
+Templates & Standards,03_TEMPLATES/PY/template_style_validator.py_T045.json,Template for style validator Python script
+Templates & Standards,03_TEMPLATES/PY/template_sync_service.py_T057.json,Template for sync service Python script
+Templates & Standards,03_TEMPLATES/PY/template_template_engine.py_T059.json,Template for template engine Python script
+Templates & Standards,03_TEMPLATES/SH/template_automation_scripts.sh_T074.json,Template for automation shell scripts
+Templates & Standards,03_TEMPLATES/SQL/template_database_schema_T035.json,Template for database schema SQL
+Templates & Standards,03_TEMPLATES/SWIFT/template_APIClient.swift_T037.json,Template for API client Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_AuthManager.swift_T043.json,Template for Auth Manager Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_CacheManager.swift_T039.json,Template for Cache Manager Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_DocumentModel.swift_T036.json,Template for Document Model Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_mock_framework.swift_T040.json,Template for mock framework Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_NetworkLayer.swift_T042.json,Template for Network Layer Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_SyncEngine.swift_T038.json,Template for Sync Engine Swift
+Templates & Standards,03_TEMPLATES/SWIFT/template_test_suite.swift_T041.json,Template for test suite Swift
+Templates & Standards,03_TEMPLATES/XCDATAMODELD/template_CoreDataModel.xcdatamodeld_T068.json,Template for Core Data Model
+Templates & Standards,03_TEMPLATES/XCFRAMEWORK/template_shared_framework.xcframework_T073.json,Template for shared framework
+Templates & Standards,03_TEMPLATES/XCODEPROJ/template_iOS_app.xcodeproj_T070.json,Template for iOS app Xcode project
+Templates & Standards,03_TEMPLATES/XCODEPROJ/template_macOS_app.xcodeproj_T069.json,Template for macOS app Xcode project
+Templates & Standards,03_TEMPLATES/XLSX/template_compliance_matrix_T003.json,Template for compliance matrix XLSX
+Templates & Standards,03_TEMPLATES/XLSX/template_inventory_catalog_T005.json,Template for inventory catalog XLSX
+Templates & Standards,03_TEMPLATES/XLSX/template_keywords_research_T004.json,Template for keywords research XLSX
+Templates & Standards,03_TEMPLATES/XLSX/template_raci_matrix_T002.json,Template for RACI matrix XLSX
+Templates & Standards,03_TEMPLATES/XLSX/template_security_audit_T001.json,Template for security audit XLSX
+Templates & Standards,03_TEMPLATES/YAML/template_api_gateway.yaml_T033.json,Template for API Gateway YAML
+Templates & Standards,03_TEMPLATES/YAML/template_api_specs.yaml_T031.json,Template for API specifications YAML
+Templates & Standards,03_TEMPLATES/YAML/template_deployment-pipeline.yaml_T032.json,Template for deployment pipeline YAML
+Templates & Standards,03_TEMPLATES/YAML/template_monitoring-stack.yaml_T034.json,Template for monitoring stack YAML
+Templates & Standards,04_STANDARDS/ISO/ISO_Анализ_качества.json,ISO Standard: Quality Analysis
+Templates & Standards,04_STANDARDS/ISO/ISO_Выявление_пробелов.json,ISO Standard: Gap Identification
+Templates & Standards,04_STANDARDS/ISO/ISO_Инвентаризация_документов.json,ISO Standard: Document Inventory
+Templates & Standards,04_STANDARDS/ISO/ISO_Классификация_по_категориям.json,ISO Standard: Categorization
+Templates & Standards,04_STANDARDS/ISO/ISO_Создание_матрицы_покрытия.json,ISO Standard: Coverage Matrix Creation

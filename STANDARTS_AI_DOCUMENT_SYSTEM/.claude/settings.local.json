@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(./start_infrastructure.sh:*)",
+      "Bash(docker:*)",
+      "Bash(open:*)",
+      "Bash(true)",
+      "Bash(python -m pip:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

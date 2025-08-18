@@ -1,0 +1,174 @@
+## GalaxyDevelopers DevSystem Auto-Documentation Configuration
+## Система автоматической документации файловой структуры
+
+system:
+  name: "GalaxyDevSystem AutoDoc"
+  version: "1.0.0"
+  environment: "production"
+  project_root: "/Volumes/Z7S/development/GalaxyDevelopers/DevSystem"
+  
+## Настройки мониторинга файлов
+monitoring:
+  enabled: true
+  mode: "hybrid"  # hybrid | git-hooks | file-watcher
+  
+  git_hooks:
+    enabled: true
+    hooks:
+      - pre-commit
+      - post-commit
+      - post-merge
+    block_on_validation_failure: false
+    
+  file_watcher:
+    enabled: true
+    poll_interval: 1000  # ms
+    read_only: true  # ТОЛЬКО ЧТЕНИЕ, НИКАКИХ ИЗМЕНЕНИЙ
+    ignore_patterns:
+      - "*.log"
+      - "*.tmp"
+      - ".git/**"
+      - "node_modules/**"
+      - "*.pyc"
+      - "__pycache__/**"
+      - ".DS_Store"
+      - "DOC_SYSTEM/**"
+      - "dist/**"
+      - "build/**"
+      - "coverage/**"
+      - ".vscode/**"
+      - ".idea/**"
+      - "*.min.js"
+      - "*.min.css"
+    watch_patterns:
+      - "*.py"
+      - "*.js"
+      - "*.ts"
+      - "*.jsx"
+      - "*.tsx"
+      - "*.html"
+      - "*.css"
+      - "*.md"
+      - "*.yaml"
+      - "*.json"
+      - "*.sh"
+      
+## Анализ зависимостей
+dependency_analysis:
+  enabled: true
+  depth_limit: 10
+  detect_orphans: true
+  analyze_imports: true
+  graph_format: "json"  # json | dot | mermaid
+  
+## Генерация документации
+documentation:
+  enabled: true
+  ai_powered: true
+  auto_generate: true
+  formats:
+    - markdown
+    - json
+    - html
+  templates:
+    file_doc: "templates/file_doc.md"
+    dependency_graph: "templates/dep_graph.md"
+    project_overview: "templates/overview.md"
+    
+## Валидация
+validation:
+  enabled: true
+  rules:
+    - require_documentation: true
+    - max_file_size: 10485760  # 10MB
+    - forbidden_patterns:
+        - "TODO"
+        - "FIXME"
+        - "console.log"
+    - require_tests: false
+  blocking_mode: false
+  grace_period: 5  # seconds
+  
+## API настройки
+api:
+  enabled: true
+  port: 37777
+  host: "127.0.0.1"
+  cors_enabled: true
+  auth_required: false
+  websocket_enabled: true
+  rate_limit: 100  # requests per minute
+  
+## Хранилище метаданных
+storage:
+  type: "memory_only"  # ТОЛЬКО В ПАМЯТИ - НЕ СОХРАНЯЕМ НА ДИСК
+  
+  yaml:
+    path: ""  # ОТКЛЮЧЕНО
+    
+  json:
+    path: ""  # ОТКЛЮЧЕНО
+    cache_enabled: false
+    
+  sqlite:
+    path: ""  # ОТКЛЮЧЕНО
+    connection_pool_size: 0
+    
+## Хеширование
+hashing:
+  algorithm: "md5"  # md5 | sha256 | sha1
+  cache_hashes: true
+  verify_on_read: false
+  
+## Интеграция с Claude
+claude_integration:
+  enabled: false  # ОТКЛЮЧЕНО - НЕ СОЗДАЕМ ФАЙЛЫ
+  memory_bank_enabled: false
+  context_export_path: ""
+  auto_update_context: false
+  update_frequency: "never"
+  
+## Интеграция с Gemini
+gemini_integration:
+  enabled: true
+  api_endpoint: "http://localhost:8080"
+  trigger_path: "~/Scripts/gemini-triggers/"
+  
+## Логирование
+logging:
+  level: "INFO"  # DEBUG | INFO | WARNING | ERROR
+  file: "logs/autodoc.log"
+  rotate: true
+  max_size: "10MB"
+  retention_days: 30
+  
+## Производительность
+performance:
+  max_workers: 4
+  batch_size: 50
+  cache_ttl: 300  # seconds
+  lazy_loading: true
+  
+## Расписание задач
+scheduler:
+  enabled: true
+  jobs:
+    - name: "cleanup_orphans"
+      cron: "0 2 * * *"  # 2 AM daily
+    - name: "regenerate_docs"
+      cron: "0 */6 * * *"  # Every 6 hours
+    - name: "optimize_database"
+      cron: "0 3 * * 0"  # 3 AM Sunday
+      
+## Уведомления
+notifications:
+  enabled: true
+  channels:
+    - console
+    - file
+    - websocket
+  events:
+    - orphan_detected
+    - validation_failed
+    - documentation_generated
+    - dependency_cycle_detected

@@ -1,0 +1,56 @@
+{
+  "role_id": "ML_nzjx4x",
+  "title": "Machine Learning Engineer",
+  "original_title": "Machine Learning Engineer",
+  "created_at": "2025-08-07T10:20:30.328199",
+  "updated_at": "2025-08-07T10:20:30.328202",
+  "version": "1.0.0",
+  "skills": [
+    "Professional skills",
+    "Domain expertise",
+    "Team collaboration"
+  ],
+  "certifications": [
+    "Professional Certification"
+  ],
+  "tools": [
+    "Professional Tools"
+  ],
+  "frameworks": [
+    "Professional Frameworks"
+  ],
+  "responsibilities": [
+    "Professional responsibilities"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "basic",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Junior Machine Learning Engineer",
+    "current": "Machine Learning Engineer",
+    "senior": "Senior Machine Learning Engineer",
+    "next": [
+      "Machine Learning Engineer Lead",
+      "Machine Learning Engineer Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in Machine Learning Engineer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Related professional roles"
+  ]
+}

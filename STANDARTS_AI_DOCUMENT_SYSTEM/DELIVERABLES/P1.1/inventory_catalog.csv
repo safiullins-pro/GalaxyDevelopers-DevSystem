@@ -1,0 +1,34 @@
+Category,Count,Percentage
+agents,13266,41.4%
+templates,81,0.3%
+roles,80,0.2%
+standards,5,0.0%
+processes,87,0.3%
+deliverables,28,0.1%
+logs,13,0.0%
+reports,29,0.1%
+
+Total Files,32017,100%
+Total Directories,3370,-
+
+Extension,Count,Files
+.py,6949,
+.pyc,6872,
+.js,6392,
+no extension,2523,
+.ts,2326,
+.json,1519,
+.md,1011,
+.pcm,979,
+.map,914,
+.pyi,329,
+.txt,268,
+.swift,239,
+.typed,183,
+.swiftmodule,111,
+.o,95,
+.yml,90,
+.dylib,84,
+.sample,78,
+.so,77,
+.mjs,76,

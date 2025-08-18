@@ -1,0 +1,91 @@
+{
+  "role_id": "ID_93c891",
+  "title": "iOS Developer",
+  "original_title": "Mobile Developer",
+  "created_at": "2025-08-07T10:19:32.825392",
+  "updated_at": "2025-08-07T10:19:32.825394",
+  "version": "1.0.0",
+  "skills": [
+    "Опыт создания robust API клиентов",
+    "Опыт работы с асинхронными операциями",
+    "Знание HTTP протоколов и RESTful принципов",
+    "Понимание принципов безопасности API",
+    "Навыки обработки сетевых ошибок и retry логики",
+    "Knowledge of SwiftUI",
+    "Knowledge of UIKit",
+    "Knowledge of Combine",
+    "Knowledge of Core Data",
+    "Knowledge of CloudKit",
+    "Knowledge of ARKit",
+    "Knowledge of Core ML",
+    "Proficiency in Xcode",
+    "Proficiency in Swift",
+    "Proficiency in SwiftUI",
+    "Proficiency in UIKit",
+    "Proficiency in TestFlight"
+  ],
+  "certifications": [
+    "Apple Certified iOS Developer",
+    "Swift Certification"
+  ],
+  "tools": [
+    "Xcode",
+    "Swift",
+    "SwiftUI",
+    "UIKit",
+    "TestFlight",
+    "Instruments",
+    "Git",
+    "CocoaPods",
+    "SPM"
+  ],
+  "frameworks": [
+    "SwiftUI",
+    "UIKit",
+    "Combine",
+    "Core Data",
+    "CloudKit",
+    "ARKit",
+    "Core ML"
+  ],
+  "responsibilities": [
+    "iOS app development",
+    "UI/UX implementation",
+    "API integration",
+    "Performance optimization",
+    "App Store deployment"
+  ],
+  "competency_levels": {
+    "technical": "expert",
+    "leadership": "basic",
+    "domain": "advanced"
+  },
+  "career_path": {
+    "junior": "Junior iOS Developer",
+    "current": "iOS Developer",
+    "senior": "Senior iOS Developer",
+    "next": [
+      "iOS Developer Lead",
+      "iOS Developer Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in iOS Developer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Mobile Developer",
+    "Frontend Developer",
+    "Full Stack Developer"
+  ]
+}

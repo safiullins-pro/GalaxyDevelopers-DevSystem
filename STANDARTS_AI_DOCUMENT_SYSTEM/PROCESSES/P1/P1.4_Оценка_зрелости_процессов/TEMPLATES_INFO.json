@@ -1,0 +1,25 @@
+{
+  "process_id": "P1.4",
+  "deliverables": [
+    {
+      "name": "compliance_matrix.xlsx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XLSX/compliance_matrix_xlsx_template.json"
+    },
+    {
+      "name": "maturity_assessment.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/maturity_assessment_pdf_template.json"
+    },
+    {
+      "name": "improvement_roadmap.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/improvement_roadmap_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "compliance_matrix.xlsx": "../../../03_TEMPLATES/XLSX/compliance_matrix_xlsx_template.json",
+    "maturity_assessment.pdf": "../../../03_TEMPLATES/PDF/maturity_assessment_pdf_template.json",
+    "improvement_roadmap.md": "../../../03_TEMPLATES/MD/improvement_roadmap_md_template.json"
+  }
+}

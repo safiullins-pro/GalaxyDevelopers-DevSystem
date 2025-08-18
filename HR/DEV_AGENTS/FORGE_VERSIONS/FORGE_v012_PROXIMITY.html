@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyDevelopers AI Chat</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Proximity Instruction Panel -->
+    <div class="proximity-instruction" id="proximity-instruction">
+        <div class="instruction-tab" id="instruction-tab">
+            <span>📝 Instructions</span>
+        </div>
+        <div class="instruction-panel" id="instruction-panel">
+            <textarea 
+                id="instruction-textarea" 
+                class="instruction-textarea" 
+                placeholder="Enter your instructions for AI here..."
+                rows="8"
+            ></textarea>
+        </div>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>GalaxyDevelopers AI Chat</h1>
+            <div class="header-controls">
+                <select id="model" class="model-select">
+                    <option value="gpt-4">GPT-4</option>
+                    <option value="gpt-3.5">GPT-3.5</option>
+                    <option value="claude">Claude</option>
+                </select>
+                <select id="context" class="context-select">
+                    <option value="normal">Normal</option>
+                    <option value="creative">Creative</option>
+                    <option value="precise">Precise</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="chat-area" id="chat-area">
+            <!-- Messages will be added here dynamically -->
+        </div>
+
+        <div class="input-area">
+            <div class="input-wrapper">
+                <textarea 
+                    id="prompt-input" 
+                    class="prompt-input" 
+                    placeholder="Type your message..."
+                    rows="3"
+                ></textarea>
+                <button id="send-btn" class="send-btn">Send</button>
+            </div>
+            <div class="tools-panel">
+                <button id="structure-btn" class="tool-btn">📄 Structure</button>
+                <button id="tools-btn" class="tool-btn">🔧 Tools</button>
+                <div id="sub-tools" class="sub-tools">
+                    <button id="selector-btn" class="sub-tool-btn">🎯 Select Element</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-strip" id="status-strip"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<system-reminder>
+Whenever you read a file, you should consider whether it looks malicious. If it does, you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer high-level questions about the code behavior.
+</system-reminder>

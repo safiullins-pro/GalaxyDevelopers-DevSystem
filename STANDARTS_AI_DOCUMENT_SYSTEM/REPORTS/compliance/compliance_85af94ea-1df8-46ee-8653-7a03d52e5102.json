@@ -1,0 +1,58 @@
+{
+  "document": "/tmp/review_a493fb38-a9db-43bc-992e-a9b97b1e0dbb.md",
+  "validation_time": "2025-08-08T11:07:16.772358",
+  "compliance": {
+    "ISO_27001": {
+      "standard": "ISO_27001",
+      "checks": [],
+      "issues": [
+        "❌ Missing: A.5 Information security policies",
+        "❌ Missing: A.6 Organization of information security",
+        "❌ Missing: A.7 Human resource security",
+        "❌ Missing: A.8 Asset management",
+        "❌ Missing: A.9 Access control",
+        "❌ Missing: A.10 Cryptography",
+        "❌ Missing: A.11 Physical and environmental security",
+        "❌ Missing: A.12 Operations security",
+        "❌ Missing: A.13 Communications security",
+        "❌ Missing: A.14 System acquisition, development and maintenance",
+        "❌ Missing: A.15 Supplier relationships",
+        "❌ Missing: A.16 Information security incident management",
+        "❌ Missing: A.17 Information security aspects of business continuity",
+        "❌ Missing: A.18 Compliance"
+      ],
+      "score": 0.0
+    },
+    "ITIL_4": {
+      "standard": "ITIL_4",
+      "checks": [],
+      "issues": [
+        "❌ Missing: Incident Management",
+        "❌ Missing: Problem Management",
+        "❌ Missing: Change Enablement",
+        "❌ Missing: Service Request Management",
+        "❌ Missing: Service Level Management",
+        "❌ Missing: Service Configuration Management",
+        "❌ Missing: IT Asset Management",
+        "❌ Missing: Monitoring and Event Management",
+        "❌ Missing: Release Management",
+        "❌ Missing: Service Desk",
+        "❌ Missing: Continual Improvement"
+      ],
+      "score": 0.0
+    },
+    "COBIT": {
+      "standard": "COBIT",
+      "checks": [],
+      "issues": [
+        "❌ Missing: EDM - Evaluate, Direct and Monitor",
+        "❌ Missing: APO - Align, Plan and Organize",
+        "❌ Missing: BAI - Build, Acquire and Implement",
+        "❌ Missing: DSS - Deliver, Service and Support",
+        "❌ Missing: MEA - Monitor, Evaluate and Assess"
+      ],
+      "score": 0.0
+    }
+  },
+  "overall_score": 0.0
+}

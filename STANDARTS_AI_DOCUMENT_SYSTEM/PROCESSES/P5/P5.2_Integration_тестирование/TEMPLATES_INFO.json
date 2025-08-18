@@ -1,0 +1,25 @@
+{
+  "process_id": "P5.2",
+  "deliverables": [
+    {
+      "name": "integration_tests.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/integration_tests_py_template.json"
+    },
+    {
+      "name": "ai_test_framework.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/ai_test_framework_py_template.json"
+    },
+    {
+      "name": "performance_benchmarks.json",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JSON/performance_benchmarks_json_template.json"
+    }
+  ],
+  "template_locations": {
+    "integration_tests.py": "../../../03_TEMPLATES/PY/integration_tests_py_template.json",
+    "ai_test_framework.py": "../../../03_TEMPLATES/PY/ai_test_framework_py_template.json",
+    "performance_benchmarks.json": "../../../03_TEMPLATES/JSON/performance_benchmarks_json_template.json"
+  }
+}

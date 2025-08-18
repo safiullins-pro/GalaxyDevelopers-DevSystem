@@ -1,0 +1,27 @@
+{
+  "id": "P7.1",
+  "name": "App Store Connect submission",
+  "description": "загрузка приложения",
+  "executor": "iOS Developer + Release Manager",
+  "methodology": [
+    "Build Preparation",
+    "Metadata Upload",
+    "TestFlight Distribution",
+    "Review Submission",
+    "Review Communication"
+  ],
+  "deliverables": [
+    "release_build.ipa",
+    "app_store_submission.pdf",
+    "review_notes.md"
+  ],
+  "required_skills": [
+    "Опыт работы с App Store Connect и submission процессом",
+    "Знание Apple Review Guidelines и требований",
+    "Навыки certificate management и code signing",
+    "Понимание TestFlight и beta testing процессов",
+    "Опыт решения вопросов с App Review"
+  ],
+  "generated_at": "2025-08-07T10:19:35.301458",
+  "status": "ready_for_execution"
+}

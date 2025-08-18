@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись в БД</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #00ff41;
+            margin-bottom: 30px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        #recordButton {
+            background: #00ff41;
+            color: #000;
+        }
+        #recordButton.recording {
+            background: #ff3333;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .status {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #00ff41;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            color: #00ff41;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        #recordings {
+            margin-top: 30px;
+        }
+        .recording-item {
+            background: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .db-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #333;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .db-status.saved {
+            background: #4CAF50;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="db-status" id="dbStatus">💾 База данных: готова</div>
+    
+    <div class="container">
+        <h1>🎤 Запись голоса в БД</h1>
+        
+        <div class="status" id="status">Готов к записи</div>
+        <div class="timer" id="timer">00:00</div>
+        
+        <div class="controls">
+            <button id="recordButton">🔴 Начать запись</button>
+        </div>
+        
+        <div id="recordings"></div>
+    </div>
+
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+        let recordingStartTime;
+        let timerInterval;
+        let isRecording = false;
+        let duration = 0;
+        
+        const recordButton = document.getElementById('recordButton');
+        const status = document.getElementById('status');
+        const timer = document.getElementById('timer');
+        const dbStatus = document.getElementById('dbStatus');
+        
+        recordButton.addEventListener('click', toggleRecording);
+        
+        async function toggleRecording() {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+        
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                
+                mediaRecorder.ondataavailable = event => {
+                    audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = async () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    await saveToDatabase(audioBlob, duration);
+                    stream.getTracks().forEach(track => track.stop());
+                };
+                
+                mediaRecorder.start();
+                recordingStartTime = Date.now();
+                startTimer();
+                
+                isRecording = true;
+                recordButton.textContent = '⏹ Остановить';
+                recordButton.classList.add('recording');
+                status.textContent = '🔴 Идет запись...';
+                
+            } catch (err) {
+                console.error('Ошибка:', err);
+                status.textContent = '❌ Ошибка: ' + err.message;
+            }
+        }
+        
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                duration = Math.floor((Date.now() - recordingStartTime) / 1000);
+                mediaRecorder.stop();
+                
+                isRecording = false;
+                recordButton.textContent = '🔴 Начать запись';
+                recordButton.classList.remove('recording');
+                status.textContent = '💾 Сохраняю в БД...';
+                stopTimer();
+            }
+        }
+        
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - recordingStartTime) / 1000);
+                const minutes = Math.floor(elapsed / 60).toString().padStart(2, '0');
+                const seconds = (elapsed % 60).toString().padStart(2, '0');
+                timer.textContent = `${minutes}:${seconds}`;
+            }, 100);
+        }
+        
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+        
+        async function saveToDatabase(audioBlob, duration) {
+            try {
+                // Конвертируем в base64
+                const reader = new FileReader();
+                reader.readAsDataURL(audioBlob);
+                reader.onloadend = async () => {
+                    const base64Audio = reader.result.split(',')[1];
+                    
+                    const response = await fetch('http://localhost:5555/api/save_recording', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            audio: base64Audio,
+                            duration: duration
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        status.textContent = '✅ Сохранено в БД';
+                        dbStatus.textContent = `💾 Сохранено: #${result.id}`;
+                        dbStatus.classList.add('saved');
+                        
+                        setTimeout(() => {
+                            dbStatus.classList.remove('saved');
+                            dbStatus.textContent = '💾 База данных: готова';
+                            status.textContent = 'Готов к записи';
+                            timer.textContent = '00:00';
+                        }, 3000);
+                        
+                        addRecordingToList(result.id, duration);
+                    } else {
+                        status.textContent = '❌ Ошибка сохранения';
+                    }
+                };
+            } catch (err) {
+                console.error('Ошибка сохранения:', err);
+                status.textContent = '❌ Ошибка: ' + err.message;
+            }
+        }
+        
+        function addRecordingToList(id, duration) {
+            const recordings = document.getElementById('recordings');
+            const item = document.createElement('div');
+            item.className = 'recording-item';
+            item.innerHTML = `
+                ✅ Запись #${id} сохранена в БД
+                <br>Длительность: ${duration} сек
+                <br>Время: ${new Date().toLocaleString('ru-RU')}
+            `;
+            recordings.insertBefore(item, recordings.firstChild);
+        }
+        
+        // Проверяем доступность сервера
+        fetch('http://localhost:5555/api/get_recordings')
+            .then(r => r.json())
+            .then(data => {
+                console.log('✅ Сервер БД доступен, записей:', data.length);
+            })
+            .catch(err => {
+                dbStatus.textContent = '❌ Сервер БД не запущен!';
+                dbStatus.style.background = '#ff3333';
+            });
+    </script>
+</body>
+</html>

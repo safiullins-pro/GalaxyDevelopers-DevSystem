@@ -1,0 +1,423 @@
+{
+  "processes": [
+    {
+      "process_id": "P1.1",
+      "process_name": "Анализ текущей документации",
+      "phase_id": "P1",
+      "executor": "Business Analyst",
+      "assigned_roles": [
+        {
+          "role": "Business Analyst",
+          "role_id": "BA_c8541e"
+        }
+      ]
+    },
+    {
+      "process_id": "P1.2",
+      "process_name": "Техническая ревизия",
+      "phase_id": "P1",
+      "executor": "System Architect + Technical Lead",
+      "assigned_roles": [
+        {
+          "role": "System Architect",
+          "role_id": "SA_2a6c2a"
+        },
+        {
+          "role": "Technical Lead",
+          "role_id": "TL_6de9b7"
+        }
+      ]
+    },
+    {
+      "process_id": "P1.3",
+      "process_name": "Анализ команды",
+      "phase_id": "P1",
+      "executor": "Business Analyst + HR Business Partner",
+      "assigned_roles": [
+        {
+          "role": "Business Analyst",
+          "role_id": "BA_c8541e"
+        },
+        {
+          "role": "HR Business Partner",
+          "role_id": "HBP_45664f"
+        }
+      ]
+    },
+    {
+      "process_id": "P1.4",
+      "process_name": "Оценка зрелости процессов",
+      "phase_id": "P1",
+      "executor": "Compliance Officer + IT Auditor",
+      "assigned_roles": [
+        {
+          "role": "Compliance Officer",
+          "role_id": "CO_54ba88"
+        },
+        {
+          "role": "Compliance Officer",
+          "role_id": "CO_54ba88"
+        }
+      ]
+    },
+    {
+      "process_id": "P2.1",
+      "process_name": "Архитектурное проектирование Multi-Agent системы",
+      "phase_id": "P2",
+      "executor": "Solution Architect + AI/ML Engineer",
+      "assigned_roles": [
+        {
+          "role": "System Architect",
+          "role_id": "SA_2a6c2a"
+        },
+        {
+          "role": "AI Specialist",
+          "role_id": "AS_dmw9ry"
+        },
+        {
+          "role": "AI/ML Engineer",
+          "role_id": "AE_a9b03e"
+        }
+      ]
+    },
+    {
+      "process_id": "P2.2",
+      "process_name": "CLI-First архитектура",
+      "phase_id": "P2",
+      "executor": "Technical Lead + DevOps Engineer",
+      "assigned_roles": [
+        {
+          "role": "Technical Lead",
+          "role_id": "TL_6de9b7"
+        },
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        }
+      ]
+    },
+    {
+      "process_id": "P2.3",
+      "process_name": "UX/UI дизайн для мобильных приложений",
+      "phase_id": "P2",
+      "executor": "UX/UI Designer + Mobile App Designer",
+      "assigned_roles": [
+        {
+          "role": "UX Designer",
+          "role_id": "UD_73qj9b"
+        },
+        {
+          "role": "UI Designer",
+          "role_id": "UD_8a0eap"
+        },
+        {
+          "role": "Mobile App Designer",
+          "role_id": "MAD_171fbf"
+        }
+      ]
+    },
+    {
+      "process_id": "P2.4",
+      "process_name": "Техническое проектирование Database Schema",
+      "phase_id": "P2",
+      "executor": "Database Architect + Backend Developer",
+      "assigned_roles": [
+        {
+          "role": "Database Architect",
+          "role_id": "DA_jkr2p4"
+        },
+        {
+          "role": "Backend Developer",
+          "role_id": "BD_2kxzj2"
+        }
+      ]
+    },
+    {
+      "process_id": "P3.1",
+      "process_name": "ResearchAgent разработка",
+      "phase_id": "P3",
+      "executor": "AI/ML Engineer + Python Developer",
+      "assigned_roles": [
+        {
+          "role": "AI Specialist",
+          "role_id": "AS_dmw9ry"
+        },
+        {
+          "role": "AI/ML Engineer",
+          "role_id": "AE_a9b03e"
+        },
+        {
+          "role": "Python Developer",
+          "role_id": "PD_2b7692"
+        }
+      ]
+    },
+    {
+      "process_id": "P3.2",
+      "process_name": "ComposerAgent разработка",
+      "phase_id": "P3",
+      "executor": "AI/ML Engineer + Technical Writer",
+      "assigned_roles": [
+        {
+          "role": "AI Specialist",
+          "role_id": "AS_dmw9ry"
+        },
+        {
+          "role": "AI/ML Engineer",
+          "role_id": "AE_a9b03e"
+        },
+        {
+          "role": "Technical Writer",
+          "role_id": "TW_816379"
+        }
+      ]
+    },
+    {
+      "process_id": "P3.3",
+      "process_name": "ReviewerAgent разработка",
+      "phase_id": "P3",
+      "executor": "QA Engineer + Compliance Specialist",
+      "assigned_roles": [
+        {
+          "role": "QA Engineer",
+          "role_id": "QE_6db8b7"
+        },
+        {
+          "role": "Compliance Officer",
+          "role_id": "CO_54ba88"
+        }
+      ]
+    },
+    {
+      "process_id": "P3.4",
+      "process_name": "IntegratorAgent разработка",
+      "phase_id": "P3",
+      "executor": "DevOps Engineer + Integration Architect",
+      "assigned_roles": [
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        },
+        {
+          "role": "Integration Architect",
+          "role_id": "IA_64b5ec"
+        }
+      ]
+    },
+    {
+      "process_id": "P3.5",
+      "process_name": "PublisherAgent разработка",
+      "phase_id": "P3",
+      "executor": "DevOps Engineer + Content Manager",
+      "assigned_roles": [
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        },
+        {
+          "role": "Content Manager",
+          "role_id": "CM_fe9ac2"
+        }
+      ]
+    },
+    {
+      "process_id": "P4.1",
+      "process_name": "SwiftUI приложения разработка",
+      "phase_id": "P4",
+      "executor": "iOS Developer + Swift Developer",
+      "assigned_roles": [
+        {
+          "role": "iOS Developer",
+          "role_id": "ID_93c891"
+        },
+        {
+          "role": "Swift Developer",
+          "role_id": "SD_b35713"
+        }
+      ]
+    },
+    {
+      "process_id": "P4.2",
+      "process_name": "Core Data implementation",
+      "phase_id": "P4",
+      "executor": "iOS Developer + Database Developer",
+      "assigned_roles": [
+        {
+          "role": "iOS Developer",
+          "role_id": "ID_93c891"
+        },
+        {
+          "role": "Database Architect",
+          "role_id": "DA_jkr2p4"
+        }
+      ]
+    },
+    {
+      "process_id": "P4.3",
+      "process_name": "REST API клиент",
+      "phase_id": "P4",
+      "executor": "Mobile Developer + API Developer",
+      "assigned_roles": [
+        {
+          "role": "iOS Developer",
+          "role_id": "ID_93c891"
+        },
+        {
+          "role": "API Developer",
+          "role_id": "AD_c3791b"
+        }
+      ]
+    },
+    {
+      "process_id": "P5.1",
+      "process_name": "Unit тестирование",
+      "phase_id": "P5",
+      "executor": "QA Engineer + Test Automation Engineer",
+      "assigned_roles": [
+        {
+          "role": "QA Engineer",
+          "role_id": "QE_6db8b7"
+        },
+        {
+          "role": "Test Automation Engineer",
+          "role_id": "TAE_16682e"
+        }
+      ]
+    },
+    {
+      "process_id": "P5.2",
+      "process_name": "Integration тестирование",
+      "phase_id": "P5",
+      "executor": "QA Engineer + AI Testing Specialist",
+      "assigned_roles": [
+        {
+          "role": "QA Engineer",
+          "role_id": "QE_6db8b7"
+        },
+        {
+          "role": "AI Testing Specialist",
+          "role_id": "ATS_9f8280"
+        }
+      ]
+    },
+    {
+      "process_id": "P5.3",
+      "process_name": "Security тестирование",
+      "phase_id": "P5",
+      "executor": "Security Specialist + Penetration Tester",
+      "assigned_roles": [
+        {
+          "role": "Security Specialist",
+          "role_id": "SS_6229c6"
+        },
+        {
+          "role": "Penetration Tester",
+          "role_id": "PT_2hrqyc"
+        }
+      ]
+    },
+    {
+      "process_id": "P5.4",
+      "process_name": "Performance тестирование",
+      "phase_id": "P5",
+      "executor": "Performance Engineer + Load Testing Specialist",
+      "assigned_roles": [
+        {
+          "role": "Performance Engineer",
+          "role_id": "PE_a9fca8"
+        },
+        {
+          "role": "Load Testing Specialist",
+          "role_id": "LTS_db8b78"
+        }
+      ]
+    },
+    {
+      "process_id": "P6.1",
+      "process_name": "App Store metadata подготовка",
+      "phase_id": "P6",
+      "executor": "App Store Optimization Specialist + Marketing Manager",
+      "assigned_roles": [
+        {
+          "role": "App Store Optimization Specialist",
+          "role_id": "ASO_5441f1"
+        },
+        {
+          "role": "Marketing Manager",
+          "role_id": "MM_21bf1c"
+        }
+      ]
+    },
+    {
+      "process_id": "P6.2",
+      "process_name": "Kubernetes production конфигурация",
+      "phase_id": "P6",
+      "executor": "DevOps Engineer + Platform Engineer",
+      "assigned_roles": [
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        },
+        {
+          "role": "Platform Engineer",
+          "role_id": "PE_2c29c1"
+        }
+      ]
+    },
+    {
+      "process_id": "P6.3",
+      "process_name": "CI/CD pipeline настройка",
+      "phase_id": "P6",
+      "executor": "DevOps Engineer + Release Manager",
+      "assigned_roles": [
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        },
+        {
+          "role": "Release Manager",
+          "role_id": "RM_b31b92"
+        }
+      ]
+    },
+    {
+      "process_id": "P7.1",
+      "process_name": "App Store Connect submission",
+      "phase_id": "P7",
+      "executor": "iOS Developer + Release Manager",
+      "assigned_roles": [
+        {
+          "role": "iOS Developer",
+          "role_id": "ID_93c891"
+        },
+        {
+          "role": "Release Manager",
+          "role_id": "RM_b31b92"
+        }
+      ]
+    },
+    {
+      "process_id": "P7.2",
+      "process_name": "Production deployment мониторинг",
+      "phase_id": "P7",
+      "executor": "DevOps Engineer + Site Reliability Engineer",
+      "assigned_roles": [
+        {
+          "role": "DevOps Engineer",
+          "role_id": "DE_c4a174"
+        },
+        {
+          "role": "Site Reliability Engineer",
+          "role_id": "SRE_75e791"
+        }
+      ]
+    }
+  ],
+  "role_assignments": {},
+  "missing_roles": [],
+  "statistics": {
+    "total_processes": 25,
+    "roles_found": 53,
+    "roles_missing": 0
+  }
+}

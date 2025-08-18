@@ -1,0 +1,140 @@
+openapi: 3.0.3
+info:
+  title: Research Agent API
+  version: 1.0.0
+  description: API спецификация для Research Agent - главного контроллера системы
+servers:
+  - url: http://localhost:8001
+    description: Development server
+paths:
+  /research/start:
+    post:
+      summary: Запуск исследования
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: Идентификатор задачи
+                query:
+                  type: string
+                  description: Запрос для исследования
+                standards:
+                  type: array
+                  items:
+                    type: string
+                  description: Список стандартов для анализа
+              required:
+                - task_id
+                - query
+      responses:
+        '200':
+          description: Исследование запущено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "started"
+                  task_id:
+                    type: string
+                  estimated_time:
+                    type: integer
+                    description: Ориентировочное время выполнения в минутах
+        '400':
+          description: Неверные параметры запроса
+        '500':
+          description: Внутренняя ошибка сервера
+  /research/status/{task_id}:
+    get:
+      summary: Получить статус исследования
+      parameters:
+        - in: path
+          name: task_id
+          required: true
+          schema:
+            type: string
+          description: Идентификатор задачи
+      responses:
+        '200':
+          description: Статус исследования
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  task_id:
+                    type: string
+                  status:
+                    type: string
+                    enum: [pending, in_progress, completed, failed]
+                  progress:
+                    type: integer
+                    minimum: 0
+                    maximum: 100
+                  results:
+                    type: object
+                    description: Результаты исследования (если завершено)
+        '404':
+          description: Задача не найдена
+  /research/results/{task_id}:
+    get:
+      summary: Получить результаты исследования
+      parameters:
+        - in: path
+          name: task_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Результаты исследования
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  task_id:
+                    type: string
+                  results:
+                    type: object
+                    properties:
+                      standards_analysis:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            standard:
+                              type: string
+                            compliance_score:
+                              type: number
+                            recommendations:
+                              type: array
+                              items:
+                                type: string
+                      generated_content:
+                        type: string
+                        description: Сгенерированный контент
+                      quality_score:
+                        type: number
+                        minimum: 0
+                        maximum: 100
+        '404':
+          description: Задача не найдена или результаты не готовы
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        code:
+          type: integer

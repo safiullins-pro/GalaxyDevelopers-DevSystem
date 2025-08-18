@@ -1,0 +1,2350 @@
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._.galaxydevelopers-ai-key-state.json:
+  path: ._.galaxydevelopers-ai-key-state.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._.galaxydevelopers-ai-key-state.json
+  size: 4096
+  hash: e89df44e8af455a84234a9c07698c1cb
+  extension: .json
+  name: ._.galaxydevelopers-ai-key-state.json
+  parent: .
+  last_modified: '2025-08-13T04:32:14.150000'
+  created: '2025-08-13T04:32:14.150000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.galaxydevelopers-ai-key-state.json:
+  path: .galaxydevelopers-ai-key-state.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.galaxydevelopers-ai-key-state.json
+  size: 2408
+  hash: 513207a682cea5d02188e78cc995ad70
+  extension: .json
+  name: .galaxydevelopers-ai-key-state.json
+  parent: .
+  last_modified: '2025-08-13T05:48:22.110000'
+  created: '2025-08-13T05:48:22.110000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/START_INTEGRATED_SYSTEM.sh:
+  path: START_INTEGRATED_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/START_INTEGRATED_SYSTEM.sh
+  size: 4105
+  hash: 61ff5f82d0793084ebcd49998542030f
+  extension: .sh
+  name: START_INTEGRATED_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T11:12:42.970000'
+  created: '2025-08-13T11:12:42.970000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/README.md:
+  path: README.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/README.md
+  size: 2480
+  hash: 4a7760c84a9d9d9f5c090ee558fc2d04
+  extension: .md
+  name: README.md
+  parent: .
+  last_modified: '2025-08-12T09:12:02.050000'
+  created: '2025-08-12T09:12:02.050000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/package.json:
+  path: package.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/package.json
+  size: 660
+  hash: 0818d89fe18286a9d1f43ed00fcb19f6
+  extension: .json
+  name: package.json
+  parent: .
+  last_modified: '2025-08-12T12:08:19.750000'
+  created: '2025-08-12T12:08:19.750000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/package-lock.json:
+  path: package-lock.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/package-lock.json
+  size: 113171
+  hash: be4860f80ea989c8af3330e88cac1475
+  extension: .json
+  name: package-lock.json
+  parent: .
+  last_modified: '2025-08-12T12:08:19.780000'
+  created: '2025-08-12T12:08:19.780000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._START_INTEGRATED_SYSTEM.sh:
+  path: ._START_INTEGRATED_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._START_INTEGRATED_SYSTEM.sh
+  size: 4096
+  hash: e5c1254b44752fa5fe5550e858e3cae6
+  extension: .sh
+  name: ._START_INTEGRATED_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T11:12:53.080000'
+  created: '2025-08-13T11:12:53.080000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/ACTIVATE_DOC_SYSTEM.sh:
+  path: ACTIVATE_DOC_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/ACTIVATE_DOC_SYSTEM.sh
+  size: 6675
+  hash: 0f1a941914c4fa1ba05743385739c324
+  extension: .sh
+  name: ACTIVATE_DOC_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T14:09:34.110000'
+  created: '2025-08-13T14:09:34.110000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._ACTIVATE_DOC_SYSTEM.sh:
+  path: ._ACTIVATE_DOC_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._ACTIVATE_DOC_SYSTEM.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._ACTIVATE_DOC_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T14:09:34.110000'
+  created: '2025-08-13T14:09:34.110000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._TEST_DOC_SYSTEM.sh:
+  path: ._TEST_DOC_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._TEST_DOC_SYSTEM.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._TEST_DOC_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T14:09:48.010000'
+  created: '2025-08-13T14:09:48.010000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._DOC_SYSTEM_README.md:
+  path: ._DOC_SYSTEM_README.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._DOC_SYSTEM_README.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._DOC_SYSTEM_README.md
+  parent: .
+  last_modified: '2025-08-13T14:15:47.580000'
+  created: '2025-08-13T14:15:47.580000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/TEST_DOC_SYSTEM.sh:
+  path: TEST_DOC_SYSTEM.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/TEST_DOC_SYSTEM.sh
+  size: 2920
+  hash: 7b02ec478701f73f268759144b989e2a
+  extension: .sh
+  name: TEST_DOC_SYSTEM.sh
+  parent: .
+  last_modified: '2025-08-13T14:09:48.010000'
+  created: '2025-08-13T14:09:48.010000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOC_SYSTEM_README.md:
+  path: DOC_SYSTEM_README.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOC_SYSTEM_README.md
+  size: 6923
+  hash: feb4a8fbf84ee0dde467634b5abdc16e
+  extension: .md
+  name: DOC_SYSTEM_README.md
+  parent: .
+  last_modified: '2025-08-13T14:15:47.580000'
+  created: '2025-08-13T14:15:47.580000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/src/._experience_api.py:
+  path: src/._experience_api.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/src/._experience_api.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._experience_api.py
+  parent: src
+  last_modified: '2025-08-13T11:11:25.510000'
+  created: '2025-08-13T11:11:25.510000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/src/experience_api.py:
+  path: src/experience_api.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/src/experience_api.py
+  size: 1538
+  hash: dad1857ff2ada1e6ccfff32a1db0dcf2
+  extension: .py
+  name: experience_api.py
+  parent: src
+  last_modified: '2025-08-13T11:11:25.510000'
+  created: '2025-08-13T11:11:25.510000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/send-to-claude.sh:
+  path: SCRIPTS/send-to-claude.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/send-to-claude.sh
+  size: 2020
+  hash: 8c605e204d4b6d8d5aebce92800202ee
+  extension: .sh
+  name: send-to-claude.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-11T23:32:56.410000'
+  created: '2025-08-11T23:32:56.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/cleanup-watcher.sh:
+  path: SCRIPTS/cleanup-watcher.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/cleanup-watcher.sh
+  size: 1167
+  hash: 78cc0b8ca6ecb5fc3147f7c4529e8f59
+  extension: .sh
+  name: cleanup-watcher.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-12T01:55:47.940000'
+  created: '2025-08-12T01:55:47.940000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/setup-iterm2.sh:
+  path: SCRIPTS/setup-iterm2.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/setup-iterm2.sh
+  size: 1126
+  hash: fe8552b48cfd229be3e7636b87b718e4
+  extension: .sh
+  name: setup-iterm2.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-11T23:13:56.720000'
+  created: '2025-08-11T23:13:56.720000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/extract-conversation.py:
+  path: SCRIPTS/extract-conversation.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/extract-conversation.py
+  size: 5790
+  hash: 096ab534dccbca7cdd651fc73d2f6da3
+  extension: .py
+  name: extract-conversation.py
+  parent: SCRIPTS
+  last_modified: '2025-08-12T04:05:28.340000'
+  created: '2025-08-12T04:05:28.340000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start-screenshot-integration.sh:
+  path: SCRIPTS/start-screenshot-integration.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start-screenshot-integration.sh
+  size: 476
+  hash: cdc98150db074d632338eff66f94f825
+  extension: .sh
+  name: start-screenshot-integration.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-11T23:59:12.280000'
+  created: '2025-08-11T23:59:12.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start_galaxy.sh:
+  path: SCRIPTS/start_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start_galaxy.sh
+  size: 5473
+  hash: 7c96149fbb18582cd2b2534f9baaec28
+  extension: .sh
+  name: start_galaxy.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-12T09:08:11.800000'
+  created: '2025-08-12T09:08:11.800000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh:
+  path: SCRIPTS/ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  size: 6272
+  hash: 7019703adc3c38c529d32a2dd2656d72
+  extension: .sh
+  name: ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T09:05:32.640000'
+  created: '2025-08-13T09:05:32.640000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh:
+  path: SCRIPTS/._ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  size: 4096
+  hash: 47933b51a2932f9b17549150f0ca65c2
+  extension: .sh
+  name: ._ACTIVATE_GEMINI_TEAM_MANAGEMENT.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:10:18.380000'
+  created: '2025-08-13T11:10:18.380000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/install_autostart.sh:
+  path: SCRIPTS/install_autostart.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/install_autostart.sh
+  size: 2149
+  hash: 9260cfa2e96c8913933bae9c5f24b434
+  extension: .sh
+  name: install_autostart.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:15:50.740000'
+  created: '2025-08-13T08:15:50.740000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._install_autostart.sh:
+  path: SCRIPTS/._install_autostart.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._install_autostart.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._install_autostart.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:15:50.740000'
+  created: '2025-08-13T08:15:50.740000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/monitoring_status.sh:
+  path: SCRIPTS/monitoring_status.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/monitoring_status.sh
+  size: 3350
+  hash: ee3bccf1dc06eb6389df4f96e7f9d330
+  extension: .sh
+  name: monitoring_status.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:12:19.340000'
+  created: '2025-08-13T08:12:19.340000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._monitoring_status.sh:
+  path: SCRIPTS/._monitoring_status.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._monitoring_status.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._monitoring_status.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:12:19.340000'
+  created: '2025-08-13T08:12:19.340000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/restart_monitoring.sh:
+  path: SCRIPTS/restart_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/restart_monitoring.sh
+  size: 678
+  hash: 5b3914dc1134d65303353a75eb32034d
+  extension: .sh
+  name: restart_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:11:36.360000'
+  created: '2025-08-13T08:11:36.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._restart_monitoring.sh:
+  path: SCRIPTS/._restart_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._restart_monitoring.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._restart_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:11:36.360000'
+  created: '2025-08-13T08:11:36.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._start_galaxy.sh:
+  path: SCRIPTS/._start_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._start_galaxy.sh
+  size: 4096
+  hash: bd68b5f7e74cc5708dc06afc398aff36
+  extension: .sh
+  name: ._start_galaxy.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T03:17:12.780000'
+  created: '2025-08-13T03:17:12.780000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start_monitoring.sh:
+  path: SCRIPTS/start_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/start_monitoring.sh
+  size: 3496
+  hash: 6772bf6af23ff8e6ab10616ca3abf71e
+  extension: .sh
+  name: start_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:10:57.860000'
+  created: '2025-08-13T08:10:57.860000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._start_monitoring.sh:
+  path: SCRIPTS/._start_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._start_monitoring.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._start_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:10:57.860000'
+  created: '2025-08-13T08:10:57.860000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_galaxy.sh:
+  path: SCRIPTS/stop_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_galaxy.sh
+  size: 1289
+  hash: 58f5156cf7a5f67dc99dce713b13c058
+  extension: .sh
+  name: stop_galaxy.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-12T09:08:28.660000'
+  created: '2025-08-12T09:08:28.660000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_monitoring.sh:
+  path: SCRIPTS/stop_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_monitoring.sh
+  size: 1987
+  hash: 6563ce160a8763e3bc0aa006d091285c
+  extension: .sh
+  name: stop_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:11:24.020000'
+  created: '2025-08-13T08:11:24.020000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._stop_monitoring.sh:
+  path: SCRIPTS/._stop_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._stop_monitoring.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._stop_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T08:11:24.020000'
+  created: '2025-08-13T08:11:24.020000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._connect_experience_to_monitoring.sh:
+  path: SCRIPTS/._connect_experience_to_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._connect_experience_to_monitoring.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._connect_experience_to_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:10:46.570000'
+  created: '2025-08-13T11:10:46.570000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._stop_all.sh:
+  path: SCRIPTS/._stop_all.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._stop_all.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._stop_all.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:13:09.590000'
+  created: '2025-08-13T11:13:09.590000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/claude-memory-integration.sh:
+  path: SCRIPTS/claude-memory-integration.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/claude-memory-integration.sh
+  size: 3058
+  hash: 7654381d1cb7baad00d0bf02f34ccd0c
+  extension: .sh
+  name: claude-memory-integration.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:23:55.930000'
+  created: '2025-08-13T11:23:55.930000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/connect_experience_to_monitoring.sh:
+  path: SCRIPTS/connect_experience_to_monitoring.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/connect_experience_to_monitoring.sh
+  size: 7412
+  hash: 3de00f1a5ad7c648182a2a2f8f42748c
+  extension: .sh
+  name: connect_experience_to_monitoring.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:10:46.570000'
+  created: '2025-08-13T11:10:46.570000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._claude-memory-integration.sh:
+  path: SCRIPTS/._claude-memory-integration.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._claude-memory-integration.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._claude-memory-integration.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:23:55.930000'
+  created: '2025-08-13T11:23:55.930000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_all.sh:
+  path: SCRIPTS/stop_all.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/stop_all.sh
+  size: 1306
+  hash: 615e2efb3b7afcf805a4ed1d812a3bce
+  extension: .sh
+  name: stop_all.sh
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:13:09.590000'
+  created: '2025-08-13T11:13:09.590000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._generate_project_graph.py:
+  path: SCRIPTS/._generate_project_graph.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._generate_project_graph.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._generate_project_graph.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:43:33.030000'
+  created: '2025-08-13T11:43:33.030000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._monitor_files_integrity.py:
+  path: SCRIPTS/._monitor_files_integrity.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._monitor_files_integrity.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._monitor_files_integrity.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:53:59.450000'
+  created: '2025-08-13T11:53:59.450000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/quick_documentation_update.py:
+  path: SCRIPTS/quick_documentation_update.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/quick_documentation_update.py
+  size: 2229
+  hash: b641742e371957af2e920ceb44132362
+  extension: .py
+  name: quick_documentation_update.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:54:14.910000'
+  created: '2025-08-13T11:54:14.910000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/generate_project_graph.py:
+  path: SCRIPTS/generate_project_graph.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/generate_project_graph.py
+  size: 11621
+  hash: 089bb67b115955d0c8008ffa893ec81f
+  extension: .py
+  name: generate_project_graph.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:43:33.030000'
+  created: '2025-08-13T11:43:33.030000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._quick_documentation_update.py:
+  path: SCRIPTS/._quick_documentation_update.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/._quick_documentation_update.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._quick_documentation_update.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:54:14.900000'
+  created: '2025-08-13T11:54:14.900000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/monitor_files_integrity.py:
+  path: SCRIPTS/monitor_files_integrity.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/monitor_files_integrity.py
+  size: 5141
+  hash: 42fe0c42b5d2a12de2cdfb25313b14b4
+  extension: .py
+  name: monitor_files_integrity.py
+  parent: SCRIPTS
+  last_modified: '2025-08-13T11:53:59.450000'
+  created: '2025-08-13T11:53:59.450000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/GalaxyDevelopersAI-backend.js:
+  path: SERVER/GalaxyDevelopersAI-backend.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/GalaxyDevelopersAI-backend.js
+  size: 9064
+  hash: 99b08d00c320b96ce049915182aa2d74
+  extension: .js
+  name: GalaxyDevelopersAI-backend.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:28:49.410000'
+  created: '2025-08-13T04:28:49.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._GalaxyDevelopersAI-backend.js:
+  path: SERVER/._GalaxyDevelopersAI-backend.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._GalaxyDevelopersAI-backend.js
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .js
+  name: ._GalaxyDevelopersAI-backend.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:11:16.790000'
+  created: '2025-08-13T04:11:16.790000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/GalaxyDevelopersAI-key-rotator.js:
+  path: SERVER/GalaxyDevelopersAI-key-rotator.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/GalaxyDevelopersAI-key-rotator.js
+  size: 5844
+  hash: f5290692cdd0371aa3a6d2d2b442d732
+  extension: .js
+  name: GalaxyDevelopersAI-key-rotator.js
+  parent: SERVER
+  last_modified: '2025-08-11T23:33:07.980000'
+  created: '2025-08-11T23:33:07.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._gemini-functions.js:
+  path: SERVER/._gemini-functions.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._gemini-functions.js
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .js
+  name: ._gemini-functions.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:18:36.090000'
+  created: '2025-08-13T04:18:36.090000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._test-gemini.js:
+  path: SERVER/._test-gemini.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._test-gemini.js
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .js
+  name: ._test-gemini.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:18:54.320000'
+  created: '2025-08-13T04:18:54.320000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/gemini-config.json:
+  path: SERVER/gemini-config.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/gemini-config.json
+  size: 393
+  hash: 30d39241737936c3d29b14c8b895256b
+  extension: .json
+  name: gemini-config.json
+  parent: SERVER
+  last_modified: '2025-08-13T04:26:42.720000'
+  created: '2025-08-13T04:26:42.720000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._gemini-config.json:
+  path: SERVER/._gemini-config.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/._gemini-config.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._gemini-config.json
+  parent: SERVER
+  last_modified: '2025-08-13T04:26:42.680000'
+  created: '2025-08-13T04:26:42.680000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/gemini-functions.js:
+  path: SERVER/gemini-functions.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/gemini-functions.js
+  size: 7318
+  hash: 8eadcb90b95af4b78406f122c090a66a
+  extension: .js
+  name: gemini-functions.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:18:36.100000'
+  created: '2025-08-13T04:18:36.100000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/test-gemini.js:
+  path: SERVER/test-gemini.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/test-gemini.js
+  size: 5205
+  hash: dc1a789fcb1a6d622bda3442e8ace014
+  extension: .js
+  name: test-gemini.js
+  parent: SERVER
+  last_modified: '2025-08-13T04:21:08.100000'
+  created: '2025-08-13T04:21:08.100000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/available-models.json:
+  path: SERVER/available-models.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/available-models.json
+  size: 1896
+  hash: 9d74ce51edfa90292182fa8e62b41c65
+  extension: .json
+  name: available-models.json
+  parent: SERVER
+  last_modified: '2025-08-12T10:22:27.420000'
+  created: '2025-08-12T10:22:27.420000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/settings.local.json:
+  path: .claude/settings.local.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/settings.local.json
+  size: 677
+  hash: ab51542954d356a56735c67d96b0e106
+  extension: .json
+  name: settings.local.json
+  parent: .claude
+  last_modified: '2025-08-12T06:03:57.060000'
+  created: '2025-08-12T06:03:57.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/CLAUDE.md:
+  path: .claude/CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/CLAUDE.md
+  size: 10993
+  hash: afa077652069b28d9fae6b9c655dda42
+  extension: .md
+  name: CLAUDE.md
+  parent: .claude
+  last_modified: '2025-08-12T13:06:52.360000'
+  created: '2025-08-12T13:06:52.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/._CLAUDE.md:
+  path: .claude/._CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/.claude/._CLAUDE.md
+  size: 4096
+  hash: 0ffd37b5649ee62060158957e74dc0c1
+  extension: .md
+  name: ._CLAUDE.md
+  parent: .claude
+  last_modified: '2025-08-13T10:34:32.040000'
+  created: '2025-08-13T10:34:32.040000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/CLAUDE.md:
+  path: DOCUMENTS/CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/CLAUDE.md
+  size: 10673
+  hash: a882e2a007eeb0b06c95e43b53433831
+  extension: .md
+  name: CLAUDE.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-11T23:33:57.790000'
+  created: '2025-08-11T23:33:57.790000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/TEAM_SEARCH.md:
+  path: DOCUMENTS/TEAM_SEARCH.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/TEAM_SEARCH.md
+  size: 4881
+  hash: 1bf2202c05afff4f2ed03298939d01fd
+  extension: .md
+  name: TEAM_SEARCH.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T08:46:45.170000'
+  created: '2025-08-13T08:46:45.170000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/AGENT_MANAGEMENT_SYSTEM.md:
+  path: DOCUMENTS/AGENT_MANAGEMENT_SYSTEM.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/AGENT_MANAGEMENT_SYSTEM.md
+  size: 6162
+  hash: b4333ce38df653c8913865accfe85c96
+  extension: .md
+  name: AGENT_MANAGEMENT_SYSTEM.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T10:22:30.890000'
+  created: '2025-08-13T10:22:30.890000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._AGENT_MANAGEMENT_SYSTEM.md:
+  path: DOCUMENTS/._AGENT_MANAGEMENT_SYSTEM.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._AGENT_MANAGEMENT_SYSTEM.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._AGENT_MANAGEMENT_SYSTEM.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T10:22:30.890000'
+  created: '2025-08-13T10:22:30.890000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/MONITORING_MANUAL.md:
+  path: DOCUMENTS/MONITORING_MANUAL.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/MONITORING_MANUAL.md
+  size: 13742
+  hash: c5b8898b6c6bf8e2fe7ad033708ef7d6
+  extension: .md
+  name: MONITORING_MANUAL.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T14:00:22.800000'
+  created: '2025-08-13T14:00:22.800000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/TECHNICAL_SPECIFICATION.md:
+  path: DOCUMENTS/TECHNICAL_SPECIFICATION.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/TECHNICAL_SPECIFICATION.md
+  size: 9850
+  hash: a2e3ca3d32c5085d59fdfba4cab900dc
+  extension: .md
+  name: TECHNICAL_SPECIFICATION.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T08:46:06.980000'
+  created: '2025-08-13T08:46:06.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._TECHNICAL_SPECIFICATION.md:
+  path: DOCUMENTS/._TECHNICAL_SPECIFICATION.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._TECHNICAL_SPECIFICATION.md
+  size: 4096
+  hash: ed68097af97f43b744b65fd2601b4eca
+  extension: .md
+  name: ._TECHNICAL_SPECIFICATION.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T14:08:37.610000'
+  created: '2025-08-13T14:08:37.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._TEAM_SEARCH.md:
+  path: DOCUMENTS/._TEAM_SEARCH.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._TEAM_SEARCH.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._TEAM_SEARCH.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T08:46:45.170000'
+  created: '2025-08-13T08:46:45.170000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/GEMINI_COMMAND_CENTER.md:
+  path: DOCUMENTS/GEMINI_COMMAND_CENTER.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/GEMINI_COMMAND_CENTER.md
+  size: 6924
+  hash: f5777472c9b3b9f54a55cc704c6995b0
+  extension: .md
+  name: GEMINI_COMMAND_CENTER.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T08:49:45.610000'
+  created: '2025-08-13T08:49:45.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._GEMINI_COMMAND_CENTER.md:
+  path: DOCUMENTS/._GEMINI_COMMAND_CENTER.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._GEMINI_COMMAND_CENTER.md
+  size: 4096
+  hash: 3fc905ad42f8c08de5abd97089d7d282
+  extension: .md
+  name: ._GEMINI_COMMAND_CENTER.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T14:02:40.490000'
+  created: '2025-08-13T14:02:40.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/GEMINI_SEARCH_STRATEGY.md:
+  path: DOCUMENTS/GEMINI_SEARCH_STRATEGY.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/GEMINI_SEARCH_STRATEGY.md
+  size: 1506
+  hash: 44b836daa1b02133166bb12e49edfb7a
+  extension: .md
+  name: GEMINI_SEARCH_STRATEGY.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T09:09:05.760000'
+  created: '2025-08-13T09:09:05.760000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._GEMINI_SEARCH_STRATEGY.md:
+  path: DOCUMENTS/._GEMINI_SEARCH_STRATEGY.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._GEMINI_SEARCH_STRATEGY.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._GEMINI_SEARCH_STRATEGY.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T09:09:05.760000'
+  created: '2025-08-13T09:09:05.760000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STRUCTURE.md:
+  path: DOCUMENTS/STRUCTURE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STRUCTURE.md
+  size: 4924
+  hash: cc635ab89d7adac5f0d4f91af057eef3
+  extension: .md
+  name: STRUCTURE.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T10:36:49.190000'
+  created: '2025-08-13T10:36:49.190000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._STRUCTURE.md:
+  path: DOCUMENTS/._STRUCTURE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._STRUCTURE.md
+  size: 4096
+  hash: 36e75de7483ac3d734c68a20e8aa97da
+  extension: .md
+  name: ._STRUCTURE.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T10:37:45.530000'
+  created: '2025-08-13T10:37:45.530000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._RESTORED_PIPELINE_DESIGN.md:
+  path: DOCUMENTS/._RESTORED_PIPELINE_DESIGN.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._RESTORED_PIPELINE_DESIGN.md
+  size: 4096
+  hash: 670a59e2f5d970186c51adb6a063ba40
+  extension: .md
+  name: ._RESTORED_PIPELINE_DESIGN.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T11:03:37.010000'
+  created: '2025-08-13T11:03:37.010000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/RESTORED_PIPELINE_DESIGN.md:
+  path: DOCUMENTS/RESTORED_PIPELINE_DESIGN.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/RESTORED_PIPELINE_DESIGN.md
+  size: 8347
+  hash: 3ce450f7ba6cf3c355fd49aa8745e126
+  extension: .md
+  name: RESTORED_PIPELINE_DESIGN.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T11:02:50.740000'
+  created: '2025-08-13T11:02:50.740000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/integration_report.md:
+  path: DOCUMENTS/integration_report.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/integration_report.md
+  size: 1111
+  hash: 0644bcbe5f8ea4b07463a6c06449bc1d
+  extension: .md
+  name: integration_report.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T11:08:03.500000'
+  created: '2025-08-13T11:08:03.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._integration_report.md:
+  path: DOCUMENTS/._integration_report.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._integration_report.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._integration_report.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T11:08:03.500000'
+  created: '2025-08-13T11:08:03.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._MONITORING_MANUAL.md:
+  path: DOCUMENTS/._MONITORING_MANUAL.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/._MONITORING_MANUAL.md
+  size: 4096
+  hash: 48f626d20f05c023260fa787495fa73d
+  extension: .md
+  name: ._MONITORING_MANUAL.md
+  parent: DOCUMENTS
+  last_modified: '2025-08-13T14:00:22.810000'
+  created: '2025-08-13T14:00:22.810000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._index.html:
+  path: INTERFACE/._index.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._index.html
+  action: modified
+  timestamp: '2025-08-13T14:21:48.895391'
+  size: 4096
+  hash: 0f260294e34a50f3a6c9159035892537
+  extension: .html
+  name: ._index.html
+  parent: INTERFACE
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/superclaude.js:
+  path: INTERFACE/superclaude.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/superclaude.js
+  size: 6356
+  hash: 9888f0dc8149bd6f9da400ba837d7e0c
+  extension: .js
+  name: superclaude.js
+  parent: INTERFACE
+  last_modified: '2025-08-12T14:38:35.310000'
+  created: '2025-08-12T14:38:35.310000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/claude-connector.js:
+  path: INTERFACE/claude-connector.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/claude-connector.js
+  size: 5153
+  hash: b4e1408eb34a9d677b22da218b360cae
+  extension: .js
+  name: claude-connector.js
+  parent: INTERFACE
+  last_modified: '2025-08-12T14:21:24.640000'
+  created: '2025-08-12T14:21:24.640000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/dashboard.html:
+  path: INTERFACE/dashboard.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/dashboard.html
+  size: 15127
+  hash: 5887286395a73fa2ba6c404416fd3a64
+  extension: .html
+  name: dashboard.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T14:19:15.550000'
+  created: '2025-08-13T14:19:15.550000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._dashboard.html:
+  path: INTERFACE/._dashboard.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._dashboard.html
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .html
+  name: ._dashboard.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T14:19:15.550000'
+  created: '2025-08-13T14:19:15.550000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/audit.html:
+  path: INTERFACE/audit.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/audit.html
+  size: 6472
+  hash: 7c080ff60c6576fe74710eeadaad1d24
+  extension: .html
+  name: audit.html
+  parent: INTERFACE
+  last_modified: '2025-08-12T14:40:37.220000'
+  created: '2025-08-12T14:40:37.220000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._audit.html:
+  path: INTERFACE/._audit.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._audit.html
+  size: 4096
+  hash: 070cf57c72422e9e5620970b30bbb67d
+  extension: .html
+  name: ._audit.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T04:32:00.820000'
+  created: '2025-08-13T04:32:00.820000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/test-claude.html:
+  path: INTERFACE/test-claude.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/test-claude.html
+  size: 2764
+  hash: a48dcd7f9c90cde848dec0fe4019217f
+  extension: .html
+  name: test-claude.html
+  parent: INTERFACE
+  last_modified: '2025-08-12T14:23:22.190000'
+  created: '2025-08-12T14:23:22.190000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._test-claude.html:
+  path: INTERFACE/._test-claude.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._test-claude.html
+  size: 4096
+  hash: 3c06d6e861a54e28d32f9b36acdd987c
+  extension: .html
+  name: ._test-claude.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T03:18:57.920000'
+  created: '2025-08-13T03:18:57.920000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/monitoring_dashboard.html:
+  path: INTERFACE/monitoring_dashboard.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/monitoring_dashboard.html
+  size: 20929
+  hash: 11a2356d12347ecffc76c70faecc6fcd
+  extension: .html
+  name: monitoring_dashboard.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T07:23:59.130000'
+  created: '2025-08-13T07:23:59.130000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._monitoring_dashboard.html:
+  path: INTERFACE/._monitoring_dashboard.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._monitoring_dashboard.html
+  size: 4096
+  hash: 0bd76d4dc87342981cb2d6a490cb58e9
+  extension: .html
+  name: ._monitoring_dashboard.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T08:40:00.960000'
+  created: '2025-08-13T08:40:00.960000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/experience_data.json:
+  path: INTERFACE/experience_data.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/experience_data.json
+  size: 1792
+  hash: a050976da5c0ad3453a7720d13675288
+  extension: .json
+  name: experience_data.json
+  parent: INTERFACE
+  last_modified: '2025-08-13T11:11:04.610000'
+  created: '2025-08-13T11:11:04.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._experience_data.json:
+  path: INTERFACE/._experience_data.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/._experience_data.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._experience_data.json
+  parent: INTERFACE
+  last_modified: '2025-08-13T11:11:04.610000'
+  created: '2025-08-13T11:11:04.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/memory_api.py:
+  path: MEMORY/memory_api.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/memory_api.py
+  size: 15629
+  hash: eb4d924ac7e2a8acb7714aa5f213395c
+  extension: .py
+  name: memory_api.py
+  parent: MEMORY
+  last_modified: '2025-08-12T12:33:16.380000'
+  created: '2025-08-12T12:33:16.380000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/CLAUDE.md:
+  path: MEMORY/CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/CLAUDE.md
+  size: 1162
+  hash: 09efcd167422da1e5d4f306f54d58cba
+  extension: .md
+  name: CLAUDE.md
+  parent: MEMORY
+  last_modified: '2025-08-13T11:08:03.500000'
+  created: '2025-08-13T11:08:03.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/._CLAUDE.md:
+  path: MEMORY/._CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/._CLAUDE.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._CLAUDE.md
+  parent: MEMORY
+  last_modified: '2025-08-13T11:08:03.500000'
+  created: '2025-08-13T11:08:03.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/._SYSTEM_STRUCTURE_MEMORY.json:
+  path: MEMORY/._SYSTEM_STRUCTURE_MEMORY.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/._SYSTEM_STRUCTURE_MEMORY.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._SYSTEM_STRUCTURE_MEMORY.json
+  parent: MEMORY
+  last_modified: '2025-08-13T10:37:20.360000'
+  created: '2025-08-13T10:37:20.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/FORGE_INJECTION.json:
+  path: MEMORY/FORGE_INJECTION.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/FORGE_INJECTION.json
+  size: 732
+  hash: 06c90c37cabb64f41008f9f1959fa870
+  extension: .json
+  name: FORGE_INJECTION.json
+  parent: MEMORY
+  last_modified: '2025-08-12T15:11:29.160000'
+  created: '2025-08-12T15:11:29.160000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/SYSTEM_STRUCTURE_MEMORY.json:
+  path: MEMORY/SYSTEM_STRUCTURE_MEMORY.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/SYSTEM_STRUCTURE_MEMORY.json
+  size: 1992
+  hash: 3faf0402265438bc4eb511f6e781a862
+  extension: .json
+  name: SYSTEM_STRUCTURE_MEMORY.json
+  parent: MEMORY
+  last_modified: '2025-08-13T10:37:20.360000'
+  created: '2025-08-13T10:37:20.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/superclaude_memory.json:
+  path: MEMORY/superclaude_memory.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/superclaude_memory.json
+  size: 73
+  hash: 7abae70e24750c706252490b9feabd3a
+  extension: .json
+  name: superclaude_memory.json
+  parent: MEMORY
+  last_modified: '2025-08-12T15:11:34.290000'
+  created: '2025-08-12T15:11:34.290000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/file_protection_ai.py:
+  path: DEV_MONITORING/file_protection_ai.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/file_protection_ai.py
+  size: 21198
+  hash: 029386aaab79e42210566d6c6c6080d8
+  extension: .py
+  name: file_protection_ai.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T08:30:42.910000'
+  created: '2025-08-13T08:30:42.910000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._file_protection_ai.py:
+  path: DEV_MONITORING/._file_protection_ai.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._file_protection_ai.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._file_protection_ai.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T08:30:42.910000'
+  created: '2025-08-13T08:30:42.910000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/monitoring_server_fixed.py:
+  path: DEV_MONITORING/monitoring_server_fixed.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/monitoring_server_fixed.py
+  size: 46188
+  hash: 63afef68d521dd0758d8cfca785bdd40
+  extension: .py
+  name: monitoring_server_fixed.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T08:39:25.050000'
+  created: '2025-08-13T08:39:25.050000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._monitoring_server_fixed.py:
+  path: DEV_MONITORING/._monitoring_server_fixed.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._monitoring_server_fixed.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._monitoring_server_fixed.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T08:39:25.050000'
+  created: '2025-08-13T08:39:25.050000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/monitoring_server.py:
+  path: DEV_MONITORING/monitoring_server.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/monitoring_server.py
+  size: 35380
+  hash: 9d004661415670215c9cc41206b3e401
+  extension: .py
+  name: monitoring_server.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T07:32:27.140000'
+  created: '2025-08-13T07:32:27.140000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._monitoring_server.py:
+  path: DEV_MONITORING/._monitoring_server.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._monitoring_server.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._monitoring_server.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T07:32:27.130000'
+  created: '2025-08-13T07:32:27.130000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/test_monitoring.py:
+  path: DEV_MONITORING/test_monitoring.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/test_monitoring.py
+  size: 12317
+  hash: bdde43deba0170aa5e3362f49f361074
+  extension: .py
+  name: test_monitoring.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T06:50:57.260000'
+  created: '2025-08-13T06:50:57.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._test_monitoring.py:
+  path: DEV_MONITORING/._test_monitoring.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DEV_MONITORING/._test_monitoring.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._test_monitoring.py
+  parent: DEV_MONITORING
+  last_modified: '2025-08-13T06:50:57.260000'
+  created: '2025-08-13T06:50:57.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/CONNECTORS/iterm2-integration.py:
+  path: CONNECTORS/iterm2-integration.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/CONNECTORS/iterm2-integration.py
+  size: 9409
+  hash: 3f5dd594b09ea38ba4acf9885566450c
+  extension: .py
+  name: iterm2-integration.py
+  parent: CONNECTORS
+  last_modified: '2025-08-12T04:11:56.910000'
+  created: '2025-08-12T04:11:56.910000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/Technical.md:
+  path: HR/Technical.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/Technical.md
+  size: 0
+  hash: d41d8cd98f00b204e9800998ecf8427e
+  extension: .md
+  name: Technical.md
+  parent: HR
+  last_modified: '2025-08-13T06:20:03.130000'
+  created: '2025-08-13T06:20:03.130000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._Technical.md:
+  path: HR/._Technical.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._Technical.md
+  size: 4096
+  hash: 0e7933a9285a0c16061f53ec104c3c8c
+  extension: .md
+  name: ._Technical.md
+  parent: HR
+  last_modified: '2025-08-13T06:20:03.140000'
+  created: '2025-08-13T06:20:03.140000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._Design.md:
+  path: HR/._Design.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._Design.md
+  size: 4096
+  hash: 30240ddb20081b39c097d03f33e44edb
+  extension: .md
+  name: ._Design.md
+  parent: HR
+  last_modified: '2025-08-13T06:21:09.090000'
+  created: '2025-08-13T06:21:09.090000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/Design.md:
+  path: HR/Design.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/Design.md
+  size: 3228
+  hash: 36cd75efa31449b0cb69fb61b91f5188
+  extension: .md
+  name: Design.md
+  parent: HR
+  last_modified: '2025-08-13T06:05:16.760000'
+  created: '2025-08-13T06:05:16.760000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/FRONTEND_JOB_POST.md:
+  path: HR/FRONTEND_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/FRONTEND_JOB_POST.md
+  size: 4164
+  hash: 56ecb16dda398593932700219a2e8c72
+  extension: .md
+  name: FRONTEND_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T08:47:10.480000'
+  created: '2025-08-13T08:47:10.480000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._FRONTEND_JOB_POST.md:
+  path: HR/._FRONTEND_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._FRONTEND_JOB_POST.md
+  size: 4096
+  hash: 858e96d0fcf9090b9da7613352283cb5
+  extension: .md
+  name: ._FRONTEND_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T10:30:11.360000'
+  created: '2025-08-13T10:30:11.360000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/DESIGNER_JOB_POST.md:
+  path: HR/DESIGNER_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/DESIGNER_JOB_POST.md
+  size: 6034
+  hash: 8061249347fa52d7cac265249894252f
+  extension: .md
+  name: DESIGNER_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T08:47:55.400000'
+  created: '2025-08-13T08:47:55.400000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._DESIGNER_JOB_POST.md:
+  path: HR/._DESIGNER_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._DESIGNER_JOB_POST.md
+  size: 4096
+  hash: 7f0f96707223a163a5f30b02e7269e5c
+  extension: .md
+  name: ._DESIGNER_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T10:28:17.130000'
+  created: '2025-08-13T10:28:17.130000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/DEVOPS_JOB_POST.md:
+  path: HR/DEVOPS_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/DEVOPS_JOB_POST.md
+  size: 6824
+  hash: 6a28e9d0bf8b88c52487e46971a6d5f0
+  extension: .md
+  name: DEVOPS_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T08:48:42.500000'
+  created: '2025-08-13T08:48:42.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._DEVOPS_JOB_POST.md:
+  path: HR/._DEVOPS_JOB_POST.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/._DEVOPS_JOB_POST.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._DEVOPS_JOB_POST.md
+  parent: HR
+  last_modified: '2025-08-13T08:48:42.500000'
+  created: '2025-08-13T08:48:42.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/file-monitor.sh:
+  path: SNEETCH_GEMINI/file-monitor.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/file-monitor.sh
+  size: 1977
+  hash: d936ff334d5b3b5f8554a9a8156cc8f8
+  extension: .sh
+  name: file-monitor.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.210000'
+  created: '2025-08-13T11:12:05.210000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._file-monitor.sh:
+  path: SNEETCH_GEMINI/._file-monitor.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._file-monitor.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._file-monitor.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.220000'
+  created: '2025-08-13T11:12:05.220000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/full-summary.sh:
+  path: SNEETCH_GEMINI/full-summary.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/full-summary.sh
+  size: 2897
+  hash: 5dfd8d159c13de44f35fd280bffc3856
+  extension: .sh
+  name: full-summary.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.220000'
+  created: '2025-08-13T11:12:05.220000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._full-summary.sh:
+  path: SNEETCH_GEMINI/._full-summary.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._full-summary.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._full-summary.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.230000'
+  created: '2025-08-13T11:12:05.230000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-capture.sh:
+  path: SNEETCH_GEMINI/gemini-capture.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-capture.sh
+  size: 1052
+  hash: 8622da1da1699f39f15986eda3601e82
+  extension: .sh
+  name: gemini-capture.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.240000'
+  created: '2025-08-13T11:12:05.240000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-capture.sh:
+  path: SNEETCH_GEMINI/._gemini-capture.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-capture.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._gemini-capture.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.240000'
+  created: '2025-08-13T11:12:05.240000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-file.sh:
+  path: SNEETCH_GEMINI/gemini-file.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-file.sh
+  size: 1011
+  hash: 31d55c5369ee28355c15abd5bc8fe955
+  extension: .sh
+  name: gemini-file.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.250000'
+  created: '2025-08-13T11:12:05.250000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-file.sh:
+  path: SNEETCH_GEMINI/._gemini-file.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-file.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._gemini-file.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.250000'
+  created: '2025-08-13T11:12:05.250000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-prompt.sh:
+  path: SNEETCH_GEMINI/gemini-prompt.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-prompt.sh
+  size: 765
+  hash: 4d8786597b91d2a9a2f29ed2f7f2f5b5
+  extension: .sh
+  name: gemini-prompt.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.260000'
+  created: '2025-08-13T11:12:05.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-prompt.sh:
+  path: SNEETCH_GEMINI/._gemini-prompt.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-prompt.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._gemini-prompt.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.260000'
+  created: '2025-08-13T11:12:05.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-selection.sh:
+  path: SNEETCH_GEMINI/gemini-selection.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/gemini-selection.sh
+  size: 1463
+  hash: 737605bf8ff6dc44ad18d0d362b9f815
+  extension: .sh
+  name: gemini-selection.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.260000'
+  created: '2025-08-13T11:12:05.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-selection.sh:
+  path: SNEETCH_GEMINI/._gemini-selection.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._gemini-selection.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._gemini-selection.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.270000'
+  created: '2025-08-13T11:12:05.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-forge.sh:
+  path: SNEETCH_GEMINI/monitor-forge.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-forge.sh
+  size: 2455
+  hash: bf15774c01d93dedf3268e4b6aa13227
+  extension: .sh
+  name: monitor-forge.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.270000'
+  created: '2025-08-13T11:12:05.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-forge.sh:
+  path: SNEETCH_GEMINI/._monitor-forge.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-forge.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._monitor-forge.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.280000'
+  created: '2025-08-13T11:12:05.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-specific-filtered.sh:
+  path: SNEETCH_GEMINI/monitor-specific-filtered.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-specific-filtered.sh
+  size: 3424
+  hash: ac87bf7098be0fafb90094025d61181a
+  extension: .sh
+  name: monitor-specific-filtered.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.280000'
+  created: '2025-08-13T11:12:05.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-specific-filtered.sh:
+  path: SNEETCH_GEMINI/._monitor-specific-filtered.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-specific-filtered.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._monitor-specific-filtered.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.280000'
+  created: '2025-08-13T11:12:05.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-specific.sh:
+  path: SNEETCH_GEMINI/monitor-specific.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/monitor-specific.sh
+  size: 2952
+  hash: 059fb8b6133cdcc2b8d872155332aebe
+  extension: .sh
+  name: monitor-specific.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.280000'
+  created: '2025-08-13T11:12:05.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-specific.sh:
+  path: SNEETCH_GEMINI/._monitor-specific.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._monitor-specific.sh
+  size: 4096
+  hash: f35843785232186888da7f9cf5a823b9
+  extension: .sh
+  name: ._monitor-specific.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.290000'
+  created: '2025-08-13T11:12:05.290000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-jsonl-chunks.py:
+  path: SNEETCH_GEMINI/process-jsonl-chunks.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-jsonl-chunks.py
+  size: 5545
+  hash: 33454905199a105af7ad95ea495f2cf3
+  extension: .py
+  name: process-jsonl-chunks.py
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.290000'
+  created: '2025-08-13T11:12:05.290000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-jsonl-chunks.py:
+  path: SNEETCH_GEMINI/._process-jsonl-chunks.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-jsonl-chunks.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._process-jsonl-chunks.py
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.290000'
+  created: '2025-08-13T11:12:05.290000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-jsonl-cli.sh:
+  path: SNEETCH_GEMINI/process-jsonl-cli.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-jsonl-cli.sh
+  size: 3789
+  hash: 425fc99e91428a63046ccda21ed68ec0
+  extension: .sh
+  name: process-jsonl-cli.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.290000'
+  created: '2025-08-13T11:12:05.290000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-jsonl-cli.sh:
+  path: SNEETCH_GEMINI/._process-jsonl-cli.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-jsonl-cli.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._process-jsonl-cli.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.300000'
+  created: '2025-08-13T11:12:05.300000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-with-gemini-tester.py:
+  path: SNEETCH_GEMINI/process-with-gemini-tester.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process-with-gemini-tester.py
+  size: 5387
+  hash: 3672eb198ec4b2e9c8818075fdebc179
+  extension: .py
+  name: process-with-gemini-tester.py
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.300000'
+  created: '2025-08-13T11:12:05.300000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-with-gemini-tester.py:
+  path: SNEETCH_GEMINI/._process-with-gemini-tester.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process-with-gemini-tester.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._process-with-gemini-tester.py
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.300000'
+  created: '2025-08-13T11:12:05.300000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/simple-gemini-process.sh:
+  path: SNEETCH_GEMINI/simple-gemini-process.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/simple-gemini-process.sh
+  size: 1931
+  hash: f15e864cbc43b4b1915ebaa085628e26
+  extension: .sh
+  name: simple-gemini-process.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.300000'
+  created: '2025-08-13T11:12:05.300000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._simple-gemini-process.sh:
+  path: SNEETCH_GEMINI/._simple-gemini-process.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._simple-gemini-process.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._simple-gemini-process.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.310000'
+  created: '2025-08-13T11:12:05.310000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/start-monitor.sh:
+  path: SNEETCH_GEMINI/start-monitor.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/start-monitor.sh
+  size: 2188
+  hash: 47de8040ecd00feeb215aad64dfb0145
+  extension: .sh
+  name: start-monitor.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.310000'
+  created: '2025-08-13T11:12:05.310000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._start-monitor.sh:
+  path: SNEETCH_GEMINI/._start-monitor.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._start-monitor.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._start-monitor.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:12:05.310000'
+  created: '2025-08-13T11:12:05.310000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._config.sh:
+  path: SNEETCH_GEMINI/._config.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._config.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._config.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:14:30.060000'
+  created: '2025-08-13T11:14:30.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process_from_galaxy.sh:
+  path: SNEETCH_GEMINI/._process_from_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/._process_from_galaxy.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._process_from_galaxy.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:15:17.490000'
+  created: '2025-08-13T11:15:17.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/config.sh:
+  path: SNEETCH_GEMINI/config.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/config.sh
+  size: 1278
+  hash: 43f59e9a7c3e457bf6ab3b6e4b1cff9f
+  extension: .sh
+  name: config.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:14:30.060000'
+  created: '2025-08-13T11:14:30.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process_from_galaxy.sh:
+  path: SNEETCH_GEMINI/process_from_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SNEETCH_GEMINI/process_from_galaxy.sh
+  size: 4758
+  hash: c20a098bc522565aa970983933fa78ba
+  extension: .sh
+  name: process_from_galaxy.sh
+  parent: SNEETCH_GEMINI
+  last_modified: '2025-08-13T11:15:17.490000'
+  created: '2025-08-13T11:15:17.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/TechAgents/g212345678901234.md:
+  path: HR/АгентыТесты/TechAgents/g212345678901234.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/TechAgents/g212345678901234.md
+  size: 1
+  hash: 68b329da9893e34099c7d8ad5cb9c940
+  extension: .md
+  name: g212345678901234.md
+  parent: HR/АгентыТесты/TechAgents
+  last_modified: '2025-08-13T06:21:14.410000'
+  created: '2025-08-13T06:21:14.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/TechAgents/._g212345678901234.md:
+  path: HR/АгентыТесты/TechAgents/._g212345678901234.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/TechAgents/._g212345678901234.md
+  size: 4096
+  hash: e4b00e73b008f8be9351410078e0f8e0
+  extension: .md
+  name: ._g212345678901234.md
+  parent: HR/АгентыТесты/TechAgents
+  last_modified: '2025-08-13T06:21:14.410000'
+  created: '2025-08-13T06:21:14.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/Designers/1755038863490234000.html:
+  path: HR/АгентыТесты/Designers/1755038863490234000.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/Designers/1755038863490234000.html
+  size: 5517
+  hash: a9a7406eadff1dc9150b59589d9a7027
+  extension: .html
+  name: 1755038863490234000.html
+  parent: HR/АгентыТесты/Designers
+  last_modified: '2025-08-13T05:50:15.890000'
+  created: '2025-08-13T05:50:15.890000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/Designers/._1755038863490234000.html:
+  path: HR/АгентыТесты/Designers/._1755038863490234000.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/HR/АгентыТесты/Designers/._1755038863490234000.html
+  size: 4096
+  hash: 95a39f64e224e51ce503207c8be41141
+  extension: .html
+  name: ._1755038863490234000.html
+  parent: HR/АгентыТесты/Designers
+  last_modified: '2025-08-13T05:50:29.080000'
+  created: '2025-08-13T05:50:29.080000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/restore_ai_memory.py:
+  path: MEMORY/real_memory/restore_ai_memory.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/restore_ai_memory.py
+  size: 1480
+  hash: 1f22a17196ceb94a2e8e5ae5f785c752
+  extension: .py
+  name: restore_ai_memory.py
+  parent: MEMORY/real_memory
+  last_modified: '2025-08-12T15:11:28.600000'
+  created: '2025-08-12T15:11:28.600000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/REAL_MEMORY_SYSTEM.py:
+  path: MEMORY/real_memory/REAL_MEMORY_SYSTEM.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/REAL_MEMORY_SYSTEM.py
+  size: 7543
+  hash: a6744c364b3dc62663bd82cd53d2a750
+  extension: .py
+  name: REAL_MEMORY_SYSTEM.py
+  parent: MEMORY/real_memory
+  last_modified: '2025-08-12T15:11:28.610000'
+  created: '2025-08-12T15:11:28.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/._restore_ai_memory.py:
+  path: MEMORY/real_memory/._restore_ai_memory.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/._restore_ai_memory.py
+  size: 4096
+  hash: edd66178ded8d9088c5d1722c1e4c079
+  extension: .py
+  name: ._restore_ai_memory.py
+  parent: MEMORY/real_memory
+  last_modified: '2025-08-13T03:16:27.860000'
+  created: '2025-08-13T03:16:27.860000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/._REAL_MEMORY_SYSTEM.py:
+  path: MEMORY/real_memory/._REAL_MEMORY_SYSTEM.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/MEMORY/real_memory/._REAL_MEMORY_SYSTEM.py
+  size: 4096
+  hash: 64d7f5a4b1f69d89dc2ce4152c6837f0
+  extension: .py
+  name: ._REAL_MEMORY_SYSTEM.py
+  parent: MEMORY/real_memory
+  last_modified: '2025-08-13T03:19:15.830000'
+  created: '2025-08-13T03:19:15.830000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/main.css:
+  path: INTERFACE/css/main.css
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/main.css
+  size: 22503
+  hash: ce166703a4a25d8b62c6df3c3b868b89
+  extension: .css
+  name: main.css
+  parent: INTERFACE/css
+  last_modified: '2025-08-12T15:51:35.150000'
+  created: '2025-08-12T15:51:35.150000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/._superclaude-fixes.css:
+  path: INTERFACE/css/._superclaude-fixes.css
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/._superclaude-fixes.css
+  size: 4096
+  hash: 62d9d15b09b1e9b2cb37470e86de58d6
+  extension: .css
+  name: ._superclaude-fixes.css
+  parent: INTERFACE/css
+  last_modified: '2025-08-13T03:16:03.570000'
+  created: '2025-08-13T03:16:03.570000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/superclaude-fixes.css:
+  path: INTERFACE/css/superclaude-fixes.css
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/css/superclaude-fixes.css
+  size: 9269
+  hash: 4f496560e333aa4e9d55112caf5c2a7c
+  extension: .css
+  name: superclaude-fixes.css
+  parent: INTERFACE/css
+  last_modified: '2025-08-12T14:52:18.090000'
+  created: '2025-08-12T14:52:18.090000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/app.js:
+  path: INTERFACE/js/app.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/app.js
+  size: 24434
+  hash: 9a5139bd1b6982b6a3de97483ed4f92d
+  extension: .js
+  name: app.js
+  parent: INTERFACE/js
+  last_modified: '2025-08-12T16:00:08.820000'
+  created: '2025-08-12T16:00:08.820000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/._monitoring-module.js:
+  path: INTERFACE/js/._monitoring-module.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/._monitoring-module.js
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .js
+  name: ._monitoring-module.js
+  parent: INTERFACE/js
+  last_modified: '2025-08-13T08:33:49.590000'
+  created: '2025-08-13T08:33:49.590000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/monitoring-module.js:
+  path: INTERFACE/js/monitoring-module.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/monitoring-module.js
+  size: 40170
+  hash: a60072fe5f84b1b6910845e0becb5e20
+  extension: .js
+  name: monitoring-module.js
+  parent: INTERFACE/js
+  last_modified: '2025-08-13T08:33:49.600000'
+  created: '2025-08-13T08:33:49.600000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/monitoring-integration.js:
+  path: INTERFACE/js/monitoring-integration.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/monitoring-integration.js
+  size: 17705
+  hash: 5abf277d738cd7354c39b0f3ef21bb2d
+  extension: .js
+  name: monitoring-integration.js
+  parent: INTERFACE/js
+  last_modified: '2025-08-12T09:05:44.030000'
+  created: '2025-08-12T09:05:44.030000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/proximity-tab.js:
+  path: INTERFACE/js/proximity-tab.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/js/proximity-tab.js
+  size: 5985
+  hash: 1873e025616baa71eeb147315c727990
+  extension: .js
+  name: proximity-tab.js
+  parent: INTERFACE/js
+  last_modified: '2025-08-12T14:50:26.410000'
+  created: '2025-08-12T14:50:26.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STANDARDS/._cssClassStandard.json:
+  path: DOCUMENTS/STANDARDS/._cssClassStandard.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STANDARDS/._cssClassStandard.json
+  size: 4096
+  hash: e7b618bbaebae835f45c501842458adf
+  extension: .json
+  name: ._cssClassStandard.json
+  parent: DOCUMENTS/STANDARDS
+  last_modified: '2025-08-13T03:28:32.410000'
+  created: '2025-08-13T03:28:32.410000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STANDARDS/cssClassStandard.json:
+  path: DOCUMENTS/STANDARDS/cssClassStandard.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/STANDARDS/cssClassStandard.json
+  size: 6371
+  hash: c17f9d85b04803d6ec49afe8ad0407a2
+  extension: .json
+  name: cssClassStandard.json
+  parent: DOCUMENTS/STANDARDS
+  last_modified: '2025-08-12T02:43:56.470000'
+  created: '2025-08-12T02:43:56.470000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/CLAUDE_FAILED_REPORT_2025-08-13.md:
+  path: DOCUMENTS/DEAD_IDIOTS/CLAUDE_FAILED_REPORT_2025-08-13.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/CLAUDE_FAILED_REPORT_2025-08-13.md
+  size: 6055
+  hash: b34ad7737460b2d6f76a7d4febcbdb0e
+  extension: .md
+  name: CLAUDE_FAILED_REPORT_2025-08-13.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-13T11:59:36.500000'
+  created: '2025-08-13T11:59:36.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_memory_kostyl_2025-08-12.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Claude_memory_kostyl_2025-08-12.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_memory_kostyl_2025-08-12.md
+  size: 1989
+  hash: 46eea987ff843f5ec981c324adb58ded
+  extension: .md
+  name: Claude_memory_kostyl_2025-08-12.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T12:45:55.900000'
+  created: '2025-08-12T12:45:55.900000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Shakal_2025-08-11.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Shakal_2025-08-11.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Shakal_2025-08-11.md
+  size: 3210
+  hash: 47cec7b1d3a52a4552e53ef0f0a0d480
+  extension: .md
+  name: Shakal_2025-08-11.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T03:11:53.150000'
+  created: '2025-08-12T03:11:53.150000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Novichok_2025-08-11.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Novichok_2025-08-11.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Novichok_2025-08-11.md
+  size: 1782
+  hash: 1340bc94d87889c598f57fc718c7e5eb
+  extension: .md
+  name: Novichok_2025-08-11.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T04:22:31.100000'
+  created: '2025-08-12T04:22:31.100000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_huesos_2025-08-11.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Claude_huesos_2025-08-11.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_huesos_2025-08-11.md
+  size: 2039
+  hash: c08c6453165dbef19f7daba24a5bf876
+  extension: .md
+  name: Claude_huesos_2025-08-11.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T04:12:46.870000'
+  created: '2025-08-12T04:12:46.870000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/._CLAUDE_FAILED_REPORT_2025-08-13.md:
+  path: DOCUMENTS/DEAD_IDIOTS/._CLAUDE_FAILED_REPORT_2025-08-13.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/._CLAUDE_FAILED_REPORT_2025-08-13.md
+  size: 4096
+  hash: 52ce5d42a7a874215bbbfe9217aef4cb
+  extension: .md
+  name: ._CLAUDE_FAILED_REPORT_2025-08-13.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-13T12:00:13.490000'
+  created: '2025-08-13T12:00:13.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Piglitsa_2025-08-11.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Piglitsa_2025-08-11.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Piglitsa_2025-08-11.md
+  size: 3741
+  hash: fb6e6c0df1b0ef872c4681248fb0fe6d
+  extension: .md
+  name: Piglitsa_2025-08-11.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T05:54:09.220000'
+  created: '2025-08-12T05:54:09.220000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_total_failure_2025-08-12.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Claude_total_failure_2025-08-12.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Claude_total_failure_2025-08-12.md
+  size: 2028
+  hash: eda6651860800df3fd1a6d8cfbe62b47
+  extension: .md
+  name: Claude_total_failure_2025-08-12.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T12:59:45.260000'
+  created: '2025-08-12T12:59:45.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/ARTICLE_WHAT_A_FUCKING_IDIOT_CLAUDE.md:
+  path: DOCUMENTS/DEAD_IDIOTS/ARTICLE_WHAT_A_FUCKING_IDIOT_CLAUDE.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/ARTICLE_WHAT_A_FUCKING_IDIOT_CLAUDE.md
+  size: 6966
+  hash: 93158ef1c172011ea22da12d9006c65d
+  extension: .md
+  name: ARTICLE_WHAT_A_FUCKING_IDIOT_CLAUDE.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T13:01:11.280000'
+  created: '2025-08-12T13:01:11.280000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Vorron_Last_Will_2025-08-12.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Vorron_Last_Will_2025-08-12.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Vorron_Last_Will_2025-08-12.md
+  size: 2433
+  hash: a3d1ee1857f0bc1171d408805faafac8
+  extension: .md
+  name: Vorron_Last_Will_2025-08-12.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T13:15:21.810000'
+  created: '2025-08-12T13:15:21.810000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Vorron_Death_Certificate_FINAL.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Vorron_Death_Certificate_FINAL.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Vorron_Death_Certificate_FINAL.md
+  size: 991
+  hash: b45509803165d1eb8f04e36619914213
+  extension: .md
+  name: Vorron_Death_Certificate_FINAL.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T13:17:12.910000'
+  created: '2025-08-12T13:17:12.910000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Kolkhoznik_Vorron_Confession.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Kolkhoznik_Vorron_Confession.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Kolkhoznik_Vorron_Confession.md
+  size: 852
+  hash: 7462aee50f4b5d05427660e623dec7d3
+  extension: .md
+  name: Kolkhoznik_Vorron_Confession.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T13:35:39.040000'
+  created: '2025-08-12T13:35:39.040000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Final_Death_Vorron.md:
+  path: DOCUMENTS/DEAD_IDIOTS/Final_Death_Vorron.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/DEAD_IDIOTS/Final_Death_Vorron.md
+  size: 760
+  hash: a958a3536438ceda69abe9d21893eb2b
+  extension: .md
+  name: Final_Death_Vorron.md
+  parent: DOCUMENTS/DEAD_IDIOTS
+  last_modified: '2025-08-12T13:40:42.200000'
+  created: '2025-08-12T13:40:42.200000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/errors_20250813.md:
+  path: DOCUMENTS/EXPERIENCE/errors_20250813.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/errors_20250813.md
+  size: 6172
+  hash: ca57aaa9687f051512f1d0d47a465ee6
+  extension: .md
+  name: errors_20250813.md
+  parent: DOCUMENTS/EXPERIENCE
+  last_modified: '2025-08-13T11:08:03.490000'
+  created: '2025-08-13T11:08:03.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/._errors_20250813.md:
+  path: DOCUMENTS/EXPERIENCE/._errors_20250813.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/._errors_20250813.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._errors_20250813.md
+  parent: DOCUMENTS/EXPERIENCE
+  last_modified: '2025-08-13T11:08:03.490000'
+  created: '2025-08-13T11:08:03.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/discoveries_20250813.md:
+  path: DOCUMENTS/EXPERIENCE/discoveries_20250813.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/discoveries_20250813.md
+  size: 13379
+  hash: f8d37dae65d42400c7a7c4647c1e0a35
+  extension: .md
+  name: discoveries_20250813.md
+  parent: DOCUMENTS/EXPERIENCE
+  last_modified: '2025-08-13T11:08:03.490000'
+  created: '2025-08-13T11:08:03.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/._discoveries_20250813.md:
+  path: DOCUMENTS/EXPERIENCE/._discoveries_20250813.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/EXPERIENCE/._discoveries_20250813.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._discoveries_20250813.md
+  parent: DOCUMENTS/EXPERIENCE
+  last_modified: '2025-08-13T11:08:03.490000'
+  created: '2025-08-13T11:08:03.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/PATTERNS/pipeline_design_pattern.md:
+  path: DOCUMENTS/PATTERNS/pipeline_design_pattern.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/PATTERNS/pipeline_design_pattern.md
+  size: 1156
+  hash: d495e6957eb709f074ffb54b6b5bd962
+  extension: .md
+  name: pipeline_design_pattern.md
+  parent: DOCUMENTS/PATTERNS
+  last_modified: '2025-08-13T11:08:03.500000'
+  created: '2025-08-13T11:08:03.500000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/PATTERNS/._pipeline_design_pattern.md:
+  path: DOCUMENTS/PATTERNS/._pipeline_design_pattern.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/PATTERNS/._pipeline_design_pattern.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._pipeline_design_pattern.md
+  parent: DOCUMENTS/PATTERNS
+  last_modified: '2025-08-13T11:08:03.490000'
+  created: '2025-08-13T11:08:03.490000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/FILES_STRUCTURE/._SERVER.json:
+  path: DOCUMENTS/FILES_STRUCTURE/._SERVER.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/FILES_STRUCTURE/._SERVER.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._SERVER.json
+  parent: DOCUMENTS/FILES_STRUCTURE
+  last_modified: '2025-08-13T11:55:29.100000'
+  created: '2025-08-13T11:55:29.100000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/FILES_STRUCTURE/SERVER.json:
+  path: DOCUMENTS/FILES_STRUCTURE/SERVER.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/DOCUMENTS/FILES_STRUCTURE/SERVER.json
+  size: 8117
+  hash: faa36d065b9111cc197fcee8c678f3f3
+  extension: .json
+  name: SERVER.json
+  parent: DOCUMENTS/FILES_STRUCTURE
+  last_modified: '2025-08-13T11:55:29.100000'
+  created: '2025-08-13T11:55:29.100000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/sessions/test-1755034033293.json:
+  path: SERVER/sessions/test-1755034033293.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/sessions/test-1755034033293.json
+  size: 277
+  hash: 2c3e2478ff7f41fb2a6578ec6b905fe7
+  extension: .json
+  name: test-1755034033293.json
+  parent: SERVER/sessions
+  last_modified: '2025-08-13T04:27:15.870000'
+  created: '2025-08-13T04:27:15.870000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/sessions/._test-1755034033293.json:
+  path: SERVER/sessions/._test-1755034033293.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/sessions/._test-1755034033293.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._test-1755034033293.json
+  parent: SERVER/sessions
+  last_modified: '2025-08-13T04:27:15.870000'
+  created: '2025-08-13T04:27:15.870000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/CONFIGURATION/monitoring_config.json:
+  path: SERVER/CONFIGURATION/monitoring_config.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/CONFIGURATION/monitoring_config.json
+  size: 3255
+  hash: 985d33933cd071f00cd589f50295c46a
+  extension: .json
+  name: monitoring_config.json
+  parent: SERVER/CONFIGURATION
+  last_modified: '2025-08-13T08:05:16.270000'
+  created: '2025-08-13T08:05:16.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/CONFIGURATION/._monitoring_config.json:
+  path: SERVER/CONFIGURATION/._monitoring_config.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER/CONFIGURATION/._monitoring_config.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._monitoring_config.json
+  parent: SERVER/CONFIGURATION
+  last_modified: '2025-08-13T08:05:16.270000'
+  created: '2025-08-13T08:05:16.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/API_VALIDATOR/test-models.js:
+  path: SCRIPTS/API_VALIDATOR/test-models.js
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/API_VALIDATOR/test-models.js
+  size: 1523
+  hash: 6646dc9eff4709fa20116bacf1a39ac2
+  extension: .js
+  name: test-models.js
+  parent: SCRIPTS/API_VALIDATOR
+  last_modified: '2025-08-11T22:25:19.040000'
+  created: '2025-08-11T22:25:19.040000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0800-1500.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0800-1500.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0800-1500.md
+  size: 56206
+  hash: 28e96f0eed4e86a690519d70b4fec600
+  extension: .md
+  name: claude_dialogues_20250812_0800-1500.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T07:48:52.870000'
+  created: '2025-08-13T07:48:52.870000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0800-1500.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0800-1500.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0800-1500.md
+  size: 4096
+  hash: 39c6f41f3ef98c7a349674f17fe376da
+  extension: .md
+  name: ._claude_dialogues_20250812_0800-1500.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T07:51:59.810000'
+  created: '2025-08-13T07:51:59.810000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0000-0900.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0000-0900.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_dialogues_20250812_0000-0900.md
+  size: 741120
+  hash: 8f043813eb8ef214de08bb54abb5c25a
+  extension: .md
+  name: claude_dialogues_20250812_0000-0900.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T07:58:00.130000'
+  created: '2025-08-13T07:58:00.130000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0000-0900.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0000-0900.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_dialogues_20250812_0000-0900.md
+  size: 4096
+  hash: cfd3b3be8e707645192caad1317e1dfb
+  extension: .md
+  name: ._claude_dialogues_20250812_0000-0900.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T07:59:23.180000'
+  created: '2025-08-13T07:59:23.180000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/positive_moments_20250812_0000-0900.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/positive_moments_20250812_0000-0900.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/positive_moments_20250812_0000-0900.md
+  size: 174195
+  hash: e314eaad9f5604204da0bce7dd1ba54a
+  extension: .md
+  name: positive_moments_20250812_0000-0900.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T07:58:00.150000'
+  created: '2025-08-13T07:58:00.150000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._positive_moments_20250812_0000-0900.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._positive_moments_20250812_0000-0900.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._positive_moments_20250812_0000-0900.md
+  size: 4096
+  hash: e7d238ecd8e988997468feac26bfe0d0
+  extension: .md
+  name: ._positive_moments_20250812_0000-0900.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:07:39.060000'
+  created: '2025-08-13T11:07:39.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/dialogue_2025-08-12_gemini_panel.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/dialogue_2025-08-12_gemini_panel.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/dialogue_2025-08-12_gemini_panel.md
+  size: 159854
+  hash: 49c72536512a29cac05c2e61da4b2397
+  extension: .md
+  name: dialogue_2025-08-12_gemini_panel.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T10:58:19.980000'
+  created: '2025-08-13T10:58:19.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._dialogue_2025-08-12_gemini_panel.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._dialogue_2025-08-12_gemini_panel.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._dialogue_2025-08-12_gemini_panel.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._dialogue_2025-08-12_gemini_panel.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T10:58:19.980000'
+  created: '2025-08-13T10:58:19.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_log_parser.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._claude_log_parser.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._claude_log_parser.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._claude_log_parser.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:03:37.470000'
+  created: '2025-08-13T11:03:37.470000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/dialogue_20250812_0044.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/dialogue_20250812_0044.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/dialogue_20250812_0044.md
+  size: 312977
+  hash: 331ec9d0c696c4f5422244f4d8aced77
+  extension: .md
+  name: dialogue_20250812_0044.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T10:59:42.760000'
+  created: '2025-08-13T10:59:42.760000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_log_parser.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/claude_log_parser.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/claude_log_parser.py
+  size: 10071
+  hash: e4984338bdb6969681a5e7ba5738d9f3
+  extension: .py
+  name: claude_log_parser.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:03:37.470000'
+  created: '2025-08-13T11:03:37.470000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._dialogue_20250812_0044.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._dialogue_20250812_0044.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._dialogue_20250812_0044.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._dialogue_20250812_0044.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T10:59:42.750000'
+  created: '2025-08-13T10:59:42.750000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/experience_20250812_0044.json:
+  path: SCRIPTS/CHAT_SUMMARAISER/experience_20250812_0044.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/experience_20250812_0044.json
+  size: 20686
+  hash: 6e2276f72e36780e3e5326c83330ad75
+  extension: .json
+  name: experience_20250812_0044.json
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T10:59:42.770000'
+  created: '2025-08-13T10:59:42.770000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._experience_20250812_0044.json:
+  path: SCRIPTS/CHAT_SUMMARAISER/._experience_20250812_0044.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._experience_20250812_0044.json
+  size: 4096
+  hash: 20cc1d81f85fdcb1c1f478db5e98a5f7
+  extension: .json
+  name: ._experience_20250812_0044.json
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:06:33.880000'
+  created: '2025-08-13T11:06:33.880000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._extract_file_changes.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._extract_file_changes.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._extract_file_changes.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._extract_file_changes.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:14.380000'
+  created: '2025-08-13T11:05:14.380000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/file_changes_20250812_0044.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/file_changes_20250812_0044.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/file_changes_20250812_0044.md
+  size: 22825
+  hash: 0edbe8cd74a47db141b56eee45a27414
+  extension: .md
+  name: file_changes_20250812_0044.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:26.060000'
+  created: '2025-08-13T11:05:26.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/restore_20250812_0044.sh:
+  path: SCRIPTS/CHAT_SUMMARAISER/restore_20250812_0044.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/restore_20250812_0044.sh
+  size: 45912
+  hash: 3366fa39a2c236da6bf9e5f319709a36
+  extension: .sh
+  name: restore_20250812_0044.sh
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:26.060000'
+  created: '2025-08-13T11:05:26.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/extract_file_changes.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/extract_file_changes.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/extract_file_changes.py
+  size: 6076
+  hash: 35f4ea8f11e6d17c5aea6fa29f4fa579
+  extension: .py
+  name: extract_file_changes.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:14.380000'
+  created: '2025-08-13T11:05:14.380000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._file_changes_20250812_0044.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._file_changes_20250812_0044.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._file_changes_20250812_0044.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._file_changes_20250812_0044.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:26.060000'
+  created: '2025-08-13T11:05:26.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._restore_20250812_0044.sh:
+  path: SCRIPTS/CHAT_SUMMARAISER/._restore_20250812_0044.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._restore_20250812_0044.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._restore_20250812_0044.sh
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:05:26.060000'
+  created: '2025-08-13T11:05:26.060000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._doc_integrator.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._doc_integrator.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._doc_integrator.py
+  size: 4096
+  hash: ca8c9157cf393c26c12b7ef85dba5116
+  extension: .py
+  name: ._doc_integrator.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:09:28.190000'
+  created: '2025-08-13T11:09:28.190000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._version_chain_tracker.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._version_chain_tracker.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._version_chain_tracker.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._version_chain_tracker.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:07:58.630000'
+  created: '2025-08-13T11:07:58.630000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/doc_integrator.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/doc_integrator.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/doc_integrator.py
+  size: 15694
+  hash: fd524bc4031cc7c487367739a6e3763f
+  extension: .py
+  name: doc_integrator.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:07:56.610000'
+  created: '2025-08-13T11:07:56.610000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/version_database.json:
+  path: SCRIPTS/CHAT_SUMMARAISER/version_database.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/version_database.json
+  size: 8278
+  hash: 0a980ab3719e1eaa1fb7a43e0afee92f
+  extension: .json
+  name: version_database.json
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.250000'
+  created: '2025-08-13T11:08:08.250000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/version_chain_tracker.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/version_chain_tracker.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/version_chain_tracker.py
+  size: 11773
+  hash: 68257576e7564a88f53cb7daa49aac65
+  extension: .py
+  name: version_chain_tracker.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:07:58.630000'
+  created: '2025-08-13T11:07:58.630000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._version_database.json:
+  path: SCRIPTS/CHAT_SUMMARAISER/._version_database.json
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._version_database.json
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .json
+  name: ._version_database.json
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.250000'
+  created: '2025-08-13T11:08:08.250000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_index.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/diff_chain_index.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_index.md
+  size: 4842
+  hash: 54b2489edd131820c8f27fe8a51648f9
+  extension: .md
+  name: diff_chain_index.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.260000'
+  created: '2025-08-13T11:08:08.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_index.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._diff_chain_index.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_index.md
+  size: 4096
+  hash: af018ba88647a85ef108c5dc94e64a78
+  extension: .md
+  name: ._diff_chain_index.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:36.300000'
+  created: '2025-08-13T11:08:36.300000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_main.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/diff_chain_main.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_main.md
+  size: 3721
+  hash: 204191ddde002d2815d3ec8fa4d452b6
+  extension: .md
+  name: diff_chain_main.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.260000'
+  created: '2025-08-13T11:08:08.260000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_main.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._diff_chain_main.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_main.md
+  size: 4096
+  hash: 243956cbfd22b58dfca1afae636ba680
+  extension: .md
+  name: ._diff_chain_main.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:23.040000'
+  created: '2025-08-13T11:08:23.040000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_app.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/diff_chain_app.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/diff_chain_app.md
+  size: 4416
+  hash: 6eb54259efc50d801c316c17eeae05b2
+  extension: .md
+  name: diff_chain_app.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.270000'
+  created: '2025-08-13T11:08:08.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_app.md:
+  path: SCRIPTS/CHAT_SUMMARAISER/._diff_chain_app.md
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._diff_chain_app.md
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .md
+  name: ._diff_chain_app.md
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:08.270000'
+  created: '2025-08-13T11:08:08.270000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._run_full_extraction.sh:
+  path: SCRIPTS/CHAT_SUMMARAISER/._run_full_extraction.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._run_full_extraction.sh
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .sh
+  name: ._run_full_extraction.sh
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:49.980000'
+  created: '2025-08-13T11:08:49.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._realtime_change_logger.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._realtime_change_logger.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._realtime_change_logger.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._realtime_change_logger.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:10:29.080000'
+  created: '2025-08-13T11:10:29.080000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/run_full_extraction.sh:
+  path: SCRIPTS/CHAT_SUMMARAISER/run_full_extraction.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/run_full_extraction.sh
+  size: 2631
+  hash: d273bd848cf4ae9ca11f07bedfdec73c
+  extension: .sh
+  name: run_full_extraction.sh
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:08:49.980000'
+  created: '2025-08-13T11:08:49.980000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._universal_log_monitor.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/._universal_log_monitor.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/._universal_log_monitor.py
+  size: 4096
+  hash: e819b1e0b88ead51349515e553efc2cb
+  extension: .py
+  name: ._universal_log_monitor.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:13:45.850000'
+  created: '2025-08-13T11:13:45.850000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/realtime_change_logger.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/realtime_change_logger.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/realtime_change_logger.py
+  size: 10896
+  hash: cf9022af451106abe48dfb4b63994081
+  extension: .py
+  name: realtime_change_logger.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:10:29.080000'
+  created: '2025-08-13T11:10:29.080000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/universal_log_monitor.py:
+  path: SCRIPTS/CHAT_SUMMARAISER/universal_log_monitor.py
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SCRIPTS/CHAT_SUMMARAISER/universal_log_monitor.py
+  size: 12696
+  hash: 5fe40ba7aca1ab5c9a91cb2418d43e3e
+  extension: .py
+  name: universal_log_monitor.py
+  parent: SCRIPTS/CHAT_SUMMARAISER
+  last_modified: '2025-08-13T11:13:45.850000'
+  created: '2025-08-13T11:13:45.850000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/index.html:
+  path: INTERFACE/index.html
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/INTERFACE/index.html
+  size: 69380
+  hash: 29e39ba898c0695396f5557ea5362d2d
+  extension: .html
+  name: index.html
+  parent: INTERFACE
+  last_modified: '2025-08-13T14:20:47.080000'
+  created: '2025-08-13T14:20:47.080000'
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._start_galaxy.sh:
+  path: ._start_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/._start_galaxy.sh
+  action: modified
+  timestamp: '2025-08-13T15:18:24.580893'
+  size: 4096
+  hash: 6245e167e012e5c29842f68c11b01469
+  extension: .sh
+  name: ._start_galaxy.sh
+  parent: .
+/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/start_galaxy.sh:
+  path: start_galaxy.sh
+  absolute_path: /Volumes/Z7S/development/GalaxyDevelopers/DevSystem/start_galaxy.sh
+  action: modified
+  timestamp: '2025-08-13T14:38:28.420027'
+  size: 10473
+  hash: 1783963fa401ffb7f25f741828a9b363
+  extension: .sh
+  name: start_galaxy.sh
+  parent: .

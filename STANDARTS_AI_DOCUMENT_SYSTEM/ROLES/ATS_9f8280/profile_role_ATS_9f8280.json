@@ -1,0 +1,44 @@
+{
+  "role_id": "ATS_9f8280",
+  "title": "AI Testing Specialist",
+  "original_title": "AI Testing Specialist",
+  "created_at": "2025-08-07T10:19:31.275364",
+  "updated_at": "2025-08-07T10:19:31.275368",
+  "version": "1.0.0",
+  "skills": [
+    "Опыт тестирования AI/ML систем",
+    "Понимание специфики тестирования AI агентов",
+    "Опыт performance testing для AI систем",
+    "Навыки создания тестовых данных и сценариев",
+    "Знание методологий integration testing",
+    "Communication skills",
+    "Problem-solving abilities",
+    "Team collaboration",
+    "Time management",
+    "Analytical thinking"
+  ],
+  "certifications": [],
+  "tools": [],
+  "frameworks": [],
+  "responsibilities": [],
+  "competency_levels": {
+    "technical": "intermediate",
+    "leadership": "basic",
+    "domain": "intermediate"
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in AI Testing Specialist role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": []
+}

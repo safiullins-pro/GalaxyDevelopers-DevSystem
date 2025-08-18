@@ -1,0 +1,29 @@
+{
+  "standard": "ISO",
+  "methodology": "Анализ качества",
+  "process": "Анализ текущей документации",
+  "checklist": [
+    "Document completeness check",
+    "Accuracy verification",
+    "Currency assessment",
+    "Consistency validation",
+    "Compliance review"
+  ],
+  "protocol": {
+    "steps": [
+      "1. Define quality criteria",
+      "2. Develop assessment metrics",
+      "3. Conduct quality audit",
+      "4. Document findings",
+      "5. Create improvement plan"
+    ]
+  },
+  "best_practices": [
+    "Follow organizational policies",
+    "Ensure stakeholder involvement",
+    "Document all decisions",
+    "Maintain audit trail"
+  ],
+  "source_url": "https://standards.org/ISO 9001:2015",
+  "retrieved_at": "2025-08-07T09:34:11.037521"
+}

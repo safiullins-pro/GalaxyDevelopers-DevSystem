@@ -1,0 +1,344 @@
+# GALAXY ORCHESTRATOR - Service Dependencies Graph
+# Dependency mapping and startup order resolution for Galaxy services
+# Created: 2025-08-18 by DevOps Infrastructure Orchestration Specialist
+
+version: "1.0"
+last_updated: "2025-08-18"
+
+# ==================================================
+# SERVICE DEPENDENCY GRAPH
+# ==================================================
+
+dependencies:
+  # Infrastructure Layer (Level 0)
+  postgres:
+    depends_on: []
+    provides_to: ["memory-api", "backend"]
+    startup_priority: 1
+    level: 0
+    type: "infrastructure"
+    
+  redis:
+    depends_on: []
+    provides_to: ["backend"]
+    startup_priority: 1
+    level: 0
+    type: "infrastructure"
+    
+  # Core Services Layer (Level 1)
+  memory-api:
+    depends_on: ["postgres"]
+    provides_to: ["backend"]
+    startup_priority: 2
+    level: 1
+    type: "core"
+    wait_for_dependencies: true
+    
+  # Main Backend Layer (Level 2)
+  backend:
+    depends_on: ["memory-api", "postgres", "redis"]
+    provides_to: ["frontend-interface", "forge-bridge"]
+    startup_priority: 3
+    level: 2
+    type: "core"
+    wait_for_dependencies: true
+    auto_start_dependencies: ["memory-api"]  # Backend auto-starts Memory API
+    
+  # Monitoring Layer (Level 2 - Parallel to Backend)
+  dev-monitoring:
+    depends_on: []
+    provides_to: ["frontend-interface"]
+    startup_priority: 3
+    level: 2
+    type: "monitoring"
+    independent: true  # Can start independently
+    
+  # Application Services Layer (Level 3)
+  experience-api:
+    depends_on: []
+    provides_to: []
+    startup_priority: 4
+    level: 3
+    type: "application"
+    independent: true
+    
+  voice-storage:
+    depends_on: []
+    provides_to: []
+    startup_priority: 4
+    level: 3
+    type: "application"
+    independent: true
+    
+  doc-system-api:
+    depends_on: []
+    provides_to: []
+    startup_priority: 4
+    level: 3
+    type: "application"
+    independent: true
+    
+  doc-system-simple:
+    depends_on: []
+    provides_to: []
+    startup_priority: 4
+    level: 3
+    type: "application"
+    independent: true
+    
+  standards-web-dashboard:
+    depends_on: []
+    provides_to: []
+    startup_priority: 4
+    level: 3
+    type: "ai_service"
+    independent: true
+    
+  # Integration Layer (Level 4)
+  forge-bridge:
+    depends_on: ["backend"]
+    provides_to: []
+    startup_priority: 5
+    level: 4
+    type: "integration"
+    wait_for_dependencies: true
+    
+  # Frontend Layer (Level 5)
+  frontend-interface:
+    depends_on: ["backend", "dev-monitoring"]
+    provides_to: []
+    startup_priority: 6
+    level: 5
+    type: "frontend"
+    wait_for_dependencies: true
+
+# ==================================================
+# STARTUP ORDER RESOLUTION
+# ==================================================
+
+startup_order:
+  phase_1_infrastructure:
+    level: 0
+    services: ["postgres", "redis"]
+    parallel: true
+    wait_time: 10
+    health_check: true
+    description: "Database and cache infrastructure"
+    
+  phase_2_core_memory:
+    level: 1
+    services: ["memory-api"]
+    parallel: false
+    wait_time: 15
+    health_check: true
+    description: "AI Memory system initialization"
+    depends_on_phases: ["phase_1_infrastructure"]
+    
+  phase_3_core_backend:
+    level: 2
+    services: ["backend", "dev-monitoring"]
+    parallel: true
+    wait_time: 20
+    health_check: true
+    description: "Main backend and monitoring systems"
+    depends_on_phases: ["phase_2_core_memory"]
+    
+  phase_4_applications:
+    level: 3
+    services: ["experience-api", "voice-storage", "doc-system-api", "doc-system-simple", "standards-web-dashboard"]
+    parallel: true
+    wait_time: 15
+    health_check: true
+    description: "Application and AI services"
+    depends_on_phases: ["phase_3_core_backend"]
+    optional: true  # Can continue if some fail
+    
+  phase_5_integration:
+    level: 4
+    services: ["forge-bridge"]
+    parallel: false
+    wait_time: 10
+    health_check: true
+    description: "Integration services"
+    depends_on_phases: ["phase_3_core_backend"]
+    optional: true
+    
+  phase_6_frontend:
+    level: 5
+    services: ["frontend-interface"]
+    parallel: false
+    wait_time: 5
+    health_check: false  # Static files
+    description: "Frontend interface"
+    depends_on_phases: ["phase_3_core_backend"]
+
+# ==================================================
+# SHUTDOWN ORDER RESOLUTION
+# ==================================================
+
+shutdown_order:
+  phase_1_frontend:
+    level: 5
+    services: ["frontend-interface"]
+    description: "Frontend interface shutdown"
+    
+  phase_2_integration:
+    level: 4
+    services: ["forge-bridge"]
+    description: "Integration services shutdown"
+    
+  phase_3_applications:
+    level: 3
+    services: ["experience-api", "voice-storage", "doc-system-api", "doc-system-simple", "standards-web-dashboard"]
+    description: "Application services shutdown"
+    
+  phase_4_monitoring:
+    level: 2
+    services: ["dev-monitoring"]
+    description: "Monitoring system shutdown"
+    
+  phase_5_backend:
+    level: 2
+    services: ["backend"]
+    description: "Main backend shutdown"
+    
+  phase_6_memory:
+    level: 1
+    services: ["memory-api"]
+    description: "Memory system shutdown"
+    
+  phase_7_infrastructure:
+    level: 0
+    services: ["postgres", "redis"]
+    description: "Infrastructure shutdown"
+    note: "External services - no action taken"
+
+# ==================================================
+# DEPENDENCY VALIDATION RULES
+# ==================================================
+
+validation_rules:
+  circular_dependency_check: true
+  max_dependency_depth: 5
+  required_services: ["postgres", "redis", "backend", "memory-api"]
+  
+  health_check_requirements:
+    - service: "backend"
+      requires_healthy: ["memory-api", "postgres", "redis"]
+      
+    - service: "memory-api"
+      requires_healthy: ["postgres"]
+      
+    - service: "forge-bridge"
+      requires_healthy: ["backend"]
+      
+    - service: "frontend-interface"
+      requires_healthy: ["backend"]
+
+# ==================================================
+# FAILURE HANDLING
+# ==================================================
+
+failure_policies:
+  critical_service_failure:
+    services: ["postgres", "redis", "backend", "memory-api", "dev-monitoring"]
+    action: "stop_dependent_services"
+    retry_count: 3
+    retry_interval: 30
+    
+  optional_service_failure:
+    services: ["experience-api", "voice-storage", "doc-system-api", "forge-bridge"]
+    action: "log_and_continue"
+    retry_count: 1
+    retry_interval: 60
+    
+  dependency_timeout:
+    timeout: 120  # seconds
+    action: "fail_startup"
+    
+  health_check_failure:
+    retries: 3
+    interval: 10
+    action: "mark_unhealthy"
+
+# ==================================================
+# AUTO-START RELATIONSHIPS
+# ==================================================
+
+auto_start_relationships:
+  backend_starts_memory:
+    trigger_service: "backend"
+    auto_starts: ["memory-api"]
+    condition: "if_not_running"
+    description: "Backend automatically starts Memory API if not running"
+    
+  monitoring_starts_protection:
+    trigger_service: "dev-monitoring"
+    auto_starts: ["file-protection-system"]
+    condition: "always"
+    description: "Monitoring starts file protection automatically"
+
+# ==================================================
+# COMMUNICATION PATTERNS
+# ==================================================
+
+communication_patterns:
+  backend_to_memory:
+    from: "backend"
+    to: "memory-api"
+    type: "http_api"
+    endpoint: "http://127.0.0.1:37778"
+    health_endpoint: "/health"
+    
+  frontend_to_backend:
+    from: "frontend-interface"
+    to: "backend"
+    type: "http_api"
+    endpoint: "http://127.0.0.1:37777"
+    health_endpoint: "/health"
+    
+  monitoring_websocket:
+    from: "frontend-interface"
+    to: "dev-monitoring"
+    type: "websocket"
+    endpoint: "ws://127.0.0.1:8765"
+    
+  bridge_to_backend:
+    from: "forge-bridge"
+    to: "backend"
+    type: "http_api"
+    endpoint: "http://127.0.0.1:37777"
+
+# ==================================================
+# RESOURCE DEPENDENCIES
+# ==================================================
+
+resource_dependencies:
+  disk_space:
+    critical_services: ["postgres", "memory-api"]
+    minimum_free: "1GB"
+    
+  memory:
+    high_usage_services: ["backend", "standards-web-dashboard"]
+    monitoring_threshold: "500MB"
+    
+  network_ports:
+    reserved_for_critical: ["37777", "37778", "5432", "6379"]
+    
+  file_system:
+    shared_directories: ["logs", "MEMORY", "INTERFACE"]
+    permissions: "read_write"
+
+# ==================================================
+# METADATA
+# ==================================================
+
+metadata:
+  dependency_graph_version: "1.0.0"
+  total_dependencies: 8
+  startup_phases: 6
+  shutdown_phases: 7
+  critical_services: 5
+  optional_services: 8
+  max_startup_time: 90  # seconds
+  last_validation: "2025-08-18"

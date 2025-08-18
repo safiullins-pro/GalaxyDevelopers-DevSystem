@@ -84,6 +84,13 @@ class GalaxyMonitoringModule {
 
     // ========== WEBSOCKET ==========
     connectWebSocket() {
+        // WebSocket отключен если URL не задан
+        if (!this.wsUrl) {
+            console.log('⚠️ WebSocket отключен - URL не настроен');
+            this.componentStatus.websocket = 'disabled';
+            return;
+        }
+        
         if (this.ws && this.ws.readyState === WebSocket.OPEN) {
             return;
         }
@@ -113,8 +120,10 @@ class GalaxyMonitoringModule {
             this.componentStatus.websocket = 'offline';
             this.updateStatusIndicators();
             
-            // Переподключение через 5 сек
-            setTimeout(() => this.connectWebSocket(), 5000);
+            // Переподключение через 5 сек (если WebSocket включен)
+            if (this.wsUrl) {
+                setTimeout(() => this.connectWebSocket(), 5000);
+            }
         };
     }
 
@@ -141,8 +150,9 @@ class GalaxyMonitoringModule {
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             return await response.json();
         } catch (error) {
-            console.error(`API Error (${endpoint}):`, error);
-            throw error;
+            console.warn(`Monitoring API недоступен (${endpoint}):`, error.message);
+            // Возвращаем пустой ответ если monitoring не запущен
+            return null;
         }
     }
 

@@ -1,0 +1,25 @@
+{
+  "process_id": "P3.1",
+  "deliverables": [
+    {
+      "name": "research_agent.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/research_agent_py_template.json"
+    },
+    {
+      "name": "api_client.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/api_client_py_template.json"
+    },
+    {
+      "name": "data_processor.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/data_processor_py_template.json"
+    }
+  ],
+  "template_locations": {
+    "research_agent.py": "../../../03_TEMPLATES/PY/research_agent_py_template.json",
+    "api_client.py": "../../../03_TEMPLATES/PY/api_client_py_template.json",
+    "data_processor.py": "../../../03_TEMPLATES/PY/data_processor_py_template.json"
+  }
+}

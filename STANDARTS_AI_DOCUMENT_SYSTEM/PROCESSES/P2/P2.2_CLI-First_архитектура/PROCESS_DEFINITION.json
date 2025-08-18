@@ -1,0 +1,26 @@
+{
+  "id": "P2.2",
+  "name": "CLI-First архитектура",
+  "description": "с Gemini CLI 1.0 и Model Context Protocol",
+  "executor": "Technical Lead + DevOps Engineer",
+  "methodology": [
+    "Дизайн CLI интерфейса",
+    "Интеграция с Model Context Protocol",
+    "Автоматизация задач",
+    "Обработка ошибок",
+    "Документирование использования"
+  ],
+  "deliverables": [
+    "cli_specs.md",
+    "automation_scripts.sh",
+    "user_manual.pdf"
+  ],
+  "required_skills": [
+    "Опыт проектирования CLI-приложений",
+    "Знание скриптинга (Python, Bash, PowerShell)",
+    "Понимание автоматизации и CI/CD процессов",
+    "Опыт работы с API интеграциями"
+  ],
+  "generated_at": "2025-08-07T10:19:35.126224",
+  "status": "ready_for_execution"
+}

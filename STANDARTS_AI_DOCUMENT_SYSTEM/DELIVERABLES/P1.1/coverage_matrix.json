@@ -1,0 +1,22 @@
+{
+  "agents": {
+    "expected": 5,
+    "found": 7,
+    "coverage": 140.0
+  },
+  "processes": {
+    "expected": 47,
+    "found": 7,
+    "coverage": 14.893617021276595
+  },
+  "templates": {
+    "expected": 141,
+    "found": 81,
+    "coverage": 57.446808510638306
+  },
+  "roles": {
+    "expected": 35,
+    "found": 38,
+    "coverage": 108.57142857142857
+  }
+}

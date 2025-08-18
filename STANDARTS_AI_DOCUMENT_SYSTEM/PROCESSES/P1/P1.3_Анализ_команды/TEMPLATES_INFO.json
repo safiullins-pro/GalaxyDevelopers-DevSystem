@@ -1,0 +1,25 @@
+{
+  "process_id": "P1.3",
+  "deliverables": [
+    {
+      "name": "raci_matrix.xlsx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XLSX/raci_matrix_xlsx_template.json"
+    },
+    {
+      "name": "roles_mapping.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/roles_mapping_pdf_template.json"
+    },
+    {
+      "name": "interview_results.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/interview_results_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "raci_matrix.xlsx": "../../../03_TEMPLATES/XLSX/raci_matrix_xlsx_template.json",
+    "roles_mapping.pdf": "../../../03_TEMPLATES/PDF/roles_mapping_pdf_template.json",
+    "interview_results.md": "../../../03_TEMPLATES/MD/interview_results_md_template.json"
+  }
+}

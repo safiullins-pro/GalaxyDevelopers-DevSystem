@@ -1,0 +1,27 @@
+{
+  "id": "P6.3",
+  "name": "CI/CD pipeline настройка",
+  "description": "для автоматических релизов",
+  "executor": "DevOps Engineer + Release Manager",
+  "methodology": [
+    "Pipeline Architecture",
+    "Automated Testing Integration",
+    "Deployment Strategies",
+    "Quality Gates",
+    "Rollback Mechanisms"
+  ],
+  "deliverables": [
+    ".github/workflows/",
+    "deployment-pipeline.yaml",
+    "rollback-procedures.md"
+  ],
+  "required_skills": [
+    "Опыт создания complex CI/CD pipelines",
+    "Знание GitOps практик и инструментов",
+    "Навыки автоматизации testing и deployment",
+    "Понимание blue-green и canary deployment стратегий",
+    "Опыт работы с artifact registries"
+  ],
+  "generated_at": "2025-08-07T10:19:35.294267",
+  "status": "ready_for_execution"
+}

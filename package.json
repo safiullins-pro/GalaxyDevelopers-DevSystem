@@ -3,9 +3,22 @@
     "@google/genai": "^1.13.0",
     "@google/generative-ai": "^0.24.1",
     "axios": "^1.11.0",
+    "bcrypt": "^6.0.0",
+    "connect-redis": "^9.0.0",
+    "cors": "^2.8.5",
     "diff": "^8.0.2",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "firebase": "^11.10.0"
+    "express-rate-limit": "^8.0.1",
+    "express-session": "^1.18.2",
+    "firebase": "^11.10.0",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "pg-pool": "^3.10.1",
+    "redis": "^5.8.1",
+    "sqlite3": "^5.1.7"
   },
   "name": "safiullins_pro",
   "version": "1.0.0",
@@ -15,16 +28,21 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "test": "jest",
+    "test:security": "jest test/security.test.js",
+    "start": "node SERVER/GalaxyDevelopersAI-backend.js",
     "backend": "node gemini-backend.js",
-    "build-mac": "electron-builder --mac"
+    "build-mac": "electron-builder --mac",
+    "migrate": "node database_migration.js",
+    "patch:security": "node McKinsey_Transformation/scripts/apply_security_patches.js",
+    "deploy:horizon1": "./McKinsey_Transformation/deploy_horizon1.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^37.2.6"
+    "electron": "^37.2.6",
+    "jest": "^29.7.0"
   }
 }

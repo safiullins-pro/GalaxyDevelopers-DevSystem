@@ -1,0 +1,22 @@
+# Ignore macOS metadata files
+._*
+._PROJECT_VAULT.md
+
+# Ignore common development files and directories
+.idea/
+.vscode/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+*.bak
+
+# Ignore git related files
+.git/
+.gitignore
+
+# Ignore environment files
+.env
+.env.*
+!*.example

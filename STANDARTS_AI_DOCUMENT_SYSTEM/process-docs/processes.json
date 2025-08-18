@@ -1,0 +1,69 @@
+{
+  "processes": {
+    "development": [
+      {
+        "id": "process_0001",
+        "name": "Code Review Process",
+        "description": "Процедура проверки кода перед мержем",
+        "status": "active",
+        "owner": "development_team",
+        "stakeholders": ["tech_lead", "senior_developers"],
+        "inputs": ["pull_request", "code_changes"],
+        "outputs": ["approved_code", "review_comments"],
+        "tools": ["GitHub", "SonarQube", "ESLint"],
+        "standards": ["ISO/IEC 25010", "NIST SP 800-53"],
+        "automation_level": "high"
+      },
+      {
+        "id": "process_0002", 
+        "name": "CI/CD Pipeline",
+        "description": "Автоматическая сборка, тестирование и развертывание",
+        "status": "active",
+        "owner": "devops_team",
+        "stakeholders": ["developers", "qa_team", "ops_team"],
+        "inputs": ["source_code", "configuration"],
+        "outputs": ["deployed_application", "test_results"],
+        "tools": ["Jenkins", "Docker", "Kubernetes"],
+        "standards": ["NIST SP 800-190", "CIS Controls"],
+        "automation_level": "very_high"
+      }
+    ],
+    "security": [
+      {
+        "id": "process_0003",
+        "name": "Security Code Analysis", 
+        "description": "Автоматический анализ кода на уязвимости",
+        "status": "active",
+        "owner": "security_team",
+        "stakeholders": ["developers", "security_officer"],
+        "inputs": ["source_code", "dependencies"],
+        "outputs": ["vulnerability_report", "security_score"],
+        "tools": ["SAST", "DAST", "SCA"],
+        "standards": ["OWASP Top 10", "NIST Cybersecurity Framework"],
+        "automation_level": "high"
+      }
+    ],
+    "documentation": [
+      {
+        "id": "process_0004",
+        "name": "Auto Documentation Generation",
+        "description": "Автоматическое создание технической документации",
+        "status": "active", 
+        "owner": "documentation_team",
+        "stakeholders": ["developers", "architects", "users"],
+        "inputs": ["code_comments", "api_specs", "requirements"],
+        "outputs": ["user_guides", "api_docs", "architecture_docs"],
+        "tools": ["Swagger", "GitBook", "Confluence"],
+        "standards": ["IEEE 1016", "ISO/IEC/IEEE 26511"],
+        "automation_level": "medium"
+      }
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-08-13",
+    "total_processes": 4,
+    "active_processes": 4,
+    "automation_coverage": 85
+  }
+}

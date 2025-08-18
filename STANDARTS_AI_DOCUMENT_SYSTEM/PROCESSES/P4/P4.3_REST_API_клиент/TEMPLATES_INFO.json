@@ -1,0 +1,25 @@
+{
+  "process_id": "P4.3",
+  "deliverables": [
+    {
+      "name": "APIClient.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/APIClient_swift_template.json"
+    },
+    {
+      "name": "AuthManager.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/AuthManager_swift_template.json"
+    },
+    {
+      "name": "NetworkLayer.swift",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SWIFT/NetworkLayer_swift_template.json"
+    }
+  ],
+  "template_locations": {
+    "APIClient.swift": "../../../03_TEMPLATES/SWIFT/APIClient_swift_template.json",
+    "AuthManager.swift": "../../../03_TEMPLATES/SWIFT/AuthManager_swift_template.json",
+    "NetworkLayer.swift": "../../../03_TEMPLATES/SWIFT/NetworkLayer_swift_template.json"
+  }
+}

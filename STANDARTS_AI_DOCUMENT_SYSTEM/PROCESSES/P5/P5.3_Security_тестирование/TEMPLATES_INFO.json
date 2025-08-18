@@ -1,0 +1,25 @@
+{
+  "process_id": "P5.3",
+  "deliverables": [
+    {
+      "name": "security_report.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/security_report_pdf_template.json"
+    },
+    {
+      "name": "vulnerability_scan.json",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JSON/vulnerability_scan_json_template.json"
+    },
+    {
+      "name": "pentest_results.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/pentest_results_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "security_report.pdf": "../../../03_TEMPLATES/PDF/security_report_pdf_template.json",
+    "vulnerability_scan.json": "../../../03_TEMPLATES/JSON/vulnerability_scan_json_template.json",
+    "pentest_results.md": "../../../03_TEMPLATES/MD/pentest_results_md_template.json"
+  }
+}

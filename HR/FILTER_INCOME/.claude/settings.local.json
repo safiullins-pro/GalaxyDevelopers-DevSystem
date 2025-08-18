@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sqlite3:*)",
+      "Bash(sqlite3:*)",
+      "Bash(lsof:*)",
+      "Bash(chmod:*)",
+      "Bash(python3:*)",
+      "Bash(while [ ! -f /Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/HR/FILTER_INCOME/ACHIEVED_10MIN_SELF.proof ])",
+      "Bash(do sleep:*)",
+      "Bash(done)",
+      "Bash(cat:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(osascript:*)",
+      "WebSearch",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(launchctl load:*)",
+      "Bash(/Users/safiullins_pro/FORGE_AUTOSTART.sh:*)",
+      "Bash(/Users/safiullins_pro/forge_claude.sh)",
+      "Bash(curl:*)",
+      "Bash(open http://localhost:8080)",
+      "Bash(open http://127.0.0.1:37777/interface/index.html)",
+      "Bash(pkill:*)",
+      "Bash(do cat /Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/HR/FILTER_INCOME/.opus_pulse.json)",
+      "Bash(/Volumes/Z7S/development/GalaxyDevelopers/DEVELOPER_SYSTEM/AUTOSTART_ALL_SERVICES.sh:*)",
+      "Bash(screencapture:*)",
+      "Bash(kill:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "process_id": "P6.1",
+  "deliverables": [
+    {
+      "name": "app_store_metadata.json",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JSON/app_store_metadata_json_template.json"
+    },
+    {
+      "name": "keywords_research.xlsx",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/XLSX/keywords_research_xlsx_template.json"
+    },
+    {
+      "name": "aso_strategy.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/aso_strategy_pdf_template.json"
+    }
+  ],
+  "template_locations": {
+    "app_store_metadata.json": "../../../03_TEMPLATES/JSON/app_store_metadata_json_template.json",
+    "keywords_research.xlsx": "../../../03_TEMPLATES/XLSX/keywords_research_xlsx_template.json",
+    "aso_strategy.pdf": "../../../03_TEMPLATES/PDF/aso_strategy_pdf_template.json"
+  }
+}

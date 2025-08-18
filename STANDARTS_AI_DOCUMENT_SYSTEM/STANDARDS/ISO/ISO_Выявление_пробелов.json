@@ -1,0 +1,29 @@
+{
+  "standard": "ISO",
+  "methodology": "Выявление пробелов",
+  "process": "Анализ текущей документации",
+  "checklist": [
+    "Current state documentation",
+    "Target state definition",
+    "Gap identification",
+    "Impact assessment",
+    "Prioritization matrix"
+  ],
+  "protocol": {
+    "steps": [
+      "1. Document as-is state",
+      "2. Define to-be state",
+      "3. Identify gaps",
+      "4. Assess gap severity",
+      "5. Prioritize remediation"
+    ]
+  },
+  "best_practices": [
+    "Follow organizational policies",
+    "Ensure stakeholder involvement",
+    "Document all decisions",
+    "Maintain audit trail"
+  ],
+  "source_url": "https://standards.org/COBIT 2019",
+  "retrieved_at": "2025-08-07T09:34:11.543242"
+}

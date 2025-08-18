@@ -1,0 +1,24 @@
+{
+  "agent": "TemplateCollectorAgent",
+  "generated_at": "2025-08-07T09:58:22.189485",
+  "templates_collected": 73,
+  "cache_size": 73,
+  "templates_by_format": {
+    "swift": 7,
+    "pdf": 13,
+    "yaml": 4,
+    "md": 12,
+    "fig": 2,
+    "py": 16,
+    "xlsx": 5,
+    "json": 5,
+    "sql": 1,
+    "xcdatamodeld": 1,
+    "xcodeproj": 2,
+    "html": 1,
+    "jmx": 1,
+    "xcframework": 1,
+    "sh": 1,
+    "ipa": 1
+  }
+}

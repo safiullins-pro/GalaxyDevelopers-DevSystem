@@ -1,0 +1,15 @@
+{
+  "agent": "TemplateCollectorAgent",
+  "generated_at": "2025-08-07T09:41:40.879427",
+  "templates_collected": 7,
+  "cache_size": 7,
+  "templates_by_format": {
+    "xlsx": 1,
+    "pdf": 1,
+    "md": 1,
+    "yaml": 1,
+    "sql": 1,
+    "swift": 1,
+    "py": 1
+  }
+}

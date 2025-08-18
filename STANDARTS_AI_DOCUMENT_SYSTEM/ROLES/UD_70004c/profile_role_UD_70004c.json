@@ -1,0 +1,44 @@
+{
+  "role_id": "UD_70004c",
+  "title": "UX/UI Designer",
+  "original_title": "UX/UI Designer",
+  "created_at": "2025-08-07T10:19:33.356476",
+  "updated_at": "2025-08-07T10:19:33.356478",
+  "version": "1.0.0",
+  "skills": [
+    "Знание принципов Human Interface Guidelines (Apple) и Material Design (Google)",
+    "Понимание accessibility принципов (WCAG 2.2)",
+    "Навыки создания wireframes и прототипов (Figma, Sketch)",
+    "Опыт проектирования мобильных интерфейсов (iOS, Android)",
+    "Опыт проведения пользовательских исследований",
+    "Communication skills",
+    "Problem-solving abilities",
+    "Team collaboration",
+    "Time management",
+    "Analytical thinking"
+  ],
+  "certifications": [],
+  "tools": [],
+  "frameworks": [],
+  "responsibilities": [],
+  "competency_levels": {
+    "technical": "intermediate",
+    "leadership": "basic",
+    "domain": "intermediate"
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in UX/UI Designer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": []
+}

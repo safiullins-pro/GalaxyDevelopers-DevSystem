@@ -1,0 +1,24 @@
+{
+  "process_id": "P6.2",
+  "deliverables": [
+    {
+      "name": "k8s-manifests/",
+      "status": "template_available",
+      "location": "generic_template"
+    },
+    {
+      "name": "monitoring-stack.yaml",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/YAML/monitoring-stack_yaml_template.json"
+    },
+    {
+      "name": "backup-strategy.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/backup-strategy_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "monitoring-stack.yaml": "../../../03_TEMPLATES/YAML/monitoring-stack_yaml_template.json",
+    "backup-strategy.md": "../../../03_TEMPLATES/MD/backup-strategy_md_template.json"
+  }
+}

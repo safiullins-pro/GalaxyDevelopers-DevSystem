@@ -1,0 +1,29 @@
+{
+  "standard": "ISO",
+  "methodology": "Создание матрицы покрытия",
+  "process": "Анализ текущей документации",
+  "checklist": [
+    "List all requirements",
+    "Map to deliverables",
+    "Track implementation status",
+    "Validate coverage",
+    "Document dependencies"
+  ],
+  "protocol": {
+    "steps": [
+      "1. Gather all requirements",
+      "2. Create matrix structure",
+      "3. Map requirements to processes",
+      "4. Validate completeness",
+      "5. Maintain and update"
+    ]
+  },
+  "best_practices": [
+    "Follow organizational policies",
+    "Ensure stakeholder involvement",
+    "Document all decisions",
+    "Maintain audit trail"
+  ],
+  "source_url": "https://standards.org/PMI PMBOK Guide",
+  "retrieved_at": "2025-08-07T09:34:12.048363"
+}

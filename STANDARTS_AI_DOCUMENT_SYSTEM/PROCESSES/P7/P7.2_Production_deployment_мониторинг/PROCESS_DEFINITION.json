@@ -1,0 +1,27 @@
+{
+  "id": "P7.2",
+  "name": "Production deployment мониторинг",
+  "description": "мониторинг систем во время релиза",
+  "executor": "DevOps Engineer + Site Reliability Engineer",
+  "methodology": [
+    "Launch Monitoring",
+    "Performance Tracking",
+    "Error Rate Analysis",
+    "Capacity Monitoring",
+    "Incident Response"
+  ],
+  "deliverables": [
+    "monitoring_dashboard.json",
+    "incident_response_plan.md",
+    "launch_report.pdf"
+  ],
+  "required_skills": [
+    "Опыт production операций и incident response",
+    "Знание monitoring и observability практик",
+    "Навыки troubleshooting production issues",
+    "Понимание SLA/SLO и error budgets",
+    "Опыт post-mortem analysis"
+  ],
+  "generated_at": "2025-08-07T10:19:35.311552",
+  "status": "ready_for_execution"
+}

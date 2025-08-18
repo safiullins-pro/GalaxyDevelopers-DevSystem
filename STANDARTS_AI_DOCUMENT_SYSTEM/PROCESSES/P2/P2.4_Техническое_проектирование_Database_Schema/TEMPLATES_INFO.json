@@ -1,0 +1,25 @@
+{
+  "process_id": "P2.4",
+  "deliverables": [
+    {
+      "name": "database_schema.sql",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/SQL/database_schema_sql_template.json"
+    },
+    {
+      "name": "er_diagrams.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/er_diagrams_pdf_template.json"
+    },
+    {
+      "name": "migration_plan.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/migration_plan_md_template.json"
+    }
+  ],
+  "template_locations": {
+    "database_schema.sql": "../../../03_TEMPLATES/SQL/database_schema_sql_template.json",
+    "er_diagrams.pdf": "../../../03_TEMPLATES/PDF/er_diagrams_pdf_template.json",
+    "migration_plan.md": "../../../03_TEMPLATES/MD/migration_plan_md_template.json"
+  }
+}

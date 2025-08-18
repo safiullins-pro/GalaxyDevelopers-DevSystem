@@ -1,0 +1,25 @@
+{
+  "process_id": "P7.2",
+  "deliverables": [
+    {
+      "name": "monitoring_dashboard.json",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/JSON/monitoring_dashboard_json_template.json"
+    },
+    {
+      "name": "incident_response_plan.md",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/MD/incident_response_plan_md_template.json"
+    },
+    {
+      "name": "launch_report.pdf",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PDF/launch_report_pdf_template.json"
+    }
+  ],
+  "template_locations": {
+    "monitoring_dashboard.json": "../../../03_TEMPLATES/JSON/monitoring_dashboard_json_template.json",
+    "incident_response_plan.md": "../../../03_TEMPLATES/MD/incident_response_plan_md_template.json",
+    "launch_report.pdf": "../../../03_TEMPLATES/PDF/launch_report_pdf_template.json"
+  }
+}

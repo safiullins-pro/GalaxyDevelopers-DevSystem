@@ -1,0 +1,27 @@
+{
+  "id": "P6.2",
+  "name": "Kubernetes production конфигурация",
+  "description": "с auto-scaling",
+  "executor": "DevOps Engineer + Platform Engineer",
+  "methodology": [
+    "Cluster Architecture Design",
+    "Security Configuration",
+    "Auto-scaling Setup",
+    "Monitoring Stack",
+    "Backup & Disaster Recovery"
+  ],
+  "deliverables": [
+    "k8s-manifests/",
+    "monitoring-stack.yaml",
+    "backup-strategy.md"
+  ],
+  "required_skills": [
+    "Экспертные знания Kubernetes и container orchestration",
+    "Опыт проектирования production-ready инфраструктуры",
+    "Знание security best practices для Kubernetes",
+    "Навыки мониторинга и логирования",
+    "Опыт auto-scaling и resource management"
+  ],
+  "generated_at": "2025-08-07T10:19:35.289236",
+  "status": "ready_for_execution"
+}

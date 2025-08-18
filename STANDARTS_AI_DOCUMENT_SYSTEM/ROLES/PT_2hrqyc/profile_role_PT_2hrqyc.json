@@ -1,0 +1,77 @@
+{
+  "role_id": "PT_2hrqyc",
+  "title": "Penetration Tester",
+  "original_title": "Penetration Tester",
+  "created_at": "2025-08-07T10:20:30.318913",
+  "updated_at": "2025-08-07T10:20:30.318916",
+  "version": "1.0.0",
+  "skills": [
+    "Security assessment",
+    "Vulnerability scanning",
+    "Network security",
+    "Web application testing",
+    "Social engineering",
+    "Risk analysis",
+    "Security tools",
+    "Compliance testing",
+    "Report writing"
+  ],
+  "certifications": [
+    "CISSP",
+    "CEH",
+    "OSCP",
+    "GIAC"
+  ],
+  "tools": [
+    "Nmap",
+    "Burp Suite",
+    "Metasploit",
+    "Wireshark",
+    "Kali Linux"
+  ],
+  "frameworks": [
+    "OWASP",
+    "NIST",
+    "PTES"
+  ],
+  "responsibilities": [
+    "Security testing",
+    "Vulnerability assessment",
+    "Risk analysis",
+    "Report creation",
+    "Compliance"
+  ],
+  "competency_levels": {
+    "technical": "advanced",
+    "leadership": "basic",
+    "domain": "expert"
+  },
+  "career_path": {
+    "junior": "Junior Penetration Tester",
+    "current": "Penetration Tester",
+    "senior": "Senior Penetration Tester",
+    "next": [
+      "Penetration Tester Lead",
+      "Penetration Tester Manager"
+    ]
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in Penetration Tester role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": [
+    "Security Specialist",
+    "IT Auditor",
+    "Compliance Officer"
+  ]
+}

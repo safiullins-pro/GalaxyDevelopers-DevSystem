@@ -1,0 +1,78 @@
+# WB Analytics Prometheus Configuration
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'wb-analytics'
+    environment: 'development'
+
+# Alertmanager configuration
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: ['alertmanager:9093']
+
+# Load rules once and periodically evaluate them
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape
+scrape_configs:
+  # Prometheus себя мониторит
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # PostgreSQL metrics (нужен postgres_exporter)
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres_exporter:9187']
+    scrape_interval: 30s
+    metrics_path: /metrics
+
+  # Redis metrics (нужен redis_exporter)
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis_exporter:9121']
+    scrape_interval: 15s
+
+  # Node metrics (системные метрики)
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node_exporter:9100']
+    scrape_interval: 15s
+
+  # Docker metrics
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['cadvisor:8080']
+    scrape_interval: 15s
+
+  # Наши агенты (когда запустим)
+  - job_name: 'wb-agents'
+    scrape_interval: 10s
+    metrics_path: /metrics
+    static_configs:
+      - targets: []  # Будем добавлять динамически
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 'localhost:4000'  # Адрес metrics collector
+
+  # Message Bus metrics
+  - job_name: 'message-bus'
+    static_configs:
+      - targets: ['localhost:4001']  # Message Bus metrics endpoint
+    scrape_interval: 5s
+    metrics_path: /metrics
+
+  # MinIO metrics
+  - job_name: 'minio'
+    static_configs:
+      - targets: ['minio:9000']
+    metrics_path: /minio/v2/metrics/cluster
+    scrape_interval: 30s

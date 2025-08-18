@@ -1,0 +1,44 @@
+{
+  "role_id": "AD_c3791b",
+  "title": "API Developer",
+  "original_title": "API Developer",
+  "created_at": "2025-08-07T10:19:32.395157",
+  "updated_at": "2025-08-07T10:19:32.395159",
+  "version": "1.0.0",
+  "skills": [
+    "Опыт создания robust API клиентов",
+    "Опыт работы с асинхронными операциями",
+    "Знание HTTP протоколов и RESTful принципов",
+    "Понимание принципов безопасности API",
+    "Навыки обработки сетевых ошибок и retry логики",
+    "Communication skills",
+    "Problem-solving abilities",
+    "Team collaboration",
+    "Time management",
+    "Analytical thinking"
+  ],
+  "certifications": [],
+  "tools": [],
+  "frameworks": [],
+  "responsibilities": [],
+  "competency_levels": {
+    "technical": "intermediate",
+    "leadership": "basic",
+    "domain": "intermediate"
+  },
+  "experience_requirements": {
+    "minimum_years": 3,
+    "preferred_years": 5,
+    "required_experience": [
+      "Hands-on experience in API Developer role",
+      "Working in Agile/Scrum environment",
+      "Cross-functional team collaboration"
+    ],
+    "nice_to_have": [
+      "Experience with enterprise-level projects",
+      "International team collaboration",
+      "Mentoring junior team members"
+    ]
+  },
+  "related_roles": []
+}

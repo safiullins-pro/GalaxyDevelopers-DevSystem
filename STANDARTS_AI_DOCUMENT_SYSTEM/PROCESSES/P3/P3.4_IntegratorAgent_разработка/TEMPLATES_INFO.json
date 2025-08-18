@@ -1,0 +1,25 @@
+{
+  "process_id": "P3.4",
+  "deliverables": [
+    {
+      "name": "integrator_agent.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/integrator_agent_py_template.json"
+    },
+    {
+      "name": "api_gateway.yaml",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/YAML/api_gateway_yaml_template.json"
+    },
+    {
+      "name": "sync_service.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/sync_service_py_template.json"
+    }
+  ],
+  "template_locations": {
+    "integrator_agent.py": "../../../03_TEMPLATES/PY/integrator_agent_py_template.json",
+    "api_gateway.yaml": "../../../03_TEMPLATES/YAML/api_gateway_yaml_template.json",
+    "sync_service.py": "../../../03_TEMPLATES/PY/sync_service_py_template.json"
+  }
+}

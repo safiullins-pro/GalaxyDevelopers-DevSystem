@@ -1,0 +1,25 @@
+{
+  "process_id": "P3.5",
+  "deliverables": [
+    {
+      "name": "publisher_agent.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/publisher_agent_py_template.json"
+    },
+    {
+      "name": "distribution_engine.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/distribution_engine_py_template.json"
+    },
+    {
+      "name": "notification_service.py",
+      "status": "template_available",
+      "location": "../../../03_TEMPLATES/PY/notification_service_py_template.json"
+    }
+  ],
+  "template_locations": {
+    "publisher_agent.py": "../../../03_TEMPLATES/PY/publisher_agent_py_template.json",
+    "distribution_engine.py": "../../../03_TEMPLATES/PY/distribution_engine_py_template.json",
+    "notification_service.py": "../../../03_TEMPLATES/PY/notification_service_py_template.json"
+  }
+}

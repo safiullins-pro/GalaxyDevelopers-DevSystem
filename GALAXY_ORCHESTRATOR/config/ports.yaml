@@ -1,0 +1,246 @@
+# GALAXY ORCHESTRATOR - Port Management System
+# Port allocation and conflict resolution for all Galaxy services
+# Created: 2025-08-18 by DevOps Infrastructure Orchestration Specialist
+
+version: "1.0"
+last_updated: "2025-08-18"
+
+# ==================================================
+# PORT ASSIGNMENTS
+# ==================================================
+
+port_assignments:
+  # Core Backend Services
+  3000: 
+    service: "frontend-interface"
+    type: "http"
+    description: "Main web interface (served through backend)"
+    status: "active"
+    
+  37777:
+    service: "backend"
+    type: "http"
+    description: "Galaxy Backend API with Gemini integration"
+    status: "active"
+    
+  37778:
+    service: "memory-api"
+    type: "http"
+    description: "AI Memory API with conversation storage"
+    status: "active"
+    
+  # Data & Experience Services
+  5555:
+    service: "voice-storage"
+    type: "http"
+    description: "Voice data storage and management"
+    status: "active"
+    priority: "high"  # Original port holder
+    
+  5556:
+    service: "experience-api"
+    type: "http"
+    description: "Experience data extraction API"
+    status: "active"
+    note: "Moved from 5555 to resolve conflict"
+    
+  # Monitoring & Operations
+  8765:
+    service: "dev-monitoring"
+    type: "websocket"
+    description: "DEV Monitoring WebSocket interface"
+    status: "active"
+    
+  8766:
+    service: "dev-monitoring"
+    type: "http"
+    description: "DEV Monitoring HTTP API"
+    status: "active"
+    
+  # AI Document Services
+  8000:
+    service: "standards-web-dashboard"
+    type: "http"
+    description: "AI Standards web dashboard with metrics"
+    status: "active"
+    
+  8080:
+    service: "doc-system-api"
+    type: "http"
+    description: "Documentation system main API"
+    status: "active"
+    
+  8081:
+    service: "doc-system-simple"
+    type: "http"
+    description: "Simple documentation server"
+    status: "active"
+    
+  # Integration Services
+  8888:
+    service: "forge-bridge"
+    type: "http"
+    description: "Forge system integration bridge"
+    status: "active"
+    
+  # External Dependencies
+  5432:
+    service: "postgres"
+    type: "tcp"
+    description: "PostgreSQL database server"
+    status: "external"
+    
+  6379:
+    service: "redis"
+    type: "tcp"
+    description: "Redis cache and session storage"
+    status: "external"
+
+# ==================================================
+# PORT CONFLICTS & RESOLUTIONS
+# ==================================================
+
+conflicts_resolved:
+  - conflict_id: "CONFLICT_001"
+    date_resolved: "2025-08-18"
+    description: "Experience API and Voice Storage both using port 5555"
+    resolution: "Experience API moved to port 5556"
+    affected_services: ["experience-api", "voice-storage"]
+    rationale: "Voice Storage was first to use 5555, Experience API more flexible"
+    
+# ==================================================
+# PORT RANGES & ALLOCATION STRATEGY
+# ==================================================
+
+port_ranges:
+  core_services: "37777-37799"
+  monitoring: "8765-8799"
+  ai_services: "8000-8099"
+  integration: "8888-8899"
+  development: "5555-5599"
+  
+allocation_strategy:
+  - core_services: "Use 37xxx range for critical backend services"
+  - monitoring: "Use 87xx range for monitoring and operations"
+  - ai_services: "Use 80xx range for AI and ML services"
+  - integration: "Use 88xx range for bridge and integration services"
+  - development: "Use 55xx range for development and data services"
+
+# ==================================================
+# PORT VALIDATION RULES
+# ==================================================
+
+validation_rules:
+  reserved_ports:
+    - 22    # SSH
+    - 25    # SMTP
+    - 53    # DNS
+    - 80    # HTTP
+    - 443   # HTTPS
+    - 3306  # MySQL
+    - 5432  # PostgreSQL (allowed for our use)
+    - 6379  # Redis (allowed for our use)
+    
+  forbidden_ranges:
+    - "1-1023"     # System reserved (except our exceptions)
+    - "49152-65535" # Dynamic/ephemeral ports
+    
+  allowed_ranges:
+    - "3000-3999"   # Development servers
+    - "5000-5999"   # Application services  
+    - "8000-8999"   # Web services
+    - "37000-37999" # Custom application range
+
+# ==================================================
+# HEALTH CHECK ENDPOINTS
+# ==================================================
+
+health_endpoints:
+  37777: "/health"          # backend
+  37778: "/health"          # memory-api
+  5555:  "/health"          # voice-storage
+  5556:  "/api/health"      # experience-api
+  8766:  "/health"          # dev-monitoring (HTTP)
+  8000:  "/metrics"         # standards-web-dashboard
+  8080:  "/health"          # doc-system-api
+  8081:  "/health"          # doc-system-simple
+  8888:  "/health"          # forge-bridge
+
+# ==================================================
+# PORT MONITORING & ALERTS
+# ==================================================
+
+monitoring:
+  check_interval: 30  # seconds
+  timeout: 5         # seconds
+  retry_count: 3
+  
+  alerts:
+    port_unreachable:
+      severity: "high"
+      action: "restart_service"
+      
+    port_conflict:
+      severity: "critical"
+      action: "stop_conflicting_service"
+      
+    health_check_failed:
+      severity: "medium"
+      action: "log_and_notify"
+
+# ==================================================
+# DYNAMIC PORT ALLOCATION
+# ==================================================
+
+dynamic_allocation:
+  enabled: false  # Static allocation for now
+  fallback_ranges:
+    - "9000-9099"  # Fallback range if conflicts arise
+    - "9100-9199"  # Secondary fallback
+    
+  conflict_resolution:
+    strategy: "manual"  # manual | automatic
+    preference: "keep_critical_services"
+
+# ==================================================
+# NETWORK SECURITY
+# ==================================================
+
+security:
+  bind_address: "127.0.0.1"  # Localhost only by default
+  
+  external_access:
+    - port: 3000
+      service: "frontend-interface"
+      allowed: true
+      reason: "Web interface needs external access"
+      
+  firewall_rules:
+    - "Allow incoming on 3000 from anywhere"
+    - "Allow incoming on 37777-37778 from localhost only"
+    - "Allow incoming on 8000-8999 from localhost only"
+    - "Deny all other incoming connections"
+
+# ==================================================
+# BACKUP PORTS
+# ==================================================
+
+backup_ports:
+  backend: 37779
+  memory-api: 37780
+  experience-api: 5557
+  voice-storage: 5558
+  dev-monitoring-http: 8767
+  doc-system-api: 8082
+
+# ==================================================
+# METADATA
+# ==================================================
+
+metadata:
+  total_ports_managed: 13
+  conflicts_resolved: 1
+  external_dependencies: 2
+  health_endpoints: 9
+  last_conflict_check: "2025-08-18"
+  port_allocation_version: "1.0.0"

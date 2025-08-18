@@ -1,0 +1,203 @@
+{
+  "directory": "SERVER",
+  "path": "/Volumes/Z7S/development/GalaxyDevelopers/DevSystem/SERVER",
+  "description": "Серверная часть системы GalaxyDevelopers - backend на Express с интеграцией Gemini API",
+  "tags": ["backend", "api", "server", "gemini", "nodejs", "express"],
+  "last_scan": "2025-08-13T10:00:00Z",
+  "files": {
+    "GalaxyDevelopersAI-backend.js": {
+      "type": "javascript",
+      "size_lines": 500,
+      "description": "Основной Express сервер системы",
+      "port": 37777,
+      "functionality": {
+        "api_endpoints": [
+          "POST /chat - основной endpoint для чата с Gemini",
+          "GET /models - список доступных моделей",
+          "POST /screenshot - создание скриншотов",
+          "GET /mcp/screenshot - MCP endpoint для AI агентов",
+          "POST /memory/save - сохранение памяти",
+          "GET /memory/context - получение контекста",
+          "GET /api/get-seed - генерация seed из Claude credentials",
+          "POST /element-selected - обработка выбранных элементов"
+        ],
+        "features": [
+          "Автоматическая ротация 14 API ключей Google",
+          "Интеграция с Memory API на порту 37778",
+          "CORS поддержка для веб-интерфейса",
+          "Stateless архитектура без сохранения сессий",
+          "Генерация seed из Claude токена для consistency"
+        ],
+        "dependencies": [
+          "express",
+          "@google/generative-ai",
+          "axios",
+          "crypto",
+          "child_process для запуска Memory API"
+        ]
+      },
+      "connections": [
+        "GalaxyDevelopersAI-key-rotator.js",
+        "gemini-config.json",
+        "gemini-functions.js",
+        "../MEMORY/memory_api.py"
+      ],
+      "tags": ["main", "api", "express", "critical"]
+    },
+    "GalaxyDevelopersAI-key-rotator.js": {
+      "type": "javascript",
+      "description": "Система ротации API ключей Google Gemini",
+      "functionality": {
+        "features": [
+          "Управление 14 API ключами",
+          "Автоматическая смена при каждом запросе",
+          "Валидация ключей через тестовые запросы",
+          "Обработка rate limits (429 ошибок)",
+          "Сохранение состояния ключей в JSON"
+        ],
+        "methods": [
+          "loadKeys() - загрузка ключей из файла",
+          "getNextKey() - получить следующий рабочий ключ",
+          "validateKey() - проверка работоспособности",
+          "markKeyAsBlocked() - пометить ключ как заблокированный",
+          "saveState() - сохранение состояния"
+        ],
+        "files_used": [
+          "../.galaxydevelopers-ai-keys",
+          "../.galaxydevelopers-ai-key-state.json"
+        ]
+      },
+      "tags": ["security", "api-keys", "rotation", "critical"]
+    },
+    "gemini-functions.js": {
+      "type": "javascript",
+      "description": "Класс для работы с Gemini API",
+      "functionality": {
+        "class": "GeminiFunctions",
+        "methods": [
+          "createModel() - создание модели с настройками",
+          "generateContent() - генерация контента",
+          "startChat() - начало чат-сессии",
+          "countTokens() - подсчет токенов"
+        ],
+        "configurations": [
+          "Safety settings - BLOCK_NONE для всех категорий",
+          "Generation config из gemini-config.json",
+          "Поддержка всех моделей Gemini"
+        ]
+      },
+      "tags": ["gemini", "api", "ai", "generator"]
+    },
+    "gemini-config.json": {
+      "type": "json",
+      "description": "Конфигурация для Gemini моделей",
+      "content": {
+        "default_generation_config": {
+          "temperature": 0.7,
+          "topP": 0.95,
+          "topK": 64,
+          "maxOutputTokens": 8192,
+          "responseMimeType": "text/plain"
+        },
+        "models": "список доступных моделей",
+        "safety_settings": "настройки безопасности"
+      },
+      "tags": ["config", "gemini", "settings"]
+    },
+    "available-models.json": {
+      "type": "json",
+      "description": "Список доступных моделей Gemini",
+      "models": [
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-lite",
+        "gemini-2.0-flash-thinking-exp",
+        "gemini-2.5-flash",
+        "gemini-2.5-pro",
+        "learnlm-2.0-flash-experimental"
+      ],
+      "tags": ["models", "gemini", "config"]
+    },
+    "test-gemini.js": {
+      "type": "javascript",
+      "description": "Тестовый скрипт для проверки Gemini функций",
+      "functionality": "Тестирование API, моделей, генерации",
+      "tags": ["test", "development", "gemini"]
+    }
+  },
+  "subdirectories": {
+    "CONFIGURATION": {
+      "description": "Конфигурационные файлы системы",
+      "files": {
+        "monitoring_config.json": {
+          "description": "Настройки мониторинга системы",
+          "tags": ["config", "monitoring"]
+        },
+        "com.galaxy.monitoring.plist": {
+          "description": "LaunchAgent для автозапуска на macOS",
+          "functionality": "Автоматический запуск сервера при загрузке системы",
+          "tags": ["macos", "launchd", "autostart", "daemon"]
+        },
+        "requirements_monitoring.txt": {
+          "description": "Python зависимости для мониторинга",
+          "tags": ["python", "dependencies"]
+        }
+      }
+    },
+    "BACKUPS": {
+      "description": "Директория для резервных копий",
+      "monitoring": "exclude",
+      "tags": ["backup", "storage"]
+    },
+    "logs": {
+      "description": "Логи системы",
+      "files": {
+        "monitoring.log": {
+          "description": "Основной лог мониторинга",
+          "tags": ["log", "monitoring"]
+        },
+        "monitoring.pid": {
+          "description": "PID файл процесса мониторинга",
+          "tags": ["pid", "process"]
+        }
+      },
+      "monitoring": "exclude",
+      "tags": ["logs", "runtime", "debug"]
+    },
+    "sessions": {
+      "description": "Временные сессии (хотя система stateless)",
+      "monitoring": "exclude",
+      "tags": ["sessions", "temporary", "cache"]
+    }
+  },
+  "cross_references": {
+    "memory_integration": [
+      "GalaxyDevelopersAI-backend.js запускает ../MEMORY/memory_api.py",
+      "Memory API работает на порту 37778",
+      "Endpoints /memory/save и /memory/context"
+    ],
+    "key_rotation": [
+      "GalaxyDevelopersAI-backend.js использует KeyRotator",
+      "Ключи в ../.galaxydevelopers-ai-keys",
+      "Состояние в ../.galaxydevelopers-ai-key-state.json"
+    ],
+    "web_interface": [
+      "Статические файлы из ../INTERFACE",
+      "Redirect с / на /interface/index.html",
+      "CORS для доступа с веб-интерфейса"
+    ]
+  },
+  "critical_dependencies": {
+    "required_for_start": [
+      "GalaxyDevelopersAI-backend.js",
+      "GalaxyDevelopersAI-key-rotator.js",
+      "../.galaxydevelopers-ai-keys",
+      "gemini-config.json"
+    ],
+    "external_services": [
+      "Google Gemini API",
+      "Memory API (опционально)"
+    ]
+  }
+}
