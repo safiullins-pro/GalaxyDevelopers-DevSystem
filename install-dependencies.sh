@@ -14,9 +14,10 @@ fi
 # --- Node.js DEPENDENCIES ---
 echo "Installing Node.js dependencies..."
 npm install express @google/generative-ai axios cors jsonwebtoken sqlite3
+npm install -g serve
 
 # --- Python DEPENDENCIES ---
 echo "Installing Python dependencies..."
-pip3 install flask flask-cors sqlite3 watchdog prometheus-client bandit requests openai anthropic
+pip3 install --break-system-packages flask flask-cors sqlite3 watchdog prometheus-client bandit requests openai anthropic
 
 echo "--- DEPENDENCIES INSTALLATION COMPLETE ---"

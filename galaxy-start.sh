@@ -47,7 +47,7 @@ start_service "Experience API" "python3 src/experience_api.py" "$LOGS_DIR/experi
 echo "
 Phase 3: Monitoring & Frontend"
 start_service "Monitoring Server" "python3 DEV_MONITORING/monitoring_server.py" "$LOGS_DIR/dev-monitoring.log" "$LOGS_DIR/dev-monitoring.pid"
-start_service "Frontend Interface" "python3 -m http.server 3000 --directory INTERFACE" "$LOGS_DIR/frontend.log" "$LOGS_DIR/frontend.pid"
+start_service "Frontend Interface" "serve -s INTERFACE -l 3000" "$LOGS_DIR/frontend.log" "$LOGS_DIR/frontend.pid"
 
 # --- PHASE 4: INTEGRATIONS ---
 echo "

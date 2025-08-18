@@ -12,22 +12,25 @@ check_service() {
     fi
 }
 
+# Function to check port
+check_port() {
+    local service_name=$1
+    local port=$2
+    echo -n "Checking $service_name... "
+    if nc -z localhost $port; then
+        echo "✅ OK"
+    else
+        echo "❌ FAILED"
+    fi
+}
+
 echo "--- RUNNING HEALTH CHECKS ---"
 
 check_service "Backend API" "http://localhost:37777/api/status"
 check_service "Memory API" "http://localhost:37778/health"
-check_service "Monitoring Server" "http://localhost:8766/api/monitoring/status"
-
-# The prompt does not specify a health check endpoint for the Experience API.
-# Assuming '/health' endpoint.
-check_service "Experience API" "http://localhost:5556/health"
-
-# Check if frontend port is open
-echo -n "Checking Frontend Interface... "
-if nc -z localhost 3000; then
-    echo "✅ OK"
-else
-    echo "❌ FAILED"
-fi
+check_service "Monitoring Server (API)" "http://localhost:8766/api/monitoring/status"
+check_port "Monitoring Server (WebSocket)" 8765
+check_service "Experience API" "http://localhost:5556/api/health"
+check_port "Frontend Interface" 3000
 
 echo "--- HEALTH CHECKS COMPLETE ---"
