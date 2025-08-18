@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LOGS_DIR="GALAXY_ORCHESTRATOR/logs"
+
+echo "--- DISPLAYING GALAXY DEVELOPERS SYSTEM LOGS ---"
+
+tail -f $LOGS_DIR/*.log
